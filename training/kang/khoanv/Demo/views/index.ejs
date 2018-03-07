@@ -27,7 +27,12 @@
 </head>
 
 <body>
-
+  <h1 style="font-weight: bold; text-align: center; font-size: 50px">Danh sach cac bai viet trong database</h1>
+  <ul>
+    <% ketqua.forEach(function(value) { %>
+      <li style="font-size: 15px;"><%= value.title %> - <%= value.content%></li>
+      <% }); %>
+  </ul>
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
