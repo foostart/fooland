@@ -8,6 +8,7 @@ var conn = mysql.createPool({
 
 module.exports.query = function(sql, callback){
     conn.query(sql, function(error, results){
+        console.log("Connect successful !");
         if (!error)
         {
             callback(results);

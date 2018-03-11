@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>XXX</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <form action="/" method="POST" class="col-md-4 col-sm-push-4">
+      <div class="form-group">
+        <label for="selProvice">Chọn Tỉnh/Thành Phố:</label>
+        <select class="form-control" id="selProvice">
+          <% for(var i = 0; i < arrayProvice.length; i++){ %>
+          <option value="<%= arrayProvice[i].ID %>"><%= arrayProvice[i].Name %></option>
+          <% } %>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="selDistrict">Chọn Quận/Huyện:</label>
+        <select class="form-control" id="selDistrict">
+            <option value="-1">--- Chọn Quận/Huyện ---</option>
+            <% for(var i = 0; i < arrayDistrict.length; i++){ %>
+              <option value="<%= arrayDistrict[i].ID %>"><%= arrayDistrict[i].Name %></option>
+              <% } %>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="selWard">Chọn Phường/Xã:</label>
+        <select class="form-control" id="selWard">
+            <option value="-1">--- Chọn Phường/Xã: ---</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success">Tìm kiếm</button>
+    </form>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/javascripts/main.js"></script>
   </body>
 </html>
