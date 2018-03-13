@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 11, 2018 at 09:09 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Generation Time: Mar 13, 2018 at 09:03 AM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -27,22 +25,22 @@ USE `db_realestate`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `district`
+-- Table structure for table `districts`
 --
 
-DROP TABLE IF EXISTS `district`;
-CREATE TABLE `district` (
-  `ID` int(11) NOT NULL,
-  `Name` text COLLATE utf8mb4_unicode_ci,
-  `Type` text COLLATE utf8mb4_unicode_ci,
-  `ProviceID` int(11) DEFAULT NULL
+DROP TABLE IF EXISTS `districts`;
+CREATE TABLE `districts` (
+  `district_id` int(11) NOT NULL,
+  `district_name` text COLLATE utf8mb4_unicode_ci,
+  `district_type` text COLLATE utf8mb4_unicode_ci,
+  `province_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `district`
+-- Dumping data for table `districts`
 --
 
-INSERT INTO `district` (`ID`, `Name`, `Type`, `ProviceID`) VALUES
+INSERT INTO `districts` (`district_id`, `district_name`, `district_type`, `province_id`) VALUES
 (1, '1', 'Quận', 1),
 (2, '12', 'Quận', 1),
 (3, 'Thủ Đức', 'Quận', 1),
@@ -71,54 +69,56 @@ INSERT INTO `district` (`ID`, `Name`, `Type`, `ProviceID`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `provice`
+-- Table structure for table `provinces`
 --
 
-DROP TABLE IF EXISTS `provice`;
-CREATE TABLE `provice` (
-  `ID` int(11) NOT NULL,
-  `Name` text COLLATE utf8mb4_unicode_ci
+DROP TABLE IF EXISTS `provinces`;
+CREATE TABLE `provinces` (
+  `province_id` int(11) NOT NULL,
+  `province_name` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `provice`
+-- Dumping data for table `provinces`
 --
 
-INSERT INTO `provice` (`ID`, `Name`) VALUES
+INSERT INTO `provinces` (`province_id`, `province_name`) VALUES
 (1, 'HCM');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `real_estate`
+-- Table structure for table `real_estates`
 --
 
-DROP TABLE IF EXISTS `real_estate`;
-CREATE TABLE `real_estate` (
-  `ID` int(11) NOT NULL,
-  `Name` text COLLATE utf8mb4_unicode_ci,
-  `LocationID` int(11) DEFAULT NULL
+DROP TABLE IF EXISTS `real_estates`;
+CREATE TABLE `real_estates` (
+  `real_estate_id` int(11) NOT NULL,
+  `real_estate_name` text COLLATE utf8mb4_unicode_ci,
+  `real_estate_price` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `real_estate_area` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `district_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ward`
+-- Table structure for table `wards`
 --
 
-DROP TABLE IF EXISTS `ward`;
-CREATE TABLE `ward` (
-  `ID` int(11) NOT NULL,
-  `Name` text COLLATE utf8mb4_unicode_ci,
-  `type` text COLLATE utf8mb4_unicode_ci,
-  `districtID` int(11) DEFAULT NULL
+DROP TABLE IF EXISTS `wards`;
+CREATE TABLE `wards` (
+  `ward_id` int(11) NOT NULL,
+  `ward_name` text COLLATE utf8mb4_unicode_ci,
+  `ward_type` text COLLATE utf8mb4_unicode_ci,
+  `district_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `ward`
+-- Dumping data for table `wards`
 --
 
-INSERT INTO `ward` (`ID`, `Name`, `type`, `districtID`) VALUES
+INSERT INTO `wards` (`ward_id`, `ward_name`, `ward_type`, `district_id`) VALUES
 (1, 'Tân Định', 'Phường', 1),
 (2, 'Đa Kao', 'Phường', 1),
 (3, 'Bến Nghé', 'Phường', 1),
@@ -447,82 +447,77 @@ INSERT INTO `ward` (`ID`, `Name`, `type`, `districtID`) VALUES
 --
 
 --
--- Indexes for table `district`
+-- Indexes for table `districts`
 --
-ALTER TABLE `district`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `ProviceID` (`ProviceID`);
+ALTER TABLE `districts`
+  ADD PRIMARY KEY (`district_id`),
+  ADD KEY `ProviceID` (`province_id`);
 
 --
--- Indexes for table `provice`
+-- Indexes for table `provinces`
 --
-ALTER TABLE `provice`
-  ADD PRIMARY KEY (`ID`);
+ALTER TABLE `provinces`
+  ADD PRIMARY KEY (`province_id`);
 
 --
--- Indexes for table `real_estate`
+-- Indexes for table `real_estates`
 --
-ALTER TABLE `real_estate`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `LocationID` (`LocationID`);
+ALTER TABLE `real_estates`
+  ADD PRIMARY KEY (`real_estate_id`),
+  ADD KEY `LocationID` (`district_id`);
 
 --
--- Indexes for table `ward`
+-- Indexes for table `wards`
 --
-ALTER TABLE `ward`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `districtID` (`districtID`);
+ALTER TABLE `wards`
+  ADD PRIMARY KEY (`ward_id`),
+  ADD KEY `districtID` (`district_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `district`
+-- AUTO_INCREMENT for table `districts`
 --
-ALTER TABLE `district`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
+ALTER TABLE `districts`
+  MODIFY `district_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
--- AUTO_INCREMENT for table `provice`
+-- AUTO_INCREMENT for table `provinces`
 --
-ALTER TABLE `provice`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+ALTER TABLE `provinces`
+  MODIFY `province_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `real_estate`
+-- AUTO_INCREMENT for table `real_estates`
 --
-ALTER TABLE `real_estate`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE `real_estates`
+  MODIFY `real_estate_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `ward`
+-- AUTO_INCREMENT for table `wards`
 --
-ALTER TABLE `ward`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=323;
-
+ALTER TABLE `wards`
+  MODIFY `ward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=323;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `district`
+-- Constraints for table `districts`
 --
-ALTER TABLE `district`
-  ADD CONSTRAINT `district_ibfk_1` FOREIGN KEY (`ProviceID`) REFERENCES `provice` (`ID`);
+ALTER TABLE `districts`
+  ADD CONSTRAINT `districts_ibfk_1` FOREIGN KEY (`province_id`) REFERENCES `provinces` (`province_id`);
 
 --
--- Constraints for table `real_estate`
+-- Constraints for table `real_estates`
 --
-ALTER TABLE `real_estate`
-  ADD CONSTRAINT `real_estate_ibfk_1` FOREIGN KEY (`LocationID`) REFERENCES `district` (`ID`);
+ALTER TABLE `real_estates`
+  ADD CONSTRAINT `real_estates_ibfk_1` FOREIGN KEY (`district_id`) REFERENCES `districts` (`district_id`);
 
 --
--- Constraints for table `ward`
+-- Constraints for table `wards`
 --
-ALTER TABLE `ward`
-  ADD CONSTRAINT `ward_ibfk_1` FOREIGN KEY (`districtID`) REFERENCES `district` (`ID`);
-COMMIT;
+ALTER TABLE `wards`
+  ADD CONSTRAINT `wards_ibfk_1` FOREIGN KEY (`district_id`) REFERENCES `districts` (`district_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
