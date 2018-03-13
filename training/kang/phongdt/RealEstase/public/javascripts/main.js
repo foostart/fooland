@@ -10,7 +10,7 @@ function getWardsByDistrictID(id){
         $("#selWard").empty();
         $("#selWard").append('<option value="-1">--- Chọn Phường/Xã: ---</option>');
         data.forEach(item => {
-            $("#selWard").append('<option value="'+ item.ID +'">'+ item.Name +'</option>');
+            $("#selWard").append('<option value="'+ item.ward_id +'">'+ item.ward_name +'</option>');
         });
         
     })

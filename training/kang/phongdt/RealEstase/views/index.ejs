@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>XXX</title>
+    <title>Demo Nodejs Real Estate</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -11,9 +11,9 @@
       <div class="form-group">
         <label for="selProvice">Chọn Tỉnh/Thành Phố:</label>
         <select class="form-control" id="selProvice">
-          <% for(var i = 0; i < arrayProvice.length; i++){ %>
-          <option value="<%= arrayProvice[i].ID %>"><%= arrayProvice[i].Name %></option>
-          <% } %>
+          <% for(var i = 0; i < arrayProvince.length; i++){ %>
+          <option value="<%= arrayProvince[i].province_id %>"><%= arrayProvince[i].province_name %></option>
+          <% } %> 
         </select>
       </div>
 
@@ -22,7 +22,7 @@
         <select class="form-control" id="selDistrict">
             <option value="-1">--- Chọn Quận/Huyện ---</option>
             <% for(var i = 0; i < arrayDistrict.length; i++){ %>
-              <option value="<%= arrayDistrict[i].ID %>"><%= arrayDistrict[i].Name %></option>
+              <option value="<%= arrayDistrict[i].district_id %>"><%= arrayDistrict[i].district_name %></option>
               <% } %>
         </select>
       </div>
