@@ -3,9 +3,10 @@ var request = require('request');
 var fs = require('fs');
 var textData = "";
 var count = 0;
-var totalPage = 50;
+var totalPage = 5;
+start = new Date();
 
-for(var  i= 0; i <= totalPage; i++)
+for(var  i= 1; i <= totalPage; i++)
 {
     getPage(i, function(status, data){
 		if (status == "OK")
