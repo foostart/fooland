@@ -16,10 +16,12 @@ for(var  i= 1; i <= totalPage; i++)
 			if(count >= totalPage)
 			{
 				fs.writeFileSync("Data_RealEstate_TimMua.txt", textData);
-				console.log("done!");
+                console.log("done!");
+                console.log(data);
 				finish = new Date();
 				console.log("Operation took " + (finish.getTime() - start.getTime()) + " ms");
-			}
+            }
+            
 		}
 	});
 }
@@ -28,6 +30,7 @@ for(var  i= 1; i <= totalPage; i++)
 function getPage(number = 1, callback)
 {
     var page = "";
+	
 	if (number > 1){
 		page = "/p" + number;
 	}
@@ -48,10 +51,10 @@ function getPage(number = 1, callback)
         var match = patt.exec(body);
         while(match != null){
             var jsonData = {
-                "Title: ": match[1],
-                "Price: ": match[2],
-                "Area: ": match[3],
-                "Location: ": match[4]
+                'Title': match[1],
+                'Price': match[2],
+                'Area': match[3],
+                'Location': match[4]
             };
 
             text += JSON.stringify(jsonData) + "\n";//stringify: convert kiểu json sang tring

@@ -1,6 +1,6 @@
 var request = require('request');
 var fs = require('fs');
-var totalPage =10,count = 0;
+var totalPage =3,count = 0;
 var textData=""; 
 for(i = 1; i <= totalPage; i++ )
 {
@@ -40,6 +40,7 @@ function getPageNumber(num = 1,callback){
 		// console.log(body);
 		//Lấy location [\w\W]*?title='[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>
 		var pattern = /class='ct_title'>\s*<a href=[\w\W]*?>(.*?)<\/a>[\w\W]*?Diện tích:<\/label>(.*?)<sup>[\w\W]*?Giá:<\/label>(.*?)[<\/div>|\/&nsp][\w\W]*?title='[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>/g;
+		
 		var text = "";
 		var match = pattern.exec(body);
 		while(match !=null)
