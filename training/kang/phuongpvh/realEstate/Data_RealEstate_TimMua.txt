@@ -1,0 +1,7 @@
+{"Title":"Chỉ 2.6 tỷ có nhà mới, đẹp trung tâm quận Đống Đa, phố Khâm Thiên","Price":"30 m","Area":"Thỏa thuận","Location":"Quận Đống Đa, Hà Nội"}
+{"Title":"Bán đất tại thôn Minh Lai, Minh Sơn, Ngọc Lặc, Thanh Hóa","Price":"245 m","Area":"245 triệu ","Location":"Huyện Ngọc Lặc, Thanh Hóa"}
+{"Title":"Bán nhà Phố Ẩm Thực  đường Lê Thái Tông, tổ 7, phường Chiềng Lề, TP Sơn La","Price":"80 m","Area":"3,2 tỷ ","Location":"Thành phố Sơn La, Sơn La"}
+{"Title":"Tiến độ thi công thực tế tại  Dự án Khu đô thị mới Phú Lương, Hà Đông, Hà Nội","Price":"62 m","Area":"29 triệu / m<sup>2</sup>","Location":"Quận Hà Đông, Hà Nội"}
+{"Title":"Bán từng lô hoặc 2 lô CLN, QH đất ở nông thôn: 900 ngàn/m2. ST-ST: 48/143-144; 48/147.","Price":"2.743 m","Area":"900 ngàn / m<sup>2</sup>","Location":"Huyện Nhơn Trạch, Đồng Nai"}
+{"Title":"Bán nhà riêng 33m2 gần chợ 200m gần trường cấp 1 2 3, ô tô vào nhà, kinh doanh, sđcc","Price":"33 m","Area":"950 triệu ","Location":"Huyện Hoài Đức, Hà Nội"}
+{"Title":"Cần bán nhà gấp","Price":"200 m","Area":"720 triệu ","Location":"Huyện Ý Yên, Nam Định"}

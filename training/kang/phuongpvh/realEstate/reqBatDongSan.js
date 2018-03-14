@@ -3,21 +3,22 @@ var request = require('request');
 var fs = require('fs');
 var textData = "";
 var count = 0;
-var totalPage = 5;
+var totalPage = 2;
 start = new Date();
 
 for(var  i= 1; i <= totalPage; i++)
 {
     getPage(i, function(status, data){
 		if (status == "OK")
-		{
+        {
+            //console.log(data);
 			textData += data;
 			count++;
 			if(count >= totalPage)
 			{
 				fs.writeFileSync("Data_RealEstate_TimMua.txt", textData);
-                console.log("done!");
-                console.log(data);
+                //console.log(textData);
+                console.log("done!");  
 				finish = new Date();
 				console.log("Operation took " + (finish.getTime() - start.getTime()) + " ms");
             }
@@ -29,13 +30,13 @@ for(var  i= 1; i <= totalPage; i++)
 
 function getPage(number = 1, callback)
 {
-    var page = "";
+    var page = "can-ban.html";
 	
 	if (number > 1){
-		page = "/p" + number;
+		page = "can-ban/trang--" + number + ".html";
 	}
 	var options = {
-	  url: 'http://timmuanhadat.com.vn/nha-dat-bat-dong-san/can-ban.html' + page,
+	  url: 'http://timmuanhadat.com.vn/nha-dat-bat-dong-san/' + page,
 	  headers: {
 		'Host': 'timmuanhadat.com.vn',
         'Connection': 'keep-alive',
@@ -45,10 +46,11 @@ function getPage(number = 1, callback)
 	  }
     };
     request.get(options, function(error, response, body){
-        var patt = /class='vip-title'.<a class='main-font-color1[\s] vip'\shref=[\w\W]*?>(.*?)<\/a>[\w\W]*?class='col1'>Diện tích:<\/label>\s*(.*?)<sup>2<\/sup><\/div>[\w\W]*?class='col1'>Giá:<\/label>\s*(.*?)<\/div>[\w\W]*?class='vip-dis'>(.*?)<\/div>/;
+        var patt = /class='vip-title'.<a class='main-font-color1[\s] vip'\shref=[\w\W]*?>(.*?)<\/a>[\w\W]*?class='col1'>Diện tích:<\/label>\s*(.*?)<sup>2<\/sup><\/div>[\w\W]*?class='col1'>Giá:<\/label>\s*(.*?)<\/div>[\w\W]*?class='vip-dis'>(.*?)<\/div>/g;
 
         var text = "";
         var match = patt.exec(body);
+        //console.log(body);
         while(match != null){
             var jsonData = {
                 'Title': match[1],
@@ -60,6 +62,7 @@ function getPage(number = 1, callback)
             text += JSON.stringify(jsonData) + "\n";//stringify: convert kiểu json sang tring
             match = patt.exec(body);
         }
+        console.log(text);
         console.log("Get data page: " + number.toString());
         callback("OK", text);
     });
