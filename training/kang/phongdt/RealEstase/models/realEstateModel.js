@@ -1,13 +1,13 @@
 const DB = require("../models/DB");
 
-class realEstateController extends DB
+class RealEstateModel extends DB
 {
     constructor(){
         super();
     }
 
     getProvinces(callback){
-        this.queryMySQL("select * from provinces").then(function(rows){
+        this.queryMySQL("SELECT * FROM provinces").then(function(rows){
             callback(rows);
         }).catch(function(err){
             console.log(err);
@@ -15,18 +15,55 @@ class realEstateController extends DB
         });
     }
 
-    getDistrictsByProciceID(provinceId, callback){
-        this.queryMySQL("select * from districts where province_id=? order by district_name", [provinceId]).then(function(rows){
+    getDistrictsByProvinceID(provinceId, callback){
+        this.queryMySQL("SELECT * FROM districts WHERE province_id=? ORDER BY district_name", [provinceId]).then(function(rows){
             callback(rows);
         }).catch(function(err){
             console.log(err);
             callback(false);
         })
     }
-    
+
     getWardsByDistrictID(districtId, callback){
-        this.queryMySQL("select * from wards where district_id=? order by ward_name", [districtId]).then(function(rows){
+        this.queryMySQL("SELECT * FROM wards WHERE district_id=? ORDER BY ward_name", [districtId]).then(function(rows){
             callback(rows);
+        }).catch(function(err){
+            console.log(err);
+            callback(false);
+        })
+    }
+
+    getSites(callback){
+        this.queryMySQL("SELECT * FROM sites").then(function(rows){
+            callback(rows);
+        }).catch(function(err){
+            console.log(err);
+            callback(-1);
+        });
+    }
+
+    /**
+     * Get Pattern by site_id
+     * @param {int} siteId Site ID
+     * @param {function} callback callback return rows data
+     */
+    getRegexPatternBySiteId(siteId, callback){
+        this.queryMySQL("SELECT * FROM patterns, sites WHERE sites.site_id=patterns.site_id and sites.site_id=?", [siteId]).then(function(rows){
+            callback(rows);
+        }).catch(function(err){
+            console.log(err);
+            callback(false);
+        })
+    }
+
+    /**
+     * Insert data into 'real_estate' table
+     * @param data: Data is an array values ex: ['name', 'price', 'area', 'date', 'url', districtID]
+     * @param callback: callback true or false
+     */
+    insertRealEstate(data, callback){
+        this.executeMySQL("INSERT INTO real_estates(real_estate_name, real_estate_price, real_estate_area, real_estate_date, real_estate_url, district_id) VALUES ?", [data]).then(function(success){
+            callback(true);
         }).catch(function(err){
             console.log(err);
             callback(false);
@@ -34,4 +71,4 @@ class realEstateController extends DB
     }
 }
 
-module.exports = realEstateController;
+module.exports = RealEstateModel;

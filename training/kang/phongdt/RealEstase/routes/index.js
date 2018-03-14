@@ -2,23 +2,89 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 const REModel = require("../models/realEstateModel");
-const realEstateController = new REModel();
+const CollectionModel = require("../models/collectionModel");
+var realEstateController = new REModel();
+var collectionController = new CollectionModel();
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  realEstateController.getProvinces(function(resultProvinces){
-      realEstateController.getDistrictsByProciceID(1, function(resultDistricts)
-      {
-        console.log(resultProvinces);
-        res.render('index', {arrayProvince: resultProvinces, arrayDistrict: resultDistricts});
+router.get('/', function (req, res, next) {
+  realEstateController.getProvinces(function (resultProvinces) {
+    realEstateController.getDistrictsByProvinceID(1, function (resultDistricts) {
+      realEstateController.getSites(function (resultSites) {
+        console.log(resultSites);
+        res.render('index', {
+          arrayProvince: resultProvinces,
+          arrayDistrict: resultDistricts,
+          arraySite: resultSites
+        });
       });
+    });
   });
 });
 
-router.post('/getWards', function(req, res, next) {
+router.post('/getWards', function (req, res, next) {
   var districtID = parseInt(req.body.DistrictID);
-  realEstateController.getWardsByDistrictID(districtID, function(resultWards){
+  realEstateController.getWardsByDistrictID(districtID, function (resultWards) {
     res.send(resultWards);
   });
 });
+
+router.post('/collectData', function (req, res, next) {
+  var siteId = req.body.siteId;
+  var numberOfPages = req.body.pages; // Get param of request (pages)
+  realEstateController.getRegexPatternBySiteId(siteId, function(rows_site){
+    var url = "";
+
+    var regexPattern = "";
+    if (rows_site.length > 0) {
+      url = rows_site[0].site_url;
+      regexPattern = rows_site[0].pattern_regex;
+    }
+
+    var options = {
+      TotalPage: numberOfPages,
+      Url: url,
+      RegexPattern: regexPattern
+    };
+
+    collectionController.CollectDataBDS(options, function (results) {
+      var resultJSON = {};
+      resultJSON.status = "OK";
+      resultJSON.message = "";
+      if (results.status == "OK") {
+        // console.log(results);
+        var values = [];
+        var arrayData = results.data;
+        // parse data was collected to array
+        arrayData.forEach(item => {
+          // console.log(item.URL);
+          values.push([item.Title, item.Price, item.Area, convertStringToDate(item.Date), item.URL, 1]);
+        });
+        // insert data into database (estate table)
+        realEstateController.insertRealEstate(values, function (success) {
+          if (!success) {
+            resultJSON.status = "Error";
+            resultJSON.message = "Cannot insert data into database !";
+          }
+          res.send(resultJSON);
+        });
+      }
+      else {
+        resultJSON.status = "Error";
+        resultJSON.message = results.message;
+        res.send(resultJSON);
+      }
+    });
+  });
+});
+
+/**
+ * Convert date string to right format mysql
+ * @param {string} str: date string input
+ */
+function convertStringToDate(str) {
+  var s = str.split('/');
+  return s[2] + "-" + s[1] + "-" + s[0];
+}
 
 module.exports = router;

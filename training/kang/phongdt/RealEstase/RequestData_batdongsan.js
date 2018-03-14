@@ -1,20 +1,19 @@
 var request = require("request");
 var fs = require("fs");
 var textData = "";
-var count = 0, totalPage = 300;
+var count = 0, totalPage = 2;
 start = new Date();
 
 for(var i = 1; i <= totalPage; i++){
 	
-	getPage(i, function(status, data){
-		// console.log(data);
+	getInfoOnPage(i, function(status, data){
 		if (status == "OK")
 		{
-			textData += data;
+			console.log(data);
 			count++;
 			if(count >= totalPage)
 			{
-				fs.writeFileSync("Data_RealEstate.txt", textData);
+				// fs.writeFileSync("Data_RealEstate.txt", textData);
 				console.log("done!");
 				finish = new Date();
 				console.log("Operation took " + (finish.getTime() - start.getTime()) + " ms");
@@ -27,7 +26,7 @@ for(var i = 1; i <= totalPage; i++){
 
 
 
-function getPage(number = 1, callback){
+function getInfoOnPage(number = 1, callback){
 	
 	var page = "";
 	if (number > 1){
@@ -45,22 +44,21 @@ function getPage(number = 1, callback){
 	};
 
 	request.get(options, function(error, response, body){	
-		var pattern = /class='p-title'>[\s|<h3>]*<a href=[\w\W]*?">\s*(.*?)\s*<\/a>[\w\W]*?class="product-price">\s*(.*?)\s*<\/span>[\w\W]*?class="product-area">\s*(.*?)\s*<\/span>[\w\W]*?class="product-city-dist">\s*(.*?)\s*<\/span>/g;
-		
-		var txt = "";
+		var pattern = /class='p-title'>[\s|<h3>]*<a href=[\w\W]*?">\s*(.*?)\s*<\/a>[\w\W]*?class="product-price">\s*(.*?)\s*<\/span>[\w\W]*?class="product-area">\s*(.*?)\s*<\/span>[\w\W]*?class="product-city-dist">\s*(.*?)\s*<\/span>[\w\W]*?class='floatright mar-right-10'>(.*?)<\/div>/g;
+		var results = [];
 		var match = pattern.exec(body);
 		while(match != null){
 			var jsonData = {
 				"Title": match[1],
 				"Price": match[2],
 				"Area": match[3],
-				"Location": match[4]
+				"Location": match[4],
+				"Date": match[5]
 			};
-			txt += JSON.stringify(jsonData) + "\n";
+			results.push(jsonData);
 			match = pattern.exec(body);
 		}
 		console.log("Get data page " + number.toString());
-		// console.log(n);
-		callback("OK", txt);
+		callback("OK", results);
 	});
 }
