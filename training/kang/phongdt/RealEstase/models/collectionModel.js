@@ -46,7 +46,7 @@ module.exports = CollectionModel;
 
 /**
  * Get data at site (single page)
- * @param {json} options options are a json: {Url: "", RegexPattern: ""}
+ * @param {json} options options are a json: {Url: "", RegexPattern: "", ExceptionString=""}
  * @param {function} callback callback return json: {status: "", message: "", data: []}
  */
 function getInfoOnPage(options, callback){
@@ -56,7 +56,9 @@ function getInfoOnPage(options, callback){
     var regexPattern = options.RegexPattern;
     if (regexPattern == "") regexPattern = 'class=\'p-title\'>[\\s|<h3>]*<a href=[\'"](.*?)[\'"][\\w\\W]*?>\\s*(.*?)\\s*<\\/a>[\\w\\W]*?class="product-price">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class="product-area">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class="product-city-dist">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\'floatright mar-right-10\'>(.*?)<\\/div>';
 
-	var options = {
+    var exception = options.ExceptionString;
+
+	var optionsRequest = {
 	  url: urlRequest,
 	  headers: {
 		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
@@ -65,14 +67,18 @@ function getInfoOnPage(options, callback){
 	  }
 	};
 
-	request.get(options, function(error, response, body){
+	request.get(optionsRequest, function(error, response, body){
         var resultJSON = {};
         resultJSON.status = 'OK';
         resultJSON.message = "";
         resultJSON.data = [];
-
         if (!error)
         {
+            if (exception && body.toString().indexOf(exception) != -1){
+                console.log("De quy");
+                getInfoOnPage(options, callback);
+                return;
+            }
             var pattern = new RegExp(regexPattern, 'g');
             var results = [];
             var match = pattern.exec(body);

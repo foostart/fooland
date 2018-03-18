@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 13, 2018 at 09:03 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th3 18, 2018 lúc 08:38 AM
+-- Phiên bản máy phục vụ: 10.1.30-MariaDB
+-- Phiên bản PHP: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_realestate`
+-- Cơ sở dữ liệu: `db_realestate`
 --
 CREATE DATABASE IF NOT EXISTS `db_realestate` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `db_realestate`;
@@ -25,7 +27,7 @@ USE `db_realestate`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `districts`
+-- Cấu trúc bảng cho bảng `districts`
 --
 
 DROP TABLE IF EXISTS `districts`;
@@ -37,7 +39,7 @@ CREATE TABLE `districts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `districts`
+-- Đang đổ dữ liệu cho bảng `districts`
 --
 
 INSERT INTO `districts` (`district_id`, `district_name`, `district_type`, `province_id`) VALUES
@@ -69,7 +71,27 @@ INSERT INTO `districts` (`district_id`, `district_name`, `district_type`, `provi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `provinces`
+-- Cấu trúc bảng cho bảng `patterns`
+--
+
+DROP TABLE IF EXISTS `patterns`;
+CREATE TABLE `patterns` (
+  `pattern_id` int(11) NOT NULL,
+  `pattern_regex` text COLLATE utf8mb4_unicode_ci,
+  `site_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `patterns`
+--
+
+INSERT INTO `patterns` (`pattern_id`, `pattern_regex`, `site_id`) VALUES
+(1, 'class=\'p-title\'>[\\s|<h3>]*<a href=[\'\"](.*?)[\'\"][\\w\\W]*?>\\s*(.*?)\\s*<\\/a>[\\w\\W]*?class=\"product-price\">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\"product-area\">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\"product-city-dist\">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\'floatright mar-right-10\'>(.*?)<\\/div>', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `provinces`
 --
 
 DROP TABLE IF EXISTS `provinces`;
@@ -79,7 +101,7 @@ CREATE TABLE `provinces` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `provinces`
+-- Đang đổ dữ liệu cho bảng `provinces`
 --
 
 INSERT INTO `provinces` (`province_id`, `province_name`) VALUES
@@ -88,22 +110,44 @@ INSERT INTO `provinces` (`province_id`, `province_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `real_estates`
+-- Cấu trúc bảng cho bảng `real_estates`
 --
 
 DROP TABLE IF EXISTS `real_estates`;
 CREATE TABLE `real_estates` (
   `real_estate_id` int(11) NOT NULL,
   `real_estate_name` text COLLATE utf8mb4_unicode_ci,
-  `real_estate_price` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `real_estate_area` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `real_estate_price` text COLLATE utf8mb4_unicode_ci,
+  `real_estate_area` text COLLATE utf8mb4_unicode_ci,
+  `real_estate_date` date DEFAULT NULL,
+  `real_estate_url` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `district_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wards`
+-- Cấu trúc bảng cho bảng `sites`
+--
+
+DROP TABLE IF EXISTS `sites`;
+CREATE TABLE `sites` (
+  `site_id` int(11) NOT NULL,
+  `site_name` text COLLATE utf8mb4_unicode_ci,
+  `site_url` text COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `sites`
+--
+
+INSERT INTO `sites` (`site_id`, `site_name`, `site_url`) VALUES
+(1, 'batdongsan.com.vn', 'https://batdongsan.com.vn/nha-dat-ban');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `wards`
 --
 
 DROP TABLE IF EXISTS `wards`;
@@ -115,7 +159,7 @@ CREATE TABLE `wards` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `wards`
+-- Đang đổ dữ liệu cho bảng `wards`
 --
 
 INSERT INTO `wards` (`ward_id`, `ward_name`, `ward_type`, `district_id`) VALUES
@@ -443,81 +487,117 @@ INSERT INTO `wards` (`ward_id`, `ward_name`, `ward_type`, `district_id`) VALUES
 (322, 'Lý Nhơn', 'Xã', 24);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `districts`
+-- Chỉ mục cho bảng `districts`
 --
 ALTER TABLE `districts`
   ADD PRIMARY KEY (`district_id`),
   ADD KEY `ProviceID` (`province_id`);
 
 --
--- Indexes for table `provinces`
+-- Chỉ mục cho bảng `patterns`
+--
+ALTER TABLE `patterns`
+  ADD PRIMARY KEY (`pattern_id`),
+  ADD KEY `site_id` (`site_id`);
+
+--
+-- Chỉ mục cho bảng `provinces`
 --
 ALTER TABLE `provinces`
   ADD PRIMARY KEY (`province_id`);
 
 --
--- Indexes for table `real_estates`
+-- Chỉ mục cho bảng `real_estates`
 --
 ALTER TABLE `real_estates`
   ADD PRIMARY KEY (`real_estate_id`),
   ADD KEY `LocationID` (`district_id`);
 
 --
--- Indexes for table `wards`
+-- Chỉ mục cho bảng `sites`
+--
+ALTER TABLE `sites`
+  ADD PRIMARY KEY (`site_id`);
+
+--
+-- Chỉ mục cho bảng `wards`
 --
 ALTER TABLE `wards`
   ADD PRIMARY KEY (`ward_id`),
   ADD KEY `districtID` (`district_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `districts`
+-- AUTO_INCREMENT cho bảng `districts`
 --
 ALTER TABLE `districts`
   MODIFY `district_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 --
--- AUTO_INCREMENT for table `provinces`
+-- AUTO_INCREMENT cho bảng `patterns`
+--
+ALTER TABLE `patterns`
+  MODIFY `pattern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT cho bảng `provinces`
 --
 ALTER TABLE `provinces`
   MODIFY `province_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT for table `real_estates`
+-- AUTO_INCREMENT cho bảng `real_estates`
 --
 ALTER TABLE `real_estates`
   MODIFY `real_estate_id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT for table `wards`
+-- AUTO_INCREMENT cho bảng `sites`
+--
+ALTER TABLE `sites`
+  MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT cho bảng `wards`
 --
 ALTER TABLE `wards`
   MODIFY `ward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=323;
+
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `districts`
+-- Các ràng buộc cho bảng `districts`
 --
 ALTER TABLE `districts`
   ADD CONSTRAINT `districts_ibfk_1` FOREIGN KEY (`province_id`) REFERENCES `provinces` (`province_id`);
 
 --
--- Constraints for table `real_estates`
+-- Các ràng buộc cho bảng `patterns`
+--
+ALTER TABLE `patterns`
+  ADD CONSTRAINT `patterns_ibfk_1` FOREIGN KEY (`site_id`) REFERENCES `sites` (`site_id`);
+
+--
+-- Các ràng buộc cho bảng `real_estates`
 --
 ALTER TABLE `real_estates`
   ADD CONSTRAINT `real_estates_ibfk_1` FOREIGN KEY (`district_id`) REFERENCES `districts` (`district_id`);
 
 --
--- Constraints for table `wards`
+-- Các ràng buộc cho bảng `wards`
 --
 ALTER TABLE `wards`
   ADD CONSTRAINT `wards_ibfk_1` FOREIGN KEY (`district_id`) REFERENCES `districts` (`district_id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
