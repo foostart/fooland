@@ -39,7 +39,7 @@ function getPageNumber(num = 1,callback){
 	request.get(option, function(error, response, body){
 		// console.log(body);
 		//Lấy location [\w\W]*?title='[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>
-		var pattern = /class='ct_title'>\s*<a href=[\w\W]*?>(.*?)<\/a>[\w\W]*?Diện tích:<\/label>(.*?)<sup>[\w\W]*?Giá:<\/label>(.*?)[<\/div>|\/&nsp][\w\W]*?title='[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>/g;
+		var pattern = /class='ct_title'>\s*<a href='(.*?)'[\w\W]*?>(.*?)<\/a>[\w\W]*?Diện tích:<\/label>(.*?)<sup>[\w\W]*?Giá:<\/label>(.*?)[<\/div>|\/&nsp][\w\W]*?title='[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>[\w\W]*?'>(.*?)<\/a>/g;
 		
 		var text = "";
 		var match = pattern.exec(body);

@@ -44,6 +44,7 @@ router.post('/collectData', function (req, res, next) {
     var options = {
       TotalPage: numberOfPages,
       Url: url,
+      LinkPage: rows_site[0].site_link_page,
       RegexPattern: regexPattern
     };
 
@@ -58,6 +59,10 @@ router.post('/collectData', function (req, res, next) {
         // parse data was collected to array
         arrayData.forEach(item => {
           // console.log(item.URL);
+          if (item.Date.indexOf('Hôm nay') != -1){
+            var cDate = new Date();
+            item.Date = cDate.getDate() + "/" + (cDate.getMonth() + 1).toString() + "/" + cDate.getFullYear();
+          }
           values.push([item.Title, item.Price, item.Area, convertStringToDate(item.Date), item.URL, 1]);
         });
         // insert data into database (estate table)

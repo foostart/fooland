@@ -6,25 +6,29 @@ class CollectionModel {
 
     /**
      * Collect all data on site
-     * @param {json} options op {TotalPage: 1, Url: "", RegexPattern: ""}
+     * @param {json} options op {TotalPage: 1, Url: "", LinkPage: "", RegexPattern: ""}
      * @param {function} callback callback return json: {status:"", message:"", total: 0, data:[]}
      */
     CollectDataBDS(options, callback){
         var count = 0;
         var countSuccess = 0;
-        var json = {};
+        var json = {}; // json return
         json.status = "OK";
         json.message = "";
         json.total = 0;
         json.data = [];
         var numberOfPages = options.TotalPage;
+        var linkPage = options.LinkPage;
         var optionsGetPage = {
             Url: options.Url,
             RegexPattern: options.RegexPattern
         };
+
         for (var page = 1; page <= numberOfPages; page++)
         {
-            optionsGetPage.Url = options.Url + "/p" + page.toString(); // assign page number to json option
+            
+            optionsGetPage.Url = options.Url + linkPage.toString().replace('[page]', page.toString()); // assign page number to json option
+            console.log(optionsGetPage);
             getInfoOnPage(optionsGetPage, function(results) {
                 // console.log(results);
                 if (results.status == "OK") {
@@ -41,6 +45,7 @@ class CollectionModel {
             });
         }
     }
+
 }
 module.exports = CollectionModel;
 
@@ -85,6 +90,8 @@ function getInfoOnPage(options, callback){
             if (match != null)
             {
                 while(match != null){
+                    // console.log("-----------------------********************------------------");
+                    // console.log(match);
                     var jsonData = {
                         "URL": getURL(urlRequest) + match[1],
                         "Title": match[2],
@@ -112,7 +119,7 @@ function getInfoOnPage(options, callback){
 }
 
 function getURL(url){
-    var p = /(http[s]:\/\/.*?)[\/]/g;
+    var p = /(http[s]*:\/\/.*?)\//g;
     var m = p.exec(url + "/");
     return m[1];
 }
