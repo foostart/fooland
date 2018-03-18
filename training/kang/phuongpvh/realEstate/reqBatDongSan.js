@@ -3,7 +3,7 @@ var request = require('request');
 var fs = require('fs');
 var textData = "";
 var count = 0;
-var totalPage = 2;
+var totalPage = 10;
 start = new Date();
 
 for(var  i= 1; i <= totalPage; i++)
@@ -18,7 +18,7 @@ for(var  i= 1; i <= totalPage; i++)
 			{
 				fs.writeFileSync("Data_RealEstate_TimMua.txt", textData);
                 //console.log(textData);
-                console.log("done!");  
+                //console.log("done!");  
 				finish = new Date();
 				console.log("Operation took " + (finish.getTime() - start.getTime()) + " ms");
             }
@@ -46,23 +46,24 @@ function getPage(number = 1, callback)
 	  }
     };
     request.get(options, function(error, response, body){
-        var patt = /class='vip-title'.<a class='main-font-color1[\s] vip'\shref=[\w\W]*?>(.*?)<\/a>[\w\W]*?class='col1'>Diện tích:<\/label>\s*(.*?)<sup>2<\/sup><\/div>[\w\W]*?class='col1'>Giá:<\/label>\s*(.*?)<\/div>[\w\W]*?class='vip-dis'>(.*?)<\/div>/g;
+        var patt = /class='vip-title'><a[\w\W]*?href='(.*?)'>(.*?)<\/a>[\w\W]*?Diện tích:<\/label>(.*?)[<sup>][\w\W]*?Giá:<\/label>\s*(.*?)\s*<\/div>[\w\W]*?'vip-dis'>(.*?)<\/div>[\w\W]*?'createdate'>(.*?)<\/div>/g;
 
         var text = "";
         var match = patt.exec(body);
         //console.log(body);
         while(match != null){
             var jsonData = {
-                'Title': match[1],
-                'Price': match[2],
+                'Title': match[1] + " - " + match[2],
                 'Area': match[3],
-                'Location': match[4]
+                'Price': match[4],
+                'Location': match[5],
+                'Create day': match[6]
             };
 
             text += JSON.stringify(jsonData) + "\n";//stringify: convert kiểu json sang tring
             match = patt.exec(body);
         }
-        console.log(text);
+        //console.log(text);
         console.log("Get data page: " + number.toString());
         callback("OK", text);
     });
