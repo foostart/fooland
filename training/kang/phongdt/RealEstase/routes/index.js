@@ -32,20 +32,21 @@ router.post('/getWards', function (req, res, next) {
 router.post('/collectData', function (req, res, next) {
   var siteId = req.body.siteId;
   var numberOfPages = req.body.pages; // Get param of request (pages)
-  realEstateController.getRegexPatternBySiteId(siteId, function(rows_site){
+  realEstateController.getRegexPatternBySiteId(siteId, function(rows_pattern){
     var url = "";
 
     var regexPattern = "";
-    if (rows_site.length > 0) {
-      url = rows_site[0].site_url;
-      regexPattern = rows_site[0].pattern_regex;
+    if (rows_pattern.length > 0) {
+      url = rows_pattern[0].site_url;
+      regexPattern = rows_pattern[0].pattern_regex;
     }
 
     var options = {
       TotalPage: numberOfPages,
       Url: url,
-      LinkPage: rows_site[0].site_link_page,
-      RegexPattern: regexPattern
+      LinkPage: rows_pattern[0].site_link_page,
+      RegexPattern: regexPattern,
+      PatternRange: rows_pattern[0].pattern_range
     };
 
     collectionController.CollectDataBDS(options, function (results) {

@@ -6,7 +6,7 @@ class CollectionModel {
 
     /**
      * Collect all data on site
-     * @param {json} options op {TotalPage: 1, Url: "", LinkPage: "", RegexPattern: ""}
+     * @param {json} options op {TotalPage: 1, Url: "", LinkPage: "", RegexPattern: "", PatternRange:""}
      * @param {function} callback callback return json: {status:"", message:"", total: 0, data:[]}
      */
     CollectDataBDS(options, callback){
@@ -21,6 +21,7 @@ class CollectionModel {
         var linkPage = options.LinkPage;
         var optionsGetPage = {
             Url: options.Url,
+            PatternRange: options.PatternRange,
             RegexPattern: options.RegexPattern
         };
 
@@ -51,7 +52,7 @@ module.exports = CollectionModel;
 
 /**
  * Get data at site (single page)
- * @param {json} options options are a json: {Url: "", RegexPattern: "", ExceptionString=""}
+ * @param {json} options options are a json: {Url: "", RegexPattern: "", PatternRange: "", ExceptionString=""}
  * @param {function} callback callback return json: {status: "", message: "", data: []}
  */
 function getInfoOnPage(options, callback){
@@ -62,7 +63,11 @@ function getInfoOnPage(options, callback){
     if (regexPattern == "") regexPattern = 'class=\'p-title\'>[\\s|<h3>]*<a href=[\'"](.*?)[\'"][\\w\\W]*?>\\s*(.*?)\\s*<\\/a>[\\w\\W]*?class="product-price">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class="product-area">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class="product-city-dist">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\'floatright mar-right-10\'>(.*?)<\\/div>';
 
     var exception = options.ExceptionString;
-
+    var patternRange = options.PatternRange;
+    var patternRangeArray = [1, 2, 3, 4, 5, 6];
+    if (patternRange && patternRange != ""){
+        patternRangeArray = patternRange.split(",");
+    }
 	var optionsRequest = {
 	  url: urlRequest,
 	  headers: {
@@ -80,7 +85,6 @@ function getInfoOnPage(options, callback){
         if (!error)
         {
             if (exception && body.toString().indexOf(exception) != -1){
-                console.log("De quy");
                 getInfoOnPage(options, callback);
                 return;
             }
@@ -93,12 +97,12 @@ function getInfoOnPage(options, callback){
                     // console.log("-----------------------********************------------------");
                     // console.log(match);
                     var jsonData = {
-                        "URL": getURL(urlRequest) + match[1],
-                        "Title": match[2],
-                        "Price": match[3],
-                        "Area": match[4],
-                        "Location": match[5],
-                        "Date": match[6]
+                        "URL": getURL(urlRequest) + match[parseInt(patternRangeArray[0])],
+                        "Title": match[parseInt(patternRangeArray[1])],
+                        "Price": match[parseInt(patternRangeArray[2])],
+                        "Area": match[parseInt(patternRangeArray[3])],
+                        "Location": match[parseInt(patternRangeArray[4])],
+                        "Date": match[parseInt(patternRangeArray[5])]
                     };
                     results.push(jsonData);
                     match = pattern.exec(body);
