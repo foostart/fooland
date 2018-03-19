@@ -60,10 +60,6 @@ router.post('/collectData', function (req, res, next) {
         // parse data was collected to array
         arrayData.forEach(item => {
           // console.log(item.URL);
-          if (item.Date.indexOf('Hôm nay') != -1){
-            var cDate = new Date();
-            item.Date = cDate.getDate() + "/" + (cDate.getMonth() + 1).toString() + "/" + cDate.getFullYear();
-          }
           values.push([item.Title, item.Price, item.Area, convertStringToDate(item.Date), item.URL, 1]);
         });
         // insert data into database (estate table)
@@ -89,8 +85,28 @@ router.post('/collectData', function (req, res, next) {
  * @param {string} str: date string input
  */
 function convertStringToDate(str) {
-  var s = str.split('/');
-  return s[2] + "-" + s[1] + "-" + s[0];
+  var s;
+  var result = "";
+  var cDate = new Date();
+  if(str.indexOf(".") != -1){
+    s = str.split('.');
+    result = s[2] + "-" + s[1] + "-" + s[0];
+  }
+  else if (str.indexOf("/") != -1){
+    s = str.split('/');
+    result = s[2] + "-" + s[1] + "-" + s[0];
+  }
+  else if (str.indexOf("-") != -1){
+    s = str.split('-');
+    result = s[2] + "-" + s[1] + "-" + s[0];
+  }
+  else if (str.indexOf("Hôm qua") != -1){
+    result = cDate.getFullYear() + "-" + (cDate.getMonth() + 1).toString() + "-" +  (cDate.getDate() - 1).toString();
+  }
+  else{
+    result = cDate.getFullYear() + "-" + (cDate.getMonth() + 1).toString() + "-" +  cDate.getDate();
+  }
+  return result;
 }
 
 module.exports = router;
