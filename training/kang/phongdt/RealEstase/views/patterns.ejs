@@ -2,9 +2,14 @@
   <div class="container">
     <h1 class="text-center">Danh sách parttern regular expression</h1>
     <br>
+    <div class="text-right mb-3">
+      <a href="#" class="btn btn-success" data-toggle="tooltip" title="Add New Pattern">Add Pattern
+        <i class="fa fa-plus"></i>
+      </a>
+    </div>
     <div class="table-responsive">
-      <table class="table" id="tablePatterns">
-        <thead>
+      <table class="table" id="tablePatterns" >
+        <thead class="thead-dark">
           <tr>
             <th>
               <h3>Pattern Name</h3>
@@ -32,7 +37,7 @@
                 </strong>
               </td>
               <td>
-                <textarea class="form-control" style="background: rgb(236, 240, 199);" cols="50" rows="5"> <%= arrayPattern[i].pattern_regex %></textarea>
+                <textarea class="form-control"  cols="50" rows="5"> <%= arrayPattern[i].pattern_regex %></textarea>
               </td>
               <td>
                 <strong>
@@ -40,12 +45,16 @@
                 </strong>
               </td>
               <td>
-                "Success"
+                <img src="/images/succses.png" style="width: 50px; height: 50px;">
               </td>
               <td>
-                <a href="#" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i></a>
-                <a href="#" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
-                
+                <a href="#" class="btn btn-warning" data-toggle="tooltip" title="Edit Pattern">
+                  <i class="fa fa-pencil-alt"></i>
+                </a>
+                <a href="patterns/delete?id=<%= arrayPattern[i].pattern_id%>" data-toggle="tooltip" title="Delete Pattern" class="btn btn-danger">
+                  <i class="fa fa-trash-alt"></i>
+                </a>
+
               </td>
             </tr>
             <%}%>

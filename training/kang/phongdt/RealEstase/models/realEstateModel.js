@@ -69,6 +69,15 @@ class RealEstateModel extends DB
         });
     }
 
+    deletePatternById(patternId,callback){
+        this.executeMySQL("DELETE FROM patterns WHERE patterns.pattern_id =? ", [patternId]).then(function(success){
+            callback(true);
+        }).catch(function(err){
+            console.log(err);
+            callback(false);
+        })
+    }
+
     /**
      * Get all real-estate data on database
      * @param {function} callback return rows data real-estate

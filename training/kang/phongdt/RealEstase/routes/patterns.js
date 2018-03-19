@@ -11,4 +11,21 @@ router.get('/', function (req, res, next) {
           });
     });
 });
+router.get('/delete', function (req, res, next) {
+    var resultJSON = {};
+    resultJSON.status = "OK";
+    resultJSON.message = "";
+    var patternId = req.query.id;
+    console.log(patternId);
+    realEstateController.deletePatternById(patternId,function(success){
+        if(!success)
+        {
+            resultJSON.status = "Error";
+            resultJSON.message = "Cannot insert data into database !";
+        }
+        // res.send(resultJSON);
+        res.render('success');
+        // alert('Khoa');
+    });
+});
 module.exports = router;
