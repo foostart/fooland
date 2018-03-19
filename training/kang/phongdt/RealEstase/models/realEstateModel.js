@@ -57,6 +57,32 @@ class RealEstateModel extends DB
     }
 
     /**
+     * Get all patterns on database
+     * @param {function} callback return rows data patterns
+     */
+    getPatterns(callback){
+        this.queryMySQL("SELECT patterns.*, sites.site_name FROM patterns LEFT JOIN sites ON patterns.site_id=sites.site_id").then(function(rows){
+            callback(rows);
+        }).catch(function(err){
+            console.log(err);
+            callback(-1);
+        });
+    }
+
+    /**
+     * Get all real-estate data on database
+     * @param {function} callback return rows data real-estate
+     */
+    getRealEstates(callback){
+        this.queryMySQL("SELECT * FROM real_estates").then(function(rows){
+            callback(rows);
+        }).catch(function(err){
+            console.log(err);
+            callback(-1);
+        });
+    }
+
+    /**
      * Insert data into 'real_estate' table
      * @param data: Data is an array values ex: ['name', 'price', 'area', 'date', 'url', districtID]
      * @param callback: callback true or false

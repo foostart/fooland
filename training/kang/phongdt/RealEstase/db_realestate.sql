@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2018 at 07:27 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Generation Time: Mar 19, 2018 at 10:16 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -75,6 +77,7 @@ INSERT INTO `districts` (`district_id`, `district_name`, `district_type`, `provi
 DROP TABLE IF EXISTS `patterns`;
 CREATE TABLE `patterns` (
   `pattern_id` int(11) NOT NULL,
+  `pattern_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `pattern_regex` text COLLATE utf8mb4_unicode_ci,
   `pattern_range` text COLLATE utf8mb4_unicode_ci,
   `site_id` int(11) DEFAULT NULL
@@ -84,11 +87,9 @@ CREATE TABLE `patterns` (
 -- Dumping data for table `patterns`
 --
 
-INSERT INTO `patterns` (`pattern_id`, `pattern_regex`, `pattern_range`, `site_id`) VALUES
-(1, 'class=\'p-title\'>[\\s|<h3>]*<a href=[\'"](.*?)[\'"][\\w\\W]*?>\\s*(.*?)\\s*<\\/a>[\\w\\W]*?class="product-price">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class="product-area">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class="product-city-dist">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\'floatright mar-right-10\'>(.*?)<\\/div>', NULL, 1),
-(2, 'class=\'vip-title\'><a[\\w\\W]*?href=\'(.*?)\'>(.*?)<\\/a>[\\w\\W]*?Diện tích:<\\/label>(.*?)[<sup>][\\w\\W]*?Giá:<\\/label>\\s*(.*?)\\s*<\\/div>[\\w\\W]*?\'vip-dis\'>(.*?)<\\/div>[\\w\\W]*?\'createdate\'>(.*?)<\\/div>', '1,2,4,3,5,6', 2),
-(3, 'class=\'ct_title\'>\\s*<a href=\'(.*?)\'[\\w\\W]*?>(.*?)<\\/a>[\\w\\W]*?Diện tích:<\\/label>(.*?)[<sup>][\\w\\W]*?Giá:<\\/label>(.*?)[<\\/div>|\\/&nsp][\\w\\W]*?title=\'[\\w\\W]*?\'>(.*?)<\\/a>[\\w\\W]*?\'>(.*?)<\\/a>[\\w\\W]*?\'>(.*?)<\\/a>', NULL, 3),
-(4, 'h4 class="title">\\s*<a[\\w\\W]*?href="(.*?)">(.*?)<\\/a>[\\w\\W]*?<span>(.*?)<\\/span>[\\w\\W]*?class="area">\\s*(.*?)[&nbsp;][\\w\\W]*?class="address">\\s*(.*?)\\s*<\\/div>[\\w\\W]*?class="price">\\s*(.*?)\\s*<\\/div>', '1,2,6,4,5,3', 4);
+INSERT INTO `patterns` (`pattern_id`, `pattern_name`, `pattern_regex`, `pattern_range`, `site_id`) VALUES
+(1, 'Lấy thông tin bất động sản', 'class=\'p-title\'>[\\s|<h3>]*<a href=[\'\"](.*?)[\'\"][\\w\\W]*?>\\s*(.*?)\\s*<\\/a>[\\w\\W]*?class=\"product-price\">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\"product-area\">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\"product-city-dist\">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\'floatright mar-right-10\'>(.*?)<\\/div>', NULL, 1),
+(2, 'Lấy thông tin tìm mua nhà đất', 'class=\'vip-title\'><a[\\w\\W]*?href=\'(.*?)\'>(.*?)<\\/a>[\\w\\W]*?Diện tích:<\\/label>(.*?)[<sup>][\\w\\W]*?Giá:<\\/label>\\s*(.*?)\\s*<\\/div>[\\w\\W]*?\'vip-dis\'>(.*?)<\\/div>[\\w\\W]*?\'createdate\'>(.*?)<\\/div>', '1,2,4,3,5,6', 2);
 
 -- --------------------------------------------------------
 
@@ -121,10 +122,136 @@ CREATE TABLE `real_estates` (
   `real_estate_name` text COLLATE utf8mb4_unicode_ci,
   `real_estate_price` text COLLATE utf8mb4_unicode_ci,
   `real_estate_area` text COLLATE utf8mb4_unicode_ci,
-  `real_estate_date` text COLLATE utf8mb4_unicode_ci,
+  `real_estate_date` date DEFAULT NULL,
   `real_estate_url` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `district_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `real_estates`
+--
+
+INSERT INTO `real_estates` (`real_estate_id`, `real_estate_name`, `real_estate_price`, `real_estate_area`, `real_estate_date`, `real_estate_url`, `district_id`) VALUES
+(1, 'SIÊU DỰ ÁN PHÚ HỒNG THỊNH 8 THUẬN AN, ĐẦU TƯ SINH LỜI CAO,CÓ SỔ HỒNG RIÊNG.LH 01657749507', ' 60 m', 'Thỏa thuận', '2018-03-16', 'http://timmuanhadat.com.vn/sieu-du-an-phu-hong-thinh-8-thuan-an-dau-tu-sinh-loi-cao-co-so-hong-rieng-lh-01657749507-592270.html', 1),
+(2, 'Bán đất tại thôn Minh Lai, Minh Sơn, Ngọc Lặc, Thanh Hóa', ' 245 m', '245 triệu', '2018-01-31', 'http://timmuanhadat.com.vn/ban-dat-tai-thon-minh-lai-minh-son-ngoc-lac-thanh-hoa-581108.html', 1),
+(3, 'Bán nhà Phố Ẩm Thực  đường Lê Thái Tông, tổ 7, phường Chiềng Lề, TP Sơn La', ' 80 m', '3,2 tỷ', '2017-10-23', 'http://timmuanhadat.com.vn/ban-nha-pho-am-thuc-duong-le-thai-tong-to-7-phuong-chieng-le-tp-son-la-528429.html', 1),
+(4, 'Tiến độ thi công thực tế tại  Dự án Khu đô thị mới Phú Lương, Hà Đông, Hà Nội', ' 62 m', '29 triệu / m<sup>2</sup>', '2017-08-16', 'http://timmuanhadat.com.vn/tien-do-thi-cong-thuc-te-tai-du-an-khu-do-thi-moi-phu-luong-ha-dong-ha-noi-495585.html', 1),
+(5, 'Bán lô đất CLN, quy hoạch đất ở nông thôn, 1,05 triệu/m2. ST/ST: 48/135-136.', ' 1.000 m', '1,05 tỷ', '2018-03-12', 'http://timmuanhadat.com.vn/ban-tung-lo-hoac-ca-3-lo-dat-trong-cay-lau-nam-900-nghin-m2-bd-st-48-143-48-144-48-138-567461.html', 1),
+(6, 'Cần bán nhà gấp', ' 200 m', '720 triệu', '2018-03-06', 'http://timmuanhadat.com.vn/can-ban-nha-gap-586979.html', 1),
+(7, 'Nhà Xưởng Cần Bán Gấp (Bình Chánh)', ' KXĐ', 'Thỏa thuận', '2018-03-18', 'http://timmuanhadat.com.vn/nha-xuong-can-ban-gap-binh-chanh--266347.html', 1),
+(8, 'BÁN 2 DÃY NHÀ QUỐC LỘ 50 VÀ NHÀ GẦN CHỢ HƯNG LONG, SỔ HỒNG RIÊNG GIÁ 420 TRIỆU - 750 TRIỆU', ' 60 m', '420 triệu', '2018-03-18', 'http://timmuanhadat.com.vn/ban-2-day-nha-quoc-lo-50-va-nha-gan-cho-hung-long-so-hong-rieng-gia-420-trieu-750-trieu-585368.html', 1),
+(9, 'BÁN 2 DÃY NHÀ QUỐC LỘ 50 VÀ NHÀ GẦN CHỢ HƯNG LONG, SỔ HỒNG RIÊNG GIÁ 450 TRIỆU - 750 TRIỆU', ' 60 m', '450 triệu', '2018-03-18', 'http://timmuanhadat.com.vn/ban-1-khu-nha-ql-50-va-1-khu-nha-gan-cho-hung-long-so-hong-gia-460-tr-680-tr-1ty1-567815.html', 1),
+(10, 'BÁN 2 DÃY NHÀ QUỐC LỘ 50 VÀ NHÀ GẦN CHỢ HƯNG LONG, SỔ HỒNG RIÊNG GIÁ 460 TRIỆU - 750 TRIỆU', ' 60 m', '460 triệu', '2018-03-18', 'http://timmuanhadat.com.vn/ban-2-day-nha-quoc-lo-50-va-nha-gan-cho-hung-long-so-hong-rieng-gia-460-trieu-750-trieu-586131.html', 1),
+(11, 'Bán 2 dãy nhà Quốc Lộ 50 và gần chợ Hưng Long,sổ hồng riêng giá 420tr-750tr', ' 60 m', '420 triệu', '2018-03-18', 'http://timmuanhadat.com.vn/ban-2-day-nha-quoc-lo-50-va-gan-cho-hung-long-so-hong-rieng-gia-420tr-750tr-587005.html', 1),
+(12, 'Cần Bán Chung Cư Tam Trinh, Yên Sở, Hoàng Mai, Hà Nội.', ' 47 m', 'Thỏa thuận', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-chung-cu-tam-trinh-yen-so-hoang-mai-ha-noi--550787.html', 1),
+(13, 'Cần Bán Đất Chính Chủ Diện Tích 108m2 Tại Yên Sở.', ' 108 m', 'Thỏa thuận', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-dat-chinh-chu-dien-tich-108m2-tai-yen-so--548079.html', 1),
+(14, 'Cần Bán Đất Chính Chủ Tại Xã Đông Dư, Gia Lâm, Hà Nội.', ' 240 m', 'Thỏa thuận', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-dat-chinh-chu-tai-xa-dong-du-gia-lam-ha-noi--570212.html', 1),
+(15, 'Cần Bán Đất Chính Chủ Tại Đường Bùi Huy Bích, Hoàng Mai, Hà Nội.', ' 85 m', 'Thỏa thuận', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-dat-chinh-chu-tai-duong-bui-huy-bich-hoang-mai-ha-noi--547323.html', 1),
+(16, 'Cần Bán Đất Tại Xã Minh Phú, Sóc Sơn, Hà Nội.', ' 40.000 m', 'Thỏa thuận', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-dat-tai-xa-minh-phu-soc-son-ha-noi--547467.html', 1),
+(17, 'Nhà Hiếm, Gần phố, Trung tâm, An sinh Đỉnh Đào Tấn, Ba Đình', ' 33 m', '3,85 tỷ', '2018-03-18', 'http://timmuanhadat.com.vn/nha-hiem-gan-pho-trung-tam-an-sinh-dinh-dao-tan-ba-dinh-591287.html', 1),
+(18, 'Nhà Hiếm, Đẹp Giang Văn Minh, Ba Đình', ' 36 m', '4 tỷ', '2018-03-18', 'http://timmuanhadat.com.vn/nha-hiem-dep-giang-van-minh-ba-dinh-591535.html', 1),
+(19, 'Cực Hiếm, Bán nhà Nguyên Hồng, Đống Đa Thang Máy, Ô tô, Vườn Hoa', ' 44 m', '11,5 tỷ', '2018-03-18', 'http://timmuanhadat.com.vn/cuc-hiem-ban-nha-nguyen-hong-dong-da-thang-may-o-to-vuon-hoa-589806.html', 1),
+(20, '12 tỷ sở hữu ngay Biệt thự, Bán nhà quận Hoàng Mai', ' 98 m', '12 tỷ', '2018-03-18', 'http://timmuanhadat.com.vn/12-ty-so-huu-ngay-biet-thu-ban-nha-quan-hoang-mai-589118.html', 1),
+(21, 'Cực Hiếm,Kinh Doanh Khủng, Bán nhà mặt ngõ mới 298 Tây Sơn, Đống Đa', '13 tỷ', ' 50 m', '2018-03-18', 'http://timmuanhadat.com.vn/cuc-hiem-kinh-doanh-khung-ban-nha-mat-ngo-moi-298-tay-son-dong-da-587032.html', 1),
+(22, 'Cực Đẹp, 9 tầng Thang Máy, Bán nhà mặt phố Nguyễn Khang, Cầu Giấy', '17,5 tỷ', ' 47 m', '2018-03-18', 'http://timmuanhadat.com.vn/cuc-dep-9-tang-thang-may-ban-nha-mat-pho-nguyen-khang-cau-giay-586469.html', 1),
+(23, 'Kinh Doanh sầm uất, Ô tô, Vỉa Hè, Bán nhà Thái Hà, Đống Đa', '14,8 tỷ', ' 52 m', '2018-03-18', 'http://timmuanhadat.com.vn/kinh-doanh-sam-uat-o-to-via-he-ban-nha-thai-ha-dong-da-586087.html', 1),
+(24, 'Nhà Đẹp Lung Linh, Bán nhà Nguyễn Lương Bằng, Đống Đa', '4,9 tỷ', ' 61 m', '2018-03-18', 'http://timmuanhadat.com.vn/nha-dep-lung-linh-ban-nha-nguyen-luong-bang-dong-da-586102.html', 1),
+(25, 'Ô tô vào nhà, Rẻ, Gần phố Lê Trọng Tấn, Thanh Xuân', '10,8 tỷ', ' 112 m', '2018-03-18', 'http://timmuanhadat.com.vn/o-to-vao-nha-re-gan-pho-le-trong-tan-thanh-xuan-586334.html', 1),
+(26, 'Rẻ, Kinh Doanh Đỉnh, Chủ nhờ bán nhà mặt phố Nguyễn Đức Cảnh, Hoàng Mai', 'Thỏa thuận', ' 59 m', '2018-03-18', 'http://timmuanhadat.com.vn/re-kinh-doanh-dinh-chu-nho-ban-nha-mat-pho-nguyen-duc-canh-hoang-mai-585973.html', 1),
+(27, 'Bán nhà Đẹp, Rẻ Yên Lãng, Đống Đa', '6,95 tỷ', ' 64 m', '2018-03-18', 'http://timmuanhadat.com.vn/ban-nha-dep-re-yen-lang-dong-da-586003.html', 1),
+(28, 'Rinh nhà đón Tết, An Sinh tốt, Hạ Yên, Yên Hòa', '4,95 tỷ', ' 40 m', '2018-03-18', 'http://timmuanhadat.com.vn/rinh-nha-don-tet-an-sinh-tot-ha-yen-yen-hoa-571761.html', 1),
+(29, 'Ô tô, Kinh doanh, Khu Vip Thái Hà, Đống Đa chỉ 152 triệu/ m2', '14,8 tỷ', ' 98 m', '2018-03-18', 'http://timmuanhadat.com.vn/o-to-kinh-doanh-khu-vip-thai-ha-dong-da-chi-152-trieu-m2-572974.html', 1),
+(30, '6 tầng thang máy, mới coong, Đặng Văn Ngữ', '685 ngàn', ' 43 m', '2018-03-18', 'http://timmuanhadat.com.vn/6-tang-thang-may-moi-coong-dang-van-ngu-572327.html', 1),
+(31, 'Nhà phân lô Vip, ô tô, Mới coong Nguyễn Chí Thanh', '8,35 tỷ', ' 43 m', '2018-03-18', 'http://timmuanhadat.com.vn/nha-phan-lo-vip-o-to-moi-coong-nguyen-chi-thanh-572429.html', 1),
+(32, 'Đón tết Nhà Mới Đẹp, An Sinh tốt, Hạ Yên, Yên Hòa', '3,95 tỷ', ' 30 m', '2018-03-18', 'http://timmuanhadat.com.vn/don-tet-nha-moi-dep-an-sinh-tot-ha-yen-yen-hoa-571340.html', 1),
+(33, 'Kinh Doanh Cực Đỉnh, 60 triệu/ tháng Lê Đức Thọ, Cầu Giấy', '11,5 tỷ', ' 60 m', '2018-03-18', 'http://timmuanhadat.com.vn/kinh-doanh-cuc-dinh-60-trieu-thang-le-duc-tho-cau-giay-571286.html', 1),
+(34, 'Nhà mặt phố, hiếm, kinh doanh đỉnh Ngọc Khánh', '9,5 tỷ', ' 28 m', '2018-03-18', 'http://timmuanhadat.com.vn/nha-mat-pho-hiem-kinh-doanh-dinh-ngoc-khanh-570065.html', 1),
+(35, 'Khu Vip, Gần Phố, Ngõ thông Văn Cao, Ba Đình', '6,8 tỷ', ' 56 m', '2018-03-18', 'http://timmuanhadat.com.vn/khu-vip-gan-pho-ngo-thong-van-cao-ba-dinh-590413.html', 1),
+(36, 'Hiếm, Ô tô, vỉa hè, Bán Gấp nhà Hoa Bằng, Cầu Giấy', '8,9 tỷ', ' 72 m', '2018-03-18', 'http://timmuanhadat.com.vn/hiem-o-to-via-he-ban-gap-nha-hoa-bang-cau-giay-590408.html', 1),
+(37, '“CỰC HIẾM” Bán nhà ven hồ Văn Chương Đống Đa KINH DOANH ĐỈNH 60m2', '11,8 tỷ', ' 60 m', '2018-03-18', 'http://timmuanhadat.com.vn/-cuc-hiem-ban-nha-ven-ho-van-chuong-dong-da-kinh-doanh-dinh-60m2-547984.html', 1),
+(38, 'Bán nhà Thái Hà Đống Đa KINH DOANH Ô TÔ 78m2', '11,9 tỷ', ' 78 m', '2018-03-18', 'http://timmuanhadat.com.vn/ban-nha-thai-ha-dong-da-kinh-doanh-o-to-78m2-547993.html', 1),
+(39, '“SIÊU HIẾM” Bán nhà Dốc Tam Đa Tây Hồ KINH DOANH 41m2', '8,3 tỷ', ' 41 m', '2018-03-18', 'http://timmuanhadat.com.vn/-sieu-hiem-ban-nha-doc-tam-da-tay-ho-kinh-doanh-41m2-548499.html', 1),
+(40, '“KINH DOANH SIÊU KHỦNG” Bán nhà mặt phố Kim Mã Ba Đình 65m2 MT 5m', '16,5 tỷ', ' 65 m', '2018-03-18', 'http://timmuanhadat.com.vn/-kinh-doanh-sieu-khung-ban-nha-mat-pho-kim-ma-ba-dinh-65m2-mt-5m-549380.html', 1),
+(41, 'SIÊU DỰ ÁN PHÚ HỒNG THỊNH 8 THUẬN AN, ĐẦU TƯ SINH LỜI CAO,CÓ SỔ HỒNG RIÊNG.LH 01657749507', 'Thỏa thuận', ' 60 m', '2018-03-16', 'http://timmuanhadat.com.vn/sieu-du-an-phu-hong-thinh-8-thuan-an-dau-tu-sinh-loi-cao-co-so-hong-rieng-lh-01657749507-592270.html', 1),
+(42, 'Bán đất tại thôn Minh Lai, Minh Sơn, Ngọc Lặc, Thanh Hóa', '245 triệu', ' 245 m', '2018-01-31', 'http://timmuanhadat.com.vn/ban-dat-tai-thon-minh-lai-minh-son-ngoc-lac-thanh-hoa-581108.html', 1),
+(43, 'Bán nhà Phố Ẩm Thực  đường Lê Thái Tông, tổ 7, phường Chiềng Lề, TP Sơn La', '3,2 tỷ', ' 80 m', '2017-10-23', 'http://timmuanhadat.com.vn/ban-nha-pho-am-thuc-duong-le-thai-tong-to-7-phuong-chieng-le-tp-son-la-528429.html', 1),
+(44, 'Tiến độ thi công thực tế tại  Dự án Khu đô thị mới Phú Lương, Hà Đông, Hà Nội', '29 triệu / m<sup>2</sup>', ' 62 m', '2017-08-16', 'http://timmuanhadat.com.vn/tien-do-thi-cong-thuc-te-tai-du-an-khu-do-thi-moi-phu-luong-ha-dong-ha-noi-495585.html', 1),
+(45, 'Bán lô đất CLN, quy hoạch đất ở nông thôn, 1,05 triệu/m2. ST/ST: 48/135-136.', '1,05 tỷ', ' 1.000 m', '2018-03-12', 'http://timmuanhadat.com.vn/ban-tung-lo-hoac-ca-3-lo-dat-trong-cay-lau-nam-900-nghin-m2-bd-st-48-143-48-144-48-138-567461.html', 1),
+(46, 'Cần bán nhà gấp', '720 triệu', ' 200 m', '2018-03-06', 'http://timmuanhadat.com.vn/can-ban-nha-gap-586979.html', 1),
+(47, 'Nhà Xưởng Cần Bán Gấp (Bình Chánh)', 'Thỏa thuận', ' KXĐ', '2018-03-18', 'http://timmuanhadat.com.vn/nha-xuong-can-ban-gap-binh-chanh--266347.html', 1),
+(48, 'BÁN 2 DÃY NHÀ QUỐC LỘ 50 VÀ NHÀ GẦN CHỢ HƯNG LONG, SỔ HỒNG RIÊNG GIÁ 420 TRIỆU - 750 TRIỆU', '420 triệu', ' 60 m', '2018-03-18', 'http://timmuanhadat.com.vn/ban-2-day-nha-quoc-lo-50-va-nha-gan-cho-hung-long-so-hong-rieng-gia-420-trieu-750-trieu-585368.html', 1),
+(49, 'BÁN 2 DÃY NHÀ QUỐC LỘ 50 VÀ NHÀ GẦN CHỢ HƯNG LONG, SỔ HỒNG RIÊNG GIÁ 450 TRIỆU - 750 TRIỆU', '450 triệu', ' 60 m', '2018-03-18', 'http://timmuanhadat.com.vn/ban-1-khu-nha-ql-50-va-1-khu-nha-gan-cho-hung-long-so-hong-gia-460-tr-680-tr-1ty1-567815.html', 1),
+(50, 'BÁN 2 DÃY NHÀ QUỐC LỘ 50 VÀ NHÀ GẦN CHỢ HƯNG LONG, SỔ HỒNG RIÊNG GIÁ 460 TRIỆU - 750 TRIỆU', '460 triệu', ' 60 m', '2018-03-18', 'http://timmuanhadat.com.vn/ban-2-day-nha-quoc-lo-50-va-nha-gan-cho-hung-long-so-hong-rieng-gia-460-trieu-750-trieu-586131.html', 1),
+(51, 'Bán 2 dãy nhà Quốc Lộ 50 và gần chợ Hưng Long,sổ hồng riêng giá 420tr-750tr', '420 triệu', ' 60 m', '2018-03-18', 'http://timmuanhadat.com.vn/ban-2-day-nha-quoc-lo-50-va-gan-cho-hung-long-so-hong-rieng-gia-420tr-750tr-587005.html', 1),
+(52, 'Cần Bán Chung Cư Tam Trinh, Yên Sở, Hoàng Mai, Hà Nội.', 'Thỏa thuận', ' 47 m', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-chung-cu-tam-trinh-yen-so-hoang-mai-ha-noi--550787.html', 1),
+(53, 'Cần Bán Đất Chính Chủ Diện Tích 108m2 Tại Yên Sở.', 'Thỏa thuận', ' 108 m', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-dat-chinh-chu-dien-tich-108m2-tai-yen-so--548079.html', 1),
+(54, 'Cần Bán Đất Chính Chủ Tại Xã Đông Dư, Gia Lâm, Hà Nội.', 'Thỏa thuận', ' 240 m', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-dat-chinh-chu-tai-xa-dong-du-gia-lam-ha-noi--570212.html', 1),
+(55, 'Cần Bán Đất Chính Chủ Tại Đường Bùi Huy Bích, Hoàng Mai, Hà Nội.', 'Thỏa thuận', ' 85 m', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-dat-chinh-chu-tai-duong-bui-huy-bich-hoang-mai-ha-noi--547323.html', 1),
+(56, 'Cần Bán Đất Tại Xã Minh Phú, Sóc Sơn, Hà Nội.', 'Thỏa thuận', ' 40.000 m', '2018-03-18', 'http://timmuanhadat.com.vn/can-ban-dat-tai-xa-minh-phu-soc-son-ha-noi--547467.html', 1),
+(57, 'Nhà Hiếm, Gần phố, Trung tâm, An sinh Đỉnh Đào Tấn, Ba Đình', '3,85 tỷ', ' 33 m', '2018-03-18', 'http://timmuanhadat.com.vn/nha-hiem-gan-pho-trung-tam-an-sinh-dinh-dao-tan-ba-dinh-591287.html', 1),
+(58, 'Nhà Hiếm, Đẹp Giang Văn Minh, Ba Đình', '4 tỷ', ' 36 m', '2018-03-18', 'http://timmuanhadat.com.vn/nha-hiem-dep-giang-van-minh-ba-dinh-591535.html', 1),
+(59, 'Cực Hiếm, Bán nhà Nguyên Hồng, Đống Đa Thang Máy, Ô tô, Vườn Hoa', '11,5 tỷ', ' 44 m', '2018-03-18', 'http://timmuanhadat.com.vn/cuc-hiem-ban-nha-nguyen-hong-dong-da-thang-may-o-to-vuon-hoa-589806.html', 1),
+(60, '12 tỷ sở hữu ngay Biệt thự, Bán nhà quận Hoàng Mai', '12 tỷ', ' 98 m', '2018-03-18', 'http://timmuanhadat.com.vn/12-ty-so-huu-ngay-biet-thu-ban-nha-quan-hoang-mai-589118.html', 1),
+(61, 'CẮT LỖ SÂU HOẶC BẰNG GIÁ CHUNG CƯ VINHOMES GARDENIA, MIỄN PHÍ TƯ VẤN VÀ XEM NHÀ LH 0934239678', '2.3 tỷ', '80.5 m²', '2018-03-18', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ham-nghi-thi-tran-cau-dien-prj-vinhomes-gardenia/cat-lo-sau-hoac-bang-gia-mien-phi-tu-van-va-xem-nha-lh-0934239678-pr14498372', 1),
+(62, 'BÁN NHÀ CẤP 4 TIỆN XÂY MỚI DT 3.55X18M, NGAY TRUNG TÂM QUẬN TÂN BÌNH 3.49 TỶ', '3.49 tỷ', '66 m²', '2018-03-18', 'https://batdongsan.com.vn/ban-nha-rieng-duong-tran-van-quang-phuong-10-10/cap-4-tien-xay-moi-dt-3-55x18m-ngay-trung-tam-quan-tan-binh-3-65-ty-pr15069313', 1),
+(63, 'BÁN CĂN HỘ VINHOMES CENTRAL PARK 1PN 2.3 TỶ, 2PN 3.3 TỶ, 3PN 4.4TỶ, 4PN GIÁ 7.5TỶ. CALL 0977771919', '2.3 tỷ', 'Không xác định', '2018-03-18', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-dien-bien-phu-phuong-22-prj-vinhomes-central-park/vinmes-1pn-2-3-ty-2pn-3-3-ty-3pn-4-4ty-4pn-gia-7-5ty-call-0977771919-pr15231011', 1),
+(64, 'MỞ BÁN 2020 NỀN GÍA 220TR,ĐÁP ỨNG CHÍNH SÁCH GIÃN DÂN NĂM 2020,VĨNH LỘC A.0933.489.299', '220 triệu', '44 m²', '2018-03-18', 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-1-xa-vinh-loc-a-1/mo-2020-gi-220tr-dp-ung-chinh-sch-gin-dn-nm-2020-0933-489-299-pr15230359', 1),
+(65, 'ĐẤT NỀN MẶT TIỀN 25C, DỰ ÁN MEGA CITY2 CHÍNH THỨC NHẬN ĐẶT CHỔ,GIÁ GỐC CĐT, CK 21%_LH:0901.26.12.12', 'Thỏa thuận', 'Không xác định', '2018-03-18', 'https://batdongsan.com.vn/ban-dat-nen-du-an-khu-do-thi-nhon-trach/mat-tien-25c-mega-city2-chinh-thuc-nh-cho-gia-goc-cdt-ck-21-lh-0901-26-12-12-pr15230130', 1),
+(66, 'D/A ASCENT LAKESIDE - Q.7 CHUẨN NHẬT CHO NHÀ VIỆT, TẶNG NGAY 100TR, GIÁ CHỈ 36TR/M2, L/H 0919140896', '4.2 tỷ', '103 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-phuong-tan-thuan-tay-1-prj-ascent-lakeside/d-a-q-7-chuan-nhat-cho-nha-viet-tang-ngay-100tr-gia-chi-36tr-m2-l-h-0919140896-pr15230089', 1),
+(67, 'NHẬN KÝ GỬI ĐẤT NỀN KHU DÂN CƯ TÂN ĐÔ, AN HẠ RIVERSIDE (ECO VILLAGE) LH: 0901.893.659', '900 triệu', '105 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-tinh-lo-10-xa-duc-hoa-ha-prj-an-ha-riverside/nh-ky-gui-khu-d-cu-t-do-eco-village-lh-0901-893-659-pr14057306', 1),
+(68, 'NHẬN MUA BÁN, KÝ GỬI KDC AN HẠ RIVERSIDE (TÂN ĐÔ ECO VILLAGE) GIÁ TỐT NHẤT THỊ TRƯỜNG: 0901893659', '650 triệu', '130 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-tinh-lo-10-xa-duc-hoa-ha-prj-an-ha-riverside/nh-mua-ky-gui-kdc-t-do-eco-village-gia-tot-nt-thi-truong-0901893659-pr11869774', 1),
+(69, 'BÁN CĂN HỘ FLORITA 68M2, 70M2, 73M2, 80M2 GIÁ CHỈ 2.19 TỶ, THÁNG 3 NHẬN NHÀ LH: 0902416899', '2.19 tỷ', '68 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-d1-phuong-tan-hung-14-prj-can-ho-florita-duc-khai/bao-sang-ten-ch-68m2-73m2-57m2-80m2-103m2-cam-ket-gia-tot-nhat-thi-truong-lh-0902416899-pr13614082', 1),
+(70, 'NHẬN MUA BÁN, KÝ GỬI KDC TÂN ĐỨC (TÂN ĐỨC E. CITY) CAM KẾT TỐT NHẤT THỊ TRƯỜNG LH 0933.901.906', '800 triệu', '125 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-tinh-lo-10-xa-huu-thanh-prj-khu-do-thi-e-city-tan-duc/nhan-mua-ky-gui-kdc-cam-kt-tot-nhat-truong-lh-0933-901-906-pr15228929', 1),
+(71, 'CẦN BÁN MIẾNG ĐẤT 1000 M2 MẶT TIỀN 15 M ĐƯỜNG BÚNG GỘI  GIÁ TỐT LH:0917198179', 'Thỏa thuận', 'Không xác định', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-duong-bung-goi-xa-cua-duong/can-mieng-1000-m2-mat-tien-gia-tot-lh-0917198179-pr15227858', 1),
+(72, 'CĐT XUÂN MAI COMPLEX: CHỈ HƠN 800TR/CĂN HỘ NỘI THẤT ĐẦY ĐỦ, HỖ TRỢ VAY LÃI SUẤT 0%. LH: 0965409828', '800 triệu', 'Không xác định', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-phuong-la-khe-prj-xuan-mai-complex/cdt-chi-n-800tr-noi-that-day-du-tro-vay-lai-suat-0-lh-0965409828-pr15227421', 1),
+(73, '10 SUẤT NGOẠI GIAO CUỐI CÙNG PHỐ PARIS CANH SALING CLUB BIỂN LỚN NHẤT BÃI TRƯỜNG', '6 tỷ', '160 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-xa-duong-to-prj-sonasea-villas-resort/20-suat-ngoai-giao-cuoi-cung-pho-paris-canh-saling-club-bien-lon-nhat-bai-truong-pr15087028', 1),
+(74, 'BÁN NHÀ ĐƯỜNG AN DƯƠNG VƯƠNG 4X13 SỔ HỒNG CHÍNH CHỦ, HẺM 1/ RỘNG 8M', '2.93 tỷ', '185 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-nha-rieng-duong-truong-dinh-hoi-phuong-16-1/hem-6m-p-q8-tret-3-lau-dien-tich-4x3-so-hong-rieng-pr15226596', 1),
+(75, 'BÁN CẮT LỖ 500 TRIỆU CĂN HỘ R1 3 NGỦ 133M2 ROYAL CITY', '5.3 tỷ', '133 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-trai-phuong-thuong-dinh-prj-royal-city/cat-lo-500-trieu-r1-3-ngu-133m2-city-pr15226140', 1),
+(76, 'BÁN CẮT LỖ CĂN HỘ 3 NGỦ FULL NỘI THẤT RẺ NHẤT TIMES CITY 3,15 TỶ', '3.15 tỷ', '92 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-minh-khai-phuong-vinh-tuy-prj-times-city/cat-lo-3-ngu-full-noi-that-re-nhat-3-15-ty-pr15226099', 1),
+(77, 'BÁN NHÀ SỔ RIÊNG THUẬN AN, MỚI XÂY, SỔ RIÊNG, , HỖ TRỢ VAY NH 70% LÃI SUẤT THẤP, LH: 0987.030.434', '500 triệu', '50 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-nha-rieng-phuong-binh-chuan/so-thuan-an-moi-xay-so-ho-tro-vay-nh-70-lai-suat-thap-lh-0987-030-434-pr14945594', 1),
+(78, 'RA MẮT 18 CĂN SHOPHOUSE THÔNG MINH VEN BỜ SÔNG HÀN 9H00 NGÀY 24/03/2017 TẠI KHÁCH SẠN MELIA HÀ NỘI', 'Thỏa thuận', 'Không xác định', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-an-trung-2-phuong-an-hai-tay-prj-the-monarchy/ra-mat-18-shophouse-thong-minh-ven-bo-song-han-9h00-ngay-24-03-2017-tai-khach-san-melia-ha-noi-pr15225820', 1),
+(79, 'BÁN LÔ ĐẤT KHÁCH SẠN MẶT TIỀN VIEW BIỂN NGUYỄN TẤT THÀNH - TP ĐÀ NẴNG', 'Thỏa thuận', '250 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-duong-nguyen-tat-thanh-phuong-thanh-khe-dong/lo-khach-san-mat-tien-view-bien-tp-da-nang-pr15225756', 1),
+(80, 'BÁN CĂN HỘ Q7 RIVERSIDE TẦNG 8, 10, 12, 16, 18, CĂN GÓC, ĐÔNG NAM, VIEW SÔNG, GIÁ GỐC CHỦ ĐẦU TƯ', '1.3 tỷ', '53 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-dao-tri-phuong-phu-thuan-3-prj-q7-saigon-riverside/tang-8-10-12-16-18-goc-dong-nam-view-song-gia-goc-chu-dau-tu-pr15225763', 1),
+(81, 'CƠ HỘI NGÀN VÀNG MUA NHÀ PHỐ 02 MẶT TIỀN CÓ PHONG THỦY CÁT TƯỜNG CHỈ TỪ 500 TRIỆU ĐỒNG', '12.5 tỷ', '200 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-nha-mat-pho-phuong-an-binh-10/co-hoi-ngan-vang-mua-02-tien-co-ng-thuy-cat-tuong-chi-tu-500-trieu-dong-pr15225744', 1),
+(82, 'BÁN ĐẤT DỰ ÁN NẰM NGAY TRUNG TÂM TP. BIÊN HÒA, ĐỒNG NAI', 'Thỏa thuận', 'Không xác định', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-nen-du-an-phuong-long-binh-tan/nam-ngay-trung-tam-tp-bien-hoa-dong-nai-pr15225582', 1),
+(83, 'CHUNG CƯ XÃ HỘI PH CĂN VIEW BIỂN GIÁ GỐC CHỦ ĐẦU TƯ, LH 0905976175 HOẶC 01653008983', 'Thỏa thuận', '63.64 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-phuong-vinh-nguyen-prj-ph-nha-trang/xa-hoi-view-bien-gia-goc-chu-dau-tu-lh-0905976175-hoac-01653008983-pr10912323', 1),
+(84, 'BÁN CHUNG CƯ ROYAL CITY HÀNG CĐT, TẶNG NỘI THẤT 500TR, MIỄN 10 NĂM DV + CK 16%, VAY 70%, LS: 0%', '34 triệu/m²', '151 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-trai-phuong-thuong-dinh-prj-royal-city/hang-cdt-tang-noi-that-500tr-mien-10-nam-dv-ck-16-vay-70-ls-0-pr15225266', 1),
+(85, 'BÁN ĐẤT BV CHỢ RẪY 2 - BÌNH CHÁNH, 450 TRIỆU/NỀN 125M2, ĐƯỜNG 20M, SHR', '450 triệu', '125 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-duong-tinh-lo-10-xa-le-minh-xuan/bv-cho-ray-2-binh-chanh-450-trieu-nen-125m2-20m-shr-pr14903248', 1),
+(86, 'NHÀ PHỐ 4 TẤM,NGAY BỆNH VIỆN QUẬN BÌNH TÂN , ĐƯỜNG HƯƠNG LỘ 2 CHỈ 1TỶ650TR/CĂN, SỔ HỒNG CHÍNH CHỦ', '1.65 tỷ', '96 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-nha-rieng-duong-huong-lo-2-65/pho-4-tam-ngay-benh-vien-quan-binh-tan-chi-1ty650tr-can-so-hong-chinh-chu-pr15225086', 1),
+(87, 'BÁN GẤP CĂN HỘ 2PN VINHOMES CENTRAL PARK XEM ĐÚNG CĂN GIÁ 3.3TỶ. LH: 0961 79 79 99', '3.3 tỷ', '63 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-dien-bien-phu-phuong-22-prj-vinhomes-central-park/gap-2pn-vinmes-xem-dung-gia-3-3ty-lh-0961-79-79-99-pr15224665', 1),
+(88, 'MỞ BÁN 6 CĂN NHÀ PHỐ 2 MẶT TIỀN, BIỆT THỰ 3 MẶT SÔNG JAMONA GOLDEN SILK', '8.3 tỷ', '102 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-duong-bui-van-ba-phuong-tan-thuan-dong-1-prj-jamona-golden-silk/mo-9-can-pho-2-mat-tien-3-mat-song-silk-pr14084676', 1),
+(89, 'GEM RIVERSIDE Q2 - DỰ ÁN HOT NHẤT KHU VỰC CỦA TĐ ĐẤT XANH- TẶNG NGAY 50TR CHO ĐỢT CÔNG BỐ ĐẦU TIÊN.', '38 triệu/m²', 'Không xác định', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-song-hanh-phuong-an-phu-prj-gem-riverside/q2-du-hot-nhat-khu-vuc-cua-td-dat-xh-tg-ngay-50tr-cho-dot-cong-bo-dau-tien-pr15223967', 1),
+(90, 'BÁN CĂN HỘ MASTERI THẢO ĐIỀN GIÁ TỐT NHẤT 1PN GIÁ 2.2 TỶ/ 2PN GIÁ 2.7 TỶ/ 3PN GIÁ 3.1 TỶ', '2.2 tỷ', '50 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-xa-lo-ha-noi-phuong-thao-dien-prj-masteri-thao-dien/gia-tot-1pn-gia-2-2-ty-2pn-gia-2-7-ty-3pn-gia-3-5-ty-pr14639367', 1),
+(91, 'BÁN NHÀ CĂN GÓC 2 MẶT TIỀN TRẦN NHẬT DUẬT, P. TÂN ĐỊNH, QUẬN 1', '31 tỷ', '90.1 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-nha-mat-pho-duong-tran-nhat-duat-phuong-tan-dinh-2/can-goc-tien-t-p-quan-1-pr14036923', 1),
+(92, 'CHÍNH CHỦ CẦN BÁN GẤP CĂN HỘ 71.2M2 VIEW CÔNG VIÊN NỘI KHU , GIÁ 2.43 TỶ, LIÊN HỆ: 0948.79.40.79', '2.43 tỷ', '71.2 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-bo-bao-tan-thang-phuong-son-ky/chinh-chu-gap-duplex-dang-cap-3pn-3wc-111-9m2-gia-3-3-ty-lien-he-0948-79-40-79-pr15222854', 1),
+(93, 'DỰ ÁN VIEW SÔNG CỔ CÒ : AN PHÚ RIVERSIDE -NHẬN ĐẶT CHỔ CHỈ 20 TRIỆU 1 LÔ, CHỦ ĐẦU TƯ: 0982 30 80 30', '5.5 triệu/m²', '100 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-xa-dien-nam-trung/du-an-view-song-co-co-an-phu-riverside-nhan-cho-chi-20-trieu-1-lo-chu-dau-tu-0982-30-80-30-pr15222646', 1),
+(94, 'TỔNG HỢP NHỮNG CĂN HỘ MASTERI ĐANG RAO BÁN T3/2018 CÓ SỔ HỒNG LH 0936 721 723 MR HOÀI', '2.7 tỷ', 'Không xác định', '2018-03-17', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-xa-lo-ha-noi-phuong-thao-dien-prj-masteri-thao-dien/tong-p-nhung-dang-rao-t3-2018-co-so-ng-lh-0936-721-723-mr-ai-pr15077743', 1),
+(95, 'MỞ BÁN 100 NỀN SIÊU ĐẸP. MẶT TIỀN TỈNH LỘ 10, SỔ HỒNG RIÊNG, GIÁ ƯU ĐÃI', '490 triệu', '80 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-tinh-lo-10-xa-binh-loi-1/mo-0-sieu-dep-mat-tien-so-hong-rieng-gia-uu-dai-pr15221812', 1),
+(96, 'BÁN GẤP LÔ ĐẤT 250M2 TỈNH LỘ 10, ĐỨC HÒA HẠ, HUYỆN ĐỨC HÒA CÁCH CẦU XÁNG 3KM, THỔ CƯ 100%, SHR', '1.2 tỷ', '250 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-duong-tinh-lo-10-xa-duc-hoa-ha/gap-250m2-huyen-cach-cau-xang-3km-tho-cu-0-shr-pr15219808', 1),
+(97, 'ĐẤT VÀNG THỊ TRẤN DƯƠNG ĐÔNG , MẶT TIỀN 20 M ĐƯỜNG DƯƠNG ĐÔNG - CỬA CẠN , 2 MẶT TIỀN', 'Thỏa thuận', '623.9 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-duong-dt-45-thi-tran-duong-dong/vang-mat-tien-20-m-cua-can-2-mat-tien-pr15219107', 1),
+(98, 'BÁN GẤP LÔ ĐẤT 6X20M ĐƯỜNG TRẦN ĐẠI NGHĨA, BÌNH CHÁNH, GẦN QL1A, BV NHI ĐỒNG 3 GIÁ 800 TRIỆU', '800 triệu', '120 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-pho-tran-dai-nghia-xa-le-minh-xuan/gap-lo-6x20m-duong-binh-chanh-gan-ql1a-bv-nhi-dong-3-gia-800-trieu-pr15221283', 1),
+(99, 'THANH LÝ TẤT CẢ CÁC LÔ ĐẤT GIÁ RẺ, KDC TÂN ĐÔ ECO VILLAGE ( AN HẠ RIVERSIDE ) LH: 0901893659', '550 triệu', '130 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-tinh-lo-10-xa-duc-hoa-ha-prj-lang-sinh-thai-du-lich-eco-village/thanh-ly-tat-ca-cac-gia-re-kdc-tan-do-anha-riverside-lh-0901893659-pr12704234', 1),
+(100, 'TÔI BÁN MẢNH ĐẤT (LÔ KẾ GÓC), ĐỐI DIỆN TRƯỜNG, GẦN CHỢ, NGAY KCN, 125M2, ĐÃ CÓ SHR, ĐƯỜNG NHỰA 14M', '900 triệu', '125 m²', '2018-03-17', 'https://batdongsan.com.vn/ban-dat-duong-tinh-lo-10-xa-binh-loi-1/toi-manh-ke-goc-doi-dien-truong-gan-cho-ngay-kcn-125m2-da-co-shr-nhua-14m-pr14608792', 1),
+(101, 'CĂN HỘ VIEW BIỂN SỞ HỮU VĨNH VIỄN NGAY TTTP NHA TRANG. GIÁ CỰC RẺ CÁCH BIỂN CHỈ 600M', '745 triệu', '63.5 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-to-hieu-phuong-vinh-truong-prj-ph-nha-trang/view-bien-so-huu-vien-ngay-tttp-gia-cuc-re-cach-bien-chi-600m-pr13891285', 1),
+(102, 'CĂN HỘ DU LỊCH BIỂN MARINA SUITES NHA TRANG - CƠ HỘI ĐẦU TƯ TỐT NHẤT CHO ĐẦU XUÂN 2018', 'Thỏa thuận', 'Không xác định', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-phan-chu-trinh-phuong-van-thanh-1-prj-marina-suites/du-lich-bien-nha-trang-co-i-dau-tu-tot-nhat-c-dau-xuan-2018-pr15056209', 1),
+(103, 'PROSPER PLAZA CAM KẾT HÀNG ĐỘC QUYỀN GIÁ CHÍNH XÁC, ƯU ĐÃI CAO. VUI LÒNG LH HOTLINE: 0911.299997', '1.2 tỷ', '49 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-phan-van-hon-phuong-tan-thoi-nhat-1-prj-prosper-plaza/cam-ket-hang-doc-quyen-gia-chinh-xac-uu-dai-cao-vui-long-lh-hotline-0911-299997-pr14561294', 1),
+(104, 'CH LIỀN KỀ PMH Q7, GIÁ CHỈ TỪ 15TR/M2, TẶNG VÀNG, TRÚNG SH, NỘI THẤT CAO CẤP. LH: 0938.103.610', '15 triệu/m²', 'Không xác định', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-15b-xa-phu-xuan-prj-orchid-park/ch-lien-ke-pmh-q7-gia-chi-tu-15tr-m2-tang-vang-trung-sh-noi-that-cao-cap-lh-0938-103-610-pr15240506', 1),
+(105, 'CẦN TIỀN XÂY NHÀ NÊN BÁN GẤP ĐẤT CÂY KEO THỦ ĐỨC, CHÍNH CHỦ', '2.7 tỷ', '76 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-cay-keo-71/can-tien-xay-nha-gap-thu-duc-chinh-chu-pr15226603', 1),
+(106, 'CĐT XUÂN MAI COMPLEX: CHỈ HƠN 800TR/CĂN HỘ NỘI THẤT ĐẦY ĐỦ, HỖ TRỢ VAY LÃI SUẤT 0%. LH: 0966818991', '800 triệu', '50 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-to-huu-phuong-duong-noi-prj-xuan-mai-complex/cdt-chi-n-800tr-that-day-du-tro-vay-lai-suat-0-lh-0966818991-pr15236866', 1),
+(107, 'Q7 SAIGON RIVERSIDE COMPLEX - LH: 01225177177', 'Thỏa thuận', '66 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-dao-tri-phuong-phu-thuan-3-prj-q7-saigon-riverside/complex-lh-01225177177-pr15240434', 1),
+(108, 'CHÍNH CHỦ CẦN THANH LÝ CĂN HỘ CHUNG CƯ MƯỜNG THANH VIỄN TRIỀU NHA TRANG', 'Thỏa thuận', 'Không xác định', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-pham-van-dong-phuong-vinh-phuoc-prj-muong-thanh-vien-trieu/chinh-chu-ly-nha-trang-pr15231934', 1),
+(109, 'CHUYÊN BÁN ĐẤT NỀN DỰ ÁN THẠNH MỸ LỢI, NGAY TTHC QUẬN 2', 'Thỏa thuận', 'Không xác định', '2018-03-19', 'https://batdongsan.com.vn/ban-dat-nen-du-an-phuong-thanh-my-loi-prj-khu-dan-cu-thanh-my-loi/chuyen-thh-ngay-tthc-qu-2-pr15239638', 1),
+(110, 'GEM RIVERSIDE-VỊNH HẠ LONG GIỮA LÒNG SÀI GÒN, SỞ HỮU NGAY CHỈ VỚI 250 TRIỆU. LH: 0901345740', 'Thỏa thuận', '49 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-song-hanh-phuong-an-phu-prj-gem-riverside/vinh-ha-long-giua-long-sai-gon-so-huu-ngay-chi-voi-250-trieu-lh-0901345740-pr15239557', 1),
+(111, 'ĐẤT AN PHÚ AN KHÁNH, QUẬN 2, GÓC 2 MẶT TIỀN, DT 10X20M, SÁT CÔNG VIÊN', '65 triệu/m²', '200 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-do-phap-thuan-phuong-an-phu-prj-an-phu-an-khanh/khh-qu-2-goc-2-mat-tien-dt-10x20m-sat-cong-vien-pr15239544', 1),
+(112, 'CĐT HƯNG THỊNH MỞ BÁN BLOCK MỚI SATURN DỰ ÁN SÀI GÒN RIVERSIDE, CHỈ TỪ 26TR/M2, CK 3-18% 0909855283', '1.7 tỷ', '66 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-dao-tri-phuong-phu-thuan-3-prj-q7-saigon-riverside/cdt-hung-thinh-mo-block-moi-saturn-du-an-sai-gon-chi-tu-26tr-m2-ck-18-090985528-pr15239506', 1),
+(113, 'BÁN CĂN HỘ VINHOMES CENTRAL PARK 1PN 2.3TỶ, 2PN 3.3TỶ, 3PN 4.4TỶ, 4PN GIÁ 7.5TỶ. CALL 0977771919', '2.3 tỷ', 'Không xác định', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-dien-bien-phu-phuong-22-prj-vinhomes-central-park/vinmes-1pn-2-3ty-2pn-3-3ty-3pn-4-4ty-4pn-gia-7-5ty-call-0977771919-pr15239489', 1),
+(114, 'ĐỘC QUYỀN CÁC CĂN ĐẸP NHẤT DỰ ÁN TNR GOLDSEASON 47 NGUYỄN TUÂN, CK LÊN TỚI 15%, LH: 0934.594.366', '1.8 tỷ', '73 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nguyen-tuan-phuong-thanh-xuan-trung-prj-goldseason/doc-quyen-cac-dep-nhat-du-an-tnr-47-ck-len-toi-15-lh-0934-594-366-pr15239307', 1),
+(115, 'CẬP NHẬT 20 CĂN HỘ CHUYỂN NHƯỢNG MỚI NHẤT 19/03/2018 VINHOMES GARDENIA. LH: 0944.666.186', '2.45 tỷ', '85 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-ham-nghi-thi-tran-cau-dien-prj-vinhomes-gardenia/cap-nhat-20-chuyen-nhuong-moi-nhat-19-03-2018-vinmes-lh-0944-666-186-pr14785302', 1),
+(116, 'CHUNG CƯ XUÂN MAI COMPLEX RA MẮT THÊM 6 CĂN TẦNG CỰC ĐẸP, CHỈ 850TR/CĂN 2PN, LIXI 15 TRIỆU ,LS 0%', '850 triệu', '54 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-to-huu-prj-xuan-mai-complex/ra-mat-them-6-tang-c-dep-chi-850tr-2pn-lixi-15-trieu-ls-0-pr15238827', 1),
+(117, 'CHUYÊN BÁN CĂN HỘ MASTERI THẢO ĐIỀN Q2, 1PN - 2.2 TỶ, 2PN - 2.73 TỶ, 3PN - 3.6 TỶ. LH NI 0901381558', '2.6 tỷ', 'Không xác định', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-xa-lo-ha-noi-phuong-thao-dien-prj-masteri-thao-dien/chuyen-q2-1pn-2-2-ty-2pn-2-8-ty-3pn-3-6ty-lh-ni-0901381558-pr14748727', 1),
+(118, 'CHÍNH THỨC MỞ BÁN GIAI ĐOẠN 2 BT AN KHANG VILLA  DƯƠNG NỘI, NAM CƯỜNG CHIẾT KHẤU LÊN ĐẾN 2 TỶ/LÔ', '37 triệu/m²', '182 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-duong-ngo-thi-nham-phuong-la-khe-prj-an-khang-villa/chinh-thuc-mo-giai-doan-2-bt-khu-a-noi-nam-cuong-chiet-khau-len-den-2-ty-lo-pr14421488', 1),
+(119, 'MASTERI BÁN GẤP NHIỀU CĂN HỘ VỚI GIÁ RẺ BẤT NGỜ. LH: 0909 88 68 58 (MS DUONG)', '3.2 tỷ', '72 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-xa-lo-ha-noi-phuong-thao-dien-prj-masteri-thao-dien/gap-nhieu-voi-gia-re-bat-ngo-lh-0909-88-68-58-ms-duong-pr13781267', 1),
+(120, 'BÁN CĂN HỘ TOPAZ CITY, TOPAZ ELITE CHỈ 1,65 TỶ/CĂN (ĐÃ VAT) 2PN, 70M2, THANH TOÁN TRẢ GÓP 0%LS', '1.65 tỷ', '70 m²', '2018-03-19', 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-cao-lo-phuong-4-15-prj-topaz-city/elite-chi-1-65-ty-da-vat-2pn-70m2-thanh-toan-tra-gop-0-ls-pr12026158', 1);
 
 -- --------------------------------------------------------
 
@@ -147,8 +274,7 @@ CREATE TABLE `sites` (
 INSERT INTO `sites` (`site_id`, `site_name`, `site_url`, `site_link_page`) VALUES
 (1, 'batdongsan.com.vn', 'https://batdongsan.com.vn/nha-dat-ban', '/p[page]'),
 (2, 'timmuanhadat.com.vn', 'http://timmuanhadat.com.vn/nha-dat-bat-dong-san/', 'can-ban/trang--[page].html'),
-(3, 'alonhadat.com.vn', 'https://alonhadat.com.vn/nha-dat/', 'can-ban/trang--[page].html'),
-(4, 'phonhadat.net', 'http://phonhadat.net/nha-dat-ban', '/p[page].htm');
+(3, 'alonhadat.com.vn', 'https://alonhadat.com.vn/nha-dat/', 'can-ban/trang--[page].html');
 
 -- --------------------------------------------------------
 
@@ -545,31 +671,37 @@ ALTER TABLE `wards`
 --
 ALTER TABLE `districts`
   MODIFY `district_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 --
 -- AUTO_INCREMENT for table `patterns`
 --
 ALTER TABLE `patterns`
-  MODIFY `pattern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `pattern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `provinces`
 --
 ALTER TABLE `provinces`
   MODIFY `province_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `real_estates`
 --
 ALTER TABLE `real_estates`
-  MODIFY `real_estate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=531;
+  MODIFY `real_estate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
+
 --
 -- AUTO_INCREMENT for table `sites`
 --
 ALTER TABLE `sites`
-  MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `wards`
 --
 ALTER TABLE `wards`
   MODIFY `ward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=323;
+
 --
 -- Constraints for dumped tables
 --
@@ -597,6 +729,7 @@ ALTER TABLE `real_estates`
 --
 ALTER TABLE `wards`
   ADD CONSTRAINT `wards_ibfk_1` FOREIGN KEY (`district_id`) REFERENCES `districts` (`district_id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

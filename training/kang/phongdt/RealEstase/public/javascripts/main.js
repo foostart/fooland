@@ -12,7 +12,7 @@ $(document).ready(function(){
 function collectionData(){
     var pages = $("#pages").val();
     var siteId = $("#selSite option:selected" ).val();
-    $.post("/collectData", {pages: parseInt(pages), siteId: siteId},function(data){
+    $.post("/crawler/collectData", {pages: parseInt(pages), siteId: siteId},function(data){
         console.log(data);
     })
 }

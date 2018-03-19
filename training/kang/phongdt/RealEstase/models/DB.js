@@ -8,7 +8,7 @@ class Database {
             connection = mysql.createConnection({
                 host: "localhost",
                 user: "root",
-                password: "vertrigo",
+                password: "",
                 database: "db_realestate"
             });
             this.connection = connection;
