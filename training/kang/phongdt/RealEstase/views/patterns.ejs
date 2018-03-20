@@ -41,13 +41,11 @@
         <tbody>
           <% for ( var i = 0; i < arrayPattern.length; i++ ){ %>
             <tr>
-              <td>
-                <strong>
-                  <%= arrayPattern[i].pattern_name %>
-                </strong>
+              <td id="patternName<%= arrayPattern[i].pattern_id%>">
+                <strong><%= arrayPattern[i].pattern_name %></strong>
               </td>
               <td>
-                <textarea class="form-control" cols="50" rows="5"> <%= arrayPattern[i].pattern_regex %></textarea>
+                <textarea id="regex<%= arrayPattern[i].pattern_id%>" class="form-control" cols="50" rows="5" readonly> <%= arrayPattern[i].pattern_regex %></textarea>
               </td>
               <td>
                 <strong>
@@ -58,9 +56,9 @@
                 <img src="/images/succses.png" style="width: 50px; height: 50px;">
               </td>
               <td>
-                <a href="#" class="btn btn-warning" data-toggle="tooltip" title="Edit Pattern">
-                  <i class="fa fa-pencil-alt"></i>
-                </a>
+                <button id="btnUpdate<%= arrayPattern[i].pattern_id%>"  class="btnShowEdit btn btn-warning" data-toggle="tooltip" title="Sửa biểu thức này">
+                  <span class="ion-edit"></span>
+                </button>
                 <a href="patterns/delete?id=<%= arrayPattern[i].pattern_id%>" data-toggle="modal" data-target="#confirmModal" title="Delete Pattern"
                   class="btnDeletePattern btn btn-danger">
                   <i class="fa fa-trash-alt"></i>

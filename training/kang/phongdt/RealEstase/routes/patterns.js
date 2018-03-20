@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
     realEstateController.getPatterns(function (resultPatterns) {
         res.render('patterns', {
             arrayPattern: resultPatterns
-          });
+        });
     });
 });
 
@@ -27,19 +27,48 @@ router.post('/delete', function (req, res, next) {
     resultJSON.message = "";
     var patternId = req.body.patternId;
     console.log("delete function: " + patternId);
-    realEstateController.deletePatternById(patternId,function(success){
-        if(!success)
-        {
+    realEstateController.deletePatternById(patternId, function (success) {
+        if (!success) {
             resultJSON.status = "Error";
             resultJSON.message = "Xóa thất bại !!!";
         }
-        else{
+        else {
             resultJSON.message = "Xóa thành công :D";
         }
         res.send(resultJSON);
         // console.log("delete function: " + resultJSON);
         // res.render('success');
-       
     });
+});
+
+//API: POST /patterns/edit
+router.post('/edit', function (req, res, next) {
+    var resultJSON = {};
+    resultJSON.status = "OK";
+    resultJSON.message = "";
+    var patternId = req.body.id;
+    var patternRegex = req.body.regex;
+    var patternName = req.body.name;
+    if (patternId && patternRegex && patternName) {
+        var jsonData = {
+            PatternID: parseInt(patternId),
+            PatternName: patternName,
+            PatternRegex: patternRegex
+        };
+        console.log(jsonData);
+        realEstateController.updatePatternByID(jsonData, function (success) {
+            if (!success) {
+                resultJSON.status = "Error";
+                resultJSON.message = "Cannot update data into database !";
+            }
+            res.send(resultJSON);
+        });
+    }
+    else
+    {
+        resultJSON.status = "Error";
+        resultJSON.message = "Wrong parameters !!!";
+        res.send(resultJSON);
+    }
 });
 module.exports = router;

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var isShowEdit = false;
     $('#selDistrict').on('change', function (e) {
         // alert(this.value);
         getWardsByDistrictID(this.value);
@@ -9,7 +10,6 @@ $(document).ready(function(){
     });
 
     $('.btnDeletePattern').click(function(){
-       
         var hrefContent=  $(this).attr("href");
         var pattern_id =  hrefContent.match(/(\d+)/g);
         console.log(pattern_id);
@@ -23,6 +23,37 @@ $(document).ready(function(){
             });
         });
     });
+
+    $(".btnShowEdit").click(function(){
+        var hrefContent=  $(this).attr("id");
+        var pattern_id =  hrefContent.match(/(\d+)/g);
+        var $textArea = $("#regex" + pattern_id);
+        var $patternName = $("#patternName" + pattern_id);
+        if (isShowEdit == false)
+        {
+            $patternName.find("strong").hide();
+            $patternName.append('<input type="text" id="txtPatternName'+ pattern_id +'" class="form-control" value="'+ $patternName.find("strong").html() +'">');
+            $(this).find("span").attr("class", "ion-archive");
+            $(this).removeClass("btn-warning").addClass("btn-success");
+            $textArea.removeAttr("readonly");
+            $textArea.addClass("editTextArea");
+            $textArea.focus();
+            isShowEdit = true;
+        }
+        else{
+            var newName = $patternName.find("input").val();
+            var newPatternRegex = $textArea.val();
+            editPatternRegex(pattern_id, newName, newPatternRegex);
+            $patternName.find("strong").show();
+            $patternName.find("strong").html(newName);
+            $patternName.find("input").remove();
+            $(this).find("span").attr("class", "ion-edit");
+            $(this).removeClass("btn-success").addClass("btn-warning");
+            $textArea.attr("readonly", true);
+            $textArea.removeClass("editTextArea");
+            isShowEdit = false;
+        }
+    })
 
 });
 
@@ -55,5 +86,11 @@ function getWardsByDistrictID(id){
             $("#selWard").append('<option value="'+ item.ward_id +'">'+ item.ward_name +'</option>');
         });
     });
+}
+
+function editPatternRegex(pattern_id, pattern_name, pattern_regex){
+    $.post("/patterns/edit", {id: parseInt(pattern_id), name: pattern_name, regex: pattern_regex}, function(data){
+        console.log(data);
+    })
 }
 

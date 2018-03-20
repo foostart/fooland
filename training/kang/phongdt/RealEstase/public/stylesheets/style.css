@@ -9,3 +9,7 @@
 #tablePatterns td textarea{
     background: rgb(236, 240, 199);
 }
+
+#tablePatterns td .editTextArea{
+    background-color: #dee2e6;
+}

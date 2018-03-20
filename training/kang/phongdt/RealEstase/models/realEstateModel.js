@@ -104,6 +104,23 @@ class RealEstateModel extends DB
             callback(false);
         })
     }
+
+    /**
+     * Update Pattern
+     * @param {json} data Data is an json array ex: {PatternID:1, PatternName: "", PatternRegex: ""}
+     * @param {function} callback ...;
+     */
+    updatePatternByID(data, callback){
+       var patternID = data.PatternID;
+       var patternName = data.PatternName;
+       var patternRegex = data.PatternRegex;
+        this.executeMySQL("UPDATE patterns SET pattern_regex = ?, pattern_name = ? WHERE patterns.pattern_id = ? ", [[patternRegex], [patternName], [patternID]]).then(function(success){
+            callback(true);
+        }).catch(function(err){
+            console.log(err);
+            callback(false);
+        })
+    };
 }
 
 module.exports = RealEstateModel;
