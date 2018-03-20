@@ -7,7 +7,37 @@ $(document).ready(function(){
     $('#btnSearch').click(function(){
         collectionData();
     });
+
+    $('.btnDeletePattern').click(function(){
+       
+        var hrefContent=  $(this).attr("href");
+        var pattern_id =  hrefContent.match(/(\d+)/g);
+        console.log(pattern_id);
+        $("#confirmModal #confirmModalTitle").html("Warning!!");
+        $("#confirmModal #confirmModalContent").html("Do you want to delete pattern #" + pattern_id);
+        $("#confirmModal #btnConfirm").click(function(e){
+            deletePattern(pattern_id, function(success){
+                $("#confirmModal #btnConfirm").attr('href', '#').attr('data-dismiss', 'modal');
+                sessionStorage.reloadAfterPageLoad = true;
+                location.reload();
+            });
+        });
+    });
+
 });
+
+function loadDataPatterns(){
+    $.post("/patterns/", {},function(data){
+        $table = $("#tablePatterns tbody");
+        $table.empty();
+    });
+}
+
+function deletePattern(pattern_id, callback){
+    $.post("/patterns/delete", {patternId: parseInt(pattern_id)},function(data){
+        callback(data);
+    });
+}
 
 function collectionData(){
     var pages = $("#pages").val();
@@ -24,6 +54,6 @@ function getWardsByDistrictID(id){
         data.forEach(item => {
             $("#selWard").append('<option value="'+ item.ward_id +'">'+ item.ward_name +'</option>');
         });
-    })
+    });
 }
 

@@ -11,21 +11,35 @@ router.get('/', function (req, res, next) {
           });
     });
 });
-router.get('/delete', function (req, res, next) {
+
+router.post('/', function (req, res, next) {
+    var html = "";
+    realEstateController.getPatterns(function (resultPatterns) {
+        resultPatterns.forEach(item => {
+        });
+        res.send(resultPatterns);
+    });
+});
+
+router.post('/delete', function (req, res, next) {
     var resultJSON = {};
     resultJSON.status = "OK";
     resultJSON.message = "";
-    var patternId = req.query.id;
-    console.log(patternId);
+    var patternId = req.body.patternId;
+    console.log("delete function: " + patternId);
     realEstateController.deletePatternById(patternId,function(success){
         if(!success)
         {
             resultJSON.status = "Error";
-            resultJSON.message = "Cannot insert data into database !";
+            resultJSON.message = "Xóa thất bại !!!";
         }
-        // res.send(resultJSON);
-        res.render('success');
-        // alert('Khoa');
+        else{
+            resultJSON.message = "Xóa thành công :D";
+        }
+        res.send(resultJSON);
+        // console.log("delete function: " + resultJSON);
+        // res.render('success');
+       
     });
 });
 module.exports = router;

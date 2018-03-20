@@ -13,7 +13,11 @@
 </head>
     <div class="col-md-4 offset-md-4 mt-5">
         <h4 class="text-center display-4">
-            <div class="alert alert-danger">Xóa thành công!!!</div>
+            <% if(resultJSON.status=='OK'){ %>
+                <div class="alert alert-success">resultJSON.message</div>
+            <% } else {%>
+                <div class="alert alert-danger">resultJSON.message</div>
+            <% } %>
         </h4>
     </div>
 </body>
