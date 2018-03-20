@@ -1,4 +1,45 @@
 <% include header %>
+  <!-- Modal Add -->
+  <div class="modal fade" id="addPatternModal" tabindex="1" role="dialog" aria-labelledby="addPatternModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          Thêm Pattern
+        </div>
+        <div class="modal-body" id="confirmModalContent">
+          <form action="/addnew" method="POST">
+            <div class="form-group">
+              <label for="patternName">Pattern Name: </label>
+              <input type="text" class="form-control" id="pattenName">
+            </div>
+            <div class="form-group">
+              <label for="patternRegex">Pattern Regex: </label>
+              <textarea class="form-control" id="pattenRegex" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="patternRange">Pattern Range: </label>
+              <input type="text" class="form-control" id="pattenRange">
+            </div>
+            <div class="form-group">
+              <label for="siteID">Sites: </label>
+              <select class="form-control" id="selSite">
+                <% for ( var i = 0; i < arrayPattern.length; i++ ){ %>
+                  <option value="<%= arrayPattern[i].site_id%>">
+                    <%= arrayPattern[i].site_name %>
+                  </option>
+                  <%}%>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" id="btnCancel">Hủy</button>
+          <button type="button" class="btn btn-outline-success" data-dismiss="modal" id="btnAddPattern">Thêm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hết modal -->
   <div class="container">
     <h2 class="text-center">Danh sách parttern regular expression</h2>
     <br>
@@ -10,8 +51,8 @@
           </strong>
         </h4>
       </div>
-      <div class="text-right col-md-6">
-        <a href="#" class="btn btn-success" data-toggle="tooltip" title="Add New Pattern">Add Pattern
+      <div class="text-right col-md-6 mb-2  ">
+        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#addPatternModal" title="Add New Pattern">Add Pattern
           <i class="fa fa-plus"></i>
         </a>
       </div>
@@ -42,7 +83,9 @@
           <% for ( var i = 0; i < arrayPattern.length; i++ ){ %>
             <tr>
               <td id="patternName<%= arrayPattern[i].pattern_id%>">
-                <strong><%= arrayPattern[i].pattern_name %></strong>
+                <strong>
+                  <%= arrayPattern[i].pattern_name %>
+                </strong>
               </td>
               <td>
                 <textarea id="regex<%= arrayPattern[i].pattern_id%>" class="form-control" cols="50" rows="5" readonly> <%= arrayPattern[i].pattern_regex %></textarea>
@@ -56,7 +99,7 @@
                 <img src="/images/succses.png" style="width: 50px; height: 50px;">
               </td>
               <td>
-                <button id="btnUpdate<%= arrayPattern[i].pattern_id%>"  class="btnShowEdit btn btn-warning" data-toggle="tooltip" title="Sửa biểu thức này">
+                <button id="btnUpdate<%= arrayPattern[i].pattern_id%>" class="btnShowEdit btn btn-warning" data-toggle="tooltip" title="Sửa biểu thức này">
                   <span class="ion-edit"></span>
                 </button>
                 <a href="patterns/delete?id=<%= arrayPattern[i].pattern_id%>" data-toggle="modal" data-target="#confirmModal" title="Delete Pattern"

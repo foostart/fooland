@@ -38,6 +38,7 @@ router.post('/delete', function (req, res, next) {
         res.send(resultJSON);
         // console.log("delete function: " + resultJSON);
         // res.render('success');
+
     });
 });
 
@@ -64,11 +65,33 @@ router.post('/edit', function (req, res, next) {
             res.send(resultJSON);
         });
     }
-    else
-    {
+    else {
         resultJSON.status = "Error";
         resultJSON.message = "Wrong parameters !!!";
         res.send(resultJSON);
     }
+});
+
+//API:POST /patterns/addnew
+router.post('/addnew', function (req, res, next) {
+    var resultJSON = {};
+    resultJSON.status = "OK";
+    resultJSON.message = "";
+    var values = [];
+    var patternName = req.body.patternName;
+    var patternRegex = req.body.patternRegex;
+    var patternRange = req.body.patternRange;
+    var siteId = req.body.siteId;
+    // console.log();
+    values.push(patternName, patternRegex, patternRange, siteId);
+    console.log(values);
+    realEstateController.insertPattern(values, function (success) {
+        if (!success) {
+            resultJSON.status = "Error";
+            resultJSON.message = "Cannot insert data into database !";
+        }
+        res.send(resultJSON);
+    })
+
 });
 module.exports = router;
