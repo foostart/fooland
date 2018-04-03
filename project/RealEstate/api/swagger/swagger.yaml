@@ -19,8 +19,10 @@ produces:
   - application/json
 paths:
   /GetAllPatterns:
-    x-swagger-router-controller: patterns
+    x-swagger-router-controller: patterns_controller
     get:
+      description: Lấy hết tất cả patterns hiện có trong database
+      operationId: getAllPatterns
       responses:
         "200":
           description: Success
@@ -31,7 +33,7 @@ paths:
           schema:
             $ref: "#/definitions/ErrorResponse"
   /Pattern:
-    x-swagger-router-controller: patterns
+    x-swagger-router-controller: patterns_controller
     post:
       description: Thêm mới 1 pattern
       parameters:
@@ -51,7 +53,7 @@ paths:
             $ref: "#/definitions/ErrorResponse"
   
   /Pattern/{patternID}:
-    x-swagger-router-controller: patterns
+    x-swagger-router-controller: patterns_controller
     put:
       summary: Cập nhật pattern
       description: Cập nhật pattern theo patternID

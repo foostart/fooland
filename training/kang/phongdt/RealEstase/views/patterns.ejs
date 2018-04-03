@@ -82,19 +82,11 @@
         <tbody>
           <% for ( var i = 0; i < arrayPattern.length; i++ ){ %>
             <tr>
-              <td id="patternName<%= arrayPattern[i].pattern_id%>">
-                <strong>
-                  <%= arrayPattern[i].pattern_name %>
-                </strong>
-              </td>
+              <td id="patternName<%= arrayPattern[i].pattern_id%>"><strong><%= arrayPattern[i].pattern_name %></strong></td>
               <td>
                 <textarea id="regex<%= arrayPattern[i].pattern_id%>" class="form-control" cols="50" rows="5" readonly> <%= arrayPattern[i].pattern_regex %></textarea>
               </td>
-              <td>
-                <strong>
-                  <%= arrayPattern[i].site_name %>
-                </strong>
-              </td>
+              <td><strong><%= arrayPattern[i].site_name %></strong></td>
               <td>
                 <img src="/images/succses.png" style="width: 50px; height: 50px;">
               </td>
