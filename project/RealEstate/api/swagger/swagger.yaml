@@ -51,6 +51,33 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /Pattern/FindBy:
+    x-swagger-router-controller: patterns_controller
+    get:
+      summary: Tìm pattern theo tiêu chí
+      description: Tìm pattern theo từng tiêu chí.
+      parameters:
+        - name: "typeQuery"
+          type: "number"
+          in: "query"
+          required: true
+          description: "Find By: 0 - patternID,\r\n 1 - SiteID,\r\n 2 - PatternCategoryID,\r\n 3 - SiteID and PatternCategoryID"
+        - name: "values"
+          in: "query"
+          required: true
+          type: "array"
+          items:
+            type: "string"
+          description: "Mảng giá trị truyền vào phụ thuộc vào typeQuery"
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/PatternsResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /Pattern/{patternID}:
     x-swagger-router-controller: patterns_controller
     get:
