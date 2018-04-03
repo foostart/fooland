@@ -91,6 +91,22 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+    get:
+      description: Lấy ra pattern theo patternID
+      parameters:
+        - name: patternID
+          type: number
+          in: path
+          required: true
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/Patterns"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
     
   /swagger:
     x-swagger-pipe: swagger_raw
