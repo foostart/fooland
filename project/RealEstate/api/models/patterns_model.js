@@ -13,7 +13,7 @@ class PatternsModel extends DB
      */
     add(data, callback){
         this.executeMySQL("INSERT INTO patterns(pattern_id, pattern_category_id, pattern_regex, site_id) VALUES (?)", [data]).then(function(success){
-            callback(true);
+            callback(success);
         }).catch(function(err){
             console.log(err);
             callback(false);
@@ -27,7 +27,7 @@ class PatternsModel extends DB
      */
     delete(patternId, callback){
         this.executeMySQL("DELETE FROM patterns WHERE pattern_id =? ", [patternId]).then(function(success){
-            callback(true);
+            callback(success);
         }).catch(function(err){
             console.log(err);
             callback(false);
@@ -45,7 +45,7 @@ class PatternsModel extends DB
         var patternRegex = data.PatternRegex;
         var patternCategoryID = data.PatternCategoryID;
          this.executeMySQL("UPDATE patterns SET pattern_category_id = ?, pattern_regex = ?, site_id = ? WHERE patterns.pattern_id = ? ", [[patternCategoryID], [patternRegex], [siteID], [patternId]]).then(function(success){
-             callback(true);
+            callback(success);
          }).catch(function(err){
              console.log(err);
              callback(false);

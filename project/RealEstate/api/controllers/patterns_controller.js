@@ -8,7 +8,8 @@ const patternModel = new PatternModelClass();
 // export cac hàm có trong controller
 module.exports = {
     getAllPatterns: getAllPatterns,
-    updatePatterns: updatePatterns
+    updatePatterns: updatePatterns,
+    deletePatterns: deletePatterns
 };
 
 // Controller lấy hết tất cả patterns có trong database
@@ -49,11 +50,11 @@ function updatePatterns(req, res, next)
         data: [],
         description: "Update success"
     };
-    var patternID = req.swagger.params.patternId.value;
-    var patternCategoryID = req.swagger.params.patterCategoryId.value;
-    var patternRegex = req.swagger.params.patternRegex.value;
-    var siteID = req.swagger.params.siteId.value;
-
+    var patternID = req.swagger.params["patternID"].value;
+    var patternCategoryID = req.swagger.params.payload.value.patternCategoryId;
+    var patternRegex = req.swagger.params.payload.value.patternRegex;
+    var siteID = req.swagger.params.payload.value.siteId;
+    
     if (patternCategoryID && patternRegex && siteID) {
         var datas = {
             PatternCategoryID: parseInt(patternCategoryID),
@@ -62,18 +63,32 @@ function updatePatterns(req, res, next)
         };
 
         patternModel.update(patternID, datas, function (success) {
+            console.log("Check: " + success);
             if (!success) {
                 results.success = 0;
                 results.description = "Cannot update data into database !";
-                res.json(results);
             }
             res.json(results);
         });
     }
 } 
 
-//Controller delete pattern
-function deletePattern(req, res, next)
-{
+//DELETE /Patterns/{PatternID} operationId
+function deletePatterns(req, res, next) {
+    var relsutsJson = {
+        success: 1,
+        description: "Delete successful"
+    };
 
+    var patternID = req.swagger.params.patternID;
+    
+    patternModel.delete(patternID, function(success){
+        if(!success)
+        {
+            relsutsJson.success = 0,
+            relsutsJson.description = "Delete failed."
+        }
+        res.json(relsutsJson);
+    });
 }
+

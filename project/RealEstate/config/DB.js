@@ -3,8 +3,7 @@ var connection = null;
 
 class Database {
     constructor() {
-        if (connection == null)
-        {
+        if (connection == null) {
             connection = mysql.createConnection({
                 host: "localhost",
                 user: "root",
@@ -19,33 +18,36 @@ class Database {
     }
 
     queryMySQL(sql, args = "") {
-        return new Promise( ( resolve, reject ) => {
-            this.connection.query( sql, args, ( err, rows ) => {
-                if ( err )
-                    return reject( err );
-                resolve( rows );
-            } );
-        } );
+        return new Promise((resolve, reject) => {
+            this.connection.query(sql, args, (err, rows) => {
+                if (err)
+                    return reject(err);
+                resolve(rows);
+            });
+        });
     }
 
     executeMySQL(sql, args = "") {
-        return new Promise( ( resolve, reject ) => {
-            this.connection.query( sql, args, ( err, rows ) => {
-                if ( err )
+        return new Promise((resolve, reject) => {
+            this.connection.query(sql, args, (err, rows) => {
+                if (err)
                     return reject(err);
-                resolve(true);
-            } );
-        } );
+                if (rows.affectedRows > 0)
+                    resolve(true);
+                else
+                    resolve(false);
+            });
+        });
     }
 
     closeMySQL() {
-        return new Promise( ( resolve, reject ) => {
-            this.connection.end( err => {
-                if ( err )
-                    return reject( err );
+        return new Promise((resolve, reject) => {
+            this.connection.end(err => {
+                if (err)
+                    return reject(err);
                 resolve();
-            } );
-        } );
+            });
+        });
     }
 }
 
