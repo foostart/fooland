@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2018 at 02:34 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 5.6.34
+-- Generation Time: Apr 04, 2018 at 04:50 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,8 +31,8 @@ USE `db_realestate`;
 --
 
 DROP TABLE IF EXISTS `datas`;
-CREATE TABLE IF NOT EXISTS `datas` (
-  `data_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `datas` (
+  `data_id` int(11) NOT NULL,
   `data_url` text COLLATE utf8mb4_unicode_ci,
   `data_title` text COLLATE utf8mb4_unicode_ci,
   `data_price` text COLLATE utf8mb4_unicode_ci,
@@ -47,8 +47,7 @@ CREATE TABLE IF NOT EXISTS `datas` (
   `data_contact_phone` text COLLATE utf8mb4_unicode_ci,
   `data_contact_email` text COLLATE utf8mb4_unicode_ci,
   `data_contact_address` text COLLATE utf8mb4_unicode_ci,
-  `status` int(11) NOT NULL,
-  PRIMARY KEY (`data_id`)
+  `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -58,13 +57,12 @@ CREATE TABLE IF NOT EXISTS `datas` (
 --
 
 DROP TABLE IF EXISTS `patterns`;
-CREATE TABLE IF NOT EXISTS `patterns` (
-  `pattern_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `patterns` (
+  `pattern_id` int(11) NOT NULL,
   `pattern_category_id` int(11) DEFAULT NULL,
   `pattern_regex` text COLLATE utf8mb4_unicode_ci,
-  `site_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`pattern_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `site_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `patterns`
@@ -91,11 +89,10 @@ INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `s
 --
 
 DROP TABLE IF EXISTS `pattern_categories`;
-CREATE TABLE IF NOT EXISTS `pattern_categories` (
-  `patt_category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `patt_category_name` text COLLATE utf8mb4_unicode_ci,
-  PRIMARY KEY (`patt_category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `pattern_categories` (
+  `patt_category_id` int(11) NOT NULL,
+  `patt_category_name` text COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pattern_categories`
@@ -124,12 +121,11 @@ INSERT INTO `pattern_categories` (`patt_category_id`, `patt_category_name`) VALU
 --
 
 DROP TABLE IF EXISTS `sites`;
-CREATE TABLE IF NOT EXISTS `sites` (
-  `site_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `sites` (
+  `site_id` int(11) NOT NULL,
   `site_name` text COLLATE utf8mb4_unicode_ci,
-  `site_url` text COLLATE utf8mb4_unicode_ci,
-  PRIMARY KEY (`site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `site_url` text COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `sites`
@@ -141,18 +137,92 @@ INSERT INTO `sites` (`site_id`, `site_name`, `site_url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `userlogin`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `userlogin`;
-CREATE TABLE IF NOT EXISTS `userlogin` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
   `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_password` char(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_password` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_token` text COLLATE utf8mb4_unicode_ci,
-  `user_status` int(11) DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
+  `user_status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_name`, `user_password`, `user_token`, `user_status`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', NULL, 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `datas`
+--
+ALTER TABLE `datas`
+  ADD PRIMARY KEY (`data_id`);
+
+--
+-- Indexes for table `patterns`
+--
+ALTER TABLE `patterns`
+  ADD PRIMARY KEY (`pattern_id`);
+
+--
+-- Indexes for table `pattern_categories`
+--
+ALTER TABLE `pattern_categories`
+  ADD PRIMARY KEY (`patt_category_id`);
+
+--
+-- Indexes for table `sites`
+--
+ALTER TABLE `sites`
+  ADD PRIMARY KEY (`site_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `datas`
+--
+ALTER TABLE `datas`
+  MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `patterns`
+--
+ALTER TABLE `patterns`
+  MODIFY `pattern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `pattern_categories`
+--
+ALTER TABLE `pattern_categories`
+  MODIFY `patt_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `sites`
+--
+ALTER TABLE `sites`
+  MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
