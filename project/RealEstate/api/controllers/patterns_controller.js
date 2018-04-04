@@ -80,7 +80,7 @@ function deletePatterns(req, res, next) {
         description: "Delete successful"
     };
 
-    var patternID = req.swagger.params.patternID;
+    var patternID = req.swagger.params["patternID"].value;
     
     patternModel.delete(patternID, function(success){
         if(!success)
@@ -91,4 +91,5 @@ function deletePatterns(req, res, next) {
         res.json(relsutsJson);
     });
 }
+
 
