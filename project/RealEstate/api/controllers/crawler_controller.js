@@ -9,3 +9,15 @@ const crawlerModel = new CrawlerModelClass();
 module.exports = {
 };
 
+function getURLBySiteID(req, res, next){
+    var results = {
+        success: 1,
+        data: [],
+        description: "Get success"
+    };
+    var siteID = req.swagger.params["siteID"].value;
+    var pageLimit = req.swagger.params["pageLimit"].value;
+    if (!pageLimit) pageLimit = 50;
+    
+}
+

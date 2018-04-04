@@ -54,18 +54,21 @@ class CrawlerModel extends DB {
         }
     }
 
+
+
     /**
      * Insert data URL into 'datas' table
-     * @param data: Data is an array values ex: ['data_url', 'status', 'data_url_md5']
+     * @param data: Data is an array values ex: ['data_url', 'status', 'data_url_md5', 'site_id']
      * @param callback: callback true or false
      */
     addURL(data, callback) {
-        this.executeMySQL("INSERT INTO data(data_url, status, data_url_md5) VALUES (?)", [data]).then(function (success) {
+        this.executeMySQL("INSERT INTO data(data_url, status, data_url_md5, site_id) VALUES (?)", [data]).then(function (success) {
             callback(success);
         }).catch(function (err) {
             callback(false);
         })
     }
+
 }
 
 /**
@@ -132,20 +135,20 @@ function getMD5(input) {
     return crypto.createHash('md5').update(input).digest("hex");
 }
 
-var test = new CrawlerModel();
-test.collect({
-    LinkPage: "https://batdongsan.com.vn/nha-dat-ban",
-    TypePage: "/p{number}",
-    PatternURL: "<div class=\'p-title\'>[\\w\\W]*?<a href=\'(.*?)\'[\\w\\W]*?<\\/a>",
-    PageLimit: 2
-}, function (rows) {
-    rows.data.forEach(item => {
-        test.addURL([item.URL, 1, getMD5(item.URL)], function(success){
-            if (success){
-                console.log(item);
-            }
-        });
-    });
-});
+// var test = new CrawlerModel();
+// test.collect({
+//     LinkPage: "https://batdongsan.com.vn/nha-dat-ban",
+//     TypePage: "/p{number}",
+//     PatternURL: "<div class=\'p-title\'>[\\w\\W]*?<a href=\'(.*?)\'[\\w\\W]*?<\\/a>",
+//     PageLimit: 5
+// }, function (rows) {
+//     rows.data.forEach(item => {
+//         test.addURL([item.URL, 1, getMD5(item.URL), 1], function(success){
+//             if (success){
+//                 console.log(item);
+//             }
+//         });
+//     });
+// });
 
 module.exports = CrawlerModel;
