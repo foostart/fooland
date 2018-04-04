@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 03, 2018 at 03:54 PM
+-- Generation Time: Apr 04, 2018 at 02:34 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 5.6.34
 
-SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -22,17 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_realestate`
 --
+CREATE DATABASE IF NOT EXISTS `db_realestate` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `db_realestate`;
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `datas`
 --
--- Creation: Apr 03, 2018 at 08:30 AM
---
 
-CREATE TABLE `datas` (
-  `data_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `datas`;
+CREATE TABLE IF NOT EXISTS `datas` (
+  `data_id` int(11) NOT NULL AUTO_INCREMENT,
   `data_url` text COLLATE utf8mb4_unicode_ci,
   `data_title` text COLLATE utf8mb4_unicode_ci,
   `data_price` text COLLATE utf8mb4_unicode_ci,
@@ -47,38 +47,31 @@ CREATE TABLE `datas` (
   `data_contact_phone` text COLLATE utf8mb4_unicode_ci,
   `data_contact_email` text COLLATE utf8mb4_unicode_ci,
   `data_contact_address` text COLLATE utf8mb4_unicode_ci,
-  `status` int(11) NOT NULL
+  `status` int(11) NOT NULL,
+  PRIMARY KEY (`data_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- RELATIONSHIPS FOR TABLE `datas`:
---
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `patterns`
 --
--- Creation: Apr 03, 2018 at 08:49 AM
---
 
-CREATE TABLE `patterns` (
-  `pattern_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `patterns`;
+CREATE TABLE IF NOT EXISTS `patterns` (
+  `pattern_id` int(11) NOT NULL AUTO_INCREMENT,
   `pattern_category_id` int(11) DEFAULT NULL,
   `pattern_regex` text COLLATE utf8mb4_unicode_ci,
-  `site_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- RELATIONSHIPS FOR TABLE `patterns`:
---
+  `site_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pattern_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `patterns`
 --
 
 INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `site_id`) VALUES
-(1, 1, '<div class=\\\'p-title\\\'>[\\w\\W]*?<a.*href=\"(.*?)\">', 1),
+(1, 1, '<div class=\'p-title\'>[\\w\\W]*?<a href=\'(.*?)\'[\\w\\W]*?<\\/a>', 1),
 (2, 2, '<h1 itemprop=\"name\">\\s*(.*?)\\s*<\\/h1>', 1),
 (3, 3, 'Giá:<\\/b>\\s*<strong>\\s*(.*?)&nbsp;\\s*<\\/strong>', 1),
 (4, 4, 'Diện tích:<\\/b>\\s*<strong>\\s*(.*?)<\\/strong>', 1),
@@ -96,17 +89,13 @@ INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `s
 --
 -- Table structure for table `pattern_categories`
 --
--- Creation: Apr 03, 2018 at 08:20 AM
---
 
-CREATE TABLE `pattern_categories` (
-  `patt_category_id` int(11) NOT NULL,
-  `patt_category_name` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- RELATIONSHIPS FOR TABLE `pattern_categories`:
---
+DROP TABLE IF EXISTS `pattern_categories`;
+CREATE TABLE IF NOT EXISTS `pattern_categories` (
+  `patt_category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `patt_category_name` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`patt_category_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pattern_categories`
@@ -133,108 +122,37 @@ INSERT INTO `pattern_categories` (`patt_category_id`, `patt_category_name`) VALU
 --
 -- Table structure for table `sites`
 --
--- Creation: Apr 03, 2018 at 07:30 AM
---
 
-CREATE TABLE `sites` (
-  `site_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `sites`;
+CREATE TABLE IF NOT EXISTS `sites` (
+  `site_id` int(11) NOT NULL AUTO_INCREMENT,
   `site_name` text COLLATE utf8mb4_unicode_ci,
-  `site_url` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- RELATIONSHIPS FOR TABLE `sites`:
---
+  `site_url` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`site_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `sites`
 --
 
 INSERT INTO `sites` (`site_id`, `site_name`, `site_url`) VALUES
-(1, 'batdongsan', '{\r\n	\"site_name\" : \"batdongsan\",\r\n	\"site_url\" : \"https://batdongsan.com.vn\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/nha-dat-cho-thue\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Dự án\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/du-an-bat-dong-san\"\r\n		}\r\n	]\r\n}');
+(1, 'batdongsan', '{\r\n	\"site_name\" : \"batdongsan\",\r\n	\"site_url\" : \"https://batdongsan.com.vn\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/nha-dat-cho-thue\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Dự án\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/du-an-bat-dong-san\"\r\n		}\r\n	],\r\n	\"type_page_url\": \"/p{number}\"\r\n}');
+
+-- --------------------------------------------------------
 
 --
--- Indexes for dumped tables
+-- Table structure for table `userlogin`
 --
 
---
--- Indexes for table `datas`
---
-ALTER TABLE `datas`
-  ADD PRIMARY KEY (`data_id`);
-
---
--- Indexes for table `patterns`
---
-ALTER TABLE `patterns`
-  ADD PRIMARY KEY (`pattern_id`);
-
---
--- Indexes for table `pattern_categories`
---
-ALTER TABLE `pattern_categories`
-  ADD PRIMARY KEY (`patt_category_id`);
-
---
--- Indexes for table `sites`
---
-ALTER TABLE `sites`
-  ADD PRIMARY KEY (`site_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `datas`
---
-ALTER TABLE `datas`
-  MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `patterns`
---
-ALTER TABLE `patterns`
-  MODIFY `pattern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT for table `pattern_categories`
---
-ALTER TABLE `pattern_categories`
-  MODIFY `patt_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `sites`
---
-ALTER TABLE `sites`
-  MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
-
---
--- Metadata
---
-USE `phpmyadmin`;
-
---
--- Metadata for table datas
---
-
---
--- Metadata for table patterns
---
-
---
--- Metadata for table pattern_categories
---
-
---
--- Metadata for table sites
---
-
---
--- Metadata for database db_realestate
---
-SET FOREIGN_KEY_CHECKS=1;
+DROP TABLE IF EXISTS `userlogin`;
+CREATE TABLE IF NOT EXISTS `userlogin` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_password` char(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_token` text COLLATE utf8mb4_unicode_ci,
+  `user_status` int(11) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
