@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const config = {
   entry: ['./src/index.js'],
@@ -11,18 +12,12 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader",
-            options: {
-              modules: true
-            }
-          }
-        ]
+        test: /\.css(\.js)?$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader",
+          publicPath: "/build/"
+        })
       },
       {
         test: /\.js$/,
@@ -39,6 +34,13 @@ const config = {
       }
     ]
   },
+  plugins: [
+    new ExtractTextPlugin({
+      filename: "bundle.css",
+      disable: false,
+      allChunks: true
+    })
+  ],
   resolveLoader: {
     moduleExtensions: ["-loader"]
   }

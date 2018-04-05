@@ -1,6 +1,6 @@
 {
   "name": "hello-world",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Test render server",
   "scripts": {
     "start": "webpack --mode production && babel-node server.js"
@@ -23,6 +23,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "json-loader": "^0.5.7",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.12",

@@ -7,18 +7,7 @@ import App from './src/components/App';
 import Transmit from 'react-transmit';
 import bodyParser from 'body-parser';
 
-/*function handleRender(req, res) {
-  Transmit.renderToString(App).then(({ reactString, reactData }) => {
-    fs.readFile('./src/index.html', 'utf8', function (err, data) {
-      if (err) throw err;
 
-      const document = data.replace(/<div id="app"><\/div>/, `<div id="app"><section role="main" class="react-container"><div>${reactString}</div></section></div>`);
-      const output = Transmit.injectIntoMarkup(document, reactData, ['/build/bundle.js']);
-
-      res.send(document);
-    });
-  });
-}*/
 function handleRender(req, res) {
   const reactHtml = ReactDOMServer.renderToString(<App />);
   const htmlTemplate = `<!DOCTYPE html>
@@ -32,6 +21,7 @@ function handleRender(req, res) {
   <body>
       <div id="app">${reactHtml}</div>
       <script src="../build/bundle.js"></script>
+      <link rel="stylesheet" href="../build/bundle.css">
   </body>
 </html>`;
   res.send(htmlTemplate);
