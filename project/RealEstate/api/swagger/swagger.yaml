@@ -275,6 +275,7 @@ paths:
     x-swagger-router-controller: crawler_controller
     get:
       description: "Lấy URL bài viết của tất cả các link có trong siteID"
+      operationId: getURLBySiteID
       parameters:
         - name: siteID
           in: query
@@ -377,14 +378,8 @@ definitions:
       data:
         type: array
         items:
-          type: object
-          properties:
-            pageNumber:
-              type: number
-              description: "Số trang hiện tại của URL"
-            URL:
-              type: string
-              description: "URL được lấy về"
+          type: string
+          description: "Mảng URL được lấy về"
       description:
         type: string
         description: a short comment 

@@ -31,7 +31,7 @@ class CrawlerModel extends DB {
             Page: 1
         };
 
-
+        var isBreak = false;
         for (var page = 1; page <= numberOfPages; page++) {
             optionsGetPage.Page = page;
             optionsGetPage.Url = options.LinkPage + options.TypePage.toString().replace('{number}', page.toString()); // assign page number to json option
@@ -45,12 +45,22 @@ class CrawlerModel extends DB {
                     });
 
                 }
+
+                // if (results.status == "Error" && results.message.indexOf("Pattern") != -1 ){
+                //     json.status = "Error";
+                //     json.message = results.message;
+                //     callback(json);
+                //     isBreak = true;
+                // }
+
                 count++;
                 if (count >= numberOfPages) {
                     json.total = countSuccess;
                     callback(json);
                 }
             });
+
+            if (isBreak) break;
         }
     }
 
@@ -100,13 +110,7 @@ function getInfoOnPage(options, callback) {
             var match = pattern.exec(body);
             if (match != null) {
                 while (match != null) {
-                    // console.log("-----------------------********************------------------");
-                    // console.log(match);
-                    var jsonData = {
-                        "URL": getURL(urlRequest) + match[1],
-                        "Page": pageNumber
-                    };
-                    results.push(jsonData);
+                    results.push(getURL(urlRequest) + match[1]);
                     match = pattern.exec(body);
                 }
                 resultJSON.status = 'OK';
