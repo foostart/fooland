@@ -8,11 +8,11 @@ class PatternsModel extends DB
 
     /**
      * Insert data into 'patterns' table
-     * @param data: Data is an array values ex: ['pattern_id', 'pattern_category_id', 'pattern_regex', 'site_id']
+     * @param data: Data is an array values ex: ['pattern_category_id', 'pattern_regex', 'site_id']
      * @param callback: callback true or false
      */
     add(data, callback){
-        this.executeMySQL("INSERT INTO patterns(pattern_id, pattern_category_id, pattern_regex, site_id) VALUES (?)", [data]).then(function(success){
+        this.executeMySQL("INSERT INTO patterns(pattern_category_id, pattern_regex, site_id) VALUES (?)", [data]).then(function(success){
             callback(success);
         }).catch(function(err){
             console.log(err);
@@ -55,21 +55,21 @@ class PatternsModel extends DB
     /**
      * Find data at 'patterns' table
      * @param typeQuery : Type Query:
-     *                      0: find by PatternID (default)
-     *                      1: find by SiteID
-     *                      2: find by PatternCategoryID
-     *                      3: find by SiteID and PatternCategoryID
+     *                      1: find by PatternID (default)
+     *                      2: find by SiteID
+     *                      3: find by PatternCategoryID
+     *                      4: find by SiteID and PatternCategoryID
      * @param valueQuery: Value is an array of input value by type query, 
      *                    Example find pattern by type as '3': [[1],[2]]
      * @param callback: callback return pattern rows
      */
     find(typeQuery, valueQuery, callback){
         var querySQL = "pattern_id = ?"; // as default find by ID
-        if (typeQuery == 1){
+        if (typeQuery == 2){
             querySQL = "site_id = ?"; // find by SiteID
-        }else if (typeQuery == 2){
-            querySQL = "pattern_category_id = ?";
         }else if (typeQuery == 3){
+            querySQL = "pattern_category_id = ?";
+        }else if (typeQuery == 4){
             querySQL = "site_id = ? AND pattern_category_id = ?"
         }
         var sql = "SELECT * FROM patterns INNER JOIN pattern_categories ON pattern_categories.patt_category_id=patterns.pattern_category_id WHERE " + querySQL;

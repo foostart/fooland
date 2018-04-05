@@ -8,11 +8,11 @@ class SitesModel extends DB
 
     /**
      * Insert data into 'sites' table
-     * @param data: Data is an array values ex: ['pattern_id', 'pattern_category_id', 'pattern_regex', 'site_id']
+     * @param data: Data is an array values ex: ['site_name', 'site_url']
      * @param callback: callback true or false
      */
     add(data, callback){
-        this.executeMySQL("INSERT INTO patterns(pattern_id, pattern_category_id, pattern_regex, site_id) VALUES (?)", [data]).then(function(success){
+        this.executeMySQL("INSERT INTO sites(site_name, site_url) VALUES (?)", [data]).then(function(success){
             callback(success);
         }).catch(function(err){
             console.log(err);
@@ -22,11 +22,11 @@ class SitesModel extends DB
     
     /**
      * Delete data from 'sites' table
-     * @param patternId: Pattern ID to delete
+     * @param siteID: Site ID to delete
      * @param callback: callback true or false
      */
-    delete(patternId, callback){
-        this.executeMySQL("DELETE FROM patterns WHERE pattern_id =? ", [patternId]).then(function(success){
+    delete(siteID, callback){
+        this.executeMySQL("DELETE FROM sites WHERE site_id =? ", [siteID]).then(function(success){
             callback(success);
         }).catch(function(err){
             console.log(err);
@@ -36,15 +36,15 @@ class SitesModel extends DB
 
     /**
      * Update data at 'sites' table
-     * @param patternId: Pattern ID to update
-     * @param data: data is an json array ex: {PatternCategoryID:1, PatternRegex: "", SiteID: 1}
+     * @param siteID: Site ID to update
+     * @param data: data is an json array ex: {SiteName:"", SiteUrl: ""}
      * @param callback: callback true or false
      */
-    update(patternId, data, callback){
+    update(siteID, data, callback){
         var siteID = data.SiteID;
-        var patternRegex = data.PatternRegex;
-        var patternCategoryID = data.PatternCategoryID;
-         this.executeMySQL("UPDATE patterns SET pattern_category_id = ?, pattern_regex = ?, site_id = ? WHERE patterns.pattern_id = ? ", [[patternCategoryID], [patternRegex], [siteID], [patternId]]).then(function(success){
+        var siteName = data.SiteName;
+        var siteUrl = data.SiteUrl;
+         this.executeMySQL("UPDATE sites SET site_name = ?, site_url = ? WHERE sites.site_id = ? ", [[siteName], [siteUrl],[siteID]]).then(function(success){
             callback(success);
          }).catch(function(err){
              console.log(err);
@@ -68,11 +68,11 @@ class SitesModel extends DB
     }
 
     /**
-     * Find all data at 'patterns' table
+     * Find all data at 'sites' table
      * @param callback: callback return all patterns
      */
     findAll(callback){
-        this.queryMySQL("SELECT * FROM patterns INNER JOIN pattern_categories ON pattern_categories.patt_category_id=patterns.pattern_category_id").then(function(rows){
+        this.queryMySQL("SELECT * FROM sites").then(function(rows){
             callback(rows);
         }).catch(function(err){
             console.log(err);
@@ -81,4 +81,4 @@ class SitesModel extends DB
     }
 }
 
-module.exports = PatternsModel;
+module.exports = SitesModel;
