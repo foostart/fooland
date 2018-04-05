@@ -53,27 +53,13 @@ class SitesModel extends DB
     }
 
     /**
-     * Find data at 'patterns' table
-     * @param typeQuery : Type Query:
-     *                      0: find by PatternID (default)
-     *                      1: find by SiteID
-     *                      2: find by PatternCategoryID
-     *                      3: find by SiteID and PatternCategoryID
-     * @param valueQuery: Value is an array of input value by type query, 
-     *                    Example find pattern by type as '3': [[1],[2]]
-     * @param callback: callback return pattern rows
+     * Find data at 'sites' table
+     * @param siteID : site need to find
+     * @param callback: callback return sites rows
      */
-    find(typeQuery, valueQuery, callback){
-        var querySQL = "pattern_id = ?"; // as default find by ID
-        if (typeQuery == 1){
-            querySQL = "site_id = ?"; // find by SiteID
-        }else if (typeQuery == 2){
-            querySQL = "pattern_category_id = ?";
-        }else if (typeQuery == 3){
-            querySQL = "site_id = ? AND pattern_category_id = ?"
-        }
-        var sql = "SELECT * FROM patterns INNER JOIN pattern_categories ON pattern_categories.patt_category_id=patterns.pattern_category_id WHERE " + querySQL;
-        this.queryMySQL(sql, valueQuery).then(function(rows){
+    findById(siteID, callback){
+        var sql = "SELECT * FROM sites WHERE site_id = ?" ;
+        this.queryMySQL(sql, [[siteID]]).then(function(rows){
             callback(rows);
         }).catch(function(err){
             console.log(err);
