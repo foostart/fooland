@@ -41,7 +41,6 @@ class SitesModel extends DB
      * @param callback: callback true or false
      */
     update(siteID, data, callback){
-        var siteID = data.SiteID;
         var siteName = data.SiteName;
         var siteUrl = data.SiteUrl;
          this.executeMySQL("UPDATE sites SET site_name = ?, site_url = ? WHERE sites.site_id = ? ", [[siteName], [siteUrl],[siteID]]).then(function(success){
@@ -52,20 +51,20 @@ class SitesModel extends DB
          })
     }
 
-    /**
-     * Find data at 'sites' table
-     * @param siteID : site need to find
-     * @param callback: callback return sites rows
-     */
-    findById(siteID, callback){
-        var sql = "SELECT * FROM sites WHERE site_id = ?" ;
-        this.queryMySQL(sql, [[siteID]]).then(function(rows){
-            callback(rows);
-        }).catch(function(err){
-            console.log(err);
-            callback(-1);
-        })
-    }
+    // /**
+    //  * Find data at 'sites' table
+    //  * @param siteID : site need to find
+    //  * @param callback: callback return sites rows
+    //  */
+    // findById(siteID, callback){
+    //     var sql = "SELECT * FROM sites WHERE site_id = ?" ;
+    //     this.queryMySQL(sql, [[siteID]]).then(function(rows){
+    //         callback(rows);
+    //     }).catch(function(err){
+    //         console.log(err);
+    //         callback(-1);
+    //     })
+    // }
 
     /**
      * Find all data at 'sites' table
