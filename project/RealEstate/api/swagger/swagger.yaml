@@ -399,8 +399,8 @@ paths:
             $ref: "#/definitions/ErrorResponse"
             
   #Pattern_Categories API
-  /Patt_Category:
-    x-swagger-router-controller: patterncategory_controller
+  /PattCategory:
+    x-swagger-router-controller: patternCategory_controller
     get:
       summary: Lấy hết tất cả pattern_categories
       description: Lấy tất cả pattern_categories có trong database
@@ -408,20 +408,81 @@ paths:
         "200":
           description: Success
           schema:
-            $ref: "#/definitions/PatternCatergories"
+            $ref: "#/definitions/PatternCatergoriesResponse"
         default:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
     post:
-      summary: Thêm site mới
-      description: Thêm mới 1 site
+      operationId: insertPatterCategory
+      summary: Thêm pattern_categories mới
+      description: Thêm mới 1 pattern_categories
       parameters:
+        - name: patterCategory
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/PatternCatergoriesResponse"
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GeneralResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /PattCategory/{pattCategoryID}:
+    x-swagger-router-controller: patternCategory_controller
+    get:
+      operationId: getPatternCategoryByID
+      summary: Lấy ra patternCategory theo patternCategoryID
+      description: Lấy ra patternCategory theo patternCategoryID
+      parameters:
+        - name: pattCategoryID
+          type: number
+          in: path
+          required: true
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/PatternCatergoriesResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    put:
+      summary: Cập nhật patternCategory
+      description: Cập nhật patternCategory theo patternCategoryID
+      parameters:
+        - name: pattCategoryID
+          in: path
+          required: true
+          type: number
         - name: payload
           in: body
           required: true
           schema:
-            $ref: "#/definitions/PatternCatergories"
+            $ref: "#/definitions/PatternCatergoriesRequire"
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GeneralResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    delete:
+      operationId: deletePatternCategory
+      summary: Xóa Pattern Category
+      description: Xóa Pattern Category theo patternCategoryID
+      parameters:
+        - name: pattCategoryID
+          in: path
+          required: true
+          type: number
       responses:
         "200":
           description: Success
@@ -590,15 +651,20 @@ definitions:
         type: string
         description: password của người dùng
   
-  PatternCatergories:
+  PatternCatergoriesResponse:
     type: object
     properties:
-      patthCategoryID:
-        type: number
-        description: id của người dùng
       patthCategoryName:
         type: string
-        description: tên của người dùng
+        description: Tên của pattern category
+  
+  PatternCatergoriesRequire:
+    required:
+      - patternCategoryName
+    properties:
+      patternCategoryName:
+        type: string
+        description: Tên của pattern category
 
     
   

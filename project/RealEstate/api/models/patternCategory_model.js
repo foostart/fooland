@@ -23,15 +23,43 @@ class PatternCategoryModel extends DB
     
     /**
      * Delete data from 'pattern_categories' table
-     * @param pattCategoryID: pattern_category_id to delete
+     * @param pattCategoryID: pattCategoryID to delete
      * @param callback: callback true or false
      */
     delete(pattCategoryID, callback){
         this.executeMySQL("DELETE FROM pattern_categories WHERE patt_category_id =? ", [pattCategoryID]).then(function(success){
+            //console.log(pattCategoryID);
             callback(success);
         }).catch(function(err){
             console.log(err);
             callback(false);
+        })
+    }
+
+     /**
+     * Find data at 'pattern_categories' table
+     * @param pattCategoryID : pattCategoryID need to find
+     * @param callback: callback return sites rows
+     */
+    findById(pattCategoryID, callback){
+        this.queryMySQL("SELECT * FROM pattern_categories WHERE patt_category_id = ?", [pattCategoryID]).then(function(rows){
+            callback(rows);
+        }).catch(function(err){
+            console.log(err);
+            callback(-1);
+        })
+    }
+
+    /**
+     * Find all data at 'pattern_categories' table
+     * @param callback: callback return all users
+     */
+    findAll(callback){
+        this.queryMySQL("SELECT * FROM pattern_categories").then(function(rows){
+            callback(rows);
+        }).catch(function(err){
+            console.log(err);
+            callback(-1);
         })
     }
 }
