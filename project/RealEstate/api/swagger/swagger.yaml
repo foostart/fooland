@@ -237,7 +237,6 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"        
-            
   
   # Crawler API
   /Crawler/CollectDetailURL:
@@ -323,7 +322,7 @@ paths:
           in: "body"
           required: true
           schema:
-            $ref: "#/definitions/Users"
+            $ref: "#/definitions/UsersRequire"
       responses:
         "200":
           description: Success
@@ -333,7 +332,6 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
-            
   /User/{userID}:
     x-swagger-router-controller: user_controller
     get:
@@ -367,7 +365,7 @@ paths:
           in: body
           required: true
           schema:
-            $ref: "#/definitions/Users"
+            $ref: "#/definitions/UsersRequire"
       responses:
         "200":
           description: Success
@@ -395,6 +393,41 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+            
+  #Pattern_Categories API
+  /Patt_Category:
+    x-swagger-router-controller: patterncategory_controller
+    get:
+      summary: Lấy hết tất cả pattern_categories
+      description: Lấy tất cả pattern_categories có trong database
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/PatternCatergories"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    post:
+      summary: Thêm site mới
+      description: Thêm mới 1 site
+      parameters:
+        - name: payload
+          in: body
+          required: true
+          schema:
+            $ref: "#/definitions/PatternCatergories"
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GeneralResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  
             
   /swagger:
     x-swagger-pipe: swagger_raw
@@ -540,7 +573,7 @@ definitions:
         type: string
         description: Mô tả tinh trạng của user
         
-  Users:
+  UsersRequire:
     required:
       - userName
       - userPassword
@@ -552,7 +585,17 @@ definitions:
       userPassword:
         type: string
         description: password của người dùng
-    
+  
+  PatternCatergories:
+    type: object
+    properties:
+      patthCategoryID:
+        type: number
+        description: id của người dùng
+      patthCategoryName:
+        type: string
+        description: tên của người dùng
+
     
   
       
