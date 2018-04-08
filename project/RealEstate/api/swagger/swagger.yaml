@@ -397,6 +397,27 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /User/FindToken/{userID}:
+    x-swagger-router-controller: user_controller
+    get:
+      operationId: getToken
+      summary: Lấy ra token của user theo userID
+      description: Lấy ra token của user theo userID
+      parameters:
+        - name: userID
+          in: path
+          required: true
+          type: number
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/UserResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        
             
   #Pattern_Categories API
   /PattCategory:
@@ -494,7 +515,6 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
-  
             
   /swagger:
     x-swagger-pipe: swagger_raw
@@ -636,6 +656,9 @@ definitions:
       userPassword:
         type: string
         description: password của người dùng
+      userToken:
+        type: string
+        description: token của người dùng
       userStatus:
         type: string
         description: Mô tả tinh trạng của user

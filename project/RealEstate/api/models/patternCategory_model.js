@@ -39,7 +39,7 @@ class PatternCategoryModel extends DB
      /**
      * Find data at 'pattern_categories' table
      * @param pattCategoryID : pattCategoryID need to find
-     * @param callback: callback return sites rows
+     * @param callback: callback return pattern_categories rows
      */
     findById(pattCategoryID, callback){
         this.queryMySQL("SELECT * FROM pattern_categories WHERE patt_category_id = ?", [pattCategoryID]).then(function(rows){

@@ -54,8 +54,8 @@ class UserModel extends DB
     
     /**
      * Find data at 'users' table
-     * @param userID : site need to find
-     * @param callback: callback return sites rows
+     * @param userID : user need to find
+     * @param callback: callback return user rows
      */
     findById(userID, callback){
         var sql = "SELECT * FROM users WHERE user_id = ?" ;
@@ -73,6 +73,21 @@ class UserModel extends DB
      */
     findAll(callback){
         this.queryMySQL("SELECT * FROM users").then(function(rows){
+            callback(rows);
+        }).catch(function(err){
+            console.log(err);
+            callback(-1);
+        })
+    }
+
+    /**
+     * 
+     * @param {*} userID : user need to find
+     * @param {*} callback : callback return token user
+     */
+   findToken(userID, callback){
+        var sql = "SELECT user_token FROM users WHERE user_id = ?" ;
+        this.queryMySQL(sql, [[userID]]).then(function(rows){
             callback(rows);
         }).catch(function(err){
             console.log(err);

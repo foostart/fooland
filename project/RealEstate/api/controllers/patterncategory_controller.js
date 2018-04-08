@@ -129,7 +129,6 @@ function updatePatternCategory(req, res, next)
             results.success = 0;
             results.description = "Cannot update pattern category into database !";
         }
-        //console.log(datas);
         res.json(results);
     });
 } 

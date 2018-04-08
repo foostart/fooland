@@ -11,7 +11,8 @@ module.exports = {
     getAllUsers: getAllUsers,
     insertUser: insertUser,
     updateUser: updateUser,
-    deleteUser: deleteUser
+    deleteUser: deleteUser,
+    getToken: getToken
 };
 
 // Controller lấy user theo userID có trong database
@@ -147,6 +148,37 @@ function deleteUser(req, res, next) {
         res.json(relsutsJson);
     });
 }
+
+//Lấy ra token của từng user theo userID
+function getToken(req, res, next)
+{
+    var results = {
+        success: 1,
+        data: [],
+        description: "Get token user by user id successful."
+    }
+
+    var userID = req.swagger.params["userID"].value;
+    UserModel.findToken(userID, function(rows){
+        if (rows != -1) {
+            rows.forEach(row => {
+                var user = {
+                    userID: row.user_id,
+                    userName: row.user_name,
+                    userToken: row.user_token 
+                };
+
+                results.data.push(user);
+            });
+            res.json(results);
+        } else {
+            results.success = 0;
+            results.description = "Cannot get token user by user id.";
+            res.json(results);
+        }
+    });
+ }
+
 
 
 
