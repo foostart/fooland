@@ -400,7 +400,7 @@ paths:
   /User/FindToken/{userID}:
     x-swagger-router-controller: user_controller
     get:
-      operationId: getToken
+      operationId: getTokenByUserID
       summary: Lấy ra token của user theo userID
       description: Lấy ra token của user theo userID
       parameters:

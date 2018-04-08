@@ -12,7 +12,7 @@ module.exports = {
     insertUser: insertUser,
     updateUser: updateUser,
     deleteUser: deleteUser,
-    getToken: getToken
+    getTokenByUserID: getTokenByUserID
 };
 
 // Controller lấy user theo userID có trong database
@@ -150,7 +150,7 @@ function deleteUser(req, res, next) {
 }
 
 //Lấy ra token của từng user theo userID
-function getToken(req, res, next)
+function getTokenByUserID(req, res, next)
 {
     var results = {
         success: 1,
