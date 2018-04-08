@@ -62,6 +62,21 @@ class PatternCategoryModel extends DB
             callback(-1);
         })
     }
+
+        /**
+     * Update data at 'pattern_categories' table
+     * @param pattCategoryID: pattern_category_id to update
+     * @param pattCategoryName: pattern_category_name need to update
+     * @param callback: callback true or false
+     */
+    update(pattCategoryID, pattCategoryName, callback){
+         this.executeMySQL("UPDATE pattern_categories SET patt_category_name = ? WHERE pattern_categories.patt_category_id = ? ", [[pattCategoryName], [pattCategoryID]]).then(function(success){
+            callback(success);
+         }).catch(function(err){
+             console.log(err);
+             callback(false);
+         })
+    }
 }
 
 

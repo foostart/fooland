@@ -402,6 +402,7 @@ paths:
   /PattCategory:
     x-swagger-router-controller: patternCategory_controller
     get:
+      operationId: getAllPatternCategory
       summary: Lấy hết tất cả pattern_categories
       description: Lấy tất cả pattern_categories có trong database
       responses:
@@ -453,6 +454,7 @@ paths:
           schema:
             $ref: "#/definitions/ErrorResponse"
     put:
+      operationId: updatePatternCategory
       summary: Cập nhật patternCategory
       description: Cập nhật patternCategory theo patternCategoryID
       parameters:

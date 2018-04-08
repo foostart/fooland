@@ -9,7 +9,9 @@ const PatternCategoryModel = new PatternCategoryModelClass();
 module.exports = {
     deletePatternCategory: deletePatternCategory,
     insertPatterCategory: insertPatterCategory,
-    getPatternCategoryByID: getPatternCategoryByID
+    getPatternCategoryByID: getPatternCategoryByID,
+    getAllPatternCategory: getAllPatternCategory,
+    updatePatternCategory: updatePatternCategory
 };
 
 // Lấy pattern category theo patterncategoryID có trong database
@@ -39,6 +41,32 @@ function getPatternCategoryByID(req, res, next) {
                 res.json(results);
             }
         });
+}
+
+// Lấy hết tất cả pattern category với pattern_category_id va pattern_category_name có trong database
+function getAllPatternCategory(req, res, next) {
+    var results = {
+        success: 1,
+        data: [],
+        description: "Find all pattern category successful."
+    };
+
+    PatternCategoryModel.findAll(function (rows) {
+        if (rows != -1) {
+            rows.forEach(row => {
+                var patt_category = {
+                    patternCategoryID: row.patt_category_id,
+                    userName: row.patt_category_name  
+                };
+                results.data.push(patt_category);
+            });
+            res.json(results);
+        } else {
+            results.success = 0;
+            results.description = "Error";
+            res.json(results);
+        }
+    });
 }
 
 
@@ -82,6 +110,29 @@ function deletePatternCategory(req, res, next) {
         res.json(relsutsJson);
     });
 }
+
+
+//Controller update pattern category
+function updatePatternCategory(req, res, next)
+{
+    var patternCategoryID = req.swagger.params["pattCategoryID"].value;
+    var patternCategoryName = req.swagger.params.payload.value.patternCategoryName;
+    
+    var results = {
+        success: 1,
+        data: [],
+        description: "Update pattern category into database successful."
+    };
+
+    PatternCategoryModel.update(patternCategoryID, patternCategoryName, function (success) {
+        if (!success) {
+            results.success = 0;
+            results.description = "Cannot update pattern category into database !";
+        }
+        //console.log(datas);
+        res.json(results);
+    });
+} 
 
 
 
