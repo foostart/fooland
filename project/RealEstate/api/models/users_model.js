@@ -1,5 +1,4 @@
 const DB = require("../../config/DB");
-const request = require("request");
 
 class UserModel extends DB
 {
@@ -82,13 +81,31 @@ class UserModel extends DB
 
     /**
      * 
-     * @param {*} userID : user need to find
+     * @param {*} username : username
+     * @param {*} password : password
      * @param {*} callback : callback return token user
      */
-   findToken(userID, callback){
-        var sql = "SELECT user_token FROM users WHERE user_id = ?" ;
-        this.queryMySQL(sql, [[userID]]).then(function(rows){
-            callback(rows);
+   findToken(username, password, callback){
+       console.log(password);
+        var sql = "SELECT * FROM users WHERE user_password = ? AND user_name = ?" ;
+        var db = this;
+        db.queryMySQL(sql, [[password],[username]]).then(function(rows){
+            if(rows != -1)
+            {
+                var userID = rows[0].user_id;
+                console.log(userID);
+                var token = genarateToken();
+                db.executeMySQL("UPDATE users SET user_token = ? WHERE user_id = ?", [[token], [userID]]).then(function(success){
+                    if (success){
+                        callback(token);
+                    }else{
+                        callback(-1);
+                    }
+                }).catch(function(err){
+                    console.log(err);
+                    callback(-1);
+                });
+            }
         }).catch(function(err){
             console.log(err);
             callback(-1);
@@ -97,5 +114,14 @@ class UserModel extends DB
     
 }
 
+function genarateToken(length = 32){
+    var str = "1234567890wertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+    var result = "";
+    for(var i = 0; i < length; i++){
+        var index = Math.floor((Math.random() * (str.length - 1)) + 0);
+        result += str[index];
+    }
+    return result;
+}
 
 module.exports = UserModel;

@@ -4,10 +4,12 @@
 // Khai báo pattern model 
 const SiteModelClass = require("../models/sites_model");
 const siteModel = new SiteModelClass();
+const authModelClass = require("../models/auth_model");
+const AuthModel = new authModelClass();
 
 // export cac hàm có trong controller
 module.exports = {
-    getAllSite: getAllSite,
+    getAllSites: getAllSite,
     insertSite: insertSite,
     updateSite: updateSite,
     deleteSite: deleteSite
@@ -15,59 +17,79 @@ module.exports = {
 
 // Controller lấy hết tất cả patterns có trong database
 function getAllSite(req, res, next) {
+    var Token = req.swagger.params['Token'].value;
+
     var results = {
         success: 1,
         sites: [],
         description: "OK"
     };
 
-    siteModel.findAll(function (rows) {
-        if (rows != -1) {
-            rows.forEach(row => {
-                var site = {
-                    siteId: row.site_id,
-                    siteName: row.site_name,
-                    siteURL: row.site_url
-                };
+    AuthModel.checkToken(Token, function (isAuth) {
+        if (isAuth) {
+            siteModel.findAll(function (rows) {
+                if (rows != -1) {
+                    rows.forEach(row => {
+                        var site = {
+                            siteId: row.site_id,
+                            siteName: row.site_name,
+                            siteURL: row.site_url
+                        };
 
-                results.sites.push(site);
+                        results.sites.push(site);
+                    });
+                    res.json(results);
+                } else {
+                    results.success = 0;
+                    results.description = "Error";
+                    res.json(results);
+                }
             });
-            res.json(results);
         } else {
             results.success = 0;
-            results.description = "Error";
+            results.description = "Token wrong !!!";
             res.json(results);
         }
     });
 }
 
 //Controller update site
-function updateSite(req, res, next)
-{
+function updateSite(req, res, next) {
     var results = {
         success: 1,
         data: [],
         description: "Update success"
     };
+
+    var Token = req.swagger.params['Token'].value;
     var siteID = req.swagger.params["siteID"].value;
     var siteName = req.swagger.params.payload.value.siteName;
     var siteURL = req.swagger.params.payload.value.siteURL;
-    if (siteName && siteURL) {
-        var datas = {
-            SiteName: siteName,
-            SiteUrl: JSON.stringify(siteURL)
-        };
 
-        siteModel.update(siteID, datas, function (success) {
-            console.log("Check: " + success);
-            if (!success) {
-                results.success = 0;
-                results.description = "Cannot update data into database !";
+    AuthModel.checkToken(Token, function (isAuth) {
+        if (isAuth) {
+            if (siteName && siteURL) {
+                var datas = {
+                    SiteName: siteName,
+                    SiteUrl: JSON.stringify(siteURL)
+                };
+
+                siteModel.update(siteID, datas, function (success) {
+                    console.log("Check: " + success);
+                    if (!success) {
+                        results.success = 0;
+                        results.description = "Cannot update data into database !";
+                    }
+                    res.json(results);
+                });
             }
+        } else {
+            results.success = 0;
+            results.description = "Token wrong !!!";
             res.json(results);
-        });
-    }
-} 
+        }
+    });
+}
 
 //DELETE /Patterns/{PatternID} operationId
 function deleteSite(req, res, next) {
@@ -76,44 +98,62 @@ function deleteSite(req, res, next) {
         description: "Delete successful"
     };
 
+    var Token = req.swagger.params['Token'].value;
     var siteID = req.swagger.params["siteID"].value;
-    
-    siteModel.delete(siteID, function(success){
-        if(!success)
-        {
-            relsutsJson.success = 0,
-            relsutsJson.description = "Delete failed."
+
+    AuthModel.checkToken(Token, function (isAuth) {
+        if (isAuth) {
+            siteModel.delete(siteID, function (success) {
+                if (!success) {
+                    relsutsJson.success = 0,
+                        relsutsJson.description = "Delete failed."
+                }
+                res.json(relsutsJson);
+            });
+        } else {
+            results.success = 0;
+            results.description = "Token wrong !!!";
+            res.json(results);
         }
-        res.json(relsutsJson);
     });
 }
 
 //Insert patterns
-function insertSite(req, res, next)
-{
+function insertSite(req, res, next) {
     var results = {
         success: 1,
         data: [],
         description: "Insert success"
     };
+
+    var Token = req.swagger.params['Token'].value;
     var siteName = req.swagger.params.payload.value.siteName;
     var siteURL = req.swagger.params.payload.value.siteURL;
-    if (siteName && siteURL) {
-        var datas = [
-            siteName,
-            JSON.stringify(siteURL)
-        ];
 
-        siteModel.add(datas, function (success) {
-            console.log("Check: " + success);
-            if (!success) {
-                results.success = 0;
-                results.description = "Cannot insert data into database !";
+    AuthModel.checkToken(Token, function (isAuth) {
+        if (isAuth) {
+            if (siteName && siteURL) {
+                var datas = [
+                    siteName,
+                    JSON.stringify(siteURL)
+                ];
+
+                siteModel.add(datas, function (success) {
+                    console.log("Check: " + success);
+                    if (!success) {
+                        results.success = 0;
+                        results.description = "Cannot insert data into database !";
+                    }
+                    res.json(results);
+                });
             }
+        } else {
+            results.success = 0;
+            results.description = "Token wrong !!!";
             res.json(results);
-        });
-    }
-} 
+        }
+    });
+}
 
 
 
