@@ -14,6 +14,7 @@ class CrawlerModel extends DB {
      * @param {function} callback callback return json: {status:"", message:"", total: 0, data:[]}
      */
     collect(options, callback) {
+        var db = this;
         var count = 0;
         var countSuccess = 0;
         var json = {}; // json return
@@ -40,18 +41,13 @@ class CrawlerModel extends DB {
                 // console.log(results);
                 if (results.status == "OK") {
                     results.data.forEach(item => {
+                        db.executeMySQL("INSERT INTO data(data_url, status, data_url_md5, site_id) VALUES (?)", [[item, 1, getMD5(item), 1]]).then(function (success) {
+                            // callback(success);
+                        }).catch(function (err) { });
                         countSuccess++;
                         json.data.push(item);
                     });
-
                 }
-
-                // if (results.status == "Error" && results.message.indexOf("Pattern") != -1 ){
-                //     json.status = "Error";
-                //     json.message = results.message;
-                //     callback(json);
-                //     isBreak = true;
-                // }
 
                 count++;
                 if (count >= numberOfPages) {
@@ -64,8 +60,6 @@ class CrawlerModel extends DB {
         }
     }
 
-
-
     /**
      * Insert data URL into 'datas' table
      * @param data: Data is an array values ex: ['data_url', 'status', 'data_url_md5', 'site_id']
@@ -75,8 +69,9 @@ class CrawlerModel extends DB {
         this.executeMySQL("INSERT INTO data(data_url, status, data_url_md5, site_id) VALUES (?)", [data]).then(function (success) {
             callback(success);
         }).catch(function (err) {
+            // console.log(err);
             callback(false);
-        })
+        });
     }
 
 }
@@ -146,13 +141,7 @@ function getMD5(input) {
 //     PatternURL: "<div class=\'p-title\'>[\\w\\W]*?<a href=\'(.*?)\'[\\w\\W]*?<\\/a>",
 //     PageLimit: 5
 // }, function (rows) {
-//     rows.data.forEach(item => {
-//         test.addURL([item.URL, 1, getMD5(item.URL), 1], function(success){
-//             if (success){
-//                 console.log(item);
-//             }
-//         });
-//     });
+//     console.log(rows);
 // });
 
 module.exports = CrawlerModel;

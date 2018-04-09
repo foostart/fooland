@@ -29,7 +29,7 @@ function getURLBySiteID(req, res, next) {
     var pattern_category_id = 1;
     var countCollected = 0;
 
-    patternModel.find(3, [[siteID], [pattern_category_id]], function (pattern_rows) { // find pattern with siteID and pattern_category_id
+    patternModel.find(4, [[siteID], [pattern_category_id]], function (pattern_rows) { // find pattern with siteID and pattern_category_id
         if (pattern_rows != -1) {
             siteModel.findById(siteID, function (site_rows) { // Find all site URL with siteID
                 if (site_rows != -1) {
@@ -50,8 +50,8 @@ function getURLBySiteID(req, res, next) {
                                         }
                                         crawlerModel.collect(jsOptions, function (data_crawler) {
                                             if (data_crawler.status == "OK"){
-                                                console.log("Data ----------------------");
-                                                console.log(data_crawler);
+                                                // console.log("Data ----------------------");
+                                                // console.log(data_crawler);
                                                 data_crawler.data.forEach(item =>{
                                                     results.data.push(item);
                                                 });

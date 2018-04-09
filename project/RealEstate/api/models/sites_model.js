@@ -51,20 +51,20 @@ class SitesModel extends DB
          })
     }
 
-    // /**
-    //  * Find data at 'sites' table
-    //  * @param siteID : site need to find
-    //  * @param callback: callback return sites rows
-    //  */
-    // findById(siteID, callback){
-    //     var sql = "SELECT * FROM sites WHERE site_id = ?" ;
-    //     this.queryMySQL(sql, [[siteID]]).then(function(rows){
-    //         callback(rows);
-    //     }).catch(function(err){
-    //         console.log(err);
-    //         callback(-1);
-    //     })
-    // }
+    /**
+     * Find data at 'sites' table
+     * @param siteID : site need to find
+     * @param callback: callback return sites rows
+     */
+    findById(siteID, callback){
+        var sql = "SELECT * FROM sites WHERE site_id = ?" ;
+        this.queryMySQL(sql, [[siteID]]).then(function(rows){
+            callback(rows);
+        }).catch(function(err){
+            console.log(err);
+            callback(-1);
+        })
+    }
 
     /**
      * Find all data at 'sites' table
