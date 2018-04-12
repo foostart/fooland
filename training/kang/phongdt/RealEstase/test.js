@@ -6,7 +6,6 @@ var options = {
     url: 'https://batdongsan.com.vn/nha-dat-ban-tp-hcm',
     headers: {
       'Accept' : 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-    //   'Accept-Encoding' : 'gzip, deflate',
       'Accept-Language': 'en-US,en;q=0.9',
       'Connection' : 'keep-alive',
       'Host': 'batdongsan.com.vn',
@@ -16,10 +15,6 @@ var options = {
 
 request.get(options, function(err, res, body){
     var html = body.toString();
-    // console.log(html);
-    // fs.open('text.txt','w',function(err){
-    //     fs.writeFileSync('text.txt',html);
-    // })
     var pattern = /<div class='p-title'>[\s\t|<h3>]+<a href=.*?title=.*?>[\s]+(.*?)[\s]+<\/a>(.*?\s)*<span class="product-price">(.*)<\/span>/g;
     var ketqua = pattern.exec(html); 
     while(ketqua !== null)

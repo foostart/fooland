@@ -1,0 +1,200 @@
+{"Title":"NHÀ GẦN CHỢ HƯNG LONG VÀ NHÀ GẦN CẦU ÔNG THÌN (QUỐC LỘ 50), SỔ HỒNG RIÊNG, GIÁ 440 TR - 720TR/CĂN","Price":"440 triệu","Area":"60 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"BÁN KHU DU LỊCH TRƯỜNG HUY TẠI VĨNH LONG","Price":"3.8 triệu/m²","Area":"Không xác định","Location":"Vĩnh Long, Vĩnh Long","Date":"13/03/2018"}
+{"Title":"TRIỂN KHAI 5 BLOCK ĐẸP NHẤT DỰ ÁN KĐT MỚI VỊNH THUẬN PHƯỚC - GIAI ĐOẠN 1. HOTLINE : 0988.066.090","Price":"30 triệu/m²","Area":"120 m²","Location":"Sơn Trà, Đà Nẵng","Date":"13/03/2018"}
+{"Title":"HOT! Q7 SAIGON RIVERSIDE - DUY NHẤT 5 CĂN SUẤT NỘI BỘ 2 MT 1PN 2PN 1TY2 - 0901303222","Price":"1.2 tỷ","Area":"53 m²","Location":"Quận 7, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CHỦ NHÀ EM CẦN BÁN CĂN OFICETEL GIÁ 1.43TỶ, 2PN 2.9 TỶ ĐÃ BAO GỒM PHÍ, KHÁCH CẦN ALO EM 0938826595","Price":"1.43 tỷ","Area":"74 m²","Location":"Tân Bình, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"BÁN BIỆT THỰ CIPUTRA TÂY HỒ, PHONG THỦY VƯỢNG KHÍ, ĐỦ CÁC HƯỚNG, SỔ ĐỎ CC, GIÁ TỐT NHẤT. 0943205668","Price":"Thỏa thuận","Area":"126 m²","Location":"Tây Hồ, Hà Nội","Date":"13/03/2018"}
+{"Title":"DỰ ÁN TECCO TOWN BÌNH TÂN, CHỈ 810TR/CĂN, TRỰC TIẾP CHỦ ĐẦU TƯ TECCO, CHO VAY 70%. LH: 0937 246 799","Price":"790 triệu","Area":"54 m²","Location":"Bình Tân, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"OFFICETEL A3-6 44M GIÁ 1,470 TỶ - TẦNG 27- 2P NGỦ GIÁ 2,204 TỶ -97M TẦNG 20 GIÁ 3,250 TỶ 0946746009","Price":"1.47 tỷ","Area":"44 m²","Location":"Quận 2, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CHÍNH CHỦ CẦN BÁN GẤP CĂN 2PN, VINHOMES, ĐẦY ĐỦ NỘI THẤT, GIÁ 3.32TỶ LH 0938533299","Price":"3.32 tỷ","Area":"Không xác định","Location":"Bình Thạnh, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"NHẬN MUA BÁN, KÝ GỬI KDC AN HẠ RIVERSIDE (TÂN ĐÔ ECO VILLAGE) GIÁ TỐT NHẤT THỊ TRƯỜNG: 0938.571.436","Price":"1.2 tỷ","Area":"130 m²","Location":"Đức Hòa, Long An","Date":"13/03/2018"}
+{"Title":"CẦN BÁN CĂN HỘ PETROLAND QUẬN 2, GIÁ 1.38 TỶ. LIÊN HỆ: 0908527126","Price":"1.38 tỷ","Area":"81 m²","Location":"Quận 2, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CELADON CITY - CHỌN NHÀ HÔM NAY, QUÀ TẶNG LIỀN TAY, MỞ BÁN THÁP ĐẸP NHẤT EMERALD 18/03 0932174330","Price":"Thỏa thuận","Area":"Không xác định","Location":"Tân Phú, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"BÁN CĂN HỘ CHUNG CƯ QUẬN 8 WEST INTELA CHỈ TỪ 1.19 TỶ/ 2 PN + 2WC , 64M2, CHÍNH THỨC NHẬN GIỮ CHỖ","Price":"20 triệu/m²","Area":"Không xác định","Location":"Quận 8, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CHUYỂN NHƯỢNG NHIỀU CĂN GIÁ THẤP NHẤT TẠI RIO VISTA, NHÀ PHỐ, BIỆT THỰ Q. 9 - 0906 816 653","Price":"3.45 tỷ","Area":"75 m²","Location":"Quận 9, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"PHÁT MÃI ĐẤT Ở ĐÔ THỊ - MẶT TIỀN CHỢ KỀ TRƯỜNG HỌC KHU CÔNG NGHIỆP HÀN - ĐÀI LOAN ĐẤT THỔ CƯ 100%","Price":"3.5 triệu/m²","Area":"360 m²","Location":"Thủ Dầu Một, Bình Dương","Date":"13/03/2018"}
+{"Title":"10 CĂN CUỐI CÙNG DỰ ÁN BÌNH THẠNH - LIÊN HỆ CHỦ ĐẦU TƯ : 0941 779 779","Price":"2.3 tỷ","Area":"70 m²","Location":"Bình Thạnh, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CHUYÊN CHUYỂN NHƯỢNG MASTERI THẢO ĐIỀN Q. 2, 1PN- 2PN- 3PN GIÁ TỪ 2.3 TỶ - 3.8 TỶ. HƯNG 01228796826","Price":"2.8 tỷ","Area":"65 m²","Location":"Quận 2, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CẦN BÁN 69 LÔ ĐẤT THỔ CƯ 5X25M, SHR, 6,8TR/M2, LIỀN KỀ CỤM KCN VÀ THÀNH PHỐ TRI THỨC KV TÂY TP HCM","Price":"6.8 triệu/m²","Area":"125 m²","Location":"Đức Hòa, Long An","Date":"13/03/2018"}
+{"Title":"ĐẤT PHÚ QUỐC HOT NHẤT ĐẶC KHU KINH TẾ-CƠ HỘI SINH LỜI GẤP ĐÔI THỊ TRẤN DƯƠNG ĐÔNG CHỈ TỪ 3.9TR/M2","Price":"3.9 triệu/m²","Area":"108 m²","Location":"Phú Quốc, Kiên Giang","Date":"13/03/2018"}
+{"Title":"CHỈ CÒN 30 NỀN SUẤT NỘI BỘ VỊ TRÍ CỰC ĐẸP, MT ĐINH ĐỨC THIỆN 6.5 TRIỆU/M2 - CK 5% BÌNH CHÁNH. SHR","Price":"6.5 triệu/m²","Area":"100 m²","Location":"Cần Đước, Long An","Date":"13/03/2018"}
+{"Title":"CHÍNH THỨC NHẬN GIỮ CHỖ CĂN ĐẸP NHẤT BLOCK E – CELADON CK 12% DUY NHẤT NGÀY 18/3. LH: 0903.325.685","Price":"2.6 tỷ","Area":"71 m²","Location":"Tân Phú, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"NHẬN ĐẶT CHỔ DỰ ÁN ECO CHARM FLC - ĐÀ NẴNG LH 0912917003","Price":"Thỏa thuận","Area":"Không xác định","Location":"Liên Chiểu, Đà Nẵng","Date":"13/03/2018"}
+{"Title":"MỞ BÁN 50 LÔ DUY NHẤT NGAY TT Q2, CHỈ 599TR/NỀN NGAY TTHC QUẬN 2 MT 30M THỔ CƯ LIÊN HỆ 0904367737","Price":"Thỏa thuận","Area":"100 m²","Location":"Quận 2, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"BÁN CẮT LỖ CĂN HỘ 3PN - PARK HILL","Price":"4.39 tỷ","Area":"113.8 m²","Location":"Hai Bà Trưng, Hà Nội","Date":"13/03/2018"}
+{"Title":"CHÍNH CHỦ CẦN BÁN GẤP 3 LÔ ĐẤT ĐẸP LIỀN KỀ NGAY MẶT TIỀN ĐƯỜNG NHỰA GỐC TRE, CHỈ 500 NGHÌN/M2","Price":"500 nghìn/m²","Area":"13043 m²","Location":"Cần Giờ, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"120 TR SỞ HỮU VĨNH VIỄN CĂN HỘ 3 MẶT VIEW SÔNG LIỀN KỀ BẾN XE MIỀN ĐÔNG MỚI LH 0909 393 095","Price":"Thỏa thuận","Area":"33 m²","Location":"Biên Hòa, Đồng Nai","Date":"13/03/2018"}
+{"Title":"ĐẶC BIỆT SỰ KIỆN MỞ BÁN ĐẦU XUÂN 18/3 TNR GOLDSEASON 47 NGUYỄN TUÂN LÌ XÌ 22 TRIỆU: 0976.19.70.70","Price":"Thỏa thuận","Area":"59 m²","Location":"Thanh Xuân, Hà Nội","Date":"13/03/2018"}
+{"Title":"68 NỀN ĐẤT SỔ ĐỎ ĐƯỜNG TRƯỜNG LƯU Q9, XD TỰ DO, ĐIỆN NƯỚC ÂM, NGAY CHỢ LONG TRƯỜNG, CK 6%, LS 8%","Price":"1.85 tỷ","Area":"85 m²","Location":"Quận 9, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"HOT HOT HOT! NHÀ MỚI XÂY, GIÁ 1 TỶ 850TR, NGAY NGÃ TƯ HƯƠNG LỘ 2, MÃ LÒ, DTSD 108M2 CHÍNH CHỦ","Price":"1.85 tỷ","Area":"108 m²","Location":"Bình Tân, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"BÁN 5000M2 ĐẤT SỔ ĐỎ CHÍNH CHỦ TẠI VÂN HÒA, BA VÌ, HÀ NỘI","Price":"Thỏa thuận","Area":"5000 m²","Location":"Ba Vì, Hà Nội","Date":"13/03/2018"}
+{"Title":"HOT, CẮT LỖ SÂU CĂN HỘ TỪ 1 - 4 PHÒNG NGỦ TẠI VINHOMES GARDENIA, MỸ ĐÌNH, HÀ NỘI","Price":"1.8 tỷ","Area":"57 m²","Location":"Nam Từ Liêm, Hà Nội","Date":"13/03/2018"}
+{"Title":"BÁN ĐẤT MẶT TIỀN ĐƯỜNG SONG HÀNH - AN PHÚ ĐÔNG, SHR TỪNG NỀN GIÁ CHỈ TỪ 35TR/M2","Price":"35 triệu/m²","Area":"90 m²","Location":"Quận 12, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"MỞ BÁN CĂN HỘ CAO CẤP HILTON - BẠCH ĐẰNG ĐÀ NẴNG - MẶT TIỀN VIEW SÔNG HÀN.HOTLINE. 0902.237.257","Price":"60 triệu/m²","Area":"50 m²","Location":"Hải Châu, Đà Nẵng","Date":"13/03/2018"}
+{"Title":"GIA ĐÌNH MÌNH DO CHUYỂN CÔNG TÁC CẦN BÁN NHÀ MỚI TỰ XÂY BÌNH CHUẨN, THUẬN AN. LH:0989016779","Price":"675 triệu","Area":"70 m²","Location":"Thuận An, Bình Dương","Date":"13/03/2018"}
+{"Title":"BÌNH GIÃ RESIDENT, GẦN LOTTE MART THANH TOÁN 50% NHẬN NHÀ Ở NGAY, LH CHỦ ĐẦU TƯ HODECO 0913 800 101","Price":"Thỏa thuận","Area":"Không xác định","Location":"Vũng Tàu, Bà Rịa Vũng Tàu","Date":"13/03/2018"}
+{"Title":"ĐẤT VÀNG THỔ CƯ (CHÍNH CHỦ) 2 MẶT TIỀN NGAY NGÃ TƯ AN PHÚ ĐÔNG 03, THƯƠNG LƯỢNG TRỰC TIẾP","Price":"3.15 tỷ","Area":"96 m²","Location":"Quận 12, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"ĐẤT MẶT TIỀN AN PHÚ ĐÔNG 03 ĐÃ CÓ SỔ HỒNG RIÊNG, QUẬN 12. GIÁ CHỈ TỪ 3 TỶ 150 TRIỆU","Price":"3.15 tỷ","Area":"90 m²","Location":"Quận 12, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CH XANH CẠNH PHÚ MỸ HƯNG PHÁP LÝ 100% CHỈ TỪ 1,1TỶ/2PN, TẶNG VÀNG, GIẢM 300 NGHÌN/M2 LH 0938375076","Price":"1.1 tỷ","Area":"70 m²","Location":"Nhà Bè, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"BÁN ĐẤT 2 MẶT TIỀN NGÃ 4 AN PHÚ ĐÔNG 3, KẾ BÊN KHU VILLA AN PHÚ ĐÔNG, QUẬN 12, CHỈ 35TR/M2","Price":"35 triệu/m²","Area":"90 m²","Location":"Quận 12, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"MONARCHY, CĂN HỘ NGHỈ DƯỠNG CÓ THIẾT KẾ CẢNH QUAN TOÀN CẢNH SÔNG HÀN, ĐẸP NHẤT ĐÀ NẴNG","Price":"Thỏa thuận","Area":"Không xác định","Location":"Sơn Trà, Đà Nẵng","Date":"12/03/2018"}
+{"Title":"CẦN BÁN GẤP 2 LÔ ĐẤT MẶT TIỀN LIÊN KHU 5 - 6, ĐỐI DIỆN CHỢ, BÁCH HÓA XANH, DT: 80M2 CHỈ VỚI 820 TR","Price":"800 triệu","Area":"80 m²","Location":"Bình Tân, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CHÍNH CHỦ BÁN NHÀ MẶT PHỐ NGUYỄN HOÀNG, VỊ TRÍ SẦM UẤT NHẤT MỸ ĐÌNH","Price":"300 triệu/m²","Area":"233 m²","Location":"Nam Từ Liêm, Hà Nội","Date":"13/03/2018"}
+{"Title":"BÁN GẤP ĐẤT 2 MẶT TIỀN ĐƯỜNG AN DƯƠNG VƯƠNG, Q8 NGAY TRUNG TÂM","Price":"43.5 triệu/m²","Area":"113 m²","Location":"Quận 8, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"BÁN NHANH MIẾNG ĐẤT THỔ CƯ 100% NGAY CHỢ, XQ KHU CÔNG NGHIỆP, SHR, GIÁ 1,7 TỶ. LH: 0938502949","Price":"1.7 tỷ","Area":"197 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"VỢ CHỒNG TÔI BÁN 250M2 ĐẤT, SHR, ĐỐI DIỆN KCN, BV NHI ĐỒNG 3, GIÁ 900TR, SHR, LH 0909.947.176","Price":"900 triệu","Area":"250 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CHÍNH CHỦ BÁN 2 LÔ ĐẤT LIỀN NHAU MẶT ĐƯỜNG 32M. GIÁ RẺ HƠN THỊ TRƯỜNG, GIÁ 1.2 TỶ, DT 92.5M2","Price":"1.2 tỷ","Area":"92.5 m²","Location":"Long Thành, Đồng Nai","Date":"13/03/2018"}
+{"Title":"NHÀ PHỐ CẤP 3 MỚI 100% NGAY TRUNG TÂM TP BIÊN HÒA, CỰC ĐẸP HIỆN ĐẠI KIÊN CỐ","Price":"2.2 tỷ","Area":"86.6 m²","Location":"Biên Hòa, Đồng Nai","Date":"13/03/2018"}
+{"Title":"CĂN HỘ RIVAPARK, QUẬN 4 NHẬN NHÀ Ở NGAY CK TỪ CÔNG TY LÊN ĐẾN 500 TRIỆU, LH: 0902351563. LỘC","Price":"2.8 tỷ","Area":"82 m²","Location":"Quận 4, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"BÁN ĐẤT SỔ HỒNG TRUNG TÂM HÀNH CHÍNH HUYỆN BÌNH CHÁNH SỐT TỪNG NGÀY CHỈ VỚI 10 TR/M2. LH 0911320666","Price":"10 triệu/m²","Area":"400 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CHÍNH THỨC NHẬN ĐẶT CHỖ SIÊU TỔ HỢP GIẢI TRÍ, NGHỈ DƯỠNG HAMUBAY, VỊ TRÍ VÀNG MẶT TIỀN BIỂN","Price":"14 triệu/m²","Area":"Không xác định","Location":"Phan Thiết, Bình Thuận","Date":"13/03/2018"}
+{"Title":"CHÍNH CHỦ BÁN ĐẤT ĐƯỜNG TRẦN HƯNG ĐẠO - BẮC VÂN PHONG, VẠN NINH","Price":"9.2 tỷ","Area":"164 m²","Location":"Vạn Ninh, Khánh Hòa","Date":"13/03/2018"}
+{"Title":"ĐẤT HƯƠNG LỘ 80, ĐỐI DIỆN UBND VĨNH LỘC B, 4X18=216TR/NỀN. LH CHÍNH CHỦ 0966349966 C HẰNG","Price":"3 triệu/m²","Area":"72 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"ROYAL CITY CẮT LỖ SÂU, MIỄN PHÍ DỊCH VỤ 10 NĂM + CK 16%,VAY 70% CĂN TẦNG ĐẸP 0979526634","Price":"3.75 tỷ","Area":"88.3 m²","Location":"Thanh Xuân, Hà Nội","Date":"13/03/2018"}
+{"Title":"CHÍNH CHỦ BÁN LẠI CĂN GÓC PHONG THỦY ĐẸP DỰ ÁN GOLDMARK CITY, HỒ TÙNG MẬU. LH: 0934356688","Price":"3.8 tỷ","Area":"162 m²","Location":"Bắc Từ Liêm, Hà Nội","Date":"13/03/2018"}
+{"Title":"BÁN ĐẤT BÌNH CHÁNH NGAY CẦU XÁNG GIÁ 290 TRIỆU/NỀN. LIÊN HỆ 0933.901.906","Price":"290 triệu","Area":"54 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"BÁN CĂN HỘ SKY CENTER GIÁ 1TỶ430 1PN 3TỶ150 2PN NHẬN NHÀ Ở NGAY, VIEW ĐẸP THOÁNG MÁT LH: 0909643113","Price":"1.43 tỷ","Area":"73 m²","Location":"Tân Bình, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"TUYỆT TÁC KIẾN TRÚC CĂN HỘ NGHỈ DƯỠNG 5 SAO VIEW SÔNG HÀN THƠ MỘNG GIÁ CHỈ 1,98 TỶ/CĂN","Price":"1.98 tỷ","Area":"Không xác định","Location":"Sơn Trà, Đà Nẵng","Date":"13/03/2018"}
+{"Title":"BÁN ĐẤT THỔ CƯ QUẬN 12 MẶT TIỀN AN PHÚ ĐÔNG, PHƯỜNG AN PHÚ ĐÔNG, ĐÃ CÓ SỔ HỒNG RIÊNG NĂM 2017","Price":"3.15 tỷ","Area":"96 m²","Location":"Quận 12, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"CĐT CHIẾT KHẤU 9% KHI MUA CĂN HỘ CAO CẤP TOKYO TOWER VẠN PHÚC, HÀ ĐÔNG, LH: 0974001833","Price":"1.6 tỷ","Area":"76 m²","Location":"Hà Đông, Hà Nội","Date":"13/03/2018"}
+{"Title":"BÁN NHÀ PHỐ BIỆT THỰ, MT PHẠM VĂN ĐỒNG, NHẬN NHÀ Ở NGAY, GIÁ TỪ 8 TỶ/CĂN, LH XEM NHÀ: 093 2060 989","Price":"8.11 tỷ","Area":"93 m²","Location":"Thủ Đức, Hồ Chí Minh","Date":"13/03/2018"}
+{"Title":"MỞ BÁN CHUNG CƯ THANH HÀ CIENCO 5 GIÁ TỪ 9,5 TRIỆU/M2 ĐẾN 12 TRIỆU/M2 – LH: 0986.345.999","Price":"9.5 triệu/m²","Area":"64.81 m²","Location":"Hà Đông, Hà Nội","Date":"10/03/2018"}
+{"Title":"KTM BIÊN HÒA CENTER MALL MỞ BÁN VỊ TRÍ VÀNG GIÁ CHỈ 1.8 TỶ/NỀN VỊ TRÍ ĐẸP(CÓ LÔ GÓC): 0898 75 61 68","Price":"1.8 tỷ","Area":"100 m²","Location":"Biên Hòa, Đồng Nai","Date":"10/03/2018"}
+{"Title":"CĐT CHÍNH THỨC THÔNG BÁO CHÍNH SÁCH THÁNG 03 DỰ ÁN TNR GOLDSEASON 47 NGUYỄN TUÂN","Price":"28 triệu/m²","Area":"Không xác định","Location":"Thanh Xuân, Hà Nội","Date":"10/03/2018"}
+{"Title":"CẦN BÁN CĂN HỘ 80M2, 2PN, 2WC GOLD VIEW, GIÁ 2 TỶ 684 (VAT + PBT), NHẬN NHÀ Ở NGAY. LH: 0933910039","Price":"2.684 tỷ","Area":"80 m²","Location":"Quận 4, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"ĐẤT NỀN BIỂN NHA TRANG BAO LỢI NHUẬN MỞ BÁN ĐỢT 1 DỰ ÁN GOLDEN BAY GIAI ĐOẠN 2 CAM KẾT SINH LỜI","Price":"8.5 triệu/m²","Area":"108 m²","Location":"Cam Ranh, Khánh Hòa","Date":"10/03/2018"}
+{"Title":"CẬP NHẬT BẢNG GIÁ MỚI NHẤT GOLDEN BAY 2018 GIAI ĐOẠN 1 VÀ 2. LIÊN HỆ 0938727886 - 0938571598","Price":"6 triệu/m²","Area":"126 m²","Location":"Cam Ranh, Khánh Hòa","Date":"10/03/2018"}
+{"Title":"CH THE ERA TOWN PREMIUM - LIỀN KỀ PHÚ MỸ HƯNG, 20TR/M2, TT 30% NHẬN NHÀ Ở NGAY. 0938 719 789","Price":"1.45 tỷ","Area":"65 m²","Location":"Quận 7, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"NHIỀU CĂN HỘ VINHOMES GIÁ TỐT, CẬP NHẬT LIÊN TỤC TRONG THÁNG GIÁ CHỈ TỪ 2,4 TỶ. LH: 0944459800","Price":"2.4 tỷ","Area":"45 m²","Location":"Bình Thạnh, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"CHÍNH CHỦ BÁN BIỆT THỰ LIỀN KỀ TRÀNG AN COMPLEX, SỐ 1 PHÙNG CHÍ KIÊN, 225.8M2, CỰC ĐẸP, GIÁ TỐT","Price":"115 triệu/m²","Area":"Không xác định","Location":"Cầu Giấy, Hà Nội","Date":"10/03/2018"}
+{"Title":"44M2X5TR=220TR/NỀN KDC HIỆN HỮU, HƯƠNG LỘ 80, VĨNH LỘC, BÌNH CHÁNH, GIÁ ĐẦU TƯ F1. 0933489299","Price":"220 triệu","Area":"44 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"NHẬN GIỮ CHỖ NGAY DỰ ÁN ĐƯỢC MONG ĐỢI NHẤT PHƯỜNG LINH ĐÔNG, SỔ HỒNG RIÊNG, GIÁ CHỈ TỪ 38TR/M2","Price":"38 triệu/m²","Area":"60 m²","Location":"Thủ Đức, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"CẦN BÁN NHÀ CẤP 4 BÌNH CHUẨN GIÁ 410TR VÀ 1 TRỆT, 1 LẦU, GIÁ 550TR. LIÊN HỆ 0988571039 CHÍNH CHỦ","Price":"410 triệu","Area":"48 m²","Location":"Thuận An, Bình Dương","Date":"10/03/2018"}
+{"Title":"DÃY PHỐ 2 TẦNG KIỂU DÁNG PHÚ MỸ HƯNG NGAY CHỢ HƯNG LONG 4MX7.5M - 380 TRIỆU, 01239331665","Price":"380 triệu","Area":"30 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"BÁN GẤP CĂN GÓC 2PN, 80M2 VINHOMES CENTRAL PARK, TRANG BỊ NỘI THẤT CAO CẤP, GIÁ 3.450 TỶ 0977771919","Price":"3.45 tỷ","Area":"80 m²","Location":"Bình Thạnh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"TIMES CITY - PARK HILL, BÁN GẤP CÁC CĂN HỘ CẮT LỖ GIÁ RẺ LÀM VIỆC TRỰC TIẾP CHỦ NHÀ - LH 0969033294","Price":"Thỏa thuận","Area":"Không xác định","Location":"Hai Bà Trưng, Hà Nội","Date":"09/03/2018"}
+{"Title":"SIÊU HOT CĂN 2, 3, 4PN TẦNG ĐẸP, VIEW THOÁNG, GIÁ TỐT NHẤT THÁNG 3/2018. LH: 0911.116.861","Price":"4.8 tỷ","Area":"115 m²","Location":"Hai Bà Trưng, Hà Nội","Date":"09/03/2018"}
+{"Title":"CHÍNH CHỦ BÁN CẮT LỖ 400TR CĂN GÓC 2204 TÒA C1, BAN CÔNG ĐÔNG NAM, VIEW HỒ. DỰ ÁN D' CAPITALE","Price":"5.17 tỷ","Area":"91 m²","Location":"Cầu Giấy, Hà Nội","Date":"09/03/2018"}
+{"Title":"CĂN HỘ THÔNG MINH HIGH INTELA, MT VÕ VĂN KIỆT, 70M2, 2PN, 1.6 TỶ. LH: 0907.09.3333","Price":"1.5 tỷ","Area":"64 m²","Location":"Quận 8, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"MỞ BÁN ĐỢT 3 CĂN HỘ CHUNG CƯ AN BÌNH 1, LIÊN HỆ NGAY PKD CĐT: 0982.326.006/0946.117.554","Price":"27 triệu/m²","Area":"82.6 m²","Location":"Hoàng Mai, Hà Nội","Date":"09/03/2018"}
+{"Title":"BÁN GẤP BIỆT THỰ SỔ ĐỎ CHÍNH CHỦ TẠI NGUYỄN NGỌC - LAI XÁ, 136M2, 0913168311","Price":"29 triệu/m²","Area":"136 m²","Location":"Hoài Đức, Hà Nội","Date":"09/03/2018"}
+{"Title":"CHỈ 650TR (30%) SỞ HỮU CĂN HỘ DIAMOND LOTUS RIVERSIDE, THÁNG 4/2018 BÀN GIAO NHÀ CĐT: 0906 330 189","Price":"Thỏa thuận","Area":"73 m²","Location":"Quận 8, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"CÁT TƯỜNG GOLDEN RIVER RESIDENCE - ĐÔ THỊ XANH, CHÍNH THỨC MỞ BÁN ĐỢT 1. LH: 0937.884.224","Price":"479 triệu","Area":"100 m²","Location":"Đức Hòa, Long An","Date":"12/03/2018"}
+{"Title":"CĂN HỘ NHẬT BẢN, CAO CẤP, CƠ HỘI ĐẦU TƯ VÀ Ở KHÔNG THỂ TỐT HƠN, 140TR SỞ HỮU VĨNH VIỄN","Price":"650 triệu","Area":"Không xác định","Location":"Dĩ An, Bình Dương","Date":"12/03/2018"}
+{"Title":"EVENT T3 CĂN HỘ DV: OFFICETEL TẶNG 2 CÂY VÀNG, CK 9%, GIÁ CHỈ TỪ 32TR/M2: LH: 0932.183.346","Price":"2.37 tỷ","Area":"63 m²","Location":"Quận 4, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"HƯNG THỊNH CHÍNH THỨC NHẬN ĐẶT CHỖ CĂN HỘ CAO CẤP Q7 SAIGON RIVERSIDE, ĐÀO TRÍ LH : 0937866386","Price":"1.3 tỷ","Area":"53 m²","Location":"Quận 7, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"NHÀ 3 TẤM KHU CHIẾN LƯỢC BÌNH TÂN,GIÁ 1 TỶ 700 TRIỆU CHÍNH CHỦ, SHR, LIÊN HỆ 0939686911","Price":"1.7 tỷ","Area":"120 m²","Location":"Bình Tân, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"ĐỊA ỐC THÀNH NAM MỞ BÁN DỰ ÁN KHU ĐÔ THỊ SINH THÁI TRUNG TÂM CỦ CHI, GIÁ ĐẦU TƯ CHỈ 599 TRIỆU/NỀN","Price":"599 triệu","Area":"80 m²","Location":"Củ Chi, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"BÁN ĐẤT CHÍNH CHỦ 370TR/LÔ GIÁ ĐẦU TƯ. DIỆN TÍCH 4,5X17M KHU PHỐ ĐIỆN NAM BẮC!!!","Price":"370 triệu","Area":"76.5 m²","Location":"Điện Bàn, Quảng Nam","Date":"12/03/2018"}
+{"Title":"CHỈ VỚI 250TRIỆU SỞ HỮU NGAY CĂN HỘ TRUNG TÂM QUẬN 2, GEM RIVERSIDE LH 0906889951","Price":"1.8 tỷ","Area":"50 m²","Location":"Quận 2, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"CẦN BÁN GẤP 160M2 ĐẤT, MẶT TIỀN 8M, HƯỚNG ĐÔNG KHU C - GELEXIMCO. LH A TÀI: 0936 560 398","Price":"24.5 triệu/m²","Area":"160 m²","Location":"Hà Đông, Hà Nội","Date":"12/03/2018"}
+{"Title":"DỰ ÁN SEA CLOUD TOWN NẰM TẠI TTTP NHA TRANG- TẠI NGÃ 4 VÕ THỊ SÁU - PHƯỚC LONG - TP NHA TRANG","Price":"36 triệu/m²","Area":"100 m²","Location":"Nha Trang, Khánh Hòa","Date":"12/03/2018"}
+{"Title":"ĐỪNG VỘI CHÊ MASTERI GIÁ CAO! KHI CHƯA GẶP TRỰC TIẾP MS. NHƯ - HOTLINE: 0938257406","Price":"3.6 tỷ","Area":"94 m²","Location":"Quận 2, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"BÁN ĐẤT THỔ CƯ ĐẸP, MẶT ĐƯỜNG NGUYỄN HUỆ - TRỤC CHÍNH ĐẶC KHU BẮC VÂN PHONG. GIÁ 6.5TR/M2","Price":"6.5 triệu/m²","Area":"460 m²","Location":"Vạn Ninh, Khánh Hòa","Date":"11/03/2018"}
+{"Title":"BÁN ĐẤT KHU ĐÔ THỊ TP. BIÊN HOÀ TẠI TAM PHƯỚC, SỔ HỒNG RIÊNG THỔ CƯ 100%, TRẢ GÓP LÃI SUẤT 0%","Price":"Thỏa thuận","Area":"90 m²","Location":"Biên Hòa, Đồng Nai","Date":"11/03/2018"}
+{"Title":"CHÍNH THỨC MỞ BÁN DỰ ÁN BÌNH MỸ CENTER, MẶT TIỀN ĐƯỜNG LÊ VĂN KHƯƠNG 40M, SHR, ĐIỆN ÂM, NƯỚC MÁY","Price":"13 triệu/m²","Area":"Không xác định","Location":"Củ Chi, Hồ Chí Minh","Date":"11/03/2018"}
+{"Title":"MỞ BÁN ĐỢT 2 KHU BIỆT THỰ LIỀN KỀ: LITTLE VILLAGE, GIÁ DƯỚI 7,9 TỶ/CĂN. LH SỚM ĐỂ NHẬN ƯU ĐÃI","Price":"7.9 tỷ","Area":"305 m²","Location":"Thủ Đức, Hồ Chí Minh","Date":"11/03/2018"}
+{"Title":"BÁN NHÀ CHÍNH CHỦ SỔ HỒNG RIÊNG, TẠI BÌNH CHUẨN, THUẬN AN, BÌNH DƯƠNG. LH: A HUỀ 0973678626","Price":"1.06 tỷ","Area":"65 m²","Location":"Thuận An, Bình Dương","Date":"11/03/2018"}
+{"Title":"BÁN 3 NỀN ĐẤT ĐIỀN PHÚC THÀNH QUẬN 9 ĐƯỜNG 30M, GIÁ 23 TRIỆU, GỌI 0912 598058","Price":"25.5 triệu/m²","Area":"80 m²","Location":"Quận 9, Hồ Chí Minh","Date":"11/03/2018"}
+{"Title":"BÁN CĂN HỘ VINHOMES CENTRAL PARK 1PN 2.3 TỶ, 2PN 3.3 TỶ, 3PN 4.4TỶ, 4PN GIÁ 7.5TỶ. CALL 0977771919","Price":"2.3 tỷ","Area":"Không xác định","Location":"Bình Thạnh, Hồ Chí Minh","Date":"11/03/2018"}
+{"Title":"CẦN BÁN GẤP CHCC TIMES CITY PARK HILL, DIỆN TÍCH: 119M2, GIÁ 3.7 TỶ, DIỆN TÍCH 94M2, GIÁ 2.9 TỶ","Price":"3.7 tỷ","Area":"119 m²","Location":"Hai Bà Trưng, Hà Nội","Date":"10/03/2018"}
+{"Title":"ĐẤT GẦN TRƯỜNG TIỂU HỌC BÌNH CHÁNH, ĐƯỜNG NHỰA 12M, 125M2 SỔ HỒNG THỔ CƯ 840TR BAO THỦ TỤC SANG TÊN","Price":"840 triệu","Area":"125 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"MỞ BÁN 150 ĐẤT NỀN Q. 9, SỔ ĐỎ CẦM TAY CƠ SỞ HẠ TẦNG ĐIỆN MƯỚC ÂM, XDTD, HOTLINE: 0906 69 39 45","Price":"19.5 triệu/m²","Area":"85 m²","Location":"Quận 9, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"SUẤT NỘI BỘ GOLDEN BAY 602 NHỮNG LÔ GẦN QUẢNG TRƯỜNG VÀ VIEW HỒ TUYỆT ĐẸP, LH 0906954186","Price":"7.5 triệu/m²","Area":"108 m²","Location":"Cam Ranh, Khánh Hòa","Date":"09/03/2018"}
+{"Title":"BÁN CĂN HỘ HOÀN THIỆN VEN SÔNG HAI MẶT TIỀN ZEN PREMIUM NGAY UBND QUẬN 12","Price":"18 triệu/m²","Area":"60 m²","Location":"Quận 12, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"SEA CLOUD TOWN NHA TRANG, MỖI NỀN ĐẤT VỪA ĐỂ Ở VỪA KẾT HỢP KINH DOANH. HOTLINE: 0935.431.499","Price":"36 triệu/m²","Area":"100 m²","Location":"Nha Trang, Khánh Hòa","Date":"09/03/2018"}
+{"Title":"BÁN CÁC CĂN CĂN HỘ TIMES CITY CẮT LỖ TỪ 100TR ĐẾN 400TR, FULL NỘI THẤT ĐẸP. LH: 0946.111.286","Price":"4.8 tỷ","Area":"115 m²","Location":"Hai Bà Trưng, Hà Nội","Date":"09/03/2018"}
+{"Title":"MỞ BÁN 2 CĂN SUẤT NGOẠI GIAO KHÁCH SẠN BIỂN PARIS VILLAS TẠI PQ SỞ HỮU ĐẤT Ở VĨNH VIỄN GIÁ 5.9 TỶ","Price":"5.9 tỷ","Area":"152 m²","Location":"Phú Quốc, Kiên Giang","Date":"09/03/2018"}
+{"Title":"BÁN NHÀ LẦU ĐƯỜNG QUỐC LỘ 50 GẦN CẦU ÔNG THÌN BÌNH CHÁNH GIÁ 490 TRIỆU - 1,2 TỶ","Price":"490 triệu","Area":"28 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"BÁN CĂN HỘ 2PN XUÂN MAI COMPLEX GIÁ CHỈ 850TR NỘI THẤT CAO CẤP. CK 2%+15TR VAY LS 0%","Price":"850 triệu","Area":"Không xác định","Location":"Hà Đông, Hà Nội","Date":"09/03/2018"}
+{"Title":"ĐẤT MT HẺM 8M QUÁCH ĐIÊU 4X11M THỔ CƯ 220TR, SH SANG TÊN 0966349966","Price":"220 triệu","Area":"44 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"SẮP RA HÀNG LOẠT CÁC TẦNG ĐẸP CỦA CHUNG CƯ XUÂN MAI COMPLEX CHỈ TỪ 850TR/CĂN ĐẸP. LH: 0968.236.393","Price":"850 triệu","Area":"52 m²","Location":"Hà Đông, Hà Nội","Date":"09/03/2018"}
+{"Title":"BÁN LÔ 222M2 ĐẤT XÂY KHÁCH SẠN, CĂN HỘ HOẶC HOMESTAY, KHU VỰC MẶT TIỀN CHẾ LAN VIÊN KHU PHỐ TÂY","Price":"Thỏa thuận","Area":"Không xác định","Location":"Ngũ Hành Sơn, Đà Nẵng","Date":"09/03/2018"}
+{"Title":"TẬP ĐOÀN NAM CƯỜNG - CHÍNH THỨC MỞ BÁN ĐỢT 2 SIÊU DỰ ÁN BIỆT THỰ DƯƠNG NỘI. HOTLINE: 0914102166","Price":"Thỏa thuận","Area":"174 m²","Location":"Hà Đông, Hà Nội","Date":"08/03/2018"}
+{"Title":"CHÍNH CHỦ CẦN BÁN CĂN HỘ CAO CẤP GIÁ RẺ PARK 6 - VINHOMES CENTRAL PARK","Price":"7 tỷ","Area":"120 m²","Location":"Bình Thạnh, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"CẦN BÁN GẤP ĐẤT CHÍNH CHỦ SỔ HỒNG ĐẦY ĐỦ NHƠN TRẠCH - ĐỒNG NAI 0902167555","Price":"700 nghìn/m²","Area":"8400 m²","Location":"Nhơn Trạch, Đồng Nai","Date":"08/03/2018"}
+{"Title":"CHÍNH CHỦ BÁN GẤP MT 01 TRƯỜNG SƠN - NGUYỄN VĂN MẠI CHO NHÀ HÀNG HQ THUÊ (CÓ HOA HỒNG CHO MG)","Price":"22.7 tỷ","Area":"200 m²","Location":"Tân Bình, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"CHÍNH THỨC MỞ BÁN TÒA CT2 DỰ ÁN HATECO XUÂN PHƯƠNG, BẢNG HÀNG CẬP NHẬT, CHÍNH SÁCH ƯU ĐÃI MỚI NHẤT","Price":"1.1 tỷ","Area":"52 m²","Location":"Nam Từ Liêm, Hà Nội","Date":"08/03/2018"}
+{"Title":"BÁN NHÀ TẬP THỂ KHU BẠCH MAI, THANH NHÀN, 55M2, ĐỦ ĐỒ, GIÁ HƠN TỶ. LIÊN HỆ 0904083000","Price":"Thỏa thuận","Area":"55 m²","Location":"Hai Bà Trưng, Hà Nội","Date":"08/03/2018"}
+{"Title":"CHÍNH THỨC NHẬN ĐẶT CHỖ CH Q7 SAIGON RIVERSIDE CHỈ 50 TRIỆU/CĂN. TRẢ TRƯỚC CHỈ 12%. LH 0937 131 505","Price":"1.5 tỷ","Area":"68 m²","Location":"Quận 7, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"DỰ ÁN KDT LONG HƯNG, TP BIÊN HÒA SỔ ĐỎ THỔ CƯ THANH TOÁN 30% NHẬN NỀN,GIÁ GỐC CDT","Price":"1 tỷ","Area":"100 m²","Location":"Biên Hòa, Đồng Nai","Date":"08/03/2018"}
+{"Title":"CH VEN SÔNG SÀI GÒN, MT ĐÀO TRÍ, Q7, LIỀN KỀ PHÚ MỸ HƯNG, GIÁ CHỈ 1.3TỶ, FULL NỘI THẤT","Price":"1.3 tỷ","Area":"53 m²","Location":"Quận 7, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"CÓ NÊN MUA DỰ ÁN ĐẤT NỀN KHU ĐT TÂN LONG, TÂN UYÊN, HỘI NGHĨA KHÔNG? KHI NÀO ĐẦU TƯ ĐỂ SINH LỜI","Price":"555 triệu","Area":"Không xác định","Location":"Tân Uyên, Bình Dương","Date":"10/03/2018"}
+{"Title":"CHÍNH CHỦ CẦN BÁN GẤP NHÀ XƯỞNG MỚI XÂY, GPXD ĐẦY ĐỦ, ĐƯỜNG SUỐI LỘI, CỦ CHI","Price":"20 tỷ","Area":"3000 m²","Location":"Củ Chi, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"MỞ BÁN SIÊU DỰ ÁN OCEAN LAND 11, MẶT TIỀN ĐƯỜNG BA TRẠI CHIẾT KHẤU HẤP DẪN, SINH LỢI NHUẬN CAO","Price":"4 triệu/m²","Area":"500 m²","Location":"Phú Quốc, Kiên Giang","Date":"10/03/2018"}
+{"Title":"BÁN NHÀ 1 LẦU 1 TRỆT CHỈ 1TỶ 650TR NGAY UBND TÂN VĨNH HIỆP, ĐƯỜNG ĐX 007.LH: 0969898979","Price":"1.65 tỷ","Area":"102 m²","Location":"Thuận An, Bình Dương","Date":"10/03/2018"}
+{"Title":"BÁN LÔ ĐƯỜNG KHUÊ MỸ ĐÔNG 10 ĐỐI DIỆN CÔNG VIÊN, KHU NHÀ MÁY CAO SU","Price":"Thỏa thuận","Area":"102 m²","Location":"Ngũ Hành Sơn, Đà Nẵng","Date":"10/03/2018"}
+{"Title":"SANG NHƯỢNG VINHOMES CENTRAL PARK GIÁ TỐT, 1PN CHỈ 2,3TỶ, 2PN CHỈ TỪ 3,2 TỶ, 3PN BÁN LỖ: 0903163021","Price":"40 triệu/m²","Area":"56 m²","Location":"Bình Thạnh, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"CHÍNH CHỦ BÁN NHANH BT SIÊU VIP MẶT HỒ TULIP 1, 294M2, ĐN, VINHOMES RIVERSIDE THE HARMONY","Price":"Thỏa thuận","Area":"294 m²","Location":"Long Biên, Hà Nội","Date":"10/03/2018"}
+{"Title":"CẦN BÁN KHU NHÀ PHỐ, BIỆT THỰ PARK RIVERSIDE QUẬN 9 GIÁ CỰC TỐT CHỈ TỪ 3,1 TỶ KÈM NHIỀU CS ƯU ĐÃI","Price":"3.1 tỷ","Area":"151 m²","Location":"Quận 9, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"CHUNG CƯ 2 PN XUÂN MAI, GIÁ CHỈ 850TR NỘI THẤT CAO CẤP. CK 2%+15TR, VAY 70% LS 0% (090 86 92 886)","Price":"850 triệu","Area":"Không xác định","Location":"Hà Đông, Hà Nội","Date":"10/03/2018"}
+{"Title":"LỘC VÀNG TRAO TAY MUA NGAY KẺO HẾT - QUÀ TẶNG KHỦNG LÊN ĐẾN 100TR TẠI SMILE BUILDING. LH 0911659494","Price":"23 triệu/m²","Area":"Không xác định","Location":"Hoàng Mai, Hà Nội","Date":"10/03/2018"}
+{"Title":"CHÍNH CHỦ CẦN TIỀN BÁN GẤP 2 CH CITIHOME DT: 73M2-84M2(2PN-3PN),VÀO Ở LIỀN. GÍA RẺ NHẤT THỊ TRƯỜNG","Price":"1.5 tỷ","Area":"73 m²","Location":"Quận 2, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"BÁN CĂN HỘ 2PN SỞ HỮU VĨNH VIỄN DIỆN TÍCH 80M2, GIÁ 3,7 TỶ. LIÊN HỆ: 0942 760 760 VŨ","Price":"3.5 tỷ","Area":"82 m²","Location":"Bình Thạnh, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"CHÍNH CHỦ BÁN NHÀ 1 TRỆT,1 LẦU NGAY NGÃ 3 BÌNH Ý, GẦN KCN CHENGSING  GIÁ 400TR,LIÊN HỆ:0981.829.225","Price":"400 triệu","Area":"56 m²","Location":"Vĩnh Cửu, Đồng Nai","Date":"10/03/2018"}
+{"Title":"BÁN NHÀ SỔ HỒNG CHÍNH CHỦ TẠI BÌNH CHUẨN, THUẬN AN. LH 0963.058.514","Price":"1.05 tỷ","Area":"75 m²","Location":"Thuận An, Bình Dương","Date":"10/03/2018"}
+{"Title":"ĐẶT CHỖ CĂN HỘ CC Q7 SAIGON RIVERSIDE, GIÁ 26TR/M2, VỊ TRÍ ĐẸP - VIEW SÔNG -VIEW Q1. LH 0903224939","Price":"26 triệu/m²","Area":"69 m²","Location":"Quận 7, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"GIỎ HÀNG CHÍNH CHỦ KÝ GỬI CHUYỂN NHƯỢNG GIÁ TỐT NHẤT HIỆN NAY - LH 0911222667","Price":"4.1 tỷ","Area":"53 m²","Location":"Quận 1, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"CĐT GIẢM 300 TRIỆU SỞ HỮU CĂN HỘ CAO CẤP TOKYO TOWER VẠN PHÚC, HÀ ĐÔNG, GIÁ 1.6TỶ TUẦN LỄ TẶNG VÀNG","Price":"1.6 tỷ","Area":"76 m²","Location":"Hà Đông, Hà Nội","Date":"10/03/2018"}
+{"Title":"DỰ ÁN GẦN PHẠM VĂN ĐỒNG VỊ TRÍ CỰC ĐẸP, LINH ĐÔNG - THỦ ĐỨC, ĐƯỜNG RỘNG 7M, SHR 0905 04 1829","Price":"38 triệu/m²","Area":"60 m²","Location":"Thủ Đức, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"CĂN HỘ ZEN TIÊU CHUẨN 4 SAO QUẬN 12, LK GÒ VẤP, RẺ NHẤT KHU VỰC, TẶNG FULL NỘI THẤT","Price":"20 triệu/m²","Area":"Không xác định","Location":"Quận 12, Hồ Chí Minh","Date":"10/03/2018"}
+{"Title":"1 TỶ/CĂN 52M2, CĂN HỘ CITY GATE 3, GÓP 1%/THÁNG, (GIÁ GỐC TỪ CHỦ ĐẦU TƯ) CK 15%. LH: 0908.891.669","Price":"1 tỷ","Area":"52 m²","Location":"Quận 8, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"BÁN NHÀ THUẬN AN, BÌNH CHUẨN CHỈ TỪ 700TR GIÁ RẺ BẤT NGỜ TẶNG NGAY 3TR KHI MUA","Price":"700 triệu","Area":"70 m²","Location":"Thuận An, Bình Dương","Date":"08/03/2018"}
+{"Title":"THANH LÝ 19 LÔ ĐẤT GIÁ SIÊU RẺ CHỈ 450TR/LÔ KDC TÊN LỬA 2, ĐƯỜNG TRẦN VĂN GIÀU","Price":"450 triệu","Area":"Không xác định","Location":"Bình Chánh, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"CHUYỂN NHƯỢNG NHIỀU CĂN TẠI PARK RIVERSIDE VÀ NHÀ PHỐ MIK, 0934 175 286","Price":"3.25 tỷ","Area":"75 m²","Location":"Quận 9, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"ĐI ĐỊNH CƯ NƯỚC NGOÀI BÁN NHANH CĂN 1PN 2.5 TỶ, 2PN 3.4 TỶ, 3PN 4.5 TỶ VINHOMES CENTRAL PARK","Price":"2.5 tỷ","Area":"54 m²","Location":"Bình Thạnh, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"BÁN 20 CĂN SUẤT NỘI BỘ DỰ ÁN HIỆP THÀNH BUILDING, 18 TR/M2, CHIẾT KHẤU 8.3% THANH LH: 0938638667","Price":"17 triệu/m²","Area":"72.84 m²","Location":"Quận 12, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"BÁN GẤP 2 LÔ ĐẤT MT ĐƯỜNG AN HẠ, TỈNH LỘ 10, 5X20M, 10X25M, GIÁ 700TR. LH 0909938022","Price":"700 triệu","Area":"100 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"ĐẤT NỀN Q9 KHU DÂN CƯ HIỆN HỮU SỔ ĐỎ XDTD 5X20 GIÁ CHỈ 19TR/M2 NH HỖ TRỢ VAY 60% LH 0904397171","Price":"19 triệu/m²","Area":"Không xác định","Location":"Quận 9, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"BÁN GẤP LÔ ĐẤT 2 MẶT TIỀN, VỊ TRÍ ĐẮC ĐỊA ĐỂ KINH DOANH, SỔ HỒNG RIÊNG, XÂY DỰNG NGAY. 950 TRIỆU","Price":"950 triệu","Area":"178 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"BÁN ĐẤT NỀN DỰ ÁN 174HA THẠNH MỸ LỢI, NGAY TTHC QUẬN 2","Price":"55 triệu/m²","Area":"200 m²","Location":"Quận 2, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"ĐẤT AN PHÚ AN KHÁNH, 2 MẶT TIỀN, 10X20M, NGAY CÔNG VIÊN HỒ SINH THÁI","Price":"75 triệu/m²","Area":"200 m²","Location":"Quận 2, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"BÁN NHÀ TRUNG TÂM PHƯỜNG BÌNH CHUẨN THUẬN AN, BD. LH : 0973139278 (KHÔNG QUA TRUNG GIAN)","Price":"750 triệu","Area":"100 m²","Location":"Thuận An, Bình Dương","Date":"08/03/2018"}
+{"Title":"DUY NHẤT 6 SUẤT NGOẠI GIAO SỞ HỮU BIỆT THỰ ĐẢO NGỌC FPT CITY, CHỈ 9,8TR/M2","Price":"9.8 triệu/m²","Area":"420 m²","Location":"Ngũ Hành Sơn, Đà Nẵng","Date":"08/03/2018"}
+{"Title":"CĐT 0906944718 - THE EASTERN CK KHỦNG 11%, THANH TOÁN 20% NHẬN NHÀ NGAY, TRẢ GÓP 3 NĂM 0 LS","Price":"Thỏa thuận","Area":"96 m²","Location":"Quận 9, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"MỞ BÁN DỰ ÁN ĐẤT THỔ CƯ NGAY VÒNG XOAY PHẠM VĂN ĐỒNG-KHA VẠN CÂN,DT: 60-65M2,ĐXH 7M,5 ĐƯỜNG THÔNG","Price":"38 triệu/m²","Area":"60 m²","Location":"Thủ Đức, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"HATECO APOLLO VÌ SAO KHÔNG  CẦN CHÍNH SÁCH VẪN HÚT KHÁCH MUA","Price":"1.1 tỷ","Area":"Không xác định","Location":"Nam Từ Liêm, Hà Nội","Date":"08/03/2018"}
+{"Title":"SAIGON RIVERSIDE VIEW SÔNG QUẬN 7, CHỈ 1.3 TỶ/CĂN, NỘI THẤT CAO CẤP, CK CAO,LH 0907273831","Price":"1.5 tỷ","Area":"68 m²","Location":"Quận 7, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"CHCC HÀN QUỐC TT 20% NHẬN NHÀ NGAY CÒN LẠI TRẢ GÓP TRONG 3 NĂM CAM KẾT CHO THUÊ 2 NĂM. 0909.941.091","Price":"Thỏa thuận","Area":"59 m²","Location":"Quận 9, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"CĂN HỘ VIEW BIỂN SỞ HỮU VĨNH VIỄN NGAY TTTP NHA TRANG. GIÁ CỰC RẺ CÁCH BIỂN CHỈ 600M","Price":"745 triệu","Area":"63.5 m²","Location":"Nha Trang, Khánh Hòa","Date":"08/03/2018"}
+{"Title":"CẦN BÁN GẤP NHÀ PHỐ ĐƯỜNG NGUYỄN THỊ NHỎ 6X12M, 1TRỆT 3 LẦU. GIÁ 8.5TỶ","Price":"8.5 tỷ","Area":"72 m²","Location":"Tân Bình, Hồ Chí Minh","Date":"08/03/2018"}
+{"Title":"ĐẤT NỀN TẠI HÀM NINH, PHÚ QUỐC, SHR, LH 0902.779.008","Price":"Thỏa thuận","Area":"Không xác định","Location":"Phú Quốc, Kiên Giang","Date":"12/03/2018"}
+{"Title":"CĂN HỘ RIVA PARK 1PN - 3PN NHẬN NHÀ NGAY. ƯU ĐÃI MỞ BÁN 10 CĂN CUỐI, HỖ TRỢ VAY LÃI SUẤT THẤP","Price":"3.5 tỷ","Area":"103 m²","Location":"Quận 4, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"CC BÁN NHÀ NGÕ 398 VÕ CHÍ CÔNG (HOẶC ĐI NGÕ 49, NGÕ 77 XUÂN LA), XUÂN LA, TÂY HỒ, 0948689689","Price":"2.7 tỷ","Area":"30 m²","Location":"Tây Hồ, Hà Nội","Date":"12/03/2018"}
+{"Title":"CÔNG TY HOÀNG HÙNG MỞ BÁN ĐỢT 2 NHÀ LK ĐÃ HOÀN THIỆN, GẦN BV ĐA KHOA DĨ AN, NỘI THẤT CAO CẤP, SHR","Price":"2.2 tỷ","Area":"60 m²","Location":"Dĩ An, Bình Dương","Date":"12/03/2018"}
+{"Title":"ĐẤT NỀN NHÀ PHỐ BÌNH CHÁNH, XÃ PHONG PHÚ, SINH LỢI GẤP 2, LH: 0938106212","Price":"14 triệu/m²","Area":"100 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"ĐẤT NỀN NHÀ PHỐ BÌNH CHÁNH, XÃ PHONG PHÚ, SINH LỢI GẤP 3. LH: 0938106212","Price":"14 triệu/m²","Area":"100 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"MỞ BÁN ĐẤT NỀN DỰ ÁN RIO BONITO QUẬN 9 SỔ ĐỎ ĐẦY ĐỦ, XDTD, GIÁ 1.6 TỶ/NỀN (80 - 100M2), CK ĐẾN 6%","Price":"1.6 tỷ","Area":"80 m²","Location":"Quận 9, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"CẦN BÁN NHÀ ĐẸP DIỆN TÍCH 4*13M, LIÊN HỆ CHÍNH CHỦ: 0906101261","Price":"4.25 tỷ","Area":"52 m²","Location":"Gò Vấp, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"KHÔNG THỂ BỎ QUA NẾU BẠN MUỐN ĐẦU TƯ GEM RIVERISIDE QUẬN 2 - CĐT ĐẤT XANH GROUP - 0909844539","Price":"38 triệu/m²","Area":"70 m²","Location":"Quận 2, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"NHÀ PHỐ BIỆT THỰ ĐƯỜNG BÙI VĂN BA, QUẬN 7, NHẬN NHÀ Ở NGAY, VIEW HAI MẶT SÔNG, LH 0932 060 989","Price":"9.67 tỷ","Area":"Không xác định","Location":"Quận 7, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"MỞ BÁN ĐỢT 1 KHU DÂN CƯ KIỂU MẪU CỦ CHI THÀNH NAM DRAGON 5M X 16M GIÁ 596 TRIỆU","Price":"596 triệu","Area":"80 m²","Location":"Củ Chi, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"SIÊU THỊ ĐẤT NỀN DỰ ÁN ĐH BÁCH KHOA, QUẬN 9","Price":"25 triệu/m²","Area":"342 m²","Location":"Quận 9, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"TỔ HỢP CĂN HỘ GOLDMARK CITY ĐẸP NHẤT CHỈ TỪ 2 TỶ","Price":"2 tỷ","Area":"Không xác định","Location":"Bắc Từ Liêm, Hà Nội","Date":"12/03/2018"}
+{"Title":"KHÁCH HÀNG ĐỔ XÔ ĐI NHẬN VÀNG VÀ IPHONE X VÌ TRÓT MUA CĂN HỘ NEW HORIZON CITY 87 LĨNH NAM","Price":"1.988 tỷ","Area":"76.76 m²","Location":"Hoàng Mai, Hà Nội","Date":"12/03/2018"}
+{"Title":"BÁN ĐẤT SĐR KHU ĐÔ THỊ SÂN BAY - GIÁ GỐC CHỦ ĐẦU TƯ GIAI ĐOẠN 1 - XD TỰ DO","Price":"Thỏa thuận","Area":"125 m²","Location":"Long Thành, Đồng Nai","Date":"12/03/2018"}
+{"Title":"CƠ HỘI HIẾM – 20 LÔ CẠNH TTTM, CÔNG VIÊN, TRƯỜNG HỌC CỦA DỰ ÁN THIÊN LỘC","Price":"430 triệu","Area":"100 m²","Location":"Sông Công, Thái Nguyên","Date":"12/03/2018"}
+{"Title":"BÁN ĐẤT CÓ NHÀ 2 MÊ ĐƯỜNG SƠN THUỶ ĐÔNG 1, CÁCH BÃI TẮM 200M","Price":"Thỏa thuận","Area":"90 m²","Location":"Ngũ Hành Sơn, Đà Nẵng","Date":"12/03/2018"}
+{"Title":"MỞ BÁN BLOCK ĐẸP NHẤT DỰ ÁN CĂN HỘ CHUẨN KHÁCH SẠN 5 SAO CHUẨN HOA KỲ ,CÁCH QUẬN 1 CHỈ 5 PHÚT","Price":"1.9 tỷ","Area":"73 m²","Location":"Quận 8, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"CÒN 30 CĂN CUỐI CÙNG CĂN HỘ XI GRAND COURT, QUẬN 10, TỪ 3.050 TỶ. LH: 0944.44.55.87","Price":"3.05 tỷ","Area":"70 m²","Location":"Quận 10, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"TỔNG HỢP 300 CĂN MASTERI THẢO ĐIỀN CAM KẾT GIÁ TỐT, SỔ HỒNG, DỊCH VỤ VƯỢT TRỘI, LH 0902668358 HÙNG","Price":"2.5 tỷ","Area":"45.02 m²","Location":"Quận 2, Hồ Chí Minh","Date":"12/03/2018"}
+{"Title":"THE SUN AVENUE 2+1 PN DT 79M2 GIÁ 2,95TỶ RẺ NHẤT THỊ TRƯỜNG VÀ CÁC CĂN GIÁ TỐT KHÁC","Price":"2.95 tỷ","Area":"79 m²","Location":"Quận 2, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"CĂN HỘ OFFICETEL QUẬN 8 CHỈ TỪ 700-1,3 TỶ/CĂN, HOT NHẤT Q8, MUA NHANH KẺO LỠ","Price":"700 triệu","Area":"56 m²","Location":"Quận 8, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"BÁN NHÀ QUỐC LỘ 50 CẦU ÔNG THÌN VÀ GẦN CHỢ HƯNG LONG BÌNH CHÁNH, 1 TRỆT 1 LẦU GIÁ 430TR NHÀ MỚI XÂY","Price":"430 triệu","Area":"60 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"CHUNG CƯ EUROWINDOW ĐÔNG TRÙ NẰM TRONG QUẦN THỂ CÁC SIÊU DỰ ÁN TẠI ĐÔNG ANH, HÀ NỘI","Price":"Thỏa thuận","Area":"67 m²","Location":"Đông Anh, Hà Nội","Date":"09/03/2018"}
+{"Title":"ĐẤT NỀN ĐỒNG NAI GIÁ ƯU ĐÃI DÀNH CHO ACE CÔNG NHÂN, CHỈ 400TR. LH 0933792668","Price":"400 triệu","Area":"100 m²","Location":"Nhơn Trạch, Đồng Nai","Date":"09/03/2018"}
+{"Title":"BIỆT THỰ PHỐ CAO CẤP 4 TỶ 990TR(1TRỆT, 1 LỬNG, 3 LẦU)MỚI - ĐẸP 4X14M NHÀ RẤT ĐẸP PHƯỜNG 15 TÂN BÌNH","Price":"4.99 tỷ","Area":"56 m²","Location":"Tân Bình, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"MỞ BÁN BLOCK EMERALD SIÊU DỰ ÁN KHU ĐÔ THỊ CELADON CITY, CHIẾT KHẤU KHỦNG LÊN ĐẾN 11%","Price":"1.86 tỷ","Area":"68 m²","Location":"Tân Phú, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"CĂN HỘ THÔNG MINH VEN SÔNG - NGUYỄN VĂN LINH, 2PN/2WC, CAM KẾT GIA: 1,1 TỶ, TẶNG NT 70 TR","Price":"1.1 tỷ","Area":"54 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"CHÍNH CHỦ CẦN BÁN CĂN HỘ ESTELLA HEIGHT. LH 01247211111","Price":"5.5 tỷ","Area":"105 m²","Location":"Quận 2, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"BÁN CẮT LỖ ROYAL,GIÁ TỪ 34TR/M2,THUÊ 9TR/TH,SỔ ĐỎ, MPDV 10 NĂM, VAY 70%LS 0%. 0946528058/0976325668","Price":"Thỏa thuận","Area":"Không xác định","Location":"Thanh Xuân, Hà Nội","Date":"09/03/2018"}
+{"Title":"CHÍNH CHỦ CẦN BÁN BIỆT THỰ ANH ĐÀO 04 - 19 KHU VINHOMES RIVERSIDE, LONG BIÊN, HÀ NỘI","Price":"Thỏa thuận","Area":"162 m²","Location":"Long Biên, Hà Nội","Date":"09/03/2018"}
+{"Title":"BÁN NHÀ CẠNH HỌC VIỆN AN NINH, DIỆN TÍCH 120.5M5, GIÁ 9.6 TỶ, Ô TÔ VÀO TẬN NHÀ","Price":"9.6 tỷ","Area":"120.5 m²","Location":"Hà Đông, Hà Nội","Date":"09/03/2018"}
+{"Title":"ĐẤT NỀN ĐƯỜNG PHAN VĂN HỚN - NGUYÊN VĂN BỨA - GÒ HƯƠU GIÁ RẺ - SHR - 0947302161","Price":"450 triệu","Area":"80 m²","Location":"Đức Hòa, Long An","Date":"09/03/2018"}
+{"Title":"HƯNG THỊNH NHẬN ĐẶT CHỖ Q7, SAIGON RIVERSIDE, 50TR/ CĂN, VỊ TRÍ ĐẸP, VIEW SÔNG, VIEW Q1","Price":"26 triệu/m²","Area":"66 m²","Location":"Quận 7, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"PHÒNG KINH DOANH VINHOMES CENTRAL PARK BÁN NHANH ĐỢT HÀNG GIÁ TỐT CUỐI CÙNG CỦA NĂM - 0907.290.474","Price":"3.3 tỷ","Area":"82 m²","Location":"Bình Thạnh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"BÁN ĐẤT MT NGUYỄN VĂN THỜI GẦN KHU CÔNG NGHIỆP TÂN KIM BÌNH CHÁNH","Price":"18 tỷ","Area":"9000 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"ĐẤT THỔ CƯ NGAY TRUNG TÂM CHỢ BÌNH PHƯỚC, QUỐC LỘ 13 (CŨ)","Price":"28.5 triệu/m²","Area":"96 m²","Location":"Thủ Đức, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"BÁN ĐẤT THỔ CƯ XÃ BÌNH SƠN, LONG THÀNH, ĐỒNG NAI","Price":"1.7 triệu/m²","Area":"23000 m²","Location":"Long Thành, Đồng Nai","Date":"09/03/2018"}
+{"Title":"BÁN 2 NỀN LIỀN KỀ, GẦN BV ĐA KHOA SG, 660 TRIỆU/130M2, SHR-XDTD, THỔ CƯ 100%, 0909 773 664","Price":"660 triệu","Area":"130 m²","Location":"Bình Chánh, Hồ Chí Minh","Date":"09/03/2018"}
+{"Title":"BÁN GẤP CH TIMES CITY 109M2 - 3,5 TỶ BAO TÊN. CĂN 75M2 - GIÁ 2,55 TỶ BAO TÊN, NHẬN NHÀ Ở NGAY","Price":"3.5 tỷ","Area":"109 m²","Location":"Hai Bà Trưng, Hà Nội","Date":"09/03/2018"}

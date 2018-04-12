@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 11, 2018 at 09:09 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Host: 127.0.0.1:3306
+-- Generation Time: Mar 19, 2018 at 01:25 PM
+-- Server version: 5.7.19
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -27,22 +27,24 @@ USE `db_realestate`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `district`
+-- Table structure for table `districts`
 --
 
-DROP TABLE IF EXISTS `district`;
-CREATE TABLE `district` (
-  `ID` int(11) NOT NULL,
-  `Name` text COLLATE utf8mb4_unicode_ci,
-  `Type` text COLLATE utf8mb4_unicode_ci,
-  `ProviceID` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+DROP TABLE IF EXISTS `districts`;
+CREATE TABLE IF NOT EXISTS `districts` (
+  `district_id` int(11) NOT NULL AUTO_INCREMENT,
+  `district_name` text COLLATE utf8mb4_unicode_ci,
+  `district_type` text COLLATE utf8mb4_unicode_ci,
+  `province_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`district_id`),
+  KEY `ProviceID` (`province_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `district`
+-- Dumping data for table `districts`
 --
 
-INSERT INTO `district` (`ID`, `Name`, `Type`, `ProviceID`) VALUES
+INSERT INTO `districts` (`district_id`, `district_name`, `district_type`, `province_id`) VALUES
 (1, '1', 'Quận', 1),
 (2, '12', 'Quận', 1),
 (3, 'Thủ Đức', 'Quận', 1),
@@ -71,54 +73,115 @@ INSERT INTO `district` (`ID`, `Name`, `Type`, `ProviceID`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `provice`
+-- Table structure for table `patterns`
 --
 
-DROP TABLE IF EXISTS `provice`;
-CREATE TABLE `provice` (
-  `ID` int(11) NOT NULL,
-  `Name` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+DROP TABLE IF EXISTS `patterns`;
+CREATE TABLE IF NOT EXISTS `patterns` (
+  `pattern_id` int(11) NOT NULL AUTO_INCREMENT,
+  `pattern_name` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pattern_regex` text COLLATE utf8mb4_unicode_ci,
+  `pattern_range` text COLLATE utf8mb4_unicode_ci,
+  `site_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pattern_id`),
+  KEY `site_id` (`site_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `provice`
+-- Dumping data for table `patterns`
 --
 
-INSERT INTO `provice` (`ID`, `Name`) VALUES
+INSERT INTO `patterns` (`pattern_id`, `pattern_name`, `pattern_regex`, `pattern_range`, `site_id`) VALUES
+(1, 'Lấy thông tin bất động sản', 'class=\'p-title\'>[\\s|<h3>]*<a href=[\'\"](.*?)[\'\"][\\w\\W]*?>\\s*(.*?)\\s*<\\/a>[\\w\\W]*?class=\"product-price\">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\"product-area\">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\"product-city-dist\">\\s*(.*?)\\s*<\\/span>[\\w\\W]*?class=\'floatright mar-right-10\'>(.*?)<\\/div>', NULL, 1),
+(2, 'Lấy thông tin tìm mua nhà đất', 'class=\'vip-title\'><a[\\w\\W]*?href=\'(.*?)\'>(.*?)<\\/a>[\\w\\W]*?Diện tích:<\\/label>(.*?)[<sup>][\\w\\W]*?Giá:<\\/label>\\s*(.*?)\\s*<\\/div>[\\w\\W]*?\'vip-dis\'>(.*?)<\\/div>[\\w\\W]*?\'createdate\'>(.*?)<\\/div>', '1,2,4,3,5,6', 2),
+(3, 'Lấy dữ liệu trang dothi.net', '<a class=\"vip[\\w\\W]*?href=\"(.*?)\">\\s*(.*?)\\s*<\\/a>[\\w\\W]*?<\\/label>\\s*(.*?)\\s*<\\/[\\w\\W]*?<\\/label>\\s*(.*?)\\s*[&nbsp;m&#178;]*\\s*<\\/div>[\\w\\W]*?<strong>\\s*(.*?)<\\/strong>[\\w\\W]*?class=\"date\">\\s*(.*?)\\s*<\\/span>', NULL, 3),
+(4, 'Lấy thông tin trang phonhadat.net', 'h4 class=\"title\">\\s*<a[\\w\\W]*?href=\"(.*?)\">(.*?)<\\/a>[\\w\\W]*?<span>(.*?)<\\/span>[\\w\\W]*?class=\"area\">\\s*(.*?)[&nbsp;][\\w\\W]*?class=\"address\">\\s*(.*?)\\s*<\\/div>[\\w\\W]*?class=\"price\">\\s*(.*?)\\s*<\\/div>', '1,2,6,4,5,3', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `provinces`
+--
+
+DROP TABLE IF EXISTS `provinces`;
+CREATE TABLE IF NOT EXISTS `provinces` (
+  `province_id` int(11) NOT NULL AUTO_INCREMENT,
+  `province_name` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`province_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `provinces`
+--
+
+INSERT INTO `provinces` (`province_id`, `province_name`) VALUES
 (1, 'HCM');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `real_estate`
+-- Table structure for table `real_estates`
 --
 
-DROP TABLE IF EXISTS `real_estate`;
-CREATE TABLE `real_estate` (
-  `ID` int(11) NOT NULL,
-  `Name` text COLLATE utf8mb4_unicode_ci,
-  `LocationID` int(11) DEFAULT NULL
+DROP TABLE IF EXISTS `real_estates`;
+CREATE TABLE IF NOT EXISTS `real_estates` (
+  `real_estate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `real_estate_name` text COLLATE utf8mb4_unicode_ci,
+  `real_estate_price` text COLLATE utf8mb4_unicode_ci,
+  `real_estate_area` text COLLATE utf8mb4_unicode_ci,
+  `real_estate_date` date DEFAULT NULL,
+  `real_estate_url` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `district_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`real_estate_id`),
+  KEY `LocationID` (`district_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ward`
+-- Table structure for table `sites`
 --
 
-DROP TABLE IF EXISTS `ward`;
-CREATE TABLE `ward` (
-  `ID` int(11) NOT NULL,
-  `Name` text COLLATE utf8mb4_unicode_ci,
-  `type` text COLLATE utf8mb4_unicode_ci,
-  `districtID` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+DROP TABLE IF EXISTS `sites`;
+CREATE TABLE IF NOT EXISTS `sites` (
+  `site_id` int(11) NOT NULL AUTO_INCREMENT,
+  `site_name` text COLLATE utf8mb4_unicode_ci,
+  `site_url` text COLLATE utf8mb4_unicode_ci,
+  `site_link_page` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`site_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `ward`
+-- Dumping data for table `sites`
 --
 
-INSERT INTO `ward` (`ID`, `Name`, `type`, `districtID`) VALUES
+INSERT INTO `sites` (`site_id`, `site_name`, `site_url`, `site_link_page`) VALUES
+(1, 'batdongsan.com.vn', 'https://batdongsan.com.vn/nha-dat-ban', '/p[page]'),
+(2, 'timmuanhadat.com.vn', 'http://timmuanhadat.com.vn/nha-dat-bat-dong-san/', 'can-ban/trang--[page].html'),
+(3, 'dothi.net', 'https://dothi.net/nha-dat-ban/', 'p[page].htm'),
+(4, 'phonhadat.net', 'http://phonhadat.net/nha-dat-ban', '/p[page].htm');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wards`
+--
+
+DROP TABLE IF EXISTS `wards`;
+CREATE TABLE IF NOT EXISTS `wards` (
+  `ward_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ward_name` text COLLATE utf8mb4_unicode_ci,
+  `ward_type` text COLLATE utf8mb4_unicode_ci,
+  `district_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ward_id`),
+  KEY `districtID` (`district_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=323 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `wards`
+--
+
+INSERT INTO `wards` (`ward_id`, `ward_name`, `ward_type`, `district_id`) VALUES
 (1, 'Tân Định', 'Phường', 1),
 (2, 'Đa Kao', 'Phường', 1),
 (3, 'Bến Nghé', 'Phường', 1),
@@ -443,85 +506,32 @@ INSERT INTO `ward` (`ID`, `Name`, `type`, `districtID`) VALUES
 (322, 'Lý Nhơn', 'Xã', 24);
 
 --
--- Indexes for dumped tables
---
-
---
--- Indexes for table `district`
---
-ALTER TABLE `district`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `ProviceID` (`ProviceID`);
-
---
--- Indexes for table `provice`
---
-ALTER TABLE `provice`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indexes for table `real_estate`
---
-ALTER TABLE `real_estate`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `LocationID` (`LocationID`);
-
---
--- Indexes for table `ward`
---
-ALTER TABLE `ward`
-  ADD PRIMARY KEY (`ID`),
-  ADD KEY `districtID` (`districtID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `district`
---
-ALTER TABLE `district`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `provice`
---
-ALTER TABLE `provice`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `real_estate`
---
-ALTER TABLE `real_estate`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `ward`
---
-ALTER TABLE `ward`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=323;
-
---
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `district`
+-- Constraints for table `districts`
 --
-ALTER TABLE `district`
-  ADD CONSTRAINT `district_ibfk_1` FOREIGN KEY (`ProviceID`) REFERENCES `provice` (`ID`);
+ALTER TABLE `districts`
+  ADD CONSTRAINT `districts_ibfk_1` FOREIGN KEY (`province_id`) REFERENCES `provinces` (`province_id`);
 
 --
--- Constraints for table `real_estate`
+-- Constraints for table `patterns`
 --
-ALTER TABLE `real_estate`
-  ADD CONSTRAINT `real_estate_ibfk_1` FOREIGN KEY (`LocationID`) REFERENCES `district` (`ID`);
+ALTER TABLE `patterns`
+  ADD CONSTRAINT `patterns_ibfk_1` FOREIGN KEY (`site_id`) REFERENCES `sites` (`site_id`);
 
 --
--- Constraints for table `ward`
+-- Constraints for table `real_estates`
 --
-ALTER TABLE `ward`
-  ADD CONSTRAINT `ward_ibfk_1` FOREIGN KEY (`districtID`) REFERENCES `district` (`ID`);
+ALTER TABLE `real_estates`
+  ADD CONSTRAINT `real_estates_ibfk_1` FOREIGN KEY (`district_id`) REFERENCES `districts` (`district_id`);
+
+--
+-- Constraints for table `wards`
+--
+ALTER TABLE `wards`
+  ADD CONSTRAINT `wards_ibfk_1` FOREIGN KEY (`district_id`) REFERENCES `districts` (`district_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

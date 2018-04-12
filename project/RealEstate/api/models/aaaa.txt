@@ -1,0 +1,2088 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><link href="https://file4.batdongsan.com.vn/images/icon-bds.ico" rel="shortcut icon" type="image/x-icon" /><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="audience" content="general" /><meta name="resource-type" content="document" /><meta name="abstract" content="Thông tin nhà đất Việt Nam" /><meta name="classification" content="Bất động sản Việt Nam" /><meta name="area" content="Nhà đất và bất động sản" /><meta name="placename" content="Việt Nam" /><meta name="author" content="Batdongsan.com.vn" /><meta name="copyright" content="©2007 Batdongsan.com.vn" /><meta name="owner" content="Batdongsan.com.vn" /><meta name="generator" content="Daiviet Software Jsc" /><meta name="distribution" content="Global" /><meta name="keywords" content="Mua, nhà, bán, nhà, đất, mua, bán, nhà, đất" /><meta name="description" content="Mua nhà, bán nhà đất, mua bán nhà đất tại Việt Nam. Bán nhà đất: theo diện tích, giá bán, địa điểm, hướng, đầy đủ, cập nhật nhất. Mua bán nhà đất và các lĩnh vực liên quan. (Trang 2)" /><meta name="revisit-after" content="1 days" /><meta name="robots" content="follow" /><meta name="custom-apple-itunes-app" content="app-id=866492094" /><title>
+Mua nhà | Mua bán nhà | Bán nhà đất | Trang 2
+</title><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/Modules/Banner/content/css/banner-preview.css?v=2221" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/css/style.css?v=2221" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/scripts/fancybox215/source/jquery.fancybox.css" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/scripts/fancybox215/source/helpers/jquery.fancybox-buttons.css" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/css/stats-demand.css?v=2221" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/App_Themes/Home/jquery.mCustomScrollbar.css" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/css/print.css" media="print" /><noscript name="deferred-styles"><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/css/fontawesome/css/font-awesome.min.css" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/Scripts/jquery-ui.css" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/css/usercomment1.css" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/Modules/Chats/styles/chat-style.css?v=2221" media="all" /><link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/Modules/Chats/styles/emoticon.css" media="all" /></noscript><script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-3729099-1', 'auto');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=302507473246792";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/jquery-1.7.2.min.js?v=2221"></script>
+<script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/jquery.cookie.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/jquery.AdvanceHiddenDropbox.js?v=2221"></script>
+<script>
+try{
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1686608788227708');
+fbq('track', 'PageView');
+}catch(ex){}
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1686608788227708&ev=PageView&noscript=1"/></noscript>
+<script type="text/javascript" src="https://content.batdongsan.com.vn/scripts/lang.js?v=2221"></script><link rel="alternate" href="https://m.batdongsan.com.vn/nha-dat-ban/p2" media="only screen and (max-width: 640px)" /><link rel="alternate" href="https://m.batdongsan.com.vn/nha-dat-ban/p2" media="handheld" /><meta name="title" content="Mua nhà | Mua bán nhà | Bán nhà đất | Trang 2" /><meta property="fb:app_id" content="302507473246792" /><meta property="og:title" content="Mua nhà | Mua bán nhà | Bán nhà đất | Trang 2" /><meta property="og:description" content="Mua nhà, bán nhà đất, mua bán nhà đất tại Việt Nam. Bán nhà đất: theo diện tích, giá bán, địa điểm, hướng, đầy đủ, cập nhật nhất. Mua bán nhà đất và các lĩnh vực liên quan. (Trang 2)" /><meta property="og:image" content="https://file4.batdongsan.com.vn/crop/600x315/2018/04/03/20180403162807-03aa_wm.jpg" /><meta property="og:image:width" content="600" /><meta property="og:image:height" content="315" /><meta property="og:type" content="website" /><meta property="og:url" content="https://batdongsan.com.vn/nha-dat-ban/p2" /></head>
+<body class="bg-site">
+<!--04/04/2018 10:40:58-->
+<form method="post" action="/nha-dat-ban/p2" id="form1" enctype="multipart/form-data" statsDomain="https://statistic.batdongsan.com.vn">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="I4ZwMQOOZzB+U7pjN2cAoOTHquoP68b36yClMRwffx05utCPA0g4KDXsOjv2ieeD8dFU6M0OjnPe8m8YrJfp6/6NkmU=" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+theForm.__EVENTTARGET.value = eventTarget;
+theForm.__EVENTARGUMENT.value = eventArgument;
+theForm.submit();
+}
+}
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+__bannerContext = {"cateId":38,"pageId":null,"currentPage":86,"cityCode":null,"districtId":null};//]]>
+</script>
+<div class="banner-left">
+<div class="container-default">
+<div>
+<div id="ban_left" class="ban_scroll">
+<div class="adPosition" positionCode="BANNER_POSITION_LEFT" style="margin-bottom: 0px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="wrap-comment">
+<a id="popup-comment" class="popup-comment gopy" href="/Modules/UserComment/CommentPopUp.aspx" ref="nofollow"></a>
+</div>
+<div class="site-center">
+<div class="header-top">
+<div class="header-top-left">
+<div style="padding-top: 5px;">
+<h1>
+<a href="/" rel="nofollow"><img src="https://file4.batdongsan.com.vn/images/opt/logo-bds.jpg" alt="Kênh thông tin mua bán, cho thuê nhà đất số 1"  style="padding-top: 2px;"/></a>
+</h1>
+</div>
+</div>
+<div class="header-top-right">
+<div id="TopBanner">
+<div class="container-default" style="min-height: 86px;">
+<div>
+<div class="adPosition" positionCode="BANNER_POSITION_TOP" style="" hasShare="True" hasNotShare="False"></div>
+</div>
+</div>
+</div>
+<div class="header-middle-right">
+<noscript name="deferred-styles">
+<link href="/css/login.css?v=2221" rel="stylesheet" />
+<!--[if gte IE 9]>
+<link href="/css/login-ie-gte9.css?v=2221" rel="stylesheet" />
+<![endif]-->
+<!--[if lte IE 8]> 
+<link href="/css/login-ie.css?v=2221" rel="stylesheet" />
+<![endif]-->
+</noscript>
+<div class="user_style">
+<div>
+<div class="header-middle-righ-link">
+<a href="/english"><span class="HeaderText">English</span></a>
+</div>
+<div class="header-middle-righ-icon">
+<img src="https://file4.batdongsan.com.vn/images/ab/english.png" alt="English" style="margin-top: 9px;" id="ico_english" />
+</div>
+</div>
+<div id="divUserStt" style="display: none;">
+<div>
+<div class="header-middle-righ-link">
+<a href="/trang-dang-nhap" rel="nofollow">Đăng nhập</a>
+</div>
+<div class="header-middle-righ-icon">
+<img src="https://file4.batdongsan.com.vn/images/ab/login.png" id="ico_login">
+</div>
+</div>
+<div>
+<div class="header-middle-righ-link max90" id="kct_username">
+<a href="/dang-ky-nguoi-dung" title="Đăng ký" rel="nofollow">Đăng ký
+</a>
+</div>
+<div class="header-middle-righ-icon">
+<img src="https://file4.batdongsan.com.vn/images/ab/register.png" id="ico_register">
+</div>
+</div>
+<div class="header-middle-righ-link" id="chat-quick-inbox-icon"></div>
+</div>
+<div class="user_hide" style="display: none !important;">
+<div class="header-middle-righ-link">
+<a href="../Defaults/#" id="UserControl1_linkPostFAQ"><span class="HeaderText">Hỏi đáp</span></a>
+</div>
+<div class="header-middle-righ-icon">
+<img src="https://file4.batdongsan.com.vn/images/opt/header-middle-right-icon2.jpg" id="ico_faq" />
+</div>
+</div>
+<div id="divCusPostProduct">
+<div id="UserControl1_divPostProduct" class="header-middle-righ-link">
+<a href="/dang-tin-rao-vat-ban-nha-dat" id="linkPostProduct"><span>Đăng tin rao</span></a>
+</div>
+<div class="header-middle-righ-icon">
+<img src="https://file4.batdongsan.com.vn/images/ab/plus.png" id="ico_product" />
+</div>
+</div>
+<div id="UserControl1_divMember">
+</div>
+<div id="UserControl1_div1">
+<div id="UserControl1_bxhicon">
+<div class="header-middle-righ-link" style="margin-right: 5px;">
+<a href="http://banxehoi.com/" target="_blank" title="banxehoi.com"><span class="HeaderText">Banxehoi.com</span></a>
+</div>
+<div class="header-middle-righ-icon" style="width: 16px;">
+<img src="https://file4.batdongsan.com.vn/images/ab/banxehoi.png" id="ico_banxehoi" style="width: 14px; height: 15px; padding-top: 3px;" />
+</div>
+</div>
+</div>
+<div class="mxh_wrap">
+<div id="utube">
+<a href="https://www.youtube.com/channel/UC703ZTxSlujd1vB8WRn4j4w" target="_blank" rel="nofollow" title="Batdongsan.com.vn trên Youtube">
+<img src="https://file4.batdongsan.com.vn/images/ab/youtube.png" alt="Youtube Batdongsan.com.vn" /></a>
+</div>
+<div id="gg">
+<a href="https://plus.google.com/u/0/106775252072535887002/" target="_blank" rel="nofollow" title="Batdongsan.com.vn trên Google+">
+<img src="https://file4.batdongsan.com.vn/images/ab/gg.png" alt="Google+ Batdongsan.com.vn" /></a>
+</div>
+<div id="fblink">
+<a href="https://www.facebook.com/Batdongsandv" target="_blank" rel="nofollow" title="Batdongsan.com.vn trên Facebook">
+<img src="https://file4.batdongsan.com.vn/images/ab/fb.png" alt="Facebook Batdongsan.com.vn" /></a>
+</div>
+</div>
+</div>
+<script>
+var LoginModule = undefined;
+$(function () {
+if (getCookie('userinfo') !== undefined && getCookie('userinfo') != '') {
+$.get('/HandlerWeb/UserHandler.ashx?type=getuserstatus',
+function (data) {
+if (data !== undefined && data != null) {
+var html = '<div><div class="header-middle-righ-link"><a href="javascript:;" onclick="LogOut()" rel="nofollow">Thoát</a></div><div class="header-middle-righ-icon"><img src="https://file4.batdongsan.com.vn/images/ab/logout.png" id="ico_logout" style="padding-top: 2px !important"></div></div><div><div class="header-middle-righ-link max155 user_name"><img src="https://file4.batdongsan.com.vn/images/ab/user.png" style="display: block; float: left; margin-top: 7px; margin-right: 3px;"><a style="white-space: nowrap;" href="' + data.cplnk + '" rel="nofollow">' + data.name + '</a></div><div class=\"header-middle-righ-icon\"  id=\"chat-quick-inbox-icon\" style=\"height: 30px; margin-top: 0px; margin-right: 2px; position: relative; width: 25px; background: url(https://file4.batdongsan.com.vn/images/ab/chat.png) no-repeat 0 7px;\"><img src=\"https://file4.batdongsan.com.vn/images/ab/user.png\" style=\"display: none;\"><span class=\"mnu-chat-icon-unread\"></span></div></div>';
+if (data.notify > 0) {
+html += '<div class="header-middle-righ-icon nqv" onclick="ShowQuickViewNotify(this);" style="height: 30px;position: relative;width: 25px;background: url(https://file4.batdongsan.com.vn/images/ab/thong-bao.png) no-repeat 0 7px;"><span class="mnu-notify-icon-unread nqv">' + data.notify + '</span></div>';
+}
+$('#divUserStt').html(html);
+}
+else {
+LoadLoginModule();
+}
+$('#divUserStt').show();
+}, 'json');
+} else {
+$('#divUserStt').show();
+LoadLoginModule();
+}
+});
+function LogOut() { try { BDSChat.LogOutSingR(false); } catch (ex) { }; window.location.href = '/Logout.aspx'; }
+function LoadLoginModule() {
+if (window.location.href.indexOf('trang-dang-nhap') < 0 && window.location.href.indexOf('dang-ky-nguoi-dung') < 0 && window.location.href.indexOf('lay-lai-mat-khau') < 0 && window.location.href.indexOf('trang-ca-nhan') < 0 && window.location.href.indexOf('thay-doi-mat-khau') < 0) {
+if (LoginModule !== undefined) {
+_loadLoginModuleSuccess();
+} else {
+//$('body').append('<link href="/css/login.css?v=' + (new Date().getTime()) + '" rel="stylesheet" />');
+//var ua = window.navigator.userAgent;
+//var msie = ua.indexOf("MSIE ");
+//if (msie > 0)
+//    $('body').append('<link href="/css/login-ie.css?v=' + (new Date().getTime()) + '" rel="stylesheet" />');
+writeScript('/Modules/UserProfile/Scripts/account-login.js?v=1');
+}
+}
+}
+window._loadLoginModuleSuccess = function () {
+$('#divUserStt').find('a[href="/trang-dang-nhap"]').click(function () {
+LoginModule.showLoginForm();
+});
+$('#divUserStt').find('a[href="/trang-dang-nhap"]').attr('href', '#');
+$('#divUserStt').find('a[href="/dang-ky-nguoi-dung"]').click(function () {
+LoginModule.showRegistForm();
+});
+$('#divUserStt').find('a[href="/dang-ky-nguoi-dung"]').attr('href', '#');
+}
+</script>
+</div>
+</div>
+</div>
+<div class="header-menu">
+<div id='left-page-nav'></div><div class='menupad'></div><div id='page-navigative-menu'><div class='ihome'><a href='/'><img src="https://file4.batdongsan.com.vn/images/opt/homea.png" /></a></div><ul class='dropdown-navigative-menu'><li class='lv0'><a href='/nha-dat-ban' class='haslink '>Nhà đất bán</a><ul><li class='lv1'><a href='/ban-can-ho-chung-cu' class='haslink '>Bán căn hộ chung cư</a></li><li class='lv1'><a href='/ban-nha-rieng' class='haslink '>Bán nhà riêng</a></li><li class='lv1'><a href='/ban-nha-biet-thu-lien-ke' class='haslink '>Bán nhà biệt thự, liền kề</a></li><li class='lv1'><a href='/ban-nha-mat-pho' class='haslink '>Bán nhà mặt phố</a></li><li class='lv1'><a href='/ban-dat-nen-du-an' class='haslink '>Bán đất nền dự án</a></li><li class='lv1'><a href='/ban-dat' class='haslink '>Bán đất</a></li><li class='lv1'><a href='/ban-trang-trai-khu-nghi-duong' class='haslink '>Bán trang trại, khu nghỉ dưỡng</a></li><li class='lv1'><a href='/ban-kho-nha-xuong' class='haslink '>Bán kho, nhà xưởng</a></li><li class='lv1'><a href='/ban-loai-bat-dong-san-khac' class='haslink '>Bán loại bất động sản khác</a></li></ul></li><li class='lv0'><a href='/nha-dat-cho-thue' class='haslink '>Nhà đất cho thuê</a><ul><li class='lv1'><a href='/cho-thue-can-ho-chung-cu' class='haslink '>Cho thuê căn hộ chung cư</a></li><li class='lv1'><a href='/cho-thue-nha-rieng' class='haslink '>Cho thuê nhà riêng</a></li><li class='lv1'><a href='/cho-thue-nha-mat-pho' class='haslink '>Cho thuê nhà mặt phố</a></li><li class='lv1'><a href='/cho-thue-nha-tro-phong-tro' class='haslink '>Cho thuê nhà trọ, phòng trọ</a></li><li class='lv1'><a href='/cho-thue-van-phong' class='haslink '>Cho thuê văn phòng</a></li><li class='lv1'><a href='/cho-thue-cua-hang-ki-ot' class='haslink '>Cho thuê cửa hàng - ki ốt</a></li><li class='lv1'><a href='/cho-thue-kho-nha-xuong-dat' class='haslink '>Cho thuê kho, nhà xưởng, đất</a></li><li class='lv1'><a href='/cho-thue-loai-bat-dong-san-khac' class='haslink '>Cho thuê loại bất động sản khác</a></li></ul></li><li class='lv0'><a href='/du-an-bat-dong-san' class='haslink '>Dự án</a><ul><li class='lv1'><a href='/can-ho-chung-cu' class='haslink '>Căn hộ, Chung cư</a></li><li class='lv1'><a href='/cao-oc-van-phong' class='haslink '>Cao ốc văn phòng</a></li><li class='lv1'><a href='/trung-tam-thuong-mai' class='haslink '>Trung tâm thương mại</a></li><li class='lv1'><a href='/khu-do-thi-moi' class='haslink '>Khu đô thị mới</a></li><li class='lv1'><a href='/khu-phuc-hop' class='haslink '>Khu phức hợp</a></li><li class='lv1'><a href='/nha-o-xa-hoi' class='haslink '>Nhà ở xã hội</a></li><li class='lv1'><a href='/khu-nghi-duong-sinh-thai' class='haslink '>Khu nghỉ dưỡng, Sinh thái</a></li><li class='lv1'><a href='/khu-cong-nghiep' class='haslink '>Khu công nghiệp</a></li><li class='lv1'><a href='/du-an-khac' class='haslink '>Dự án khác</a></li><li class='lv1'><a href='/biet-thu-lien-ke' class='haslink '>Biệt thự, liền kề</a></li></ul></li><li class='lv0'><a href='/can-mua-can-thue' class='haslink '>Cần mua - Cần thuê</a><ul><li class='lv1'><a href='/nha-dat-can-mua' class='haslink indent'>Nhà đất cần mua</a><ul><li class='lv2'><a href='/mua-can-ho-chung-cu' class='haslink '>Mua căn hộ chung cư</a></li><li class='lv2'><a href='/mua-nha-rieng' class='haslink '>Mua nhà riêng</a></li><li class='lv2'><a href='/mua-nha-biet-thu-lien-ke' class='haslink '>Mua nhà biệt thự, liền kề</a></li><li class='lv2'><a href='/mua-nha-mat-pho' class='haslink '>Mua nhà mặt phố</a></li><li class='lv2'><a href='/mua-dat-nen-du-an' class='haslink '>Mua đất nền dự án</a></li><li class='lv2'><a href='/mua-dat' class='haslink '>Mua đất</a></li><li class='lv2'><a href='/mua-trang-trai-khu-nghi-duong' class='haslink '>Mua trang trại, khu nghỉ dưỡng</a></li><li class='lv2'><a href='/mua-kho-nha-xuong' class='haslink '>Mua kho, nhà xưởng</a></li><li class='lv2'><a href='/mua-cac-loai-bat-dong-san-khac' class='haslink '>Mua loại bất động sản khác</a></li></ul></li><li class='lv1'><a href='/nha-dat-can-thue' class='haslink indent'>Nhà đất cần thuê</a><ul><li class='lv2'><a href='/can-thue-can-ho-chung-cu' class='haslink '>Cần thuê căn hộ chung cư</a></li><li class='lv2'><a href='/can-thue-nha-rieng' class='haslink '>Cần thuê nhà riêng</a></li><li class='lv2'><a href='/can-thue-nha-mat-pho' class='haslink '>Cần thuê nhà mặt phố</a></li><li class='lv2'><a href='/can-thue-nha-tro-phong-tro' class='haslink '>Cần thuê nhà trọ, phòng trọ</a></li><li class='lv2'><a href='/can-thue-van-phong' class='haslink '>Cần thuê văn phòng</a></li><li class='lv2'><a href='/can-thue-cua-hang-ki-ot' class='haslink '>Cần thuê cửa hàng - ki ốt</a></li><li class='lv2'><a href='/can-thue-kho-nha-xuong-dat' class='haslink '>Cần thuê kho, nhà xưởng, đất</a></li><li class='lv2'><a href='/can-thue-cac-loai-bat-dong-san-khac' class='haslink '>Cần thuê loại bất động sản khác</a></li></ul></li></ul></li><li class='lv0'><a href='/tin-tuc' class='haslink '>Tin tức</a><ul><li class='lv1'><a href='/tin-thi-truong' class='haslink '>Tin thị trường</a></li><li class='lv1'><a href='/phan-tich-nhan-dinh' class='haslink '>Phân tích - nhận định</a></li><li class='lv1'><a href='/chinh-sach-quan-ly' class='haslink '>Chính sách - Quản lý</a></li><li class='lv1'><a href='/thong-tin-quy-hoach' class='haslink '>Thông tin quy hoạch</a></li><li class='lv1'><a href='/bat-dong-san-the-gioi' class='haslink '>Bất động sản thế giới</a></li><li class='lv1'><a href='/tai-chinh-chung-khoan-bat-dong-san' class='haslink '>Tài chính - Chứng khoán - BĐS</a></li><li class='lv1'><a href='/tu-van-luat-bat-dong-san' class='haslink indent'>Tư vấn luật</a><ul><li class='lv2'><a href='/trinh-tu-thu-tuc' class='haslink '> Trình tự, thủ tục</a></li><li class='lv2'><a href='/quyen-so-huu' class='haslink '>Quyền sở hữu</a></li><li class='lv2'><a href='/tranh-chap' class='haslink '>Tranh chấp</a></li><li class='lv2'><a href='/xay-dung-hoan-cong' class='haslink '>Xây dựng - Hoàn công</a></li><li class='lv2'><a href='/nghia-vu-tai-chinh' class='haslink '>Nghĩa vụ tài chính</a></li><li class='lv2'><a href='/cac-van-de-co-yeu-to-nuoc-ngoai' class='haslink '>Các vấn đề có yếu tố nước ngoài</a></li></ul></li><li class='lv1'><a href='/loi-khuyen' class='haslink indent'>Lời khuyên</a><ul><li class='lv2'><a href='/loi-khuyen-cho-nguoi-mua' class='haslink '>Lời khuyên cho người mua</a></li><li class='lv2'><a href='/loi-khuyen-cho-nguoi-ban' class='haslink '>Lời khuyên cho người bán</a></li><li class='lv2'><a href='/loi-khuyen-cho-nha-dau-tu' class='haslink '>Lời khuyên cho nhà đầu tư</a></li><li class='lv2'><a href='/loi-khuyen-cho-nguoi-thue' class='haslink '>Lời khuyên cho người thuê</a></li><li class='lv2'><a href='/loi-khuyen-cho-nguoi-cho-thue' class='haslink '>Lời khuyên cho người cho thuê</a></li></ul></li></ul></li><li class='lv0'><a href='javascript:;' class='nolink '>Xây dựng - Kiến trúc</a><ul><li class='lv1'><a href='/xay-dung' class='haslink indent'>Xây dựng</a><ul><li class='lv2'><a href='/vat-lieu-xay-dung' class='haslink '>Vật liệu xây dựng</a></li><li class='lv2'><a href='/kien-thuc-xay-dung' class='haslink '>Kiến thức xây dựng</a></li><li class='lv2'><a href='/giai-phap-xay-dung' class='haslink '>Giải pháp xây dựng</a></li></ul></li><li class='lv1'><a href='/kien-truc' class='haslink indent'>Kiến trúc</a><ul><li class='lv2'><a href='/tu-van-thiet-ke' class='haslink '>Tư vấn thiết kế</a></li><li class='lv2'><a href='/kien-truc-xua-va-nay' class='haslink '>Kiến trúc xưa và nay</a></li><li class='lv2'><a href='/the-gioi-kien-truc' class='haslink '>Thế giới kiến trúc</a></li><li class='lv2'><a href='/nha-dep' class='haslink '>Nhà đẹp</a></li><li class='lv2'><a href='/thu-vien-mau-nha' class='haslink indent'>Thư viện mẫu nhà</a><ul><li class='lv3'><a href='/nha-pho' class='haslink '>Nhà phố</a></li><li class='lv3'><a href='/biet-thu' class='haslink '>Biệt thự</a></li><li class='lv3'><a href='/chung-cu' class='haslink '>Chung cư</a></li><li class='lv3'><a href='/van-phong' class='haslink '>Văn phòng</a></li></ul></li></ul></li></ul></li><li class='lv0'><a href='/noi-ngoai-that' class='haslink '>Nội - Ngoại thất</a><ul><li class='lv1'><a href='/ngoai-that' class='haslink '>Ngoại thất</a></li><li class='lv1'><a href='/noi-that' class='haslink indent'>Nội thất</a><ul><li class='lv2'><a href='/toan-canh-ngoi-nha' class='haslink '>Toàn cảnh ngôi nhà</a></li><li class='lv2'><a href='/phong-khach' class='haslink '>Phòng khách</a></li><li class='lv2'><a href='/phong-ngu' class='haslink '>Phòng ngủ</a></li><li class='lv2'><a href='/phong-bep' class='haslink '>Phòng bếp</a></li><li class='lv2'><a href='/phong-tam' class='haslink '>Phòng tắm</a></li><li class='lv2'><a href='/phong-tre-em' class='haslink '>Phòng trẻ em</a></li><li class='lv2'><a href='/noi-that-van-phong' class='haslink '>Nội thất văn phòng</a></li><li class='lv2'><a href='/khach-san-nha-hang-showroom' class='haslink '>Khách sạn, Nhà hàng, Showroom</a></li></ul></li><li class='lv1'><a href='/tu-van-noi-ngoai-that' class='haslink '>Tư vấn nội ngoại thất</a></li><li class='lv1'><a href='/mach-ban' class='haslink '>Mách bạn</a></li><li class='lv1'><a href='/mua-sam' class='haslink '>Mua sắm</a></li></ul></li><li class='lv0'><a href='/phong-thuy' class='haslink '>Phong thủy</a><ul><li class='lv1'><a href='/phong-thuy-toan-canh' class='haslink '>Phong thủy toàn cảnh</a></li><li class='lv1'><a href='/tu-van-phong-thuy' class='haslink '>Tư vấn phong thủy</a></li><li class='lv1'><a href='/phong-thuy-nha-o' class='haslink indent'>Phong thủy nhà ở</a><ul><li class='lv2'><a href='/phong-thuy-phong-ngu' class='haslink '>Phong thủy phòng ngủ</a></li><li class='lv2'><a href='/phong-thuy-phong-khach' class='haslink '>Phong thủy phòng khách</a></li><li class='lv2'><a href='/phong-thuy-phong-bep' class='haslink '>Phong thủy phòng bếp</a></li><li class='lv2'><a href='/phong-thuy-phong-tam' class='haslink '>Phong thủy phòng tắm</a></li><li class='lv2'><a href='/phong-thuy-cua-chinh-san-vuon' class='haslink '>Phong thủy cửa chính, sân vườn</a></li></ul></li><li class='lv1'><a href='/phong-thuy-van-phong' class='haslink '>Phong thủy văn phòng</a></li><li class='lv1'><a href='/tin-tuc-phong-thuy-theo-tuoi' class='haslink '>Phong thủy theo tuổi</a></li></ul></li><li class='lv0'><a href='javascript:;' class='nolink '>Danh bạ</a><ul><li class='lv1'><a href='/nha-moi-gioi' class='haslink '>Nhà môi giới</a></li><li class='lv1'><a href='/doanh-nghiep' class='haslink '>Doanh nghiệp</a><ul></ul></li></ul></li><li class='lv0'><a href='/dien-dan-hoi-dap-bat-dong-san' class='haslink '>Hỏi - Đáp</a><ul><li class='lv1'><a style='font-family: Arial; color:#055699; font-weight:bold; font-size:14px;text-decoration: underline;' href='/dang-tin-hoi-dap' class='faqlink '>Đặt câu hỏi</a></li><li class='lv1'><a href='/hd-tu-van-thiet-ke' class='haslink indent'>Tư vấn - thiết kế</a><ul><li class='lv2'><a href='/hd-nha-pho-nha-lien-ke' class='haslink '>Nhà phố - Nhà liền kề</a></li><li class='lv2'><a href='/hd-giai-phap-xay-dung' class='haslink '>Giải pháp xây dựng</a><ul></ul></li><li class='lv2'><a href='/hd-biet-thu-nha-vuon' class='haslink '>Biệt thự - Nhà vườn</a></li><li class='lv2'><a href='/hd-can-ho-chung-cu' class='haslink '>Căn hộ chung cư</a></li><li class='lv2'><a href='/hd-thiet-ke-khac' class='haslink '>Thiết kế khác</a></li></ul></li><li class='lv1'><a href='/hd-phong-thuy' class='haslink indent'>Phong thủy</a><ul><li class='lv2'><a href='/hd-phong-thuy-nha-o' class='haslink '>Phong thủy nhà ở</a><ul></ul></li><li class='lv2'><a href='/hd-phong-thuy-van-phong' class='haslink '>Phong thủy văn phòng</a></li><li class='lv2'><a href='/hd-phong-thuy-cua-chinh-san-vuon' class='haslink '>Phong thủy cửa chính, sân vườn</a></li></ul></li><li class='lv1'><a href='/hd-van-ban-luat' class='haslink indent'>Văn bản luật</a><ul><li class='lv2'><a href='/hd-trinh-tu-thu-tuc' class='haslink '>Trình tự, thủ tục</a></li><li class='lv2'><a href='/hd-quyen-so-huu' class='haslink '>Quyền sở hữu</a></li><li class='lv2'><a href='/hd-xay-dung-hoan-cong' class='haslink '>Xây dựng - Hoàn công</a></li><li class='lv2'><a href='/hd-nghia-vu-tai-chinh' class='haslink '>Nghĩa vụ tài chính</a></li><li class='lv2'><a href='/hd-tranh-chap' class='haslink '>Tranh chấp</a></li><li class='lv2'><a href='/hd-cac-van-de-co-yeu-to-nuoc-ngoai' class='haslink '>Các vấn đề có yếu tố nước ngoài</a></li></ul></li><li class='lv1'><a href='/hd-thi-truong' class='haslink indent'>Thị trường</a><ul><li class='lv2'><a href='/hd-vat-tu-dich-vu' class='haslink '>Vật tư - Dịch vụ</a><ul></ul></li><li class='lv2'><a href='/hd-mua-ban-bds' class='haslink '>Mua bán BĐS</a></li><li class='lv2'><a href='/hd-cho-thue-bds' class='haslink '>Cho thuê BĐS</a></li><li class='lv2'><a href='/hd-thong-tin-du-an' class='haslink '>Thông tin dự án</a></li></ul></li><li class='lv1'><a href='/hd-mua-sam-bao-quan-do-noi-that' class='haslink '>Mua sắm, bảo quản đồ nội thất</a></li><li class='lv1'><a href='/hd-khac' class='haslink '>Khác</a></li></ul></li></ul></div><div class='menupad'></div><div id='right-page-nav'></div>
+</div>
+<div id="MiddleSubMenu">
+<div class="home-top-search" style="padding-bottom: 10px !important;">
+<div class="home-top-search-keyword">
+<input name="ctl00$MiddleSubMenu$_homeTopSearch$txt1" type="text" value="Nhập từ khóa để tìm theo cụm từ" id="txt1" />
+</div>
+<div class="advance-select-box" id="home-top-search">
+<span class="select-text">
+<span class="select-text-content">Nhà đất bán</span>
+</span>
+<input type="hidden" name="ctl00$MiddleSubMenu$_homeTopSearch$cboTypeSearch" id="cboTypeSearch" value="1" />
+<div id="home-top-search-otions" class="advance-select-options advance-options">
+<ul class="advance-options">
+<li vl="1" class="advance-options current">Nhà đất bán</li><li vl="2" class="advance-options">Nhà đất cho thuê</li><li vl="3" class="advance-options">Tin tức</li><li vl="4" class="advance-options">Hỏi đáp</li><li vl="5" class="advance-options">Dự án</li><li vl="6" class="advance-options">Doanh nghiệp</li><li vl="7" class="advance-options">Môi giới</li>
+</ul>
+</div>
+</div>
+<img src="https://file4.batdongsan.com.vn/images/header-bottom-button.jpg" onclick="Redirect();" class="fg-button fg-button-bg-default fg-button-toggleable ui-corner-all"
+alt="Tìm kiếm" name="btnSearch" id="btnSearch" />
+</div>
+<div style="position: absolute;right: 0;top: 5px;">
+<a href="https://topbank.vn/dang-ky-vay-mua-nha-tai-acb-ha-noi/1.2ty-10nam-1.5ty-pid340?ref=bds" rel="nofollow"  id="topbanklink" style="display: block;position: relative;" title="Hỗ trợ vay ngân hàng" target="_blank">
+<img src="https://file4.batdongsan.com.vn/images/httc/TB_button_list.gif" alt="Hỗ trợ vay ngân hàng"/><span class="ht1" style="color: #fff; text-transform: uppercase; position: absolute; top:11px; left:47px;"><strong>Hỗ trợ vay ngân hàng</strong></span>
+</a>
+</div>
+<div id="gglbody"></div>
+<script type="text/javascript">
+var defaultKeyword = "Nhập từ khóa để tìm theo cụm từ";
+var hdbTopSearch = $('#home-top-search').AdvanceHiddenDropbox({
+id: 'home-top-search-otions',
+hddValue: 'cboTypeSearch'
+});
+function Redirect() {
+var strInput = $("#txt1").val().toLowerCase();
+if (strInput.length == 0 || $.trim(strInput) == '' || $.trim(strInput) == defaultKeyword) {
+$("#txt1").focus();
+//return false;
+}
+else {
+strInput = strInput.replace(/'/ig, '');
+var strOrigin = strInput;
+strInput = UnicodeToKoDauUrl(strInput);
+var url = "";
+var typeSearch = $("#cboTypeSearch").val();
+if (typeSearch == "1")
+url = "/tags/ban/" + strInput;
+else if (typeSearch == "2")
+url = "/tags/cho-thue/" + strInput;
+else if (typeSearch == "3")
+url = "/tag/" + strInput;
+else if (typeSearch == "4")
+url = "/dien-dan-hoi-dap-bat-dong-san?k=" + strInput;
+else if (typeSearch == "5")
+url = "/phan-muc-cac-du-an-bds?k=" + strOrigin;
+else if (typeSearch == "6")
+url = "/doanh-nghiep-cac-linh-vuc?k=" + strOrigin;
+else if (typeSearch == "7")
+url = "/nha-moi-gioi?k=" + strOrigin;
+window.location.href = url;
+}
+}
+$(document).ready(function () {
+//$("#txt1").val(defaultKeyword);
+$("#txt1").addClass("txtKeyword");
+$("#txt1").click(function () {
+$("#txt1").focus();
+});
+$("#txt1").focus(function () {
+if ($("#txt1").val().length == 0 || $.trim($("#txt1").val()) == '' || $.trim($("#txt1").val()) == defaultKeyword)
+$("#txt1").val("");
+});
+$("#txt1").blur(function () {
+var strInput = $("#txt1").val();
+if (strInput.length == 0 || $.trim(strInput) == '' || $.trim(strInput) == defaultKeyword)
+$("#txt1").val(defaultKeyword);
+});
+$('#txt1').keypress(function (e) {
+if (e.which == 13) {
+Redirect();
+return false;
+}
+});
+if ($.browser.opera || ($.browser.msie && $.browser.version.split('.')[0] < 7)) {
+$('.home-top-search .select-box').css('opacity', '1');
+}
+else {
+// select element styling
+$('.home-top-search .select-box').each(function () {
+var title = $(this).attr('title');
+if ($('option:selected', this).val() != '') title = $('option:selected', this).text();
+$(this).css({ 'z-index': 10, 'opacity': 0, '-khtml-appearance': 'none' });
+$(this).after('<span class="select-text"><span class="select-text-content" style="width: 102px; height: 26px; line-height: 26px; color: grey;">' + title + '</span></span>');
+$(this).change(function () {
+var val = $('option:selected', this).text();
+$(this).next().children(":first").text(val);
+});
+});
+}
+if (document.referrer.indexOf("www.google.com") > 0 && window.location.href != '/') {
+$('#gglbody').html('<span id="bigfont" style="font-size:14px;">Chào mừng bạn đến với Batdongsan.com.vn từ Google! Bạn có biết</span><span> Batdongsan.com.vn là kênh thông tin số 1 về bất động sản và các lĩnh vực liên quan với <span class="redfont"><strong>240.000</strong> lượt truy cập</span> và <span class="redfont"><strong>15.000</strong> tin mới</span> mỗi ngày? Hãy sử dụng <a href="https://batdongsan.com.vn" title="Batdongsan.com.vn">Batdongsan.com.vn</a> để thỏa mãn tốt nhất mọi nhu cầu của bạn!</span>');
+$('#gglbody').show();
+}
+});
+</script>
+<div style="clear: both;"></div>
+</div>
+<div id="MainContent">
+</div>
+<div class="clear">
+</div>
+<div class="body-left">
+<div>
+<div class="SubTopContent">
+</div>
+<div class="SubTopContent">
+</div>
+</div>
+<div style="clear: both;">
+</div>
+<div class="container-default">
+<div>
+<div class="product-list product-list-page" pagekey="afgYRJI2uSWSXQ70P/5TjQ==">
+<div class="Title">
+<h1>
+Nhà đất bán tại Việt Nam</h1>
+<div class="Footer">
+Có <span class='greencolor'><strong>177,411</strong></span> bất động sản.
+</div>
+</div>
+<div id="bannerQC">
+<div class="adPosition" positionCode="BANNER_POSITION_HORIZONTAL_MAIN_CONTENT" style="" hasShare="True" hasNotShare="True"></div>
+</div>
+<div class="Main">
+<div class="Header">
+<ul class="header-tab filter">
+<li class="active" rel="all"><span><span style="white-space: nowrap;">
+<a onclick="ChangeTypeListProduct(&#39;all&#39;);" id="LeftMainContent__productSearchResult_blFilterAll" href="javascript:__doPostBack(&#39;ctl00$LeftMainContent$_productSearchResult$blFilterAll&#39;,&#39;&#39;)">Tất cả tin rao</a>
+(177411) </span></span></li>
+<li class="" rel="1"><span><span>
+<a onclick="ChangeTypeListProduct(1);" id="LeftMainContent__productSearchResult_blFilterImageVideo" rel="nofollow" ref="nofollow" href="javascript:__doPostBack(&#39;ctl00$LeftMainContent$_productSearchResult$blFilterImageVideo&#39;,&#39;&#39;)">Tin rao có hình</a>
+</span></span></li>
+<li class="" rel="4" tab="img360">
+<img src="https://file4.batdongsan.com.vn/images/tab/pr-tab-hot.png" />
+<span><span>
+<a onclick="ChangeTypeListProduct(4);" id="LeftMainContent__productSearchResult_blFilterImage360" rel="nofollow" href="javascript:__doPostBack(&#39;ctl00$LeftMainContent$_productSearchResult$blFilterImage360&#39;,&#39;&#39;)">Tin rao 3D - 360°</a>
+</span></span>
+</li>
+<li class="" rel="2"><span><span>
+<a onclick="ChangeTypeListProduct(2);" id="LeftMainContent__productSearchResult_blFilterVideo" rel="nofollow" href="javascript:__doPostBack(&#39;ctl00$LeftMainContent$_productSearchResult$blFilterVideo&#39;,&#39;&#39;)">Tin rao có video</a>
+</span></span></li>
+<li class="" rel="project" style="display:none;" id="liProjectInfo"><span><span>
+<a id="blProjectInfo" href="javascript:void(0)" onclick="displayProjectInfo()">Dự án</a>
+</span></span></li>
+<li  rel="maps"><span><span>
+<a id="LeftMainContent__productSearchResult_lnkToMap" title="Xem trên bản đồ" href="/ban-do-nha-dat-ban">
+Xem trên bản đồ
+</a></span></span>
+</li>
+</ul>
+<input type="hidden" name="ctl00$LeftMainContent$_productSearchResult$hddFilter" id="LeftMainContent__productSearchResult_hddFilter" />
+<div class="Repeat">
+<h2>
+Nhà đất bán Việt Nam</h2>
+<div class="order">
+<span>Sắp xếp theo: </span>
+<select name="ctl00$LeftMainContent$_productSearchResult$ddlSortReult" onchange="sortchange();setTimeout(&#39;__doPostBack(\&#39;ctl00$LeftMainContent$_productSearchResult$ddlSortReult\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlSortReult">
+<option value="0">Th&#244;ng thường</option>
+<option value="1">Tin mới nhất</option>
+<option value="2">Gi&#225; thấp nhất</option>
+<option value="3">Gi&#225; cao nhất</option>
+<option value="4">Diện t&#237;ch nhỏ nhất</option>
+<option value="5">Diện t&#237;ch lớn nhất</option>
+</select>
+</div>
+</div>
+</div>
+<div class="clear">
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-duong-truong-luu-phuong-long-truong/mat-tien-30m-gia-12-trieu-m2-dien-tich-2115-m-0946746009-pr15445967' title='B&#193;N ĐẤT MẶT TIỀN TRƯỜNG LƯU ĐƯỜNG 30M GI&#193; 12 TRIỆU/M2  DIỆN T&#205;CH 2115 M 0946746009' style="text-rendering: optimizelegibility;">
+BÁN ĐẤT MẶT TIỀN TRƯỜNG LƯU ĐƯỜNG 30M GIÁ 12 TRIỆU/M2  DIỆN TÍCH 2115 M 0946746009
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-duong-truong-luu-phuong-long-truong/mat-tien-30m-gia-12-trieu-m2-dien-tich-2115-m-0946746009-pr15445967' title='B&#193;N ĐẤT MẶT TIỀN TRƯỜNG LƯU ĐƯỜNG 30M GI&#193; 12 TRIỆU/M2  DIỆN T&#205;CH 2115 M 0946746009'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/20180403162807-03aa_wm.jpg' alt='B&#193;N ĐẤT MẶT TIỀN TRƯỜNG LƯU ĐƯỜNG 30M GI&#193; 12 TRIỆU/M2  DIỆN T&#205;CH 2115 M 0946746009' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">BÁN ĐẤT MẶT TIỀN ĐƯỜNG TRƯỜNG LƯU 30 M  GIÁ 12TR/M2 DIỆN TÍCH 2115M THUẬN TIỆN ĐỂ PHÂN LÔ VÀ LÀM KHO HOẶC NHÀ XƯỠNG .ĐẤT CÓ SỔ GIÁ HIỆN TẠI THỊ TRƯỜNG LA 33TR MẶT TIỀN ĐƯƠNG LH 0946746009 - 0916746009...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">12 triệu/m²</span>&nbsp;
+Diện tích: 
+<span class="product-area">2115 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Quận 9, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-can-ho-chung-cu-duong-15b-phuong-phu-my-9-prj-the-era-town/t-cao-cap-chuyen-nhuong-pr14432069' title='Hot! Căn hộ chung cư cao cấp cần chuyển nhượng' style="text-rendering: optimizelegibility;">
+HOT! CĂN HỘ CHUNG CƯ CAO CẤP CẦN CHUYỂN NHƯỢNG
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-can-ho-chung-cu-duong-15b-phuong-phu-my-9-prj-the-era-town/t-cao-cap-chuyen-nhuong-pr14432069' title='Hot! Căn hộ chung cư cao cấp cần chuyển nhượng'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/03/10/20180310113002-f73a_wm.jpg' alt='Hot! Căn hộ chung cư cao cấp cần chuyển nhượng' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Căn hộ với nhiều tiện ích như: Hồ bơi, siêu thị, gym, sân bóng rổ, đường đi bộ bờ sông 1,5km,... Cách bệnh viện Tim Tâm Đức 2km, trường cấp 1, cấp 2..Hiện cần sang nhượng một số căn hộ với diện tích sau: - 02 phòng ngủ: + 67m2, giá 1.45 tỷ. + 85m2, 77m2, 90m2, giá 1.65tỷ - 1.7 tỷ. - 03 phòng ngủ: + ...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">1.65 tỷ</span>&nbsp;
+Diện tích: 
+<span class="product-area">90 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Quận 7, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-nen-du-an-duong-tinh-lo-10-xa-le-minh-xuan/mo-50-tho-cu-mat-tien-10-pr15444264' title='Mở b&#225;n 50 nền đất thổ cư mặt tiền đường Tỉnh Lộ 10' style="text-rendering: optimizelegibility;">
+MỞ BÁN 50 NỀN ĐẤT THỔ CƯ MẶT TIỀN ĐƯỜNG TỈNH LỘ 10
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-nen-du-an-duong-tinh-lo-10-xa-le-minh-xuan/mo-50-tho-cu-mat-tien-10-pr15444264' title='Mở b&#225;n 50 nền đất thổ cư mặt tiền đường Tỉnh Lộ 10'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/20180403151002-3c7b_wm.jpg' alt='Mở b&#225;n 50 nền đất thổ cư mặt tiền đường Tỉnh Lộ 10' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Chính thức mở bán 50 nền đất thổ cư. Vị trí: Nằm trên mặt tiền đường 50m - ngay trung tâm hành chính - liền kề bệnh viện Chợ Rẫy 2 - cách chợ Vĩnh Lộc 15p. - Cách đường Nguyễn Văn Linh 20 phút - kết nối rất nhanh về quận 8 và quận 5 quận 7 chỉ 20 phút, quận 1 chỉ 30 phút. Diện tích: 5*17: 5*20: 6*20...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">680 triệu</span>&nbsp;
+Diện tích: 
+<span class="product-area">85 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Bình Chánh, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-can-ho-chung-cu-duong-duong-to-xa-duong-to-prj-best-western-premier-sonasea-phu-quoc/chi-1-3ty-da-so-huu-ngay-5-chuan-my-ngay-dac-khu-kinh-te-quoc-pr15445582' title='Chỉ 1,3 tỷ đ&#227; sở hữu ngay căn hộ 5* chuẩn Mỹ Best Western ngay đặc khu kinh tế Ph&#250; Quốc' style="text-rendering: optimizelegibility;">
+CHỈ 1,3 TỶ ĐÃ SỞ HỮU NGAY CĂN HỘ 5* CHUẨN MỸ BEST WESTERN NGAY ĐẶC KHU KINH TẾ PHÚ QUỐC
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-can-ho-chung-cu-duong-duong-to-xa-duong-to-prj-best-western-premier-sonasea-phu-quoc/chi-1-3ty-da-so-huu-ngay-5-chuan-my-ngay-dac-khu-kinh-te-quoc-pr15445582' title='Chỉ 1,3 tỷ đ&#227; sở hữu ngay căn hộ 5* chuẩn Mỹ Best Western ngay đặc khu kinh tế Ph&#250; Quốc'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/20180403161022-d3cd_wm.jpg' alt='Chỉ 1,3 tỷ đ&#227; sở hữu ngay căn hộ 5* chuẩn Mỹ Best Western ngay đặc khu kinh tế Ph&#250; Quốc' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Để ở nhà thì sợ trộm và không sinh lời. Gửi ngân hàng thì lo lắng tiền của mình một ngày "không cánh mà bay". Bất động sản nghỉ dưỡng - kênh đầu tư làm chao đảo giới nhà giàu. *Best Western Premier Sonasea Phú Quốc. - Tổng diện tích: 34.807 m2. - Quy mô: 9 tầng nổi 1 tầng hầm, 2 tòa Condotel A- B vớ...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">1.3 tỷ</span>&nbsp;
+Diện tích: 
+<span class="product-area">38 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Phú Quốc, Kiên Giang
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-duong-bung-goi-xa-cua-duong/chinh-chu-can-gap-lo-gia-dau-tu-khu-biet-thu-view-nui-ong-lang-so-hong-rieng-day-du-pr15445309' title='Ch&#237;nh chủ cần b&#225;n gấp l&#244; đất gi&#225; đầu tư khu biệt thự view n&#250;i &#212;ng Lang. Sổ hồng ri&#234;ng đầy đủ' style="text-rendering: optimizelegibility;">
+CHÍNH CHỦ CẦN BÁN GẤP LÔ ĐẤT GIÁ ĐẦU TƯ KHU BIỆT THỰ VIEW NÚI ÔNG LANG. SỔ HỒNG RIÊNG ĐẦY ĐỦ
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-duong-bung-goi-xa-cua-duong/chinh-chu-can-gap-lo-gia-dau-tu-khu-biet-thu-view-nui-ong-lang-so-hong-rieng-day-du-pr15445309' title='Ch&#237;nh chủ cần b&#225;n gấp l&#244; đất gi&#225; đầu tư khu biệt thự view n&#250;i &#212;ng Lang. Sổ hồng ri&#234;ng đầy đủ'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/20180403155928-d300.jpg' alt='Ch&#237;nh chủ cần b&#225;n gấp l&#244; đất gi&#225; đầu tư khu biệt thự view n&#250;i &#212;ng Lang. Sổ hồng ri&#234;ng đầy đủ' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Vị trí ấp Búng Gội, xã Cửa Dương - Cách trung tâm Dương Đông 5 km - Cách biển Ông Lang 2 km - Chỉ mất 5 - 7 phút đến Casino & Vinperland - Liền kề khu biệt thự nghĩ dưỡng cao cấp, cảnh quan đẹp & công viên... - Sổ hồng riêng, pháp lý rõ ràng, cam kết không dính quy hoạch. - Giá 4,3 tỷ. Diện tích 500...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">4.3 tỷ</span>&nbsp;
+Diện tích: 
+<span class="product-area">500 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Phú Quốc, Kiên Giang
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-nen-du-an-duong-phan-van-hon-75/khu-dan-cu-dong-duc-hoc-mon-dep-gia-re-nhat-khu-vuc-lh-0934733036-shr-pr15445238' title='Đất khu d&#226;n cư đ&#244;ng đ&#250;c - H&#243;c M&#244;n, Đất đẹp - gi&#225; rẻ nhất khu vực, LH 0934733036. SHR' style="text-rendering: optimizelegibility;">
+ĐẤT KHU DÂN CƯ ĐÔNG ĐÚC - HÓC MÔN, ĐẤT ĐẸP - GIÁ RẺ NHẤT KHU VỰC, LH 0934733036. SHR
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-nen-du-an-duong-phan-van-hon-75/khu-dan-cu-dong-duc-hoc-mon-dep-gia-re-nhat-khu-vuc-lh-0934733036-shr-pr15445238' title='Đất khu d&#226;n cư đ&#244;ng đ&#250;c - H&#243;c M&#244;n, Đất đẹp - gi&#225; rẻ nhất khu vực, LH 0934733036. SHR'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/wHfq97ef/20180403155422-fc35.jpg' alt='Đất khu d&#226;n cư đ&#244;ng đ&#250;c - H&#243;c M&#244;n, Đất đẹp - gi&#225; rẻ nhất khu vực, LH 0934733036. SHR' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Đất khu dân cư đông đúc - Hóc Môn. Đất đẹp - giá rẻ nhất khu vực. Thổ cư 100% - Xây dựng tự do - Đường nhựa 12 - 15m. Giá chỉ 399 triệu/nền. Sổ hồng riêng có sẵn - Khách mua có thể đi công chứng sang tên ngay lập tức. Không giới hạn thời gian xây dựng.Vị trí đắc địa: - Mặt tiền đường Phan Văn Hớn. -...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">399 triệu</span>&nbsp;
+Diện tích: 
+<span class="product-area">80 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Hóc Môn, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-nen-du-an-duong-quoc-lo-51-xa-long-hung-6-prj-dreamland-city/gap-nha-pho-khu-gan-song-gia-9-2-trieu-m2-lien-he-ngay-de-xem-0915-224-799-pr9856132' title='B&#225;n gấp nền nh&#224; phố khu Long Hưng gần s&#244;ng, gi&#225; 9.8 triệu/m2. Li&#234;n hệ ngay để xem đất 0915 224 799' style="text-rendering: optimizelegibility;">
+BÁN GẤP NỀN NHÀ PHỐ KHU LONG HƯNG GẦN SÔNG, GIÁ 9.8 TRIỆU/M2. LIÊN HỆ NGAY ĐỂ XEM ĐẤT 0915 224 799
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-nen-du-an-duong-quoc-lo-51-xa-long-hung-6-prj-dreamland-city/gap-nha-pho-khu-gan-song-gia-9-2-trieu-m2-lien-he-ngay-de-xem-0915-224-799-pr9856132' title='B&#225;n gấp nền nh&#224; phố khu Long Hưng gần s&#244;ng, gi&#225; 9.8 triệu/m2. Li&#234;n hệ ngay để xem đất 0915 224 799'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/01/06/20180106145012-5601_wm.jpg' alt='B&#225;n gấp nền nh&#224; phố khu Long Hưng gần s&#244;ng, gi&#225; 9.8 triệu/m2. Li&#234;n hệ ngay để xem đất 0915 224 799' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Với quy mô dự án khu đô thị kinh tế mở Long Hưng - Biên Hòa - Đồng Nai (ngay Quốc Lộ 51, ngã 3 Bến Gỗ vào 800m).  Cần bán gấp lô đất giáp sông khu đô thị long Hưng, sổ đỏ đã có, lô đất với diện tích 100m2 (5x20m), lô đất nằm phía gần sông nên rất mát.  + Quy mô dự án 1.500 ha, thổ cư 100%. + To...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">9.8 triệu/m²</span>&nbsp;
+Diện tích: 
+<span class="product-area">100 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Biên Hòa, Đồng Nai
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-can-ho-chung-cu-duong-cau-giay-phuong-dich-vong-prj-discovery-complex/cccc-dt-99m2-lhcc-0966332688-pr15182423' title='Cần b&#225;n Căn hộ CCCC Discovery Cầu Giấy. DT 99m2, LHCC 0966332688' style="text-rendering: optimizelegibility;">
+CẦN BÁN CĂN HỘ CCCC DISCOVERY CẦU GIẤY. DT 99M2, LHCC 0966332688
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-can-ho-chung-cu-duong-cau-giay-phuong-dich-vong-prj-discovery-complex/cccc-dt-99m2-lhcc-0966332688-pr15182423' title='Cần b&#225;n Căn hộ CCCC Discovery Cầu Giấy. DT 99m2, LHCC 0966332688'
+onclick="">
+<img class="product-avatar-img" src='https://file1.batdongsan.com.vn/images/no-photo.jpg' alt='Cần b&#225;n Căn hộ CCCC Discovery Cầu Giấy. DT 99m2, LHCC 0966332688' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Bán chung cư cao cấp Discovery 302 <a href="/ban-can-ho-chung-cu-duong-cau-giay-7">Cầu Giấy</a>. Nhà đẹp vừa làm thủ tục nhận nhà. Diện tích 99m2 xây dựng, có 2 PN (có thể sửa chữa thành 2 PN đẹp, 1 phòng bếp, 1 phòng khách, 2wc, 1 ban công, 1 gialo. Ban công nhìn ra công viên Nghĩa Đô và trung tâm thành phố. Chính chủ giao bán, ai có nhu cầu mua trự...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">Thỏa thuận</span>&nbsp;
+Diện tích: 
+<span class="product-area">99 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Cầu Giấy, Hà Nội
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-duong-duong-dong-360/chinh-chu-gap-lo-goc-2-mt-trung-tam-phu-quoc-680tr-192m-lh-0902856066-pr15093762' title='Ch&#237;nh chủ b&#225;n gấp l&#244; g&#243;c 2 MT trung t&#226;m Ph&#250; Quốc 680tr/192m LH: 0902856066' style="text-rendering: optimizelegibility;">
+CHÍNH CHỦ BÁN GẤP LÔ GÓC 2 MT TRUNG TÂM PHÚ QUỐC 680TR/192M LH: 0902856066
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-duong-duong-dong-360/chinh-chu-gap-lo-goc-2-mt-trung-tam-phu-quoc-680tr-192m-lh-0902856066-pr15093762' title='Ch&#237;nh chủ b&#225;n gấp l&#244; g&#243;c 2 MT trung t&#226;m Ph&#250; Quốc 680tr/192m LH: 0902856066'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/03/06/66QqqaY2/20180306172743-08a1.jpg' alt='Ch&#237;nh chủ b&#225;n gấp l&#244; g&#243;c 2 MT trung t&#226;m Ph&#250; Quốc 680tr/192m LH: 0902856066' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">1. Bán đất Phú Quốc MT Dương Đông, nguyên trung trực 10x50=500m2 4,7 ty - DT 6x32=990 (đường trước nhà 6m đã có sổ hồng). 2. Bán MT đường 30 - 4 trung tâm Phú Quốc. - DT: 6x20 =120m2 giá 1,3t (MT đường 6m gần chợ đêm gần biển). - lô góc hai mặt tiền 8,5x20 =166m2 (ngay ngã ba 30 - 4 và tuyến trá...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">680 triệu</span>&nbsp;
+Diện tích: 
+<span class="product-area">192 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Phú Quốc, Kiên Giang
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-can-ho-chung-cu-duong-nguyen-van-huong-phuong-thao-dien-prj-xi-riverview-palace/chinh-chu-3-pn-lh-0908-181-185-pr15431537' title='Xi Riverview - ch&#237;nh chủ cần b&#225;n căn hộ 3PN. LH 0908 181 185' style="text-rendering: optimizelegibility;">
+XI RIVERVIEW - CHÍNH CHỦ CẦN BÁN CĂN HỘ 3PN. LH 0908 181 185
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-can-ho-chung-cu-duong-nguyen-van-huong-phuong-thao-dien-prj-xi-riverview-palace/chinh-chu-3-pn-lh-0908-181-185-pr15431537' title='Xi Riverview - ch&#237;nh chủ cần b&#225;n căn hộ 3PN. LH 0908 181 185'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/20180403162444-a7fb_wm.jpg' alt='Xi Riverview - ch&#237;nh chủ cần b&#225;n căn hộ 3PN. LH 0908 181 185' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Căn hộ tháp T2, lầu 12 thuộc dự án Xi Riverview: - Toàn bộ các phòng đều hướng sông, mát mẻ và thư giãn, đầy đủ nội thất cao cấp, sẵn sàng vào ở hoặc dễ dàng cho Expats thuê với giá cao. - Tòa nhà có chất lượng xây dựng vượt trội so với các dự án khác cùng mức giá. - Dịch vụ quản lý chất lượng quốc ...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">8.4 tỷ</span>&nbsp;
+Diện tích: 
+<span class="product-area">145 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Quận 2, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-duong-khuat-van-buc-xa-tan-kien/lo-binh-chanh-100m2-gia-900-trieu-pr15444506' title='B&#225;n l&#244; đất đường Khuất Văn Bức, T&#226;n Ki&#234;n, B&#236;nh Ch&#225;nh, 100m2 gi&#225; 900 triệu' style="text-rendering: optimizelegibility;">
+BÁN LÔ ĐẤT ĐƯỜNG KHUẤT VĂN BỨC, TÂN KIÊN, BÌNH CHÁNH, 100M2 GIÁ 900 TRIỆU
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-duong-khuat-van-buc-xa-tan-kien/lo-binh-chanh-100m2-gia-900-trieu-pr15444506' title='B&#225;n l&#244; đất đường Khuất Văn Bức, T&#226;n Ki&#234;n, B&#236;nh Ch&#225;nh, 100m2 gi&#225; 900 triệu'
+onclick="">
+<img class="product-avatar-img" src='https://file1.batdongsan.com.vn/images/no-photo.jpg' alt='B&#225;n l&#244; đất đường Khuất Văn Bức, T&#226;n Ki&#234;n, B&#236;nh Ch&#225;nh, 100m2 gi&#225; 900 triệu' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">- Nằm trên đường Khuất Văn Bức, X. Tân Kiên, Bình Chánh. - Đường nhựa trước nhà 8m. - Xung quanh khu dân cư đông đúc, gần chợ. - Giá bán 900 triệu. - Toàn bộ đất thổ cư, sổ hồng.  - LH: A Long 0947.641.648...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">900 triệu</span>&nbsp;
+Diện tích: 
+<span class="product-area">100 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Bình Chánh, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-nha-biet-thu-lien-ke-duong-nguyen-tat-thanh-prj-cam-ranh-mystery-villas/dang-cap-compoud-tai-trang-kiem-loi-tren-chinh-do-chu-dau-tu-lam-thay-ban-pr15443803' title='Biệt thự đẳng cấp compoud tại Nha Trang kiếm lời tr&#234;n ch&#237;nh biệt thự do chủ đầu tư l&#224;m thay bạn' style="text-rendering: optimizelegibility;">
+BIỆT THỰ ĐẲNG CẤP COMPOUD TẠI NHA TRANG KIẾM LỜI TRÊN CHÍNH BIỆT THỰ DO CHỦ ĐẦU TƯ LÀM THAY BẠN
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-nha-biet-thu-lien-ke-duong-nguyen-tat-thanh-prj-cam-ranh-mystery-villas/dang-cap-compoud-tai-trang-kiem-loi-tren-chinh-do-chu-dau-tu-lam-thay-ban-pr15443803' title='Biệt thự đẳng cấp compoud tại Nha Trang kiếm lời tr&#234;n ch&#237;nh biệt thự do chủ đầu tư l&#224;m thay bạn'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/qhMONDIE/20180403150433-fa37.jpg' alt='Biệt thự đẳng cấp compoud tại Nha Trang kiếm lời tr&#234;n ch&#237;nh biệt thự do chủ đầu tư l&#224;m thay bạn' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Đường đến Cam Ranh Mystery Villa như sau: Từ sân bay Cam Ranh di chuyển về hướng thành phố Nha Trang, đi khoảng 5 phút, dự án biệt thự biển Mystery Cam Ranh nằm bên tay phải. Một mặt dự án là mặt tiền đường Nguyễn Tất Thành, mặt còn lại mặt tiền biển Bãi Dài hoang sơ, bình lặng. Các resort trên trục...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">7.29 tỷ</span>&nbsp;
+Diện tích: 
+<span class="product-area">240 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Cam Ranh, Khánh Hòa
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-can-ho-chung-cu-duong-an-duong-vuong-phuong-16-1-prj-west-intela/ch-qu-8-gia-9-ty-2-pn-2wc-64m2-nh-giu-cho-pr15175628' title='B&#225;n CH đường An Dương Vương, Quận 8 West Intela gi&#225; 1.19 tỷ/ 2 pn + 2wc, 64m2, nhận giữ chỗ' style="text-rendering: optimizelegibility;">
+BÁN CH ĐƯỜNG AN DƯƠNG VƯƠNG, QUẬN 8 WEST INTELA GIÁ 1.19 TỶ/ 2 PN + 2WC, 64M2, NHẬN GIỮ CHỖ
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='javaScript:void(0)' title='B&#225;n CH đường An Dương Vương, Quận 8 West Intela gi&#225; 1.19 tỷ/ 2 pn + 2wc, 64m2, nhận giữ chỗ'
+onclick="togglevideo(15175628)">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/03/13/20180313152105-8a23_wm.jpg' alt='B&#225;n CH đường An Dương Vương, Quận 8 West Intela gi&#225; 1.19 tỷ/ 2 pn + 2wc, 64m2, nhận giữ chỗ' />
+<span class="product-video colorboldblue">Xem Video</span> <span> <img alt="videoicon" id="videoicon" class="video-icon" src="https://file4.batdongsan.com.vn/images/playicon.png"></span>
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Căn hộ thông minh quận 8 mở bán đợt đầu - 2 phòng ngủ 64m2 giá 1.2 tỷ (100%). Liên hệ 0916550101- 0988555551 (full nội thất thông minh). Chương trình quà tặng: + Bốc thăm ôtô Altis. + Bốc thăm 50 bộ nội thất thông minh chỉ duy nhất trong ngày mở bán. + Tặng thêm các quà tặng Smart. ** Vị trí: - Tọa <a href="/ban-can-ho-chung-cu-duong-an-duong-vuong-60"></a>...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">1.2 tỷ</span>&nbsp;
+Diện tích: 
+<span class="product-area">64 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Quận 8, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div rel="videook" videourl="https://www.youtube.com/watch?v=SJ5nOCTlVCY&feature=youtu.be" id="togglevideo_15175628" style="text-align: center; padding-bottom:15px; display:none; width:743px;"><div id="mediaplayer_15175628" class="video" style="text-align:center;"></div><div style="height:10px; clear:both;"></div><div><a onclick='togglevideo(15175628)' href='javaScript:void(0)' class='colorboldblue' style='padding-top: 10px;'>Tắt Video</a></div></div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-can-ho-chung-cu-duong-dien-bien-phu-phuong-22-prj-vinhomes-central-park/vinmes-1pn-2-45-ty-2pn-3-3-ty-3pn-4-4-ty-4pn-7-5-ty-lh-0977771919-pr15444061' title='B&#225;n căn hộ Vinhomes Central Park 1PN 2.45 tỷ, 2PN 3.3 tỷ, 3PN 4.4 tỷ, 4PN 7.5 tỷ, LH 0977771919' style="text-rendering: optimizelegibility;">
+BÁN CĂN HỘ VINHOMES CENTRAL PARK 1PN 2.45 TỶ, 2PN 3.3 TỶ, 3PN 4.4 TỶ, 4PN 7.5 TỶ, LH 0977771919
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-can-ho-chung-cu-duong-dien-bien-phu-phuong-22-prj-vinhomes-central-park/vinmes-1pn-2-45-ty-2pn-3-3-ty-3pn-4-4-ty-4pn-7-5-ty-lh-0977771919-pr15444061' title='B&#225;n căn hộ Vinhomes Central Park 1PN 2.45 tỷ, 2PN 3.3 tỷ, 3PN 4.4 tỷ, 4PN 7.5 tỷ, LH 0977771919'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/20180403150619-0b75_wm.jpg' alt='B&#225;n căn hộ Vinhomes Central Park 1PN 2.45 tỷ, 2PN 3.3 tỷ, 3PN 4.4 tỷ, 4PN 7.5 tỷ, LH 0977771919' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Call 0977771919 và 0938179199. Quản lý 100% căn hộ Vinhomes Central Park bán cho thuê. Căn L5 1PN 50,5m2, giá 2 tỷ 450 bao thuế phí tầng đẹp. - Căn L4 1PN, 54m2, giá 2 tỷ 5 bao thuế phí có cam kết thuê 8%/năm. - Căn L5 2PN, 79m2, giá 3 tỷ 650 bao thuế phí SHVV tầng cao. - Căn L1 05 54m2 SHVV, giá 3....</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">2.8 tỷ</span>&nbsp;
+Diện tích: 
+<span class="product-area">49 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Bình Thạnh, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-can-ho-chung-cu-pho-ta-quang-buu-phuong-4-15-prj-topaz-elite/chu-dau-tu-thanh-ly-16-2pn-3pn-do-khach-hang-het-kha-nang-thanh-toan-pr15205573' title='Chủ đầu tư thanh l&#253; 16 căn 2pn, 3pn Topaz Elite do kh&#225;ch h&#224;ng hết khả năng thanh to&#225;n' style="text-rendering: optimizelegibility;">
+CHỦ ĐẦU TƯ THANH LÝ 16 CĂN 2PN, 3PN TOPAZ ELITE DO KHÁCH HÀNG HẾT KHẢ NĂNG THANH TOÁN
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-can-ho-chung-cu-pho-ta-quang-buu-phuong-4-15-prj-topaz-elite/chu-dau-tu-thanh-ly-16-2pn-3pn-do-khach-hang-het-kha-nang-thanh-toan-pr15205573' title='Chủ đầu tư thanh l&#253; 16 căn 2pn, 3pn Topaz Elite do kh&#225;ch h&#224;ng hết khả năng thanh to&#225;n'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/03/15/20180315175418-f70d_wm.jpg' alt='Chủ đầu tư thanh l&#253; 16 căn 2pn, 3pn Topaz Elite do kh&#225;ch h&#224;ng hết khả năng thanh to&#225;n' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Chủ đầu tư thanh lý 16 căn hộ Topaz Elite view đẹp do khách hàng mua mất khả năng thanh toán. LH 0932.700.726 gặp Hiếu phòng Khách Hàng hoặc. Hotline 0911.745.755 (24/7). (để xem căn hộ mẫu thực tế).  Ngay mặt tiền Tạ Quang Bửu - Cao Lỗ, P. 4, Q. 8. Quy mô 6 tầng trung tâm thương mại.  Quý k...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">1.4 tỷ</span>&nbsp;
+Diện tích: 
+<span class="product-area">60 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Quận 8, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-duong-lien-phuong-phuong-phuoc-long-b-prj-kdc-phu-nhuan-phuoc-long-b/chinh-chu-lo-lo-o1-1-goc-2mt-gia-re-0902719488-pr15443924' title='Ch&#237;nh chủ b&#225;n đất ph&#250; nhuận l&#244; O1-1 g&#243;c 2mt đường li&#234;n phường 0902.719.488' style="text-rendering: optimizelegibility;">
+CHÍNH CHỦ BÁN ĐẤT PHÚ NHUẬN LÔ O1-1 GÓC 2MT ĐƯỜNG LIÊN PHƯỜNG 0902.719.488
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-duong-lien-phuong-phuong-phuoc-long-b-prj-kdc-phu-nhuan-phuoc-long-b/chinh-chu-lo-lo-o1-1-goc-2mt-gia-re-0902719488-pr15443924' title='Ch&#237;nh chủ b&#225;n đất ph&#250; nhuận l&#244; O1-1 g&#243;c 2mt đường li&#234;n phường 0902.719.488'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/20180403145834-8a31_wm.jpg' alt='Ch&#237;nh chủ b&#225;n đất ph&#250; nhuận l&#244; O1-1 g&#243;c 2mt đường li&#234;n phường 0902.719.488' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Dự án phú nhuận ngay góc liên phường Đỗ xuân hợp hạ tầng hoàn chỉnh. Điện âm nước máy. Sổ hồng cá nhân. Dt: 307.7m. Lô: O1-1. Giá: 43 triệu/m2. Miễn trung gian. Lh: Anh Tâm 0902.719.488 chính chủ....</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">43 triệu/m²</span>&nbsp;
+Diện tích: 
+<span class="product-area">308 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Quận 9, Hồ Chí Minh
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-can-ho-chung-cu-duong-to-hieu-phuong-vinh-truong-prj-ph-nha-trang/uu-dai-len-den-5-cho-khach-hang-dang-ky-ngay-hom-nay-xa-hoi-p-h-cach-bien-600m-pr13891285' title='Căn hộ cao cấp d&#224;nh cho người Thu nhập thấp tại CC XH P.H Nha Trang. Gi&#225; chủ đ&#224;u tư, c&#225;ch biển 600m' style="text-rendering: optimizelegibility;">
+CĂN HỘ CAO CẤP DÀNH CHO NGƯỜI THU NHẬP THẤP TẠI CC XH P.H NHA TRANG. GIÁ CHỦ ĐÀU TƯ, CÁCH BIỂN 600M
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-can-ho-chung-cu-duong-to-hieu-phuong-vinh-truong-prj-ph-nha-trang/uu-dai-len-den-5-cho-khach-hang-dang-ky-ngay-hom-nay-xa-hoi-p-h-cach-bien-600m-pr13891285' title='Căn hộ cao cấp d&#224;nh cho người Thu nhập thấp tại CC XH P.H Nha Trang. Gi&#225; chủ đ&#224;u tư, c&#225;ch biển 600m'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2017/10/22/20171022162244-6f13_wm.jpg' alt='Căn hộ cao cấp d&#224;nh cho người Thu nhập thấp tại CC XH P.H Nha Trang. Gi&#225; chủ đ&#224;u tư, c&#225;ch biển 600m' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Lần đầu tiên tại Nha Trang xuất hiện một dự án nhà ở xã hội mang phong cách hiện đại cao cấp với đầy đủ tiện ích như: Bể bơi, vườn dạo bộ, quán café, nhà hàng, nhà vui chơi trẻ em, phòng gym, trung tâm thương mại, shophouse, tương tự như các dự án căn hộ nghỉ dưỡng cao cấp ven biển Nha Trang.  ***...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">846 triệu</span>&nbsp;
+Diện tích: 
+<span class="product-area">63.5 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Nha Trang, Khánh Hòa
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-can-ho-chung-cu-duong-minh-khai-phuong-vinh-tuy-prj-vinhomes-times-city-park-hill/gap-cac-cat-lo-gia-re-lam-viec-truc-tiep-chu-nha-lh-0969033294-pr15129472' title='Times city - park hill, b&#225;n gấp c&#225;c căn hộ cắt lỗ gi&#225; rẻ l&#224;m việc trực tiếp chủ nh&#224; - Lh 0969033294' style="text-rendering: optimizelegibility;">
+TIMES CITY - PARK HILL, BÁN GẤP CÁC CĂN HỘ CẮT LỖ GIÁ RẺ LÀM VIỆC TRỰC TIẾP CHỦ NHÀ - LH 0969033294
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-can-ho-chung-cu-duong-minh-khai-phuong-vinh-tuy-prj-vinhomes-times-city-park-hill/gap-cac-cat-lo-gia-re-lam-viec-truc-tiep-chu-nha-lh-0969033294-pr15129472' title='Times city - park hill, b&#225;n gấp c&#225;c căn hộ cắt lỗ gi&#225; rẻ l&#224;m việc trực tiếp chủ nh&#224; - Lh 0969033294'
+onclick="">
+<img class="product-avatar-img" src='https://file1.batdongsan.com.vn/images/no-photo.jpg' alt='Times city - park hill, b&#225;n gấp c&#225;c căn hộ cắt lỗ gi&#225; rẻ l&#224;m việc trực tiếp chủ nh&#224; - Lh 0969033294' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Hiện chúng tôi đang nhận mua bán ký gửi tất cả các căn hộ tại Times City. Chúng luôn chắc chắn với khách hàng rằng có hơn 300 căn hộ Chính chủ ký gửi đang chào bán và cho thuê. Khách hàng thiện chí mua căn hộ có thể toàn tâm toàn ý tin tưởng, luôn có những những căn giá tốt nhất Times City để tư vấn<a href="/ban-can-ho-chung-cu-duong-minh-khai-4"></a><a rel="nofollow" target="_blank" href="https://timescity-parkhill.com/"></a>...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">Thỏa thuận</span>&nbsp;
+Diện tích: 
+<span class="product-area">Không xác định</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Hai Bà Trưng, Hà Nội
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-nen-du-an-thi-tran-duong-dong/cong-ks-phu-quoc-gia-re-chinh-chu-0945-270-678-pr15436911' title='B&#225;n đất mặt đường Trần Hưng Đạo , vị tr&#237; kim cương , LH 0945270678' style="text-rendering: optimizelegibility;">
+BÁN ĐẤT MẶT ĐƯỜNG TRẦN HƯNG ĐẠO , VỊ TRÍ KIM CƯƠNG , LH 0945270678
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-nen-du-an-thi-tran-duong-dong/cong-ks-phu-quoc-gia-re-chinh-chu-0945-270-678-pr15436911' title='B&#225;n đất mặt đường Trần Hưng Đạo , vị tr&#237; kim cương , LH 0945270678'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/20180403093117-07df_wm.jpg' alt='B&#225;n đất mặt đường Trần Hưng Đạo , vị tr&#237; kim cương , LH 0945270678' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">Bán đất mặt đường Trần Hưng Đạo , diện tích 6000m2 , mặt tiền 50m , vị trí kim cương . Sổ đỏ chính chủ . Giá bán thỏa thuận . LH Mr Tùng 0945270678 Bán đầu tư đất nền , đất công , đất khách sạn . Từ 100m2 - 500m2 đến 20 hecta . Giá tốt để đầu tư .  Mặt biển , mặt phố khu vực trung tâm Trần Hưng Đạo...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">Thỏa thuận</span>&nbsp;
+Diện tích: 
+<span class="product-area">Không xác định</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Phú Quốc, Kiên Giang
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+<div class='vip0 search-productItem'>
+<div class='p-title'>
+<h3><a href='/ban-dat-nen-du-an-duong-dt-45-xa-cua-can-prj-donasea-villas/thong-tin-villa-phu-quoc-cap-nhat-gia-moi-nhat-tu-cdt-lh-hotline-0906899786-pr15443040' title='Th&#244;ng tin đất nền Donasea Villa Ph&#250; Quốc, cập nhật gi&#225; b&#225;n mới nhất từ CĐT. LH hotline 0906899786' style="text-rendering: optimizelegibility;">
+THÔNG TIN ĐẤT NỀN DONASEA VILLA PHÚ QUỐC, CẬP NHẬT GIÁ BÁN MỚI NHẤT TỪ CĐT. LH HOTLINE 0906899786
+</a></h3>
+</div>
+<div class='p-main'>
+<div class='p-main-image-crop'>
+<a class="product-avatar" href='/ban-dat-nen-du-an-duong-dt-45-xa-cua-can-prj-donasea-villas/thong-tin-villa-phu-quoc-cap-nhat-gia-moi-nhat-tu-cdt-lh-hotline-0906899786-pr15443040' title='Th&#244;ng tin đất nền Donasea Villa Ph&#250; Quốc, cập nhật gi&#225; b&#225;n mới nhất từ CĐT. LH hotline 0906899786'
+onclick="">
+<img class="product-avatar-img" src='https://file4.batdongsan.com.vn/crop/120x90/2018/04/03/20180403142055-0ae9_wm.jpg' alt='Th&#244;ng tin đất nền Donasea Villa Ph&#250; Quốc, cập nhật gi&#225; b&#225;n mới nhất từ CĐT. LH hotline 0906899786' />
+</a>
+</div>
+<div class='p-content'>
+<div class='p-main-text' style="text-rendering: optimizelegibility;">5 nền cuối cùng. Đất nền sổ hồng riêng Phú Quốc dự án Donasea Villa.- Cam kết lợi nhuận từ 20%/năm. - Sổ hồng riêng - công chứng nhận sổ ngay. - Xây dựng tự do. - Mua lại nếu không sinh lời - trả 7% lãi suất ngân hàng. - Đăng kí nhận báo giá để có cơ hội bốc thăm trúng xe máy SH.Hotline: 0906899786 ...</div>
+</div>
+<div class="clear"></div>
+<div class="p-bottom-crop fix-p-bottom-crop">
+<div class='floatleft'>
+Giá: 
+<span class="product-price">7.1 triệu/m²</span>&nbsp;
+Diện tích: 
+<span class="product-area">120 m²</span>&nbsp;
+Quận/Huyện: 
+<span class="product-city-dist">
+Phú Quốc, Kiên Giang
+</span>
+</div>
+<div class='floatright mar-right-10'>03/04/2018</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+</div>
+</div>
+<div class="clear">
+</div>
+<div class="tagpanel">    Tìm kiếm theo từ khóa: &nbsp;<a title="Bán đất gần làng đại học Thủ Đức" href="/tags/ban/ban-dat-gan-lang-dai-hoc-thu-duc">Bán đất gần làng đại học Thủ Đức</a>,&nbsp;<a title="Bán nhà chính chủ" href="/tags/ban/ban-nha-chinh-chu">Bán nhà chính chủ</a>,&nbsp;<a title="Bán chung cư B4 Kim Liên" href="/tags/ban/ban-chung-cu-b4-kim-lien">Bán chung cư B4 Kim Liên</a>,&nbsp;<a title="Bán nhà gần công viên Lê Thị Riêng" href="/tags/ban/ban-nha-gan-cong-vien-le-thi-rieng">Bán nhà gần công viên Lê Thị Riêng</a>,&nbsp;<a title="Bán chung cư chính chủ" href="/tags/ban/ban-chung-cu-chinh-chu">Bán chung cư chính chủ</a>,&nbsp;<a title="Bán đất chính chủ" href="/tags/ban/ban-dat-chinh-chu">Bán đất chính chủ</a></div>
+<div class="separable">
+</div>
+<div style="float: right;">
+<a id="emailregister" class="fancybox.iframe" href='/Modules/EmailSendRegister/EmailRegister.aspx?pType=38&cateId=0&cityCode=&distId=0&projId=0&room=-1&area=-1&price=-1&direction=-1&streetId=0&wardId=0' rel="nofollow">
+<img src="https://file4.batdongsan.com.vn/images/opt/btnClick.png" /></a>
+</div>
+<div>
+<h3>
+Tìm Nhà đất bán khác tại Việt Nam</h3>
+</div>
+<div class="separable">
+<br />
+</div>
+<div id="div_linkPostAdNews">
+Quý khách muốn nhanh chóng tìm được BĐS phù hợp ?
+<a id="LeftMainContent__productSearchResult_linkPostAdNew" title="Click vào đây để đăng tin cần mua trên batdongsan.com.vn" onclick="return linkPostAdNewClick(&#39;{&quot;TypeId&quot;:400,&quot;CateId&quot;:0,&quot;CityCode&quot;:&quot;&quot;,&quot;DistrictId&quot;:0,&quot;WardId&quot;:0,&quot;StreetId&quot;:0,&quot;ProjectId&quot;:0}&#39;);" href="/dang-tin-rao-vat-mua-nha-dat">Click vào đây để đăng tin cần mua trên batdongsan.com.vn</a>
+</div>
+<style>
+#div_linkPostAdNews {
+color: #3e9c10;
+font-family: arial;
+font-size: 12px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+#div_linkPostAdNews a {
+background: url("https://file4.batdongsan.com.vn/images/opt/bg-btn-postAdNew-Details.png") no-repeat scroll 0 0 #fff;
+color: #fff;
+display: inline-block;
+font-family: arial;
+font-size: 12px;
+font-weight: bold;
+line-height: 29px;
+margin: 0;
+padding: 0;
+width: 365px;
+text-align: center;
+}
+</style>
+<div class="background-pager-controls">
+<div class="background-pager-right-controls">
+<a href='/nha-dat-ban'><div 
+style='
+margin-left: 2px;
+margin-right: 2px;
+padding-left: 6px;
+padding-right: 6px ;
+width: auto;
+height: 23px;
+color: #000000  ;
+text-decoration: none ;
+line-height: 23px ;
+float: left;
+border: 1px solid #ccc;'
+align='center'><</div></a><a href='/nha-dat-ban'><div  
+style='
+padding-left: 6px ;
+padding-right: 6px;
+width: auto !important;;
+line-height: 23px ;
+text-decoration: none ;
+float: left ;
+color: #000000 ;
+border: 1px solid #ccc ;' 
+align='center'>...</div></a><a href='/nha-dat-ban'><div 
+style='
+margin-left: 2px;
+width: auto;
+color: #000000;
+text-decoration: none;
+height: 23px;
+line-height: 23px;
+float: left;
+padding-left: 6px;
+padding-right: 6px;
+border: 1px solid #ccc;'
+align='center'>1</div></a><a href='/nha-dat-ban/p2'><div 
+style='
+margin-left: 2px;
+width: auto;
+color: #000000;
+text-decoration: none;
+height: 23px;
+line-height: 23px;
+float: left;
+padding-left: 6px;
+padding-right: 6px;
+border: 1px solid #ccc;'
+class='style-pager-row-selected' align='center'>2</div></a><a href='/nha-dat-ban/p3'><div 
+style='
+margin-left: 2px;
+width: auto;
+color: #000000;
+text-decoration: none;
+height: 23px;
+line-height: 23px;
+float: left;
+padding-left: 6px;
+padding-right: 6px;
+border: 1px solid #ccc;'
+align='center'>3</div></a><a href='/nha-dat-ban/p4'><div 
+style='
+margin-left: 2px;
+width: auto;
+color: #000000;
+text-decoration: none;
+height: 23px;
+line-height: 23px;
+float: left;
+padding-left: 6px;
+padding-right: 6px;
+border: 1px solid #ccc;'
+align='center'>4</div></a><a href='/nha-dat-ban/p5'><div 
+style='
+margin-left: 2px;
+width: auto;
+color: #000000;
+text-decoration: none;
+height: 23px;
+line-height: 23px;
+float: left;
+padding-left: 6px;
+padding-right: 6px;
+border: 1px solid #ccc;'
+align='center'>5</div></a><a href='/nha-dat-ban/p3'><div 
+style='
+margin-left: 2px;
+margin-right: 2px;
+padding-left: 6px;
+padding-right: 6px ;
+width: auto;
+height: 23px;
+color: #000000  ;
+text-decoration: none ;
+line-height: 23px ;
+float: left;
+border: 1px solid #ccc;'
+align='center'>...</div></a><a href='/nha-dat-ban/p8871'><div 
+style='
+margin-left: 2px;
+margin-right: 2px;
+padding-left: 6px;
+padding-right: 6px ;
+width: auto;
+height: 23px;
+color: #000000  ;
+text-decoration: none ;
+line-height: 23px ;
+float: left;
+border: 1px solid #ccc;'
+align='center'>></div></a><span id="LeftMainContent__productSearchResult_ProductsPager"></span>
+</div>
+</div>
+<script type="text/javascript">
+var urlCrypted = $('.product-list').attr('pagekey');
+function sortchange() {
+setCookie('psortfilter', $('#ddlSortReult').val() + '$' + $('ul.filter > li.active').attr('rel') + '$' + urlCrypted, 1);
+}
+function ChangeTypeListProduct(type) {
+setCookie('psortfilter', $('#ddlSortReult').val() + '$' + type + '$' + urlCrypted, 1);
+}
+function linkPostAdNewClick(data) {
+setCookie('POST_ADNEW_LOCATION', data, 1);
+return true;
+}
+function displayProjectInfo() {
+$(".project-container").css("display", "block");
+$("#LeftMainContent__productSearchResult_ltrTagsLocation").hide();
+$(".search-productItem").hide();
+$("#LeftMainContent__productSearchResult_pnlNotFound").hide();
+//$(".Repeat").hide();
+$("ul.header-tab li").removeClass("active");
+$("#liProjectInfo").addClass("active");
+}
+$(function () {
+var cookie = getCookie('psortfilter');
+if (cookie != undefined && cookie != null && cookie.length > 0) {
+var arr = cookie.split('$');
+if (arr.length == 3) {
+if (urlCrypted != arr[2]) {
+setCookie('psortfilter', '', 0);
+}
+}
+}
+});
+</script>
+<style>
+.project-container {
+display: none;
+}
+.divProjectInfo {
+/*display: none;*/
+padding: 8px;
+margin: 0px;
+border: 1px solid #d7d7d7;
+border-width: 0 1px 1px;
+min-height: 150px;
+}
+.divProjectInfo-left {
+float: left;
+width: 200px;
+height: 150px;
+}
+.divProjectInfo-left img {
+width: 200px;
+height: 150px;
+}
+.divProjectInfo-right {
+float: left;
+padding-left: 10px;
+width: 505px;
+}
+.divProjectInfo-right > div {
+padding: 3px 2px;
+}
+.divProjectInfo-right .infoName {
+color: #055699;
+}
+.divProjectInfo-right #ProjName {
+color: #055699;
+font-size: 18px;
+font-weight: bold;
+}
+.project-container a.lnkProjectDetail {
+color: #055699;
+background: url("https://file4.batdongsan.com.vn/images/project-details-icon.png") no-repeat 0 0 #ffffff;
+width: 96px;
+height: 25px;
+display: inline-block;
+line-height: 25px;
+margin-top: 10px;
+}
+</style>
+</div>
+</div>
+</div>
+<div class="body-right">
+<div class="container-default">
+<div>
+<div id="RightMainContent_DisplayForm_pnlInsidePage">
+<div class="newsletter-form-small">
+<div class="mb5">
+<div class="fl">
+<img src="https://file4.batdongsan.com.vn/images/icon-newsletter-small.jpg" />
+</div>
+<div class="fl news-text">Nhận bản tin từ Batdongsan.com.vn</div>
+<div class="clear"></div>
+</div>
+<div class="newsletter-content">
+<div class="newsletter-bound">
+<div class="fl">
+<input type="text" id="email" placeholder="Nhập email của bạn" />
+</div>
+<div class="fl"><a href="#" class="newsletter-register">Đăng ký</a></div>
+<div class="clear">&nbsp;</div>
+<div id="emailValid"></div>
+</div>
+</div>
+</div>
+</div>
+<style type="text/css">
+.fancybox-newsletter .fancybox-close {
+background-image: url("https://file4.batdongsan.com.vn/images/close-newsletter.jpg") !important;
+background-repeat: no-repeat;
+width: 21px;
+height: 21px;
+top: 11px;
+right: 11px;
+}
+.newsletter-form-small .search-form  a {
+background-color: #4b9f00;
+border-radius: 4px;
+width: 75px;
+border: none;
+}
+.box-left .newsletter-content {
+padding: 10px 5px;
+}
+.search-form .newsletter-bound{ border: 1px solid #d7d7d7;border-radius: 4px;padding: 3px 5px;}
+</style>
+<script>
+(function ($) {
+$.support.placeholder = ('placeholder' in document.createElement('input'));
+})(jQuery);
+//fix for IE7 and IE8
+$(function () {
+if (!$.support.placeholder) {
+$("[placeholder]").css("color", "#555");
+$("[placeholder]").focus(function () {
+if ($(this).val() == $(this).attr("placeholder")) $(this).val("");
+}).blur(function () {
+if ($(this).val() == "") $(this).val($(this).attr("placeholder"));
+}).blur();
+$("[placeholder]").parents("form").submit(function () {
+$(this).find('[placeholder]').each(function () {
+if ($(this).val() == $(this).attr("placeholder")) {
+$(this).val("");
+}
+});
+});
+}
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+$(".newsletter-register").click(function (e) {
+e.preventDefault();
+var email = $('#email').val().trim();
+$(".newsletter-register").attr("href", "/Modules/Newsletter/Frontend/Register.aspx?email=" + email);
+return true;
+});
+$(".newsletter-register").fancybox({
+'width': 660,
+'height': 540,
+'maxWidth': 660,
+'minHeight': 360,
+'autoScale': false,
+'transitionIn': 'none',
+'transitionOut': 'none',
+'type': 'iframe',
+'scrolling': 'no',
+'iframe': { 'scrolling': 'no' },
+padding: 0,
+wrapCSS: 'fancybox-newsletter'
+});
+});
+function ChangeNewsletterStyle() {
+$(".newsletter-form-small").css("border", "none").addClass("box-left");
+$(".newsletter-form-small .mb5").html("<div class=\"box-title\">Cập nhật thông tin thị trường</div>").removeClass("mb5");
+$(".newsletter-content").addClass("search-form");
+$(".newsletter-content #email").css("border", "none").css("width", "130px").css("padding","0").css("border-radius", "0");
+}
+</script>
+</div>
+<div>
+<div id="content-main-right">
+<div id="column-right">
+<div>
+<div id="product_search" class="box-left">
+<div class="box-title">
+Tìm kiếm trong 1.000.000 tin rao
+</div>
+<div id="searchcp" class="search-form">
+<div class="result"></div>
+<div class="searchrow" style="position: relative; z-index: 100; text-align: left !important;">
+<div class="newicon" style="width: 213px !important; padding-left: 5px; border: 1px solid #ccc;clear: both;">
+<input type="text" id="txtAutoComplete" placeholder="Nhập địa điểm, vd: Sunrise City" style="border: 0;width: 187px; padding: 0"/>
+</div>
+<div class="suggestTT">
+<div class="arr"><img src="https://file4.batdongsan.com.vn/images/opt/greyarrow.png"/></div>
+<div class="greencolor goiy"><strong>Gợi ý</strong></div>
+<ul>
+<li>Nhập tên tỉnh/thành phố, quận/huyện, phường/xã, đường/phố, dự án; ví dụ: Sunrise City</li>
+<li>Phải chọn các gợi ý chúng tôi đề xuất bên dưới để kết quả chính xác nhất</li>
+<li>Nếu không nhập địa điểm ở đây, Quý vị có thể chọn lựa khu vực bằng các ô phía dưới trong công cụ tìm kiếm này</li>
+</ul>
+<div class="closeTT"><img src="https://file4.batdongsan.com.vn/images/opt/close.png"/></div>
+</div>
+</div>
+<div id="divCategory" class="searchrow advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn loại tin rao--</span>
+</span>
+<input type="hidden" name="cboCategory" id="hdCboCatagory" />
+<div id="divCatagoryOptions" class="advance-select-options advance-options advance-select-options-2">
+<ul class="advance-options">
+<li vl="0" class="advance-options">--Chọn loại tin rao--</li><li vl="38" class="advance-options current">Nhà đất bán</li><li vl="49" class="advance-options">Nhà đất cho thuê</li>
+</ul>
+</div>
+</div>
+<div id="divCategoryRe" class="searchrow advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn loại nhà đất--</span>
+</span>
+<input type="hidden" name="cboTypeRe" id="hdCboCatagoryRe" />
+<div id="divCatagoryReOptions" class="advance-select-options advance-options advance-select-options-2">
+<ul class="advance-options">
+<li vl="0" class="advance-options">--Chọn Loại nhà đất--</li>
+</ul>
+</div>
+</div>
+<div id="divCity" class="searchrow advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn Tỉnh/Thành phố--</span>
+</span>
+<input type="hidden" name="cboCity" id="hdCboCity" />
+<div id="divCityOptions" class="advance-select-options advance-options advance-select-options-2">
+<ul class="advance-options">
+<li vl="CN" class="advance-options">--Chọn Tỉnh/Thành phố--</li><li vl="SG" class="advance-options">Hồ Chí Minh</li><li vl="HN" class="advance-options">Hà Nội</li><li vl="DDN" class="advance-options">Đà Nẵng</li><li vl="BD" class="advance-options">Bình Dương</li><li vl="DNA" class="advance-options">Đồng Nai</li><li vl="KH" class="advance-options">Khánh Hòa</li><li vl="HP" class="advance-options">Hải Phòng</li><li vl="LA" class="advance-options">Long An</li><li vl="QNA" class="advance-options">Quảng Nam</li><li vl="VT" class="advance-options">Bà Rịa Vũng Tàu</li><li vl="DDL" class="advance-options">Đắk Lắk</li><li vl="CT" class="advance-options">Cần Thơ</li><li vl="BTH" class="advance-options">Bình Thuận  </li><li vl="LDD" class="advance-options">Lâm Đồng</li><li vl="TTH" class="advance-options">Thừa Thiên Huế</li><li vl="KG" class="advance-options">Kiên Giang</li><li vl="BN" class="advance-options">Bắc Ninh</li><li vl="QNI" class="advance-options">Quảng Ninh</li><li vl="TH" class="advance-options">Thanh Hóa</li><li vl="NA" class="advance-options">Nghệ An</li><li vl="HD" class="advance-options">Hải Dương</li><li vl="GL" class="advance-options">Gia Lai</li><li vl="BP" class="advance-options">Bình Phước</li><li vl="HY" class="advance-options">Hưng Yên</li><li vl="BDD" class="advance-options">Bình Định</li><li vl="TG" class="advance-options">Tiền Giang</li><li vl="TB" class="advance-options">Thái Bình</li><li vl="BG" class="advance-options">Bắc Giang</li><li vl="HB" class="advance-options">Hòa Bình</li><li vl="AG" class="advance-options">An Giang</li><li vl="VP" class="advance-options">Vĩnh Phúc</li><li vl="TNI" class="advance-options">Tây Ninh</li><li vl="TN" class="advance-options">Thái Nguyên</li><li vl="LCA" class="advance-options">Lào Cai</li><li vl="NDD" class="advance-options">Nam Định</li><li vl="QNG" class="advance-options">Quảng Ngãi</li><li vl="BTR" class="advance-options">Bến Tre</li><li vl="DNO" class="advance-options">Đắk Nông</li><li vl="CM" class="advance-options">Cà Mau</li><li vl="VL" class="advance-options">Vĩnh Long</li><li vl="NB" class="advance-options">Ninh Bình</li><li vl="PT" class="advance-options">Phú Thọ</li><li vl="NT" class="advance-options">Ninh Thuận</li><li vl="PY" class="advance-options">Phú Yên</li><li vl="HNA" class="advance-options">Hà Nam</li><li vl="HT" class="advance-options">Hà Tĩnh</li><li vl="DDT" class="advance-options">Đồng Tháp</li><li vl="ST" class="advance-options">Sóc Trăng</li><li vl="KT" class="advance-options">Kon Tum</li><li vl="QB" class="advance-options">Quảng Bình</li><li vl="QT" class="advance-options">Quảng Trị</li><li vl="TV" class="advance-options">Trà Vinh</li><li vl="HGI" class="advance-options">Hậu Giang</li><li vl="SL" class="advance-options">Sơn La</li><li vl="BL" class="advance-options">Bạc Liêu</li><li vl="YB" class="advance-options">Yên Bái</li><li vl="TQ" class="advance-options">Tuyên Quang</li><li vl="DDB" class="advance-options">Điện Biên</li><li vl="LCH" class="advance-options">Lai Châu</li><li vl="LS" class="advance-options">Lạng Sơn</li><li vl="HG" class="advance-options">Hà Giang</li><li vl="BK" class="advance-options">Bắc Kạn</li><li vl="CB" class="advance-options">Cao Bằng</li>
+</ul>
+</div>
+</div>
+<div id="divDistrict" class="searchrow advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn Quận/Huyện--</span>
+</span>
+<input type="hidden" name="cboDistrict" id="hdCboDistrict" />
+<div id="divDistrictOptions" class="advance-select-options advance-options advance-select-options-2">
+<ul class="advance-options">
+<li vl="0" class="advance-options">--Chọn Quận/Huyện--</li>
+</ul>
+</div>
+</div>
+<div id="divArea" class="searchrow advance-select-box ">
+<span class="select-text">
+<span class="select-text-content">--Chọn diện tích--</span>
+</span>
+<input type="hidden" id="hdCboArea" name="cboArea" />
+<div id="divAreaOptions" class="advance-select-options advance-options advance-select-options-2">
+<table class="header-options options"><tr class="advance-options"><td class="advance-options"><input type="text" id="txtAreaMinValue" name="areamin" placeholder="Từ" class="min-value advance-options" maxlength="6" numbersonly="true" decimal="false" value=""/></td><td class="advance-options"><span class="advance-options">- </span></td><td class="advance-options"><input type="text" id="txtAreaMaxValue" name="areamax" placeholder="Đến" class="max-value advance-options" maxlength="6" numbersonly="true" decimal="false" value=""/></td><td class="advance-options"><span class="advance-options">m2</span></td> </tr></table>
+<ul class="advance-options">
+<li vl="-1" class="advance-options">--Chọn Diện tích--</li><li vl="0" class="advance-options">Chưa x&#225;c định</li><li vl="1" class="advance-options">&lt;= 30 m2</li><li vl="2" class="advance-options">30 - 50 m2</li><li vl="3" class="advance-options">50 - 80 m2</li><li vl="4" class="advance-options">80 - 100 m2</li><li vl="5" class="advance-options">100 - 150 m2</li><li vl="6" class="advance-options">150 - 200 m2</li><li vl="7" class="advance-options">200 - 250 m2</li><li vl="8" class="advance-options">250 - 300 m2</li><li vl="9" class="advance-options">300 - 500 m2</li><li vl="10" class="advance-options">&gt;= 500 m2</li>
+</ul>
+</div>
+</div>
+<div id="divPrice" class="searchrow advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn mức giá--</span>
+</span>
+<input type="hidden" id="hdCboPrice" name="cboPrice" />
+<div id="divPriceOptions" class="advance-select-options advance-options advance-select-options-2">
+<table class="header-options options"><tr class="advance-options"><td class="advance-options"><input type="text" id="txtPriceMinValue" name="pricemin" placeholder="Từ" class="min-value advance-options" maxlength="6" numbersonly="true" decimal="true" value=""/><div id="lblPriceMin"></div></td><td class="advance-options"><span class="advance-options">- </span></td><td class="advance-options"><input type="text" id="txtPriceMaxValue" name="pricemax" placeholder="Đến" class="max-value advance-options" maxlength="6" numbersonly="true" decimal="true" value=""/><div id="lblPriceMax"></div></td></tr></table>
+<ul class="advance-options">
+<li vl="-1" class="advance-options">--Chọn mức giá--</li><li vl="0" class="advance-options">Thỏa thuận</li><li vl="1" class="advance-options">&lt; 500 triệu</li><li vl="2" class="advance-options">500 - 800 triệu</li><li vl="3" class="advance-options">800 triệu - 1 tỷ</li><li vl="4" class="advance-options">1 - 2 tỷ</li><li vl="5" class="advance-options">2 - 3 tỷ</li><li vl="6" class="advance-options">3 - 5 tỷ</li><li vl="7" class="advance-options">5 - 7 tỷ</li><li vl="8" class="advance-options">7 - 10 tỷ</li><li vl="9" class="advance-options">10 - 20 tỷ</li><li vl="10" class="advance-options">20 - 30 tỷ</li><li vl="11" class="advance-options">&gt; 30 tỷ</li>
+</ul>
+</div>
+</div>
+<div id="divWard" class="searchrow adv-search advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn Phường/Xã--</span>
+</span>
+<input type="hidden" name="cboWard" id="hdCboWard" />
+<div id="divWardOptions" class="advance-select-options advance-options advance-select-options-2">
+<ul class="advance-options">
+<li vl="0" class="advance-options">--Chọn Phường/Xã--</li>
+</ul>
+</div>
+</div>
+<div id="divStreet" class="searchrow adv-search advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn Đường/Phố--</span>
+</span>
+<input type="hidden" name="cboStreet" id="hdCboStreet" />
+<div id="divStreetOptions" class="advance-select-options advance-options advance-select-options-2">
+<ul class="advance-options">
+<li vl="0" class="advance-options">--Chọn Đường/Phố--</li>
+</ul>
+</div>
+</div>
+<div id="divBedRoom" class="searchrow adv-search advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn số phòng ngủ--</span>
+</span>
+<input type="hidden" name="cboBedRoom" id="hdCboBedRoom" />
+<div id="divBedRoomOptions" class="advance-select-options advance-options advance-select-options-2">
+<ul class="advance-options">
+<li vl="-1" class="advance-options">--Chọn số phòng ngủ--</li><li vl="0" class="advance-options">Không xác định</li><li vl="1" class="advance-options">1+</li><li vl="2" class="advance-options">2+</li><li vl="3" class="advance-options">3+</li><li vl="4" class="advance-options">4+</li><li vl="5" class="advance-options">5+</li>
+</ul>
+</div>
+</div>
+<div id="divHomeDirection" class="searchrow adv-search advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn hướng nhà--</span>
+</span>
+<input type="hidden" name="cboHomeDirection" id="hdCboHomeDirection" />
+<div id="divHomeDirectionOptions" class="advance-select-options advance-options advance-select-options-2">
+<ul class="advance-options">
+<li vl="-1" class="advance-options">--Chọn hướng nhà--</li><li vl="0" class="advance-options">KXĐ</li><li vl="1" class="advance-options">Đông</li><li vl="2" class="advance-options">Tây</li><li vl="3" class="advance-options">Nam</li><li vl="4" class="advance-options">Bắc</li><li vl="5" class="advance-options">Đông-Bắc</li><li vl="6" class="advance-options">Tây-Bắc</li><li vl="7" class="advance-options">Tây-Nam</li><li vl="8" class="advance-options">Đông-Nam</li>
+</ul>
+</div>
+</div>
+<div id="divProject" class="searchrow adv-search advance-select-box">
+<span class="select-text">
+<span class="select-text-content">--Chọn dự án--</span>
+</span>
+<input type="hidden" name="cboListProj" id="hdCboProject" />
+<div id="divProjectOptions" class="advance-select-options advance-options advance-select-options-2">
+<ul class="advance-options">
+<li vl="0" class="advance-options">--Chọn dự án bất động sản--</li>
+</ul>
+</div>
+</div>
+<div class="searchbtn">
+<input type="image" name="btnSearch" id="btnSearchContext" onmouseover="this.src='https://file4.batdongsan.com.vn/images/search2.jpg'" onmouseout="this.src='https://file4.batdongsan.com.vn/images/opt/search1.jpg'" src="https://file4.batdongsan.com.vn/images/opt/search1.jpg" />
+</div>
+<div id="divLabelSearchAdv">
+<span class="box-sub-title" id="lblSearch">Tìm kiếm nâng cao</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$("#btnSearchContext").click(function() {
+$('form').attr('action', '/HandlerWeb/redirect.ashx?IsMainSearch=true');
+});
+$(document).ready(function() {
+ChangeCategoryContext(38, 0);
+});
+</script>
+</div>
+</div>
+<input type="hidden" name="ctl00$RightMainContent$_productCountByContext$areaCount" id="areaCount" />
+<input type="hidden" name="ctl00$RightMainContent$_productCountByContext$priceCount" id="priceCount" />
+<input type="hidden" name="ctl00$RightMainContent$_productCountByContext$roomCount" id="roomCount" />
+<div id="RightMainContent__productCountByContext_HeaderContainer" class="box-header1">
+<h2 align="center" class="name_tit1 new-header">
+Nhà đất bán
+</h2>
+</div>
+<div id="RightMainContent__productCountByContext_bodyContainer" class="bor_box">
+<div id="div_count_product">
+<div id="divCountByAreas">
+<ul>
+<li><h3 class="normal"><a href='/nha-dat-ban-tp-hcm'>
+Hồ Chí Minh</a> (82007) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-ha-noi'>
+Hà Nội</a> (43585) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-binh-duong'>
+Bình Dương</a> (8530) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-da-nang'>
+Đà Nẵng</a> (8364) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-dong-nai'>
+Đồng Nai</a> (6213) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-bac-ninh'>
+Bắc Ninh</a> (675) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-yen-bai'>
+Yên Bái</a> (21) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-ha-tinh'>
+Hà Tĩnh</a> (85) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-dak-lak'>
+Đắk Lắk</a> (589) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-bac-lieu'>
+Bạc Liêu</a> (40) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-hai-duong'>
+Hải Dương</a> (231) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-nam-dinh'>
+Nam Định</a> (143) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-vinh-phuc'>
+Vĩnh Phúc</a> (353) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-hung-yen'>
+Hưng Yên</a> (280) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-tra-vinh'>
+Trà Vinh</a> (92) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-hoa-binh'>
+Hòa Bình</a> (258) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-thua-thien-hue'>
+Thừa Thiên Huế</a> (297) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-phu-tho'>
+Phú Thọ</a> (63) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-an-giang'>
+An Giang</a> (160) </h3></li>
+<li><h3 class="normal"><a href='/nha-dat-ban-thanh-hoa'>
+Thanh Hóa</a> (317) </h3></li>
+</ul>
+</div>
+<div class="Project">
+</div>
+</div>
+</div>
+<div style="clear: both; margin-bottom: 10px;">
+</div>
+<script>
+var p_leng = $(".Project ul li").length;
+if (p_leng > 15) {
+for (var i = 14; i < p_leng; i++) {
+if (i > 15) {
+$(".Project ul li").eq(i).css("display", "none");
+}
+}
+}
+else
+$(".show_p").hide();
+$(function () {
+$(".show_p").click(function () {
+$(this).hide();
+$(".Project ul li").css("display", "block");
+});
+});
+</script>
+<div style="clear: both;"></div>
+<div class="container-default">
+<div>
+<div class="adPosition" positionCode="BANNER_POSITION_RIGHT_MAIN_CONTENT" style="margin-bottom: 10px;"></div>
+</div>
+</div>
+<input type="hidden" name="ctl00$RightMainContent$_boxKeyword$areaCount" id="areaCount" />
+<input type="hidden" name="ctl00$RightMainContent$_boxKeyword$priceCount" id="priceCount" />
+<input type="hidden" name="ctl00$RightMainContent$_boxKeyword$roomCount" id="roomCount" />
+<div id="RightMainContent__boxKeyword_HeaderContainer" class="box-header1 checkrun">
+<h2 align="center" class="name_tit1 new-header">
+LIÊN KẾT NỔI BẬT
+</h2>
+</div>
+<div id="RightMainContent__boxKeyword_bodyContainer" class="bor_box checkrun">
+<div id="div_count_product">
+<div id="divCountByAreas">
+<ul>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-saigonhomes'>
+Căn hộ Saigonhomes</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-sunshine-avenue'>
+Căn hộ Sunshine Avenue</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-city-home'>
+Căn hộ Citi Home Quận 2</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-eco-dream-nguyen-xien'>
+Chung cư Eco Dream Nguyễn Xiển</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-gold-tower'>
+Chung cư Gold Tower</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-eco-green-city'>
+Chung cư Eco Green City</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-new-city-thu-thiem'>
+Cặn hộ New City Thủ Thiêm</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-anland-nam-cuong'>
+Chung cư Anland Nam Cường</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-eco-dream-nguyen-xien'>
+Căn hộ Eco Dream Nguyễn Xiển</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-kingdom-101'>
+Căn hộ Kingdom 101</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-citi-esto'>
+Căn hộ Citi Esto</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-one-verandah-mapletree'>
+Căn hộ One Verandah Mapletree</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-hqc-binh-trung-dong'>
+Căn hộ HQC Bình Trưng Đông</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-rivera-park-ha-noi'>
+Chung cư Rivera Park Hà Nội</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-startup-tower'>
+Chung cư Startup Tower</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-iris-garden'>
+Chung cư Iris Garden</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-western-dragon'>
+Căn hộ Western Dragon</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-lavida-plus'>
+Căn hộ Lavida Plus</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-topaz-elite'>
+Căn hộ Topaz Elite</a></h3></li>
+<li><h3 class="normal"><a href='/ban-can-ho-chung-cu-the-k-park'>
+Chung cư The K Park</a></h3></li>
+</ul>
+</div>
+<div class="show3">
+</div>
+</div>
+</div>
+<div style="clear: both; margin-bottom: 10px;">
+</div>
+<div style="clear: both;"></div>
+<div class="container-default">
+<div>
+<div class="box-tien-ich">
+<div class="box-header aligncenter" >
+<h2 class="name_tit">Hỗ trợ tiện ích</h2>
+</div>
+<div class="bor_box">
+<ul>
+<li>
+<a href="/ho-tro-tien-ich/ht-xem-huong-nha">
+<img alt="Tư vấn phong thủy" src="https://file4.batdongsan.com.vn/images/icon-phongthuy.png" />Tư vấn phong thủy
+</a>
+</li>
+<li>
+<a href="/ho-tro-tien-ich/ht-du-toan-chi-tiet">
+<img alt="Tính lãi suất" src="https://file4.batdongsan.com.vn/images/icon-chiphi.png" />Dự tính chi phí làm nhà
+</a>
+</li>
+<li>
+<a href="/ho-tro-tien-ich/ht-tinh-lai-suat">
+<img alt="Tính lãi suất" src="https://file4.batdongsan.com.vn/images/icon-laisuat.png" />Tính lãi suất
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear10"></div>
+</div>
+</div>
+<div class="container-default">
+<div>
+<div id="bannerfix">
+<div class="adPosition" positionCode="BANNER_POSITION_FIX" style="position:fixed; bottom:0px; right:0px; z-index:100;"></div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="https://content.batdongsan.com.vn/Modules/Support/images/styles/home.css" media="all" />
+<!--Tạm ẩn-->
+<div class="box1">
+<h2 class="h1">
+Dành cho người xây nhà</h2>
+<ul>
+<li><a href="/quy-trinh-xay-nha" title="Quy trình xây nhà" rel="nofollow">Quy trình xây nhà</a></li>
+<li class="last"><a href="/ho-tro-tien-ich/ht-xem-tuoi-xay-nha" title="Xem tuổi làm nhà" rel="nofollow">Xem tuổi làm nhà</a></li>
+</ul>
+<div class="clear">
+</div>
+</div>
+<!--/#box1-->
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
+<div class="container-default">
+<div>
+<div id="RightMainContent__boxlinkBanxehoi_panel0">
+<div align="center" class="name_tit1 new-header">
+Bạn quan tâm tới xe hơi?
+</div>
+<div class="list bor_box">
+<ul>
+<li><a href="https://banxehoi.com/xe-toyota-land-cruiser-vx-nam-2016-pb" target="_blank" title="Toyota Land Cruiser VX 2016">Toyota Land Cruiser VX 2016</a></li>
+<li><a href="https://banxehoi.com/xe-lexus-rx-450h-nam-2016-pb" target="_blank" title="Lexus RX 450h 2016">Lexus RX 450h 2016</a></li>
+<li><a href="https://banxehoi.com/salons/ben-thanh-ford-29632-520" target="_blank" title="Bến Thành Ford">Bến Thành Ford</a></li>
+<li><a href="https://banxehoi.com/salons/kia-giai-phong-31989-375" target="_blank" title="Kia Giải Phóng">Kia Giải Phóng</a></li>
+<li><a href="https://banxehoi.com/salons/toyota-an-suong-24757-430" target="_blank" title="Toyota An Sương">Toyota An Sương</a></li>
+</ul>
+</div>
+<div class="clear10"></div>
+</div>
+</div>
+<div class="fb-fanpage">
+<div id="fb-root"></div>
+<div class="fb-page" data-href="https://www.facebook.com/Batdongsandv/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+<blockquote cite="https://www.facebook.com/Batdongsandv/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Batdongsandv/">Batdongsan.com.vn</a></blockquote>
+</div>
+</div>
+</div>
+</div>
+<div class="banner-bottom">
+<div style="float: left; width: 560px">
+</div>
+<div style="float: left; width: 430px; margin-left: 5px">
+</div>
+</div>
+<script type="text/javascript">
+if ($("#boxLinkFooter_boxLink").height() >= 240) { $("#boxLinkFooter_boxLink").css("height", "240px"); $("#boxLinkFooter_boxLink").css("overflow", "hidden") }
+</script>
+<style type="text/css">
+.footer-bottom-top-1 a {
+white-space: nowrap;
+}
+</style>
+<div class="footer">
+<div class="footer-bottom">
+<div class="clearboth pad-bot-10">
+<div class='footer-home'>
+<div class="footer-bottom-top-1">
+<a href="/gioi-thieu" rel="nofollow">Giới thiệu</a>
+</div>
+<div class="footer-bottom-top-1">
+<a href="/dieu-khoan-thoa-thuan" rel="nofollow">Điều khoản thỏa thuận</a>
+</div>
+<div class="footer-bottom-top-1">
+<a href="/quy-dinh-su-dung" rel="nofollow">Quy chế hoạt động</a>
+</div>
+<div class="footer-bottom-top-1">
+<a href="/bao-gia-quang-cao" rel="nofollow">Báo giá & hỗ trợ</a>
+</div>
+<div class="footer-bottom-top-1">
+<a href="/nhung-cau-hoi-thuong-gap" rel="nofollow">Những câu hỏi thường gặp</a>
+</div>
+<div class="footer-bottom-top-1">
+<a href="/quy-dinh-dang-tin" rel="nofollow">Quy định đăng tin</a>
+</div>
+<div class="footer-bottom-top-1">
+<a href="/tuyen-dung" rel="nofollow">Tuyển Dụng</a>
+</div>
+<div class="footer-bottom-top-1">
+<a href="/lien-he" rel="nofollow">Liên hệ</a>
+</div>
+<div class="footer-bottom-top-1">
+<a href="/ve-batdongsancomvn">Về Batdongsan.com.vn</a>
+</div>
+<div class="footer-bottom-top-1" style="border-right: none;">
+<a href="/rss" rel="nofollow">Rss</a>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="clear">
+</div>
+</div>
+<div class="inter" id="inter" style="height: 22px;">
+<div id="title">
+International
+</div>
+<ul id="country">
+<li>
+<a target="_blank" href="http://www.rumah.com" title="Indonesia Real Estate">
+<img src="https://file4.batdongsan.com.vn/images/opt/indonesia.jpg" alt="Indonesia Real Estate" />Indonesia</a></li>
+<li>
+<a target="_blank" href="http://www.ddproperty.com" title="Thailand Real Estate">
+<img src="https://file4.batdongsan.com.vn/images/opt/thailand.jpg" alt="Thailand Real Estate" />Thailand</a></li>
+<li>
+<a target="_blank" href="http://www.homeguru.com.my" title="Malaysia Real Estate">
+<img src="https://file4.batdongsan.com.vn/images/opt/malaysia.jpg" alt="Malaysia Real Estate" />Malaysia</a></li>
+<li>
+<a target="_blank" href="http://www.propertyguru.com.sg/" title="Singapore Real Estate">
+<img src="https://file4.batdongsan.com.vn/images/opt/singapore.jpg" alt="Singapore Real Estate" />Singapore</a>
+</li>
+<li>
+<a target="_blank" href="http://www.28hse.com/en/" title="Hong Kong Real Estate">
+<img src="https://file4.batdongsan.com.vn/images/hongkong.png" alt="Hong Kong" />Hong Kong</a>
+</li>
+<li>
+<a target="_blank" href="http://www.immobiliare.it/" style="width: 100%; float: left;" rel="nofollow" title="Italy Real Estate">
+<img src="https://file4.batdongsan.com.vn/images/italy.png" alt="Italy" />Italy</a>
+</li>
+<li>
+<a target="_blank" href="http://www.luxuryestate.com/" style="width: 100%; float: left;" title="Luxury homes">
+<img src="https://file4.batdongsan.com.vn/images/opt/earth.png" alt="Italy" />Italy</a>
+</li>
+<li>
+<a target="_blank" href="http://www.propertyfinder.co.tz/" style="width: 100%; float: left;" title="Tanzania Real Estate">
+<img src="https://file4.batdongsan.com.vn/images/opt/tanzania.jpg" alt="Tanzania Real Estate" />Tanzania</a>
+</li>
+<li>
+<a target="_blank" href="http://aqarmap.com/" style="width: 100%; float: left;" title="Egypt Real Estate">
+<img src="https://file4.batdongsan.com.vn/images/opt/egypt.jpg" alt="Egypt Real Estate" />Egypt</a>
+</li>
+<li>
+<a target="_blank" href="http://american-european.net" title="Costa Rica Real Estate">
+<img src="https://file4.batdongsan.com.vn/images/opt/costa-rica.jpg" alt="Costa Rica Real Estate" />Costa Rica</a>
+</li>
+<li>
+<a target="_blank" href="http://www.malimalihome.net/" title="Macau Estate">
+<img src="https://file4.batdongsan.com.vn/images/opt/macau.jpg" alt="Macau Real Estate" />Macau</a>
+</li>
+</ul>
+</div>
+<div class="footer-bottom-end">
+<div class="footer-bottom-end-row1" style="padding-bottom: 10px; color: #000;">
+<strong style="font-size: 1.2em;">Công ty Cổ phần Đầu tư và Công nghệ Đại Việt</strong>
+</div>
+<div class="footer-bottom-end-row1" style="color: #555754">
+<strong>Tổng đài CSKH: 1900 1881</strong>
+</div>
+<div class="footer-bottom-end-row1" style="color: #555754">
+Copyright © 2007 - 2018 Batdongsan.com.vn.
+</div>
+<div class="footer-bottom-end-row1" style="color: #555754">
+Email: hotro@batdongsan.com.vn | cskh@batdongsan.com.vn
+<a rel="nofollow" href="skype:cskh.batdongsan?chat" title="Chat với cskh.batdongsan" style="text-decoration: none;">
+<img src="https://file4.batdongsan.com.vn/images/opt/skype.png" alt="skype" style="vertical-align: bottom; height: 20px;" />
+</a>
+</div>
+<div class="footer-bottom-end-row1" style="color: #555754">
+Giấy phép ICP số 3399/GP-STTTT do Sở Thông tin và Truyền thông Hà Nội cấp ngày 4 tháng 9 năm 2014.
+<br />Chịu trách nhiệm nội dung: Bà Trần Thị Hồng Thúy - ® Ghi rõ nguồn "Batdongsan.com.vn" khi phát hành lại thông tin từ website này.
+</div>
+<div class="footer-bottom-end-row1" style="color: #555754; position: relative;">
+Phát triển bởi Daiviet Software Jsc <a style="color: #555754" href='http://daivietgroup.com' target="_blank">http://daivietgroup.com</a>
+<div style="position: absolute; right: 20px; bottom: 32px;">
+<a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=5488" target="_blank" rel="nofollow">
+<img src="https://file4.batdongsan.com.vn/2016/07/20/yl6ZFYiO/20160720092657-0be3.jpg" alt="Đã đăng ký với Bộ Công Thương" width="130px">
+</a>
+</div>
+</div>
+<div class="footer-bottom-end-row1" style="padding: 10px 0 10px;">
+<img src="https://file4.batdongsan.com.vn/images/line-footer.png" alt="" noloaderror="true" />
+</div>
+<div class="footer-bottom-end-row1">
+<div class="add-left" style="width: 335px; padding-right: 15px;">
+<div><strong>Trụ sở chính</strong></div>
+<div>Tầng 31, Keangnam Hanoi Landmark Tower, khu E6, khu đô thị Cầu Giấy, phường Mễ Trì, quận Nam Từ Liêm, TP. Hà Nội</div>
+<div>Tổng đài CSKH: 1900 1881</div>
+<div>Điện thoại: (024) 3 562 5939 | (024) 3 562 5940 </div>
+</div>
+<div class="add-left" style="width: 298px; padding-right: 15px;">
+<div><strong>Chi nhánh Nha Trang</strong></div>
+<div>Tầng 8, tòa nhà Chánh Bổn, số 02 Lê Thành Phương, phường Phương Sài, TP. Nha Trang, tỉnh Khánh Hòa</div>
+<div>Điện thoại: (0258) 3 818 886 - Mobile: 0902 169 295</div>
+</div>
+<div class="add-right" style="width: 294px;">
+<div><strong>Chi nhánh Vũng Tàu</strong></div>
+<div>Tầng 4, tòa nhà ACB, số 111 Hoàng Hoa Thám, phường 2, TP. Vũng Tàu, tỉnh Bà Rịa - Vũng Tàu</div>
+<div>Điện thoại: (0254) 3 511 339 - Mobile: 0904 509 293</div>
+</div>
+<div class="clear10"></div>
+<div class="add-left" style="width: 335px; padding-right: 15px;">
+<div><strong>Chi nhánh TP. Hồ Chí Minh</strong></div>
+<div>Tầng 8, Tòa nhà Xổ số Kiến thiết (Lottery Tower), Số 77 Trần Nhân Tôn, Phường 9, Quận 5, TP. Hồ Chí Minh</div>
+<div>Điện thoại: (028) 3 830 8560 - Mobile: 0904 893 279</div>
+</div>
+<div class="add-left" style="width: 298px; padding-right: 15px;">
+<div><strong>Chi nhánh Hải Phòng</strong></div>
+<div>Phòng 601B, TD Business Center, lô 20A Lê Hồng Phong, quận Ngô Quyền, TP. Hải Phòng</div>
+<div>Điện thoại: (0225) 3 246 848 - Mobile: 0903 456 322</div>
+</div>
+<div class="add-right" style="width: 294px;">
+<div><strong>Chi nhánh Bình Dương</strong></div>
+<div>Phòng 10, tầng 16, Becamex Tower, số 230 Đại lộ Bình Dương, P.Phú Hòa, TP.Thủ Dầu Một, tỉnh Bình Dương</div>
+<div>Điện thoại: (0274) 22 21 201, Mobile: 0919 255 580</div>
+</div>
+<div class="clear10"></div>
+<div class="add-left" style="width: 335px; padding-right: 15px;">
+<div><strong>Chi nhánh Đà Nẵng</strong></div>
+<div>Tầng 9, tòa nhà Vĩnh Trung Plaza, số 255 – 257 Hùng Vương, phường Vĩnh Trung, quận Thanh Khê, TP. Đà Nẵng</div>
+<div>Điện thoại: (0236) 3 666 968 - Mobile: 0904 907 279</div>
+</div>
+<div class="add-left" style="width: 298px; padding-right: 15px;">
+<div><strong>Chi nhánh Cần Thơ</strong></div>
+<div>Lầu 8, số 8 đường Phan Văn Trị, phường An Phú, quận Ninh Kiều, TP. Cần Thơ</div>
+<div>Điện thoại: (0292) 3 837 838 - Mobile: 0902 229 697</div>
+</div>
+<div class="add-right" style="width: 294px;">
+<div><strong>Chi nhánh Đồng Nai</strong></div>
+<div>Lầu 18, tòa Pegasus, số 53-55 đường Võ Thị Sáu, phường Quyết Thắng, TP. Biên Hoà, tỉnh Đồng Nai</div>
+<div>Điện thoại: 0904 819 295</div>
+</div>
+<div class="clear10"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--end site-->
+<div style="clear: both">
+</div>
+<div class="banner-right">
+<div class="container-default">
+<div>
+<div id="ban_right" class="ban_scroll">
+<div class="adPosition" positionCode="BANNER_POSITION_RIGHT" style="margin-bottom: 0px;"></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var loadDeferredStyles = function() {
+var addStylesNode = document.getElementsByName("deferred-styles");
+if (addStylesNode.length > 0)
+{
+var html = '';
+while(addStylesNode.length > 0)
+{
+var node = addStylesNode[0];
+html += node.textContent;
+node.parentElement.removeChild(node);
+}
+var replacement = document.createElement("div");
+replacement.innerHTML = html;
+document.body.appendChild(replacement);
+}
+};
+var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+if (raf)
+raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+else
+window.addEventListener('load', loadDeferredStyles); 
+//]]>
+</script>
+</form>
+<script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Banner/scripts/banner.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/jquery.bt.min.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/jquery-ui-1.8.11.min.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/common.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/common.validator.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/jcarousellite.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/fengshui_divinations.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/scripts/fancybox215/lib/jquery.mousewheel-3.0.6.pack.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/scripts/fancybox215/source/jquery.fancybox.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/scripts/fancybox215/source/helpers/jquery.fancybox-buttons.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/jwplayer.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/ScrollBar/jquery.mCustomScrollbar.min.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/HandlerWeb/ProductEditServiceHandler.ashx?type=prepairbds2&v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/HandlerWeb/ProductEditServiceHandler.ashx?type=prepairbds3&v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/HandlerWeb/ProductEditServiceHandler.ashx?type=prepairbds4&v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/HandlerWeb/ProductEditServiceHandler.ashx?type=prepairother&v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/HandlerWeb/ProductEditServiceHandler.ashx?type=prepairbds1&v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/searchScript.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/matchingdemand/stats-demand.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/statistic/statisticapi.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Scripts/usercomment.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Chats/scripts/jquery.signalR-2.1.2.min.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Chats/scripts/hubs.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Chats/scripts/jquery.tmpl.min.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Chats/scripts/jquery.emoticon.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Chats/scripts/ChatUserTemplates.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Chats/scripts/BDSChat.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Chats/scripts/chatPopup.js?v=2221"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Chats/scripts/jquery.cookie.js"></script><script type="text/javascript" src="https://content.batdongsan.com.vn/Modules/Chats/scripts/chatCommon.js?v=2221"></script><script type="text/javascript" src="http://log.batdongsan.com.vn/LogReceiver/DVLoggerClient.js?v=20180404"></script>
+<a id="to_top" href="javascript:;" rel="nofollow" style="display: none;">
+<img title="Về đầu trang" alt="Về đầu trang" src="https://file4.batdongsan.com.vn/images/opt/lendau.png"/>
+</a>
+<div class="chat-header-bds chat-with-bds" id="chat-width-bds-noreg">
+<a class="link-chat-bds" href="javascript:void(0)" rel="nofollow" onclick="BDSChat.chatWithProductOwner('0','Đăng ký', 0)">
+<span class="link-chat-bds-header"></span>
+<span class="link-chat-bds-content">Chat với <b>Batdongsan.com.vn</b></span>
+</a>
+</div>
+<div id="pnlQuickBoxChat" class="chat-quick-inbox-content" >
+<div class="inbox-body">
+<div class="chat-quick-inbox-content-arrow"></div>
+<ul></ul>
+<div class="chat-quick-view-all"><a href="/trang-ca-nhan/uspg-chatinbox" onclick="window.location.href='/trang-ca-nhan/uspg-chatinbox'">Xem tất cả</a></div>
+</div>
+</div>
+<div id="hiddenDivChat" class="chat-hiddendiv"></div>
+<script type="text/javascript">
+var lstChatServer = ['https://s1.batdongsan.com.vn', 'https://s2.batdongsan.com.vn', 'https://s3.batdongsan.com.vn'];    
+chatServerUrl = localStorage.getItem('chatServerHost')
+if (chatServerUrl == null) {
+chatServerUrl = lstChatServer[Math.floor(Math.random() * lstChatServer.length)];
+localStorage.setItem('chatServerHost', chatServerUrl);
+}    
+//var hiddenDiv = $(document.createElement('div')), content = null;
+//hiddenDiv.addClass('chat-hiddendiv');
+//$("body").prepend(hiddenDiv);
+</script>
+<script type="text/javascript">
+(function () {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct: "b6pvi1aUS/00O2", domain: "batdongsan.com.vn", dynamic: true };
+(function () { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript>
+<img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=b6pvi1aUS/00O2" style="display: none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+</body>
+</html>

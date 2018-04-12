@@ -1,8 +1,15 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+#tablePatterns {
+    border: 1px solid #dee2e6;;
+}
+#tablePatterns td{
+    vertical-align: middle;
 }
 
-a {
-  color: #00B7FF;
+#tablePatterns td textarea{
+    background: rgb(236, 240, 199);
+}
+
+#tablePatterns td .editTextArea{
+    background-color: #dee2e6;
 }
