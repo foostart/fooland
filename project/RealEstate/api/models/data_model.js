@@ -8,11 +8,10 @@ class DataModel extends DB
 
     /**
      * update data into 'data' table
-     * @param {int} data_id: data_id
      * @param {array} data: Data is an array values of data table
      * @param callback: callback true or false
      */
-    update(data_id, data, callback){
+    update(data, callback){
         this.executeMySQL("UPDATE data SET data_title=?,data_price=?,data_area=?,data_description=?,data_type_of_news=?,data_type_BDS=?,data_location=?,data_date=?,data_project_name=?,data_contact_name=?,data_contact_phone=?,data_contact_email=?,data_contact_address=?,status=? WHERE data_id=?", data).then(function(success){
             callback(success);
         }).catch(function(err){
