@@ -17,59 +17,164 @@ const dataModel = new DataClass();
 
 // export cac hàm có trong controller
 module.exports = {
-    getURLBySiteID: getURLBySiteID
+    getURLBySiteID: getURLBySiteID,
+    getDataDetailBySiteID : getDataDetailBySiteID
 };
 
-var siteID = 1;
-var status = 1; // 1: chi co URL trong database , 2: co day du du lieu roi
-patternModel.find(2, siteID, function (pattern_rows) {
-    console.log("------------------------------------------------------------------------------");
-    dataModel.findURLByStatus(status, siteID, function (url_rows) {
-        for (var i = 0; i < url_rows.length; i++) {
-            var url = url_rows[i]["data_url"];
-            var data_id = url_rows[i]["data_id"];
-            console.log(data_id, url);
-            getHTML(url, data_id, function (dataSource, dataID) {
-                if (dataSource != "") {
-                    var dataInput = [];
-                    var title = getValueByPattern("Title", pattern_rows, dataSource);
-                    var price = getValueByPattern("Price", pattern_rows, dataSource);
-                    var description = getValueByPattern("Description", pattern_rows, dataSource);
-                    var area = getValueByPattern("Area", pattern_rows, dataSource);
-                    var typeOfNews = getValueByPattern("Type Of News", pattern_rows, dataSource);
-                    var typeBDS = getValueByPattern("Type BDS", pattern_rows, dataSource);
-                    var location = getValueByPattern("Location", pattern_rows, dataSource);
-                    var dateCreated = getValueByPattern("Date Created", pattern_rows, dataSource);
-                    var projectName = getValueByPattern("Project Name", pattern_rows, dataSource);
-                    var contactName = getValueByPattern("Contact Name", pattern_rows, dataSource);
-                    var contactPhone = getValueByPattern("Contact Phone", pattern_rows, dataSource);
-                    var contactEmail = getValueByPattern("Contact Email", pattern_rows, dataSource);
-                    var contactAddress = getValueByPattern("Contact Address", pattern_rows, dataSource);
-                    dataInput.push([title]);
-                    dataInput.push([price]);
-                    dataInput.push([description]);
-                    dataInput.push([area]);
-                    dataInput.push([typeOfNews]);
-                    dataInput.push([typeBDS]);
-                    dataInput.push([location]);
-                    dataInput.push([convertStringToDate(dateCreated)]);
-                    dataInput.push([projectName]);
-                    dataInput.push([contactName]);
-                    dataInput.push([contactPhone]);
-                    dataInput.push([contactEmail]);
-                    dataInput.push([contactAddress]);
-                    dataInput.push([2]);
-                    dataInput.push([dataID]);
-                    dataModel.update(dataInput, function (update_success) {
-                        console.log( "Update: ", dataID, update_success);
-                        dataInput = [];
-                    });
+
+
+
+function getDataDetailBySiteID(req, res, next) {
+    var results = {
+        success: 1,
+        collected: 0,
+        description: "Get data detail success"
+    };
+
+    var siteID = req.swagger.params["siteID"].value;
+    console.log(siteID);
+    var urlLimit = req.swagger.params["urlLimit"].value;
+    console.log(urlLimit);
+    var countCollected = 0;
+    if (urlLimit == null || urlLimit == "") {
+        urlLimit = 10;
+    }
+    var status = 1; // 1: chua co URL trong database , 2: co day du du lieu roi
+    patternModel.find(2, siteID, function (pattern_rows) {
+        if (pattern_rows != -1) {
+            dataModel.findURLByStatus(status,siteID, function (url_rows) {
+                if(url_rows != -1)
+                {
+                    if (urlLimit <= url_rows.length)
+                    {
+                        for (var i = 0; i < urlLimit; i++) {
+                            var url = url_rows[i]["data_url"];
+                            var data_id = url_rows[i]["data_id"];
+                            console.log(data_id, url);
+                            getHTML(url, data_id, function (dataSource, dataID) {
+                                if (dataSource != "") {
+                                    var dataInput = [];
+                                    var title = getValueByPattern("Title", pattern_rows, dataSource);
+                                    var price = getValueByPattern("Price", pattern_rows, dataSource);
+                                    var description = getValueByPattern("Description", pattern_rows, dataSource);
+                                    var area = getValueByPattern("Area", pattern_rows, dataSource);
+                                    var typeOfNews = getValueByPattern("Type Of News", pattern_rows, dataSource);
+                                    var typeBDS = getValueByPattern("Type BDS", pattern_rows, dataSource);
+                                    var location = getValueByPattern("Location", pattern_rows, dataSource);
+                                    var dateCreated = getValueByPattern("Date Created", pattern_rows, dataSource);
+                                    var projectName = getValueByPattern("Project Name", pattern_rows, dataSource);
+                                    var contactName = getValueByPattern("Contact Name", pattern_rows, dataSource);
+                                    var contactPhone = getValueByPattern("Contact Phone", pattern_rows, dataSource);
+                                    var contactEmail = getValueByPattern("Contact Email", pattern_rows, dataSource);
+                                    var contactAddress = getValueByPattern("Contact Address", pattern_rows, dataSource);
+                                    dataInput.push([title]);
+                                    dataInput.push([price]);
+                                    dataInput.push([description]);
+                                    dataInput.push([area]);
+                                    dataInput.push([typeOfNews]);
+                                    dataInput.push([typeBDS]);
+                                    dataInput.push([location]);
+                                    dataInput.push([convertStringToDate(dateCreated)]);
+                                    dataInput.push([projectName]);
+                                    dataInput.push([contactName]);
+                                    dataInput.push([contactPhone]);
+                                    dataInput.push([contactEmail]);
+                                    dataInput.push([contactAddress]);
+                                    dataInput.push([2]);
+                                    dataInput.push([dataID]);
+                                    dataModel.update(dataInput, function (update_success) {
+                                        console.log( "Update: ", dataID, update_success);
+                                        dataInput = [];
+                                        countCollected++;
+                                        if (countCollected >= urlLimit) {
+                                            res.json(results);
+                                        }
+                                    });
+                                }
+                                // console.log("------------------------------------------------------------------------------");
+                            });
+                        }                        
+                    }else{
+                        results.success = 0
+                        results.description = "The existing url is :" + url_rows.length
+                        res.json(results);
+                    }
+                }else{
+                    results.success = 0;
+                    results.description = "All urls were get data";
+                    res.json(results);
                 }
-                // console.log("------------------------------------------------------------------------------");
             });
         }
+    }); 
+}
+
+function getURLBySiteID(req, res, next) {
+    var results = {
+        success: 1,
+        data: [],
+        description: "Get success"
+    };
+    var siteID = req.swagger.params["siteID"].value;
+    var pageLimit = req.swagger.params["pageLimit"].value;
+    if (!pageLimit) pageLimit = 50;
+
+    var pattern_category_id = 1;
+    var countCollected = 0;
+
+    patternModel.find(4, [[siteID], [pattern_category_id]], function (pattern_rows) { // find pattern with siteID and pattern_category_id
+        if (pattern_rows != -1) {
+            siteModel.findById(siteID, function (site_rows) { // Find all site URL with siteID
+                if (site_rows != -1) {
+                    site_rows.forEach(site => {
+                        var siteJson = JSON.parse(site.site_url);
+                        var categories = siteJson.site_url_categories; // array url of site
+                        console.log(pattern_rows);
+                        var totalColected = categories.length * pattern_rows.length;
+                        categories.forEach(category => { // Loop for each URL of site
+                            pattern_rows.forEach(pattern => { // Loop for each pattern
+                                patternModel.check(pattern.pattern_regex, category.category_url, function (pattern_checked) {
+                                    if (pattern_checked) {
+                                        var jsOptions = {
+                                            LinkPage: category.category_url,
+                                            TypePage: siteJson.type_page_url,
+                                            PatternURL: pattern.pattern_regex,
+                                            PageLimit: parseInt(pageLimit)
+                                        }
+                                        crawlerModel.collect(jsOptions, function (data_crawler) {
+                                            if (data_crawler.status == "OK") {
+                                                // console.log("Data ----------------------");
+                                                // console.log(data_crawler);
+                                                data_crawler.data.forEach(item => {
+                                                    results.data.push(item);
+                                                });
+                                            }
+                                            countCollected++;
+
+                                            if (countCollected >= totalColected) {
+                                                res.json(results);
+                                            }
+                                        });
+                                    }
+                                });
+                            });
+                        });
+                    });
+                } else {
+                    results.success = 0;
+                    results.description = "Cannot get site url by site ID";
+                    res.json(results);
+                }
+            });
+
+        } else {
+            results.success = 0;
+            results.description = "Cannot get pattern url by site ID";
+            res.json(results);
+        }
     });
-});
+
+}
 
 function convertStringToDate(str) {
     var s;
@@ -141,91 +246,3 @@ function getValueByPattern(name, arrayPattern, sourceHTML) {
     }
     return result;
 }
-
-function getDataDetailBySiteID(req, res, next) {
-    var results = {
-        success: 1,
-        collected: 0,
-        description: "Get data detail success"
-    };
-
-    var siteID = req.swagger.params["siteID"].value;
-    var urlLimit = req.swagger.params["urlLimit"].value;
-
-    if (urlLimit == null || urlLimit == "") {
-        urlLimit = 10;
-    }
-
-    var status = 1; // 1: chi co URL trong database , 2: co day du du lieu roi
-    dataModel.findURLByStatus(status, function (url_rows) {
-        console.log(url_rows);
-    });
-}
-
-function getURLBySiteID(req, res, next) {
-    var results = {
-        success: 1,
-        data: [],
-        description: "Get success"
-    };
-    var siteID = req.swagger.params["siteID"].value;
-    var pageLimit = req.swagger.params["pageLimit"].value;
-    if (!pageLimit) pageLimit = 50;
-
-    var pattern_category_id = 1;
-    var countCollected = 0;
-
-    patternModel.find(4, [[siteID], [pattern_category_id]], function (pattern_rows) { // find pattern with siteID and pattern_category_id
-        if (pattern_rows != -1) {
-            siteModel.findById(siteID, function (site_rows) { // Find all site URL with siteID
-                if (site_rows != -1) {
-                    site_rows.forEach(site => {
-                        var siteJson = JSON.parse(site.site_url);
-                        var categories = siteJson.site_url_categories; // array url of site
-                        console.log(pattern_rows);
-                        var totalColected = categories.length * pattern_rows.length;
-                        categories.forEach(category => { // Loop for each URL of site
-                            pattern_rows.forEach(pattern => { // Loop for each pattern
-                                patternModel.check(pattern.pattern_regex, category.category_url, function (pattern_checked) {
-                                    if (pattern_checked) {
-                                        var jsOptions = {
-                                            LinkPage: category.category_url,
-                                            TypePage: siteJson.type_page_url,
-                                            PatternURL: pattern.pattern_regex,
-                                            PageLimit: parseInt(pageLimit)
-                                        }
-                                        crawlerModel.collect(jsOptions, function (data_crawler) {
-                                            if (data_crawler.status == "OK") {
-                                                // console.log("Data ----------------------");
-                                                // console.log(data_crawler);
-                                                data_crawler.data.forEach(item => {
-                                                    results.data.push(item);
-                                                });
-                                            }
-                                            countCollected++;
-
-                                            if (countCollected >= totalColected) {
-                                                res.json(results);
-                                            }
-                                        });
-                                    }
-                                });
-                            });
-                        });
-                    });
-                } else {
-                    results.success = 0
-                    results.description = "Cannot get site url by site ID"
-                    res.json(results);
-                }
-            });
-
-        } else {
-            results.success = 0
-            results.description = "Cannot get pattern url by site ID"
-            res.json(results);
-        }
-    });
-
-}
-

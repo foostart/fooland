@@ -285,31 +285,24 @@ paths:
             $ref: "#/definitions/ErrorResponse"        
   
   # Crawler API
-  /Crawler/CollectDetailURL:
+  /Crawler/CollectDataDetailBySiteID:
     x-swagger-router-controller: crawler_controller
     get:
-      description: "Lấy URL chi tiết của 1 page bds"
+      description: "Lấy thông tin chi tiết của tin tức theo siteID"
+      operationId: getDataDetailBySiteID      
       parameters:
-        - name: categoryURL
+        - name: siteID
           in: query
-          type: string
+          type: number
           required: true
-        - name: patternURL
-          in: query
-          type: string
-          required: true
-        - name: typePage
-          in: query
-          type: string
-          required: true
-        - name: pageLimit
+        - name: urlLimit
           in: query
           type: number
           required: false
         
       responses:
         "200":
-          description: "Lấy URL thành công"
+          description: "Get success"
           schema:
             $ref: "#/definitions/CrawlerResponse"
         default:
