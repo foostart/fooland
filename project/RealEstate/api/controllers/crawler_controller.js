@@ -1,5 +1,5 @@
-
 'use strict';
+const request = require("request");
 
 // Khai bao crawler model
 const CrawlerModelClass = require("../models/crawler_model");
@@ -11,10 +11,147 @@ const siteModel = new SiteModelClass();
 const PatternModelClass = require("../models/patterns_model");
 const patternModel = new PatternModelClass();
 
+// Khai báo data_model 
+const DataClass = require("../models/data_model");
+const dataModel = new DataClass();
+
 // export cac hàm có trong controller
 module.exports = {
     getURLBySiteID: getURLBySiteID
 };
+
+var siteID = 1;
+var status = 1; // 1: chi co URL trong database , 2: co day du du lieu roi
+patternModel.find(2, siteID, function (pattern_rows) {
+    console.log(pattern_rows);
+    console.log("------------------------------------------------------------------------------");
+    
+    
+    dataModel.findURLByStatus(status, siteID, function (url_rows) {
+        for(var i = 0; i < url_rows.length; i++)
+        {
+            var url = url_rows[i]["data_url"];
+            var data_id = url_rows[i]["data_id"];
+            console.log(url);
+            getHTML(url, function(dataSource){
+                var title = getValueByPattern("Title", pattern_rows, dataSource);
+                var price = getValueByPattern("Price", pattern_rows, dataSource);
+                var description = getValueByPattern("Description", pattern_rows, dataSource);
+                var area = getValueByPattern("Area", pattern_rows, dataSource);
+                var typeOfNews = getValueByPattern("Type Of News", pattern_rows, dataSource);
+                var typeBDS = getValueByPattern("Type BDS", pattern_rows, dataSource);
+                var location = getValueByPattern("Location", pattern_rows, dataSource);
+                var dateCreated = getValueByPattern("Date Created", pattern_rows, dataSource);               
+                var projectName = getValueByPattern("Project Name", pattern_rows, dataSource);
+                var contactName = getValueByPattern("Contact Name", pattern_rows, dataSource);
+                var contactPhone = getValueByPattern("Contact Phone", pattern_rows, dataSource);
+                var contactEmail = getValueByPattern("Contact Email", pattern_rows, dataSource);
+                var contactAddress = getValueByPattern("Contact Address", pattern_rows, dataSource);
+                // console.log(price);
+                console.log("------------------------------------------------------------------------------");
+                console.log(title);
+                console.log(price);
+                console.log(description);
+                console.log(area);
+                console.log(typeOfNews);
+                console.log(typeBDS);
+                console.log(location);
+                console.log(dateCreated);
+                console.log(projectName);
+                console.log(contactName);
+                console.log(contactPhone);
+                console.log(contactEmail);
+                console.log(contactAddress);
+                var dataInput = [];
+                dataInput.push = [title];
+                dataInput.push = [price];
+                dataInput.push = [description];
+                dataInput.push = [area];
+                dataInput.push = [typeOfNews];
+                dataInput.push = [typeBDS];
+                dataInput.push = [location];
+                dataInput.push = [dateCreated];
+                dataInput.push = [projectName];
+                dataInput.push = [contactName];
+                dataInput.push = [contactPhone];
+                dataInput.push = [contactEmail];
+                dataInput.push = [contactAddress];
+                dataInput.push = 2;
+                dataInput.push = data_id;
+                console.log(dataInput);
+                // dataModel.update()
+                // console.log("------------------------------------------------------------------------------");
+            });
+            break;
+        }
+    });
+});
+
+
+function getHTML(urlRequest, callback){
+    var optionsRequest = {
+        url: urlRequest,
+        headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+            'Accept-Language': 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5'
+        }
+    };
+
+    request.get(optionsRequest, function (error, response, body) {
+        if (!error){
+            callback(body);
+        }
+        return callback("");
+    });
+}
+
+/**
+ * 
+ * @param {string} name : Pattern category name 
+ * @param {array} arrayPattern : array of patterns
+ * @param {string} sourceHTML : html to regex
+ * @returns {string}: Return value
+ */
+function getValueByPattern(name, arrayPattern, sourceHTML) {
+    var result = "";
+    for (var index = 0; index < arrayPattern.length; index++) {
+        var element = arrayPattern[index]["patt_category_name"].toString(); // get name_category of each element in array 
+
+        if (element.indexOf(name) != - 1) { // if name is exist
+
+            var patternRegex = arrayPattern[index]["pattern_regex"]; // get pattern_regex to exec
+            var pattern = new RegExp(patternRegex, 'g');
+
+            var match = pattern.exec(sourceHTML); // execute regex with HTML Source
+            if (match != null) {
+                result = match[1];
+                break;
+            }
+        }
+    }
+    return result;
+}
+
+function getDataDetailBySiteID(req, res, next) {
+    var results = {
+        success: 1,
+        collected: 0,
+        description: "Get data detail success"
+    };
+
+    var siteID = req.swagger.params["siteID"].value;
+    var urlLimit = req.swagger.params["urlLimit"].value;
+
+    if (urlLimit == null || urlLimit == "") {
+        urlLimit = 10;
+    }
+
+    var status = 1; // 1: chi co URL trong database , 2: co day du du lieu roi
+    dataModel.findURLByStatus(status, function (url_rows) {
+        console.log(url_rows);
+    });
+}
 
 function getURLBySiteID(req, res, next) {
     var results = {
@@ -40,8 +177,8 @@ function getURLBySiteID(req, res, next) {
                         var totalColected = categories.length * pattern_rows.length;
                         categories.forEach(category => { // Loop for each URL of site
                             pattern_rows.forEach(pattern => { // Loop for each pattern
-                                patternModel.check(pattern.pattern_regex, category.category_url, function(pattern_checked){
-                                    if (pattern_checked){
+                                patternModel.check(pattern.pattern_regex, category.category_url, function (pattern_checked) {
+                                    if (pattern_checked) {
                                         var jsOptions = {
                                             LinkPage: category.category_url,
                                             TypePage: siteJson.type_page_url,
@@ -49,16 +186,16 @@ function getURLBySiteID(req, res, next) {
                                             PageLimit: parseInt(pageLimit)
                                         }
                                         crawlerModel.collect(jsOptions, function (data_crawler) {
-                                            if (data_crawler.status == "OK"){
+                                            if (data_crawler.status == "OK") {
                                                 // console.log("Data ----------------------");
                                                 // console.log(data_crawler);
-                                                data_crawler.data.forEach(item =>{
+                                                data_crawler.data.forEach(item => {
                                                     results.data.push(item);
                                                 });
                                             }
                                             countCollected++;
-        
-                                            if (countCollected >= totalColected){
+
+                                            if (countCollected >= totalColected) {
                                                 res.json(results);
                                             }
                                         });
