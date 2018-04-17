@@ -15,7 +15,7 @@ class AuthModel extends DB
         var sql = "SELECT * FROM users WHERE user_token = ?" ;
         var db = this;
         db.queryMySQL(sql, [[token]]).then(function(rows){
-            console.log(rows);
+            //console.log(rows);
             if(rows != null && rows.length > 0)
             {
                callback(true);
