@@ -618,6 +618,7 @@ paths:
   /Data/FindBy/{Token}:
     x-swagger-router-controller: data_controller
     get:
+      operationId: getDataFindBy
       summary: Tìm du lieu they yêu cầu
       description: Tìm du lieu theo yêu câu đưa ra
       parameters:
@@ -627,11 +628,11 @@ paths:
           required: true
         - name: typeQuery
           type: number
-          maximum: 12
+          maximum: 15
           in: query
           required: true
-          description: "Find by: 1. Data-Url, 2. Data-Tilte, 3. Data-Price, 4. Data-Area, 5. Data-Type-of-News, 6. Data-TypeofBDS, 7. Data-Location, 8. Data-ProjectName, 9. Data-ContactName, 10. Data-ContactPhone, 11. Data-ContactEmail, 12. Data-ContactAddress"
-        - name: values
+          description: "Find by: 1. Data-ID, 2. Data-URL 3. Data-Tilte, 4. Data-Price,5. Data-Area, 6.Data-Description, 7. Data-Type-of-News, 8. Data-TypeofBDS, 9. Data-Location, 10. Data-Date 11. Data-ProjectName, 12. Data-ContactName, 13. Data-ContactPhone, 14. Data-ContactEmail, 15. Data-ContactAddress"
+        - name: valueQuery
           in: query
           required: true
           type: array
@@ -642,7 +643,7 @@ paths:
         "200":
           description: Success
           schema:
-            $ref: "#/definitions/DataRequire"
+            $ref: "#/definitions/DataFoundResponse"
         default:
           description: Error
           schema:
@@ -895,11 +896,12 @@ definitions:
         type: string
         description: Mã hóa url
         
-  DataRequire:
+  DataFoundResponse:
+    type: object
     required:
       - data
     properties:
-      sucess:
+      success:
         type: number
         description: Tra ve 1 neu thanh cong, Tra ve 0 neu that bai
       data:
@@ -908,7 +910,7 @@ definitions:
           type: object
           properties:
             dataID:
-              type: number
+              type: string
             dataUrl:
               type: string
             dataTitle:
@@ -924,6 +926,8 @@ definitions:
             dataTypeOfBDS:
               type: string
             dataLocation:
+              type: string
+            dataDate:
               type: string
             dataProjectName:
               type: string
