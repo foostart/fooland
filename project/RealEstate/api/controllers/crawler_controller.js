@@ -18,7 +18,7 @@ const dataModel = new DataClass();
 // export cac hàm có trong controller
 module.exports = {
     getURLBySiteID: getURLBySiteID,
-    getDataDetailBySiteID : getDataDetailBySiteID
+    getDataDetailBySiteID: getDataDetailBySiteID
 };
 
 
@@ -42,71 +42,66 @@ function getDataDetailBySiteID(req, res, next) {
     var status = 1; // 1: chua co URL trong database , 2: co day du du lieu roi
     patternModel.find(2, siteID, function (pattern_rows) {
         if (pattern_rows != -1) {
-            dataModel.findURLByStatus(status,siteID, function (url_rows) {
-                if(url_rows != -1)
-                {
-                    if (urlLimit <= url_rows.length)
-                    {
-                        for (var i = 0; i < urlLimit; i++) {
-                            var url = url_rows[i]["data_url"];
-                            var data_id = url_rows[i]["data_id"];
-                            console.log(data_id, url);
-                            getHTML(url, data_id, function (dataSource, dataID) {
-                                if (dataSource != "") {
-                                    var dataInput = [];
-                                    var title = getValueByPattern("Title", pattern_rows, dataSource);
-                                    var price = getValueByPattern("Price", pattern_rows, dataSource);
-                                    var description = getValueByPattern("Description", pattern_rows, dataSource);
-                                    var area = getValueByPattern("Area", pattern_rows, dataSource);
-                                    var typeOfNews = getValueByPattern("Type Of News", pattern_rows, dataSource);
-                                    var typeBDS = getValueByPattern("Type BDS", pattern_rows, dataSource);
-                                    var location = getValueByPattern("Location", pattern_rows, dataSource);
-                                    var dateCreated = getValueByPattern("Date Created", pattern_rows, dataSource);
-                                    var projectName = getValueByPattern("Project Name", pattern_rows, dataSource);
-                                    var contactName = getValueByPattern("Contact Name", pattern_rows, dataSource);
-                                    var contactPhone = getValueByPattern("Contact Phone", pattern_rows, dataSource);
-                                    var contactEmail = getValueByPattern("Contact Email", pattern_rows, dataSource);
-                                    var contactAddress = getValueByPattern("Contact Address", pattern_rows, dataSource);
-                                    dataInput.push([title]);
-                                    dataInput.push([price]);
-                                    dataInput.push([description]);
-                                    dataInput.push([area]);
-                                    dataInput.push([typeOfNews]);
-                                    dataInput.push([typeBDS]);
-                                    dataInput.push([location]);
-                                    dataInput.push([convertStringToDate(dateCreated)]);
-                                    dataInput.push([projectName]);
-                                    dataInput.push([contactName]);
-                                    dataInput.push([contactPhone]);
-                                    dataInput.push([contactEmail]);
-                                    dataInput.push([contactAddress]);
-                                    dataInput.push([2]);
-                                    dataInput.push([dataID]);
-                                    dataModel.update(dataInput, function (update_success) {
-                                        console.log( "Update: ", dataID, update_success);
-                                        dataInput = [];
-                                        countCollected++;
-                                        if (countCollected >= urlLimit) {
-                                            res.json(results);
-                                        }
-                                    });
-                                }
-                                // console.log("------------------------------------------------------------------------------");
-                            });
-                        }                        
-                    }else{
-                        results.success = 0
-                        results.description = "The existing url is :" + url_rows.length
-                        res.json(results);
+            dataModel.findURLByStatus(status, siteID, function (url_rows) {
+                if (url_rows != -1) {
+                    if (urlLimit >= url_rows.length)
+                        urlLimit = url_rows.length;
+                    for (var i = 0; i < urlLimit; i++) {
+                        var url = url_rows[i]["data_url"];
+                        var data_id = url_rows[i]["data_id"];
+                        console.log(data_id, url);
+                        getHTML(url, data_id, function (dataSource, dataID) {
+                            if (dataSource != "") {
+                                var dataInput = [];
+                                var title = getValueByPattern("Title", pattern_rows, dataSource);
+                                var price = getValueByPattern("Price", pattern_rows, dataSource);
+                                var description = getValueByPattern("Description", pattern_rows, dataSource);
+                                var area = getValueByPattern("Area", pattern_rows, dataSource);
+                                var typeOfNews = getValueByPattern("Type Of News", pattern_rows, dataSource);
+                                var typeBDS = getValueByPattern("Type BDS", pattern_rows, dataSource);
+                                var location = getValueByPattern("Location", pattern_rows, dataSource);
+                                var dateCreated = getValueByPattern("Date Created", pattern_rows, dataSource);
+                                var projectName = getValueByPattern("Project Name", pattern_rows, dataSource);
+                                var contactName = getValueByPattern("Contact Name", pattern_rows, dataSource);
+                                var contactPhone = getValueByPattern("Contact Phone", pattern_rows, dataSource);
+                                var contactEmail = getValueByPattern("Contact Email", pattern_rows, dataSource);
+                                var contactAddress = getValueByPattern("Contact Address", pattern_rows, dataSource);
+                                dataInput.push([title]);
+                                dataInput.push([price]);
+                                dataInput.push([description]);
+                                dataInput.push([area]);
+                                dataInput.push([typeOfNews]);
+                                dataInput.push([typeBDS]);
+                                dataInput.push([location]);
+                                dataInput.push([convertStringToDate(dateCreated)]);
+                                dataInput.push([projectName]);
+                                dataInput.push([contactName]);
+                                dataInput.push([contactPhone]);
+                                dataInput.push([contactEmail]);
+                                dataInput.push([contactAddress]);
+                                dataInput.push([2]);
+                                dataInput.push([dataID]);
+                                dataModel.update(dataInput, function (update_success) {
+                                    console.log("Update: ", dataID, update_success);
+                                    dataInput = [];
+                                    countCollected++;
+                                    if (countCollected >= urlLimit) {
+                                        res.json(results);
+                                    }
+                                });
+                            }
+                            // console.log("------------------------------------------------------------------------------");
+                        });
                     }
-                }else{
+
+                } else {
                     results.success = 0;
                     results.description = "All urls were get data";
                     res.json(results);
                 }
             });
         }
-    }); 
+    });
 }
 
 function getURLBySiteID(req, res, next) {
@@ -180,26 +175,26 @@ function convertStringToDate(str) {
     var s;
     var result = "";
     var cDate = new Date();
-    if(str.indexOf(".") != -1){
-      s = str.split('.');
-      result = s[2] + "-" + s[1] + "-" + s[0];
+    if (str.indexOf(".") != -1) {
+        s = str.split('.');
+        result = s[2] + "-" + s[1] + "-" + s[0];
     }
-    else if (str.indexOf("/") != -1){
-      s = str.split('/');
-      result = s[2] + "-" + s[1] + "-" + s[0];
+    else if (str.indexOf("/") != -1) {
+        s = str.split('/');
+        result = s[2] + "-" + s[1] + "-" + s[0];
     }
-    else if (str.indexOf("-") != -1){
-      s = str.split('-');
-      result = s[2] + "-" + s[1] + "-" + s[0];
+    else if (str.indexOf("-") != -1) {
+        s = str.split('-');
+        result = s[2] + "-" + s[1] + "-" + s[0];
     }
-    else if (str.indexOf("Hôm qua") != -1){
-      result = cDate.getFullYear() + "-" + (cDate.getMonth() + 1).toString() + "-" +  (cDate.getDate() - 1).toString();
+    else if (str.indexOf("Hôm qua") != -1) {
+        result = cDate.getFullYear() + "-" + (cDate.getMonth() + 1).toString() + "-" + (cDate.getDate() - 1).toString();
     }
-    else{
-      result = cDate.getFullYear() + "-" + (cDate.getMonth() + 1).toString() + "-" +  cDate.getDate();
+    else {
+        result = cDate.getFullYear() + "-" + (cDate.getMonth() + 1).toString() + "-" + cDate.getDate();
     }
     return result;
-  }
+}
 
 
 function getHTML(urlRequest, data_id, callback) {
