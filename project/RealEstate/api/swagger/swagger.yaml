@@ -309,7 +309,7 @@ paths:
           description: "Error"
           schema:
             $ref: "#/definitions/ErrorResponse"
-  /Crawler/CollectDetailURLBySiteID:
+  /Crawler/CollectAllURLBySiteID:
     x-swagger-router-controller: crawler_controller
     get:
       description: "Lấy URL bài viết của tất cả các link có trong siteID"

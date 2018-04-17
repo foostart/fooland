@@ -40,12 +40,17 @@ function getDataDetailBySiteID(req, res, next) {
         urlLimit = 10;
     }
     var status = 1; // 1: chua co URL trong database , 2: co day du du lieu roi
-    patternModel.find(2, siteID, function (pattern_rows) {
+    patternModel.find(2, siteID, function (pattern_rows) { // lay ra pattern theo siteID
         if (pattern_rows != -1) {
             dataModel.findURLByStatus(status, siteID, function (url_rows) {
+                console.log("\r\n url_rows: --------------------------------------------------------");
+                console.log(url_rows);
+                console.log("-------------------------------------------------------------------");
                 if (url_rows != -1) {
-                    if (urlLimit >= url_rows.length)
+                    if (urlLimit >= url_rows.length) {
                         urlLimit = url_rows.length;
+                    }
+
                     for (var i = 0; i < urlLimit; i++) {
                         var url = url_rows[i]["data_url"];
                         var data_id = url_rows[i]["data_id"];
@@ -67,9 +72,9 @@ function getDataDetailBySiteID(req, res, next) {
                                 var contactEmail = getValueByPattern("Contact Email", pattern_rows, dataSource);
                                 var contactAddress = getValueByPattern("Contact Address", pattern_rows, dataSource);
                                 dataInput.push([title]);
-                                dataInput.push([price]);
+                                dataInput.push([price.replace("m<sup>2</sup>", "m²")]);
+                                dataInput.push([area.replace("m<sup>2</sup>", "m²")]);
                                 dataInput.push([description]);
-                                dataInput.push([area]);
                                 dataInput.push([typeOfNews]);
                                 dataInput.push([typeBDS]);
                                 dataInput.push([location]);
@@ -81,11 +86,15 @@ function getDataDetailBySiteID(req, res, next) {
                                 dataInput.push([contactAddress]);
                                 dataInput.push([2]);
                                 dataInput.push([dataID]);
+                                console.log("\r\ndataInput ---------------------------------------------------");
+                                console.log(dataInput);
+                                console.log("\r\n---------------------------------------------------");
                                 dataModel.update(dataInput, function (update_success) {
                                     console.log("Update: ", dataID, update_success);
                                     dataInput = [];
                                     countCollected++;
                                     if (countCollected >= urlLimit) {
+                                        results.collected = countCollected;
                                         res.json(results);
                                     }
                                 });
@@ -114,47 +123,70 @@ function getURLBySiteID(req, res, next) {
     var pageLimit = req.swagger.params["pageLimit"].value;
     if (!pageLimit) pageLimit = 50;
 
-    var pattern_category_id = 1;
+    var pattern_category_id = 1; // 1: lay ra pattern cua url 
     var countCollected = 0;
 
-    patternModel.find(4, [[siteID], [pattern_category_id]], function (pattern_rows) { // find pattern with siteID and pattern_category_id
+    patternModel.find(4, [[siteID], [pattern_category_id]], function (pattern_rows) { // find pattern URL with siteID and pattern_category_id
+        console.log("\r\pattern_rows: ---------------------------------------------------------");
+        console.log(pattern_rows);
         if (pattern_rows != -1) {
             siteModel.findById(siteID, function (site_rows) { // Find all site URL with siteID
-                if (site_rows != -1) {
-                    site_rows.forEach(site => {
-                        var siteJson = JSON.parse(site.site_url);
-                        var categories = siteJson.site_url_categories; // array url of site
-                        console.log(pattern_rows);
-                        var totalColected = categories.length * pattern_rows.length;
-                        categories.forEach(category => { // Loop for each URL of site
-                            pattern_rows.forEach(pattern => { // Loop for each pattern
-                                patternModel.check(pattern.pattern_regex, category.category_url, function (pattern_checked) {
-                                    if (pattern_checked) {
-                                        var jsOptions = {
-                                            LinkPage: category.category_url,
-                                            TypePage: siteJson.type_page_url,
-                                            PatternURL: pattern.pattern_regex,
-                                            PageLimit: parseInt(pageLimit)
-                                        }
-                                        crawlerModel.collect(jsOptions, function (data_crawler) {
-                                            if (data_crawler.status == "OK") {
-                                                // console.log("Data ----------------------");
-                                                // console.log(data_crawler);
-                                                data_crawler.data.forEach(item => {
-                                                    results.data.push(item);
-                                                });
-                                            }
-                                            countCollected++;
+                console.log("\r\nsite_rows: ---------------------------------------------------------");
+                console.log(site_rows);
 
-                                            if (countCollected >= totalColected) {
-                                                res.json(results);
-                                            }
+                if (site_rows != -1) {
+                    var siteJson = JSON.parse(site_rows[0].site_url);
+                    var categories = siteJson.site_url_categories; // array url of site
+                    var totalColected = categories.length * pattern_rows.length;
+                    console.log("\r\nsiteJson: ---------------------------------------------------------");
+                    console.log(siteJson);
+                    console.log("\r\ntotalColected: ---------------------------------------------------------");
+                    console.log(totalColected);
+                    console.log("\r\ncategories: ---------------------------------------------------------");
+                    console.log(categories);
+                    var isRunning = true;
+                    for (var iSite = 0; iSite < categories.length; iSite++)// Loop for each URL of site
+                    {
+                        var category = categories[iSite];
+                        pattern_rows.forEach(pattern => { // Loop for each pattern
+                            // patternModel.check(pattern.pattern_regex, category.category_url, function (pattern_checked) {
+                            //     if (pattern_checked) {
+                            var jsOptions = {
+                                LinkPage: category.category_url, // Duong dan cua trang can lay
+                                TypePage: siteJson.type_page_url, // Kieu trang cua duong dan do
+                                PatternURL: pattern.pattern_regex, // Pattern de lay ra URL cua tung bai viet
+                                SiteID: siteID, // Truyen vao siteID de khi crawler xong add vao DB
+                                PageLimit: parseInt(pageLimit) // gioi han trang lay ve
+
+                            } // Khai bao du lieu option de truyen vao ham collect data 
+
+                            crawlerModel.collect(jsOptions, function (data_crawler) {
+                                if (data_crawler.status == "OK") {
+                                    // console.log("\r\nData ----------------------");
+                                    // console.log(data_crawler);
+                                    if (data_crawler.data.length > 0) {
+                                        data_crawler.data.forEach(item => {
+                                            results.data.push(item);
                                         });
+                                    } else {
+                                        results.description = data_crawler.message; // assign error message 
+                                        isRunning = false;
                                     }
-                                });
+                                }
+                                countCollected++;
+
+                                if (countCollected >= totalColected) {
+                                    res.json(results);
+                                }
                             });
+                            //     }
+                            // });
                         });
-                    });
+
+                        if (isRunning == false) {
+                            break;
+                        }
+                    }
                 } else {
                     results.success = 0;
                     results.description = "Cannot get site url by site ID";

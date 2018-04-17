@@ -10,7 +10,7 @@ class CrawlerModel extends DB {
 
     /**
      * Collect all data on site
-     * @param {json} options op {LinkPage: "", TypePage: "", PatternURL: "", PageLimit = 50}
+     * @param {json} options op {LinkPage: "", TypePage: "", PatternURL: "", SiteID = 1, PageLimit = 50}
      * @param {function} callback callback return json: {status:"", message:"", total: 0, data:[]}
      */
     collect(options, callback) {
@@ -29,24 +29,32 @@ class CrawlerModel extends DB {
         var optionsGetPage = {
             Url: options.LinkPage,
             PatternURL: options.PatternURL,
-            Page: 1
+            Page: 1,
+            SiteID: options.SiteID
         };
 
         var isBreak = false;
         for (var page = 1; page <= numberOfPages; page++) {
             optionsGetPage.Page = page;
             optionsGetPage.Url = options.LinkPage + options.TypePage.toString().replace('{number}', page.toString()); // assign page number to json option
+            console.log("\r\noptionsGetPage:========================================================" + page);            
             console.log(optionsGetPage);
+            console.log("===========================================================================");                        
             getInfoOnPage(optionsGetPage, function (results) {
                 // console.log(results);
                 if (results.status == "OK") {
                     results.data.forEach(item => {
-                        db.executeMySQL("INSERT INTO data(data_url, status, data_url_md5, site_id) VALUES (?)", [[item, 1, getMD5(item), 1]]).then(function (success) {
+                        db.executeMySQL("INSERT INTO data(data_url, status, data_url_md5, site_id) VALUES (?)", [[item, 1, getMD5(item), optionsGetPage.SiteID]]).then(function (success) {
                             // callback(success);
                         }).catch(function (err) { });
                         countSuccess++;
                         json.data.push(item);
                     });
+                }
+                else
+                {
+                    json.message = results.message;
+                    isBreak = true;
                 }
 
                 count++;
@@ -78,13 +86,14 @@ class CrawlerModel extends DB {
 
 /**
  * Get data at site (single page)
- * @param {json} options options are a json: {Url: "", PatternURL: "", Page: 1}
+ * @param {json} options options are a json: {Url: "", PatternURL: "", Page: 1, SiteID = 1}
  * @param {function} callback callback return json: {status: "", message: "", data: []}
  */
 function getInfoOnPage(options, callback) {
     var urlRequest = options.Url;
     var pageNumber = options.Page;
     var patternURL = options.PatternURL;
+    var siteID = options.SiteID;
     var optionsRequest = {
         url: urlRequest,
         headers: {
@@ -99,6 +108,7 @@ function getInfoOnPage(options, callback) {
         resultJSON.status = 'OK';
         resultJSON.message = "";
         resultJSON.data = [];
+        resultJSON.SiteID = siteID;
         if (!error) {
             var pattern = new RegExp(patternURL, 'g');
             var results = [];
