@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 17, 2018 at 11:10 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Host: 127.0.0.1:3306
+-- Generation Time: Apr 17, 2018 at 06:53 PM
+-- Server version: 5.7.19
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,8 +31,8 @@ USE `db_realestate`;
 --
 
 DROP TABLE IF EXISTS `data`;
-CREATE TABLE `data` (
-  `data_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `data` (
+  `data_id` int(11) NOT NULL AUTO_INCREMENT,
   `data_url` text COLLATE utf8mb4_unicode_ci,
   `data_title` text COLLATE utf8mb4_unicode_ci,
   `data_price` text COLLATE utf8mb4_unicode_ci,
@@ -49,8 +49,10 @@ CREATE TABLE `data` (
   `data_contact_address` text COLLATE utf8mb4_unicode_ci,
   `status` int(11) NOT NULL,
   `data_url_md5` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `site_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `site_id` int(11) NOT NULL,
+  PRIMARY KEY (`data_id`),
+  UNIQUE KEY `data_url_md5` (`data_url_md5`)
+) ENGINE=InnoDB AUTO_INCREMENT=581 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `data`
@@ -458,7 +460,148 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 (397, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-hoang-ngan-phuong-trung-hoa-4/meland-use-ang-a-cau-giay-gia-re-tien-ich-cao-cap-lh-0934599226-pr15583110', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '0a9887f0f6687c7a2ad11cd4b458f2a7', 1),
 (398, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-ben-van-don-phuong-1-prj-the-gold-view/trum-quan-4-gia-13-trieu-thang-2pn-dt-70m2-lau-cao-0907937983-pr15582491', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'a6b2e56844041e2b61d0c8008124bc92', 1),
 (399, 'https://batdongsan.com.vn/cho-thue-nha-tro-phong-tro-duong-dong-van-cong-54/trong-can-ho-chung-cu-cbd-premium-home-q2-noi-that-day-du-sang-trong-gia-chi-4-4tr-pr15582933', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '32d105046a5fb141be8cbdebfcf6b3d8', 1),
-(400, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-bo-bao-tan-thang-phuong-son-ky-prj-celadon-city/2-pn-69m2-full-noi-that-cao-cap-phi-quan-ly-hinh-thuc-te-pr15582876', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'e781abd5d6fb5948b6795d5f4a795610', 1);
+(400, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-bo-bao-tan-thang-phuong-son-ky-prj-celadon-city/2-pn-69m2-full-noi-that-cao-cap-phi-quan-ly-hinh-thuc-te-pr15582876', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'e781abd5d6fb5948b6795d5f4a795610', 1),
+(401, 'http://phonhadat.net/ban-nha-mat-pho-duong-ly-tu-trong-53/ban-nha-mat-tien-duong-ly-tu-trong-quan-1-dt-4x19m-gia-357-ty0931480960-pr9920552.htm', 'Bán Nhà Mặt Tiền  Đường Lý Tự Trọng , Quận 1. DT: 4X19M. Gía: 35.7 tỷ-0931480960', 'Thỏa thuận', 'Không xác định', '\r\n                Bán Nhà Mặt Tiền Đường Lý Tự Trọng.P. Bến Thành.Quận 1. Liên Hệ: -0931480960 \r\n<br/>- DT: 4X19M.\r\n<br/>- Vị trí: Tọa lạc trên vị trí đắc địa nhất Sài Gòn. Gần chợ Bến Thành, KS New World, CV 23/9, khu vực tập trung nhiều tòa nhà cao tầng, trung tâm thương mại, khách sạn 5 sao.\r\n<br/> \r\n<br/>- Gía: 35.7 tỷ\r\n<br/>- Liên hệ : Xem nhà : 0931.480.960 PHONG - (Zalo, Viber 24/7).\r\n<br/>\r\n            ', '', '', 'Bán nhà mặt tiền tại Đường Lý Tự Trọng', '2018-04-18', '', 'Phạm Tuấn Phong', '', '', '', 2, 'caff6b8544e4f9e0f1ed2a86c856da08', 3),
+(402, 'http://phonhadat.net/ban-dat-xa-phuoc-hau/ban-gap-500m2-tc-mt-duong-xe-tai-835a-gia-chi-38-trm2-pr9920541.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '393d0cf3f044e644cc9c9d98702a4192', 3),
+(403, 'http://phonhadat.net/ban-nha-mat-pho-pho-thi-sach-53/ban-khach-san-4-sao-quan1-12-lau-100-phong-gia-845ty-pr9920548.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '80aeae3ae35ece427a4df4681965ef48', 3),
+(404, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/-cc-can-ban-nha-trieu-khuc-46m2x4t-gan-nguyen-xien-gan-duong-25m-gia-285-ty-lh-0917185826-pr9920537.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '4480f672d94fda21e72c5a4819b6e5b5', 3),
+(405, 'http://phonhadat.net/ban-nha-mat-pho-duong-nguyen-thi-minh-khai-53/ban-nha-mat-tien-thut-duong-nguyen-thi-minh-khai-quan-1-dt-5-6x15m-gia-14-ty0931480960-pr9920547.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '2a7d8014e8e0e670ccdc594a8e5b8f6a', 3),
+(406, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/toi-cc-ban-nha-trieu-khuc-34m2x5t-ngo-thong-cach-o-to-80m-gia-215-ty-lh-0917185826-pr9920536.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '672573b07f598dcb0e4c22c5f9fb0692', 3),
+(407, 'http://phonhadat.net/ban-nha-mat-pho-duong-nguyen-dinh-chieu-55/ban-gap-nha-hxh-duong-nguyen-dinh-chieuq3dt-43x155m3-laugia-125-ty0931480960-pr9920549.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'f2d9f36ec468e302ffffb536bcc8e5f7', 3),
+(408, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/ban-nha-40m2x5t-trieu-khuc-thanh-xuan-ngo-thong-2-mat-thoang-cach-o-to-10m-gia-325-ty-lh-0917185826-pr9920538.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'dceb37e9b5a74c688257927420f41f76', 3),
+(409, 'http://phonhadat.net/ban-nha-mat-pho-quan-1/ban-nha-mat-tien-goc-nguyen-van-maihuynh-tinh-cuaquan-1-dt-85x20m-gia-25-ty0931480960-pr9920558.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'ae275c2d2dca58f5d2f33f7f541f8f98', 3),
+(410, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/ban-gap-nha-33m2x5t-trieu-khuccach-o-to-10m-san-de-xe-20mgia-215-tylh-0917185826-pr9920534.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'fcb782443e151ad9635a81a5dc662861', 3),
+(411, 'http://phonhadat.net/ban-nha-mat-pho-duong-nguyen-du-53/ban-nha-mat-tien-duong-nguyen-du-quan-1-dtcn-176m2-gia-40-ty0931480960-pr9920546.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '5d73c1e815167a68686c838febc15368', 3),
+(412, 'http://phonhadat.net/ban-nha-mat-pho-duong-mac-dinh-chi-1-53/ban-nha-mat-tien-mac-dinh-chi-p-dk-quan-1-22m-x-55mgia-390-ty-pr9920554.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '10306b7c678fa8c12cc07192e83bf437', 3),
+(413, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/can-tien-ban-gap-dat-gan-cho-trieu-khuc-40m2-gia-chi-1880-ty-gan-ho-o-to-do-cach-5m-0917-185-826-pr9920530.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '90ed254aff5ff57f0f73a891bc193cd9', 3),
+(414, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/ban-dat-gian-dan-60m2-ngo-66-trieu-khuc-duong-rong-12m-co-via-he-gia-54-ty-lh-0917185826-pr9920543.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '95868ff811d0411beefc5fb13d1b114c', 3),
+(415, 'http://phonhadat.net/ban-nha-mat-pho-duong-pasteur-53/ban-nha-mat-tien-duong-pasteurquan-1-dtcn-98m2-gia-32-ty0931480960-pr9920555.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1efc12cb4d5471fc48cf4584faf9f97c', 3),
+(416, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/can-ban-gap-dat-mat-ngo-66a-va-mat-duong-21m-trieu-khuc-o-to-do-cua-kinh-doanh-duoc-sat-cong-phu-cdgtvt-gia-127tr1m-0917185826-pr9920531.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '37d2f721d6f3998864054b27606b2d82', 3),
+(417, 'http://phonhadat.net/ban-nha-mat-pho-duong-nguyen-thi-minh-khai-53/ban-nha-2-mat-tien-duong-nguyen-thi-minh-khai-phuong-da-kao-q1-dt9x10mgia225-ty-pr9920544.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'c028a859cffdc9dfedf56f97032f105c', 3),
+(418, 'http://phonhadat.net/ban-nha-rieng-duong-nguyen-trai-53/ban-nha-mat-tien-nguyen-trai-q1-vi-tri-vang-gan-cho-ben-thanh-gia-32-ty-pr9920553.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '85335e26eb188cfbc0bb9691f8313df4', 3),
+(419, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/ban-dat-gian-dan-60m2-ngo-66-trieu-khuc-duong-rong-12m-co-via-he-gia-54-ty-lh-0917185826-pr9920529.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '959903c6d5295db6ad4f3368f6a14897', 3),
+(420, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/cc-can-ban-gap-dat-52m-ngo-58-trieu-khuc-o-to-do-cua-gan-nguyen-trai-gia-42-ty-0917185826-pr9920542.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '7d8edb0e0e4ef8c930ededa2dae7896c', 3),
+(421, 'http://phonhadat.net/ban-dat-phuong-hiep-binh-phuoc/dat-hiep-binh-phuoc-thu-duc-tho-cu-shr-dau-tu-sinh-loi-pr9920556.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '0a76452fa0b66cf4b992276c1363d070', 3),
+(422, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/ban-dat-phan-lo-40m2-trieu-khuc-thanh-xuan-o-to-vao-sat-uy-ban-tan-trieu-duong-6m-gia-295-ty-lh-0917185826-pr9920532.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '9f4bbeb3c1eaeac7f3def769bd74368b', 3),
+(423, 'http://phonhadat.net/ban-nha-rieng-duong-cat-linh-phuong-cat-linh/ban-nha-pho-cat-linh-32m24-tang-nha-ngay-gan-mat-pho-cat-linh-gia-3-ty-pr9920545.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '43efe1902f809e504071db5920909dbb', 3),
+(424, 'http://phonhadat.net/ban-nha-mat-pho-duong-cao-thang-55/ban-nha-mat-tien-cao-thang-quan-3-25m-x-40mgia-318ty-pr9920557.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd5ca97c39d7917ce31a1795cac9ee724', 3),
+(425, 'http://phonhadat.net/ban-nha-rieng-pho-phan-dang-luu-phuong-7-11/nhinh-4-ty-co-ngay-nha-mt-hem-phan-dang-luu-2-lau-32m2-pr9909937.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '4b3075a8f020ea6644359480980b9a98', 3),
+(426, 'http://phonhadat.net/ban-nha-rieng-thanh-xuan/chinh-chu-nha-le-trong-tan-vi-tri-dep-o-to-do-cua-chi-co-4-ty-pr9920533.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd7eb2dd51206d8664924f610bafc78e8', 3),
+(427, 'http://phonhadat.net/ban-nha-rieng-duong-giai-phong-phuong-phuong-liet/22-ty-30m-giai-phong-truong-chinh-5-tang-long-gio-lo-goc-noi-that-sang-sat-pho-pr9920550.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'df3317b66c3f34723e7e864cd04b6fe6', 3),
+(428, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/can-ban-gap-nha-33m2x5t-trieu-khuc-cach-o-to-10mngay-sat-duong-25m-moi-gia-225-ty-lh-0917185826-pr9920539.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'aa88c4bed316737d29785eded67e8c00', 3);
+INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
+(429, 'http://phonhadat.net/ban-nha-rieng-duong-ho-tung-mau-53/ban-gap-mat-tien-nguyen-cong-tru-ho-tung-mau-dtsd-280m2-8-lau-co-hd-thue-13605-trth-chi-31-ty-pr9920551.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'b2fa47ca972acab811e1d790a90cf630', 3),
+(430, 'http://phonhadat.net/ban-nha-mat-pho-duong-calmette-53/ban-nha-mat-tien-duong-calmette-quan-1-dt-4x19m-ham-8-lau-cho-thue-khoang-7000thanggia-475-ty0931480960-pr9920540.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1083882ea5eaea9ec24e0406fc8e2077', 3),
+(431, 'http://phonhadat.net/cho-thue-nha-mat-pho-pho-tran-dai-nghia-phuong-bach-khoa/cho-thue-toa-nha-80m2x10-tang-lam-van-phong-mat-pho-tran-dai-nghia-0984875704-pr7299644.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '8bfd2eb0c44dd0714a4fd7cd9aa64fe0', 3),
+(432, 'http://phonhadat.net/cho-thue-van-phong-duong-quan-thanh-1-phuong-quan-thanh/cho-thue-van-phong-ao-dang-ki-kinh-doanh-tai-quan-ba-dinh-gia-1trthanglh-0931743628-pr7639719.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '17cdb13c6509bbc088255558da6ec104', 3),
+(433, 'http://phonhadat.net/cho-thue-van-phong-pho-le-trong-tan-phuong-khuong-mai/cho-thue-vp-chuyen-nghiep-dt-linh-hoat-24m2-40m2-70m2-100m2-300m2-500m2-pho-le-trong-tan-pr7315002.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '8beb26dc247941a7c70bd0ef34f3a104', 3),
+(434, 'http://phonhadat.net/cho-thue-van-phong-pho-tran-dai-nghia-4/cho-thue-van-phong-80m2-moi-dep-pho-tran-dai-nghia-quan-hai-ba-trung-0984875704-pr7675196.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '592c36a97845e26c2ef545eb0323bf1b', 3),
+(435, 'http://phonhadat.net/cho-thue-van-phong-duong-nguyen-cong-tru-phuong-nguyen-thai-binh/cho-thue-van-phong-tai-tnr-tower-nguyen-cong-tru-quan-1-pr9920535.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'ab9182e38972f585bc38e6f8333e45e3', 3),
+(436, 'http://phonhadat.net/cho-thue-van-phong-duong-ly-nam-de-1/toi-con-trong-1-phong-15m2-toa-nha-van-phong-tai-mat-pho-ly-nam-de-0931743628-pr7632474.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '30ceeb9d8aced06af04e7cd9321720b1', 3),
+(437, 'http://phonhadat.net/cho-thue-van-phong-pho-tran-dai-nghia-phuong-bach-khoa/cho-thue-van-phong-80m2-moi-day-du-tien-nghi-tai-pho-tran-dai-nghia-hai-ba-trung-pr7789564.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '8262d7231953da5ec24336237c0c13e6', 3),
+(438, 'http://phonhadat.net/cho-thue-van-phong-pho-tran-dai-nghia-phuong-bach-khoa/cho-thue-van-phong-dt-30-80m2-building-mp-tran-dai-nghia-gia-chi-tu-9m2-lh0984875704-pr7337794.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '235744c10fc5006c018bfa41cf32ecc7', 3),
+(439, 'http://phonhadat.net/cho-thue-van-phong-pho-chua-lang-phuong-lang-thuong/cho-thue-van-phong-khu-vuc-chua-lang-canh-vincom-nguyen-chi-thanh-quan-dong-da-35m285m2-100m2-gia-11m2thang-pr7622259.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '2185e0a9c4ee6da8dac49daa6945c08d', 3),
+(440, 'http://phonhadat.net/cho-thue-nha-tro-phong-tro-duong-vinh-hung-phuong-vinh-hung-2/phong-tro-tranh-nong-tai-pho-vinh-hung-hoang-mai-pr9874012.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '8f411fb2a9986ee86819d1611e8372bf', 3),
+(441, 'http://phonhadat.net/cho-thue-van-phong-pho-chua-lang-phuong-lang-thuong/cho-thue-van-phong-80m2-cuc-dep-tai-pho-chua-lang-nguyen-chi-thanh-0984875704-pr7625288.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '7e2ec40b3f4780bb402baf1740c3ba2e', 3),
+(442, 'http://phonhadat.net/cho-thue-van-phong-pho-tran-dai-nghia-phuong-bach-khoa/cho-thue-van-phong-deptran-dai-nghia-quan-hai-ba-trung-50m2-11tr-lh-0984875704-pr7789579.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'fde0b3dda357b84271f7d7ea23f9d049', 3),
+(443, 'http://phonhadat.net/cho-thue-van-phong-pho-tran-dai-nghia-phuong-bach-khoa/toa-nha-van-phong-10-tang-ttai-mat-pho-tran-dai-nghia-cho-thue-tung-tang-hoac-ca-toa-rong-0984875704-pr7332543.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '3103779d54fb47ab5512ba221c0eaee6', 3),
+(444, 'http://phonhadat.net/cho-thue-van-phong-pho-tran-dai-nghia-4/cho-thue-van-phong-pho-le-thanh-nghi-bach-khoa-hai-ba-trung-dien-tich-80m2160m2-co-thang-may-dieu-hoa-am-pr7658763.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '5923cb731c37546484205e9feb25ef7d', 3),
+(445, 'http://phonhadat.net/cho-thue-nha-tro-phong-tro-duong-bach-dang-phuong-2-22/ktx-may-lanh-400kthang-tai-cong-vien-gia-dinhsan-bay-pr9861623.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'a697d50cc1f2a611452d979c5df77932', 3),
+(446, 'http://phonhadat.net/cho-thue-van-phong-duong-ly-nam-de-1/van-phong-showroom-cua-hang-tai-tang-2-ly-nam-de-giao-voi-tran-phu-quan-hoan-kiem-55m2-lh-0984875704-pr7633057.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '7d8bbf147ecb55d044e16b5334c8646a', 3),
+(447, 'http://phonhadat.net/cho-thue-van-phong-pho-chua-lang-phuong-lang-thuong/cho-thue-van-phong-35m2-85m2-120m2-240m2-mat-pho-chua-lang-canh-dh-ngoai-thuong-ngoai-giao-lh-0984875704-pr7740177.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'aa28aeea15f8f0d13a8dbaf0ab70122c', 3),
+(448, 'http://phonhadat.net/cho-thue-kho-nha-xuong-dat-phuong-hoa-phu-2/cho-thue-hoac-ban-3900m2-nha-xuong-trong-kcn-dong-anngay-khu-cong-nhan-dong-pr7293436.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '37da3617959a2eeafa2316fe67e16c24', 3),
+(449, 'http://phonhadat.net/cho-thue-van-phong-pho-chua-lang-phuong-lang-thuong/cho-thue-van-phong-cao-cap-co-view-ho-dep-tai-pho-chua-lang-canh-vincom-nguyen-chi-thanh-lh-0984875704-pr7637687.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'e60486948a1f1cccd63e7b8b170a4034', 3),
+(450, 'http://phonhadat.net/cho-thue-van-phong-pho-tran-dai-nghia-phuong-bach-khoa/cho-thue-san-van-phonglop-hoc-phong-ve-tai-mat-pho-tran-dai-nghia-hai-ba-trung-ha-noi-pr7796785.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '550488230c27fe9682c295baf1a89b07', 3),
+(451, 'http://phonhadat.net/cho-thue-kho-nha-xuong-dat-xa-binh-my-1/cho-thue-dat-mau-cao-suhop-dong-lau-dai-tai-tan-uyen-gia-remat-duong-lon-pr6961287.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'f8d2ef4cb76167178bb03cee2128ea67', 3),
+(452, 'http://phonhadat.net/cho-thue-van-phong-pho-chua-lang-phuong-lang-thuong/cho-thue-toa-nha-van-phong-9-tang-x115m2-tai-mat-pho-chua-lang-7m2-mat-tien-lh-0984875704-pr7629845.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '48c0307c06b21153a00e71ea456dbee8', 3),
+(453, 'http://phonhadat.net/cho-thue-van-phong-phuong-bui-thi-xuan/cho-thue-van-phong-dep-20m2-60m2-pho-huehai-ba-trung-0984875704-pr7911351.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '13a363d32fe07321a7310e8c2a179855', 3),
+(454, 'http://phonhadat.net/cho-thue-van-phong-pho-le-trong-tan-phuong-khuong-mai/cho-thue-vp-chuyen-nghiep-dt-linh-hoat-24m2-40m2-70m2-100m2-300m2-500m2-pho-le-trong-tan-pr7299073.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'c904c25d74984d08e668d328291d2150', 3),
+(455, 'http://phonhadat.net/cho-thue-van-phong-pho-chua-lang-phuong-lang-thuong/cho-thue-van-phong-showroom-mat-pho-quan-dong-da-dt-tu-35-den-100m2-gia-12m2-pr7658730.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '946a41c13c426ced29aae8ebd0141c46', 3),
+(456, 'http://phonhadat.net/cho-thue-van-phong-pho-lang-ha-phuong-lang-ha/can-cho-thue-van-phong-khu-vuc-lang-ha-quan-dong-da-dt-35m2-gia-9tr-lh-chinh-chu-0984875704-pr7802259.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '0b11dce81f1ceb15f3ff3376ba446cd0', 3),
+(457, 'http://phonhadat.net/cho-thue-van-phong-pho-tran-dai-nghia-4/van-phong-cho-thue-80m2-moi-dep-pho-tran-dai-nghia-quan-hai-ba-trung-0984875704-pr7330689.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'c98c369a32d461a9be31f83f68222226', 3),
+(458, 'http://phonhadat.net/cho-thue-van-phong-phuong-lang-thuong/cho-thue-van-phong-115-m2-pho-chua-lang-dong-da-ha-noi-pr7658694.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '28a13851532322adb463377764133db5', 3),
+(459, 'http://phonhadat.net/cho-thue-van-phong-pho-tran-dai-nghia-4/van-phong-cho-thue-80m2-moi-dep-pho-tran-dai-nghia-quan-hai-ba-trung-0984875704-pr7299808.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '7a76b40261979038fc846c2d39af5646', 3),
+(460, 'http://phonhadat.net/cho-thue-van-phong-pho-chua-lang-phuong-lang-thuong/cho-thue-vpshowroom-trung-tam-dao-tao-toa-nha-mat-pho-chua-lang-dong-da-dt-35m2-80m2-115m2-pr7678955.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '0dee1123721572a18b8d45116ddfd735', 3),
+(461, 'https://dothi.net/ban-nha-rieng-duong-quang-trung-phuong-12-8/ban-nha-rieng-tai-duong-quang-trung-phuong-12-go-vap-ho-chi-minh-dien-tich-77m2-gia-6700-ty-pr10955256.htm', 'Bán nhà riêng tại Đường Quang Trung, Phường 12, Gò Vấp, Hồ Chí Minh diện tích 77m2 giá 6.700 Tỷ', '6.7 Tỷ', '77m²', '\r\n            Bán nhà hai mặt tiền thiết kế tuyệt đẹp DT:77m đường Quang Trung Phường 12 Gò Vấp. Giá: 6.7 tỷ\r\n\r\n<br/>Diện tích: 5.5 x 14m.\r\n<br/>\r\n<br/>Hướng : Tây Nam. \r\n<br/>\r\n<br/>Kết cấu : Nhà thiết kế hiện đại rất đẹp đảm bảo về phong thủy, thẩm mỹ, độ bền vững và đầy đủ công năng.  \r\n<br/>Nhà gồm một trệt + một lửng + hai lầu + sân thượng trước sau. Nhà có 5 phòng ngủ, 6 toilet, phòng khách, phòng bếp, giếng trời phòng giặt sân phơi rộng thoáng mát.\r\n<br/>\r\n<br/>Nội thất: Sử dụng nội thất cao cấp từ các thương hiệu nổi tiếng như Toshiba, Panasonic, Inax… các thiết bị nhập khẩu trực tiếp từ nước ngoài. Nhà trang bị sẵm tủ tường, tủ bếp, tủ riệu + tủ quần áo âm tường. Bàn ghế salon, bàn ăn, bàn uống trà, bàn trang điểm, toilet rất sạch sẽ thoáng mát thiết bị hiện đại. Hệ thống đèn – điện âm tường, dùng 100% đèn Led tiết kiệm 70% điện năng tiêu thụ. Các phòng đều có máy lạnh nội thất trang trí dẹpđày đủ tiện nghi. \r\n<br/>\r\n<br/>Vị trí – Tiện ích: Vị trí nhà tuyệt đẹp trong khu nhà đồng bộ cao cấp, hẻm trước nhà 6m xe hơi di chuyển được. Cách trục đường chính Quang Trung 100m nên dễ di chuyển qua các quận Tân Bình, Hóc môm, quận 12, Thủ Đức… Di chuyển qua sân bay 5-10 phút. Gần trung tâm y tế phường, trường học các cấp, trường mẫu giáo, bệnh viện quận. Nhà gần chợ, nhà Thờ, Chùa, coopmart, các nhà hàng, cửa hàng, siêu thị thuận tiện cho việc mua sắm và nhiều tiện ích khác. Nhà nằm trong khu dân trí cao, hàng xóm thân thiện dễ gần. \r\n<br/>\r\n<br/>Đây là link video nhà: https://www.youtube.com/channel/UCG6EcEQexM29nWZJgcNRDow\r\n<br/>Quý khách xem thêm nhà trên 5 tỷ tại đây : https://nhadatngochoa.com/khoang-gia/tren-5-ti/\r\n<br/>: Quý khách xem thêm nhà tại :  https://nhadatngochoa.com/\r\n<br/>( Hình thật 100%).\r\n<br/>Sổ hồng mới năm 2017, chính chủ bao sang tên.\r\n<br/> Hỗ trợ vay ngân hàng 80% với lãi suất ưu đãi.\r\n<br/>Liên hệ : Ngọc Hoa 0934.024.479 – 0987.250.909\r\n<br/>\r\n        ', '', 'Bán nhà riêng', '', '2018-04-17', 'Bán nhà riêng tại Đường Quang Trung, Phường 12, Gò Vấp, Hồ Chí Minh diện tích 77m2 giá 6.700 Tỷ', 'Ngọc Hoa', '0987250909', '', '', 2, '4395e6a3b95d52b7b870ba63fea702e9', 4),
+(462, 'https://dothi.net/ban-dat-nen-du-an-duong-dinh-duc-thien-72/ban-dat-mat-tien-dinh-duc-thien-binh-chanh-gia-chi-399-trieunen-so-hong-rieng-pr10954977.htm', 'BÁN ĐẤT MẶT TIỀN ĐINH ĐỨC THIỆN, BÌNH CHÁNH GIÁ CHỈ 399 TRIỆU/NỀN, SỔ HỒNG RIÊNG, LH: 0938 452 653', '399 Triệu', '100m²', '\r\n            BÁN ĐẤT MẶT TIỀN ĐINH ĐỨC THIỆN, BÌNH CHÁNH GIÁ CHỈ 399 TRIỆU/NỀN, SỔ HỒNG RIÊNG<br/>-Nằm ngay mặt tiền Đinh Đức Thiện(lộ giới mở rộng 40m)- trung tâm Bình Chánh.<br/>-Với giá siêu rẻ chỉ 399 triệu quý khách có ngay nền với diện tích 4.5x20 5x20 5x25, Sổ Hồng Riêng.<br/>-Bao công chứng sang tên trong ngày<br/>-Ngân hàng sacombank hỗ trợ vay lên tới 70%, trả góp LS 0%<br/>-Chiết khấu từ 3%-10% giá trị<br/>-Nhiều quà tặng giá trị lên đến 100 triệu đồng<br/><br/>-Nằm sau kế bên chợ Bình Chánh mặt tiền Đinh Đức Thiện thuộc trung tâm Bình Chánh.<br/>-Gần các tiện ích lớn: trường học các cấp, bệnh viện, trung tâm mua sắm, KDC, KCN Bình Chánh,KCN Vĩnh Lộc 2, KCN Phúc Long.<br/>-Kết nối nhanh Quận 1, 7, 6, 8, Quận Bình Tân, Tân Phú và cả khu vực Long An<br/><br/>-Vị trí sinh lời nhanh cho các nhà đầu tư.<br/><br/>-Tiện ích nổi bật: Đường 12 - 16m đã trải nhựa, vỉa hè 2m, hệ thống cây xanh trải hết tuyến đường.<br/>-Tiến độ thanh toán: Linh hoạt, hỗ trợ nhiệt tình cho khách hàng thiện chí không tiếp môi giới!<br/>-Pháp lý minh bạch, rõ ràng có Ngân hàng Sacombank đứng ra bảo lãnh.<br/>-Tặng từ 1-5 chỉ vàng cho khách hàng để lại thông tin sớm nhất qua SMS<br/><br/>Liên hệ: 0938.452.653 hoặc 01644.540.377 gặp A.Thoại<br/>\r\n        ', '', 'Bán đất nền dự án (đất trong dự án quy hoạch)', '', '2018-04-17', 'BÁN ĐẤT MẶT TIỀN ĐINH ĐỨC THIỆN, BÌNH CHÁNH GIÁ CHỈ 399 TRIỆU/NỀN, SỔ HỒNG RIÊNG, LH: 0938 452 653', 'Nguyễn Văn Thoai', '0902385455', '', '', 2, '454bd09d8d34855e9ac22786ac710c22', 4),
+(463, 'https://dothi.net/ban-nha-rieng-duong-thanh-loc-17-phuong-thanh-loc-3/rat-tiec-vi-phai-ban-can-nha-xay-de-o-duong-thanh-loc-17-quan-12-pr10953522.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'f6748c501d6ac77253331268c7dbbadf', 4),
+(464, 'https://dothi.net/ban-dat-duong-tinh-lo-10-xa-pham-van-hai/gia-dinh-dinh-cu-can-ban-gap-lo-dat-dt-125m2-shr-gan-cho-va-truong-tieu-hoc-thcs-gia-900tr-pr10954744.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '75a7b91f86787e86eae0228a87318c5f', 4),
+(465, 'https://dothi.net/ban-dat-duong-tinh-lo-10-xa-pham-van-hai/ban-3-lo-dat-gia-dinh-mt-tinh-lo-10-shr-gan-cho-truong-hoc-0938-502-089-pr10954135.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1e3585761878b7731cab593d9ab90c5f', 4),
+(466, 'https://dothi.net/ban-dat-duong-vo-duy-tao-phuong-6_1/can-ban-400m2-dat-tho-cu-duong-vo-duy-tao-tp-tan-an-shr-pr10951777.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '03e7ab20fa432ec3dbdabb39a38b7a88', 4),
+(467, 'https://dothi.net/ban-dat-duong-tran-hung-dao-xa-duong-to/ban-mot-so-manh-dat-tai-tran-hung-dao-va-cua-lap-suoi-may-gia-re-pr10952560.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '765a91e5b6d5eb427c7fce24669ca209', 4),
+(468, 'https://dothi.net/ban-dat-nen-du-an-duong-tinh-lo-10-419/gia-cuc-cao-mua-ban-nhan-ki-gui-dat-nen-tan-do-long-an-lh-0906779195-pr6295671.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '51224e2ddc8f3aaa41192c5caf3154de', 4),
+(469, 'https://dothi.net/ban-dat-nen-du-an-duong-tinh-lo-10-thi-tran-duc-hoa-1/can-ban-nhan-ky-gui-dat-nen-khu-cong-nghiep-tan-do-long-an-lh-0901-359-990-pr8901127.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'b4a82a6b088f8d28a8827df37a7ad6c0', 4),
+(470, 'https://dothi.net/ban-dat-duong-tinh-lo-10-xa-pham-van-hai/ban-gap-ban-gap-dat-tho-cu-100-gan-kcn-le-minh-xuan-shr-pr9287948.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '13d253d9c552f890d251d6dad6000725', 4),
+(471, 'https://dothi.net/ban-dat-duong-tinh-lo-10-xa-pham-van-hai/ban-dat-cat-nha-250m2-125m2-so-hong-chinh-chu-dat-binh-chanh-gia-840tr-0909263537-pr9018821.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'a0e21993006271cdf46d378b5b1e4045', 4),
+(472, 'https://dothi.net/ban-dat-nen-du-an-duc-hoa-la/ban-2-lo-dat-lk-10x25m-726-tr125-m2-giua-dh-tan-tao-va-benh-vien-da-khoa-tan-tao-lh-0909263537-pr8826319.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '692757a9476c6259beadd750c69b910a', 4),
+(473, 'https://dothi.net/ban-can-ho-chung-cu-duong-hoi-xa-phuong-giang-bien-1/mua-chung-cu-cao-cap-no08-giang-bien-tang-goi-noi-that-72-trieu-ck-95-vay-0-lai-suat-pr10501029.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '52671f08b576f399b0296fb41cb5ee4d', 4),
+(474, 'https://dothi.net/ban-dat-duong-tinh-lo-10-xa-pham-van-hai/gia-dinh-toi-can-ban-300m2-dat-gia-850-trieu-sh-rieng-mt-tinh-lo-10-lh-0938702747-pr9217775.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'f8149311c2ba2d193668c70565a1ecdc', 4),
+(475, 'https://dothi.net/ban-nha-mat-pho-duong-le-thi-rieng-phuong-ben-thanh/ban-gap-toa-nha-van-phong-mt-le-thi-rieng-72x19-1ham-9-lau-79-ty-pr10947760.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '6f42078d4c83db9629673158786af955', 4),
+(476, 'https://dothi.net/ban-nha-mat-pho-duong-truong-dinh-phuong-ben-thanh/ban-khach-san-toa-nha-van-phong-trung-tam-quan-1-3-gia-50-500-ty-pr10947727.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '2c351b8ac99de325830cbb9691ace9a2', 4),
+(477, 'https://dothi.net/ban-nha-mat-pho-duong-vo-van-tan-phuong-6-7/ban-dat-lon-xay-khach-san-van-phong-trung-tam-quan-1-3-gia-50-500-ty-pr10947716.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '27e6a61ebed555d161ac3d624f89b2bf', 4),
+(478, 'https://dothi.net/ban-dat-duong-tinh-lo-10-xa-pham-van-hai/ban-mieng-dat-ngay-tl-10-gan-cho-gan-benh-viendt-200m2-shr800tr-pr10947672.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1d4f96ebc5467899c46fb91171d93a72', 4),
+(479, 'https://dothi.net/ban-dat-duong-tinh-lo-10-xa-pham-van-hai/ban-gap-258m2-dat-shr-doi-dien-kcn-le-minh-xuan-iii-gia-900tr-shr-lh-chinh-chu-0909947176-pr10947301.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'b26f2198ff05182eaef515ab69f94da5', 4),
+(480, 'https://dothi.net/ban-nha-mat-pho-duong-hoang-sa-phuong-11-1/nha-mat-tien-1007-hoang-sa-phuong-11-quan-3-pr10943016.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '5ddc545b0451d225818259c1c6182fc8', 4),
+(481, 'https://alonhadat.com.vn/cho-thue-nguyen-can-hostel-dang-kinh-doanh-bui-vien-gia-28-trieu-2937228.html', 'cho thuê nguyên căn Hostel đang kinh doanh Bùi Viện giá 28 triệu', '28 triệu /&nbsp;tháng', '', '100 m', 'Cho thuê', 'Nhà trong hẻm', 'Đường Bùi Viện, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh', '2018-04-17', 'cho thuê nguyên căn Hostel đang kinh doanh Bùi Viện giá 28 triệu', 'thien thanh', '0906.656.873', '', ' Đường Bùi Viện, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh', 2, 'b99e172c3a26c66c74806f300bf74412', 5),
+(482, 'https://alonhadat.com.vn/cho-thue-van-phong-35-55m2-building-mat-pho-hoang-quoc-viet-gia-re-2476943.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '99562d08befb101a414c808b753aa1a7', 5),
+(483, 'https://alonhadat.com.vn/cho-thue-van-phong-20m2-35m2-50m2-full-do-vi-tri-dac-dia-gia-chi-tu-5-trieu-th-2906341.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '986d2e331db2e6e208b61cb44937e4a5', 5),
+(484, 'https://alonhadat.com.vn/mat-bang-cho-thue-gia-re-o-quan-1-2938185.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'e1be8c25d2b7164faf3d6a7ee3933b13', 5),
+(485, 'https://alonhadat.com.vn/van-phong-cho-thue-gia-re-o-quan-phu-nhuan-2938176.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '70691c1bac222b2fbc8b0387d1c02a4f', 5),
+(486, 'https://alonhadat.com.vn/can-cho-thue-phong-gia-re-3-trieu-thang-xinh-dep-o-quan-phu-nhuan-2938163.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '51400a6f147731158fffff3e1c68e325', 5),
+(487, 'https://alonhadat.com.vn/mat-bang-cho-thue-gia-re-o-quan-phu-nhuan-2787421.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd8e2db28aa66cb1cdedfd6f043f8d1bc', 5),
+(488, 'https://alonhadat.com.vn/van-phong-cho-thue-gia-re-o-quan-binh-thanh-2938140.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '8d7ca06aea9dee4cd7dbe8590d290d40', 5),
+(489, 'https://alonhadat.com.vn/van-phong-cho-thue-mat-tien-gia-re-3tr-o-q-1-2938133.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '7840c202e0cdb3090a2da9f3f421ee5d', 5),
+(490, 'https://alonhadat.com.vn/chinh-chu-cho-thue-chung-cu-mini-khep-kin-co-do-co-ban-1-phong-ngu-dt30-m2-pho-ham-nghi-2866417.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '6d4806d74241f265d9e17213d2e6cc7b', 5),
+(491, 'https://alonhadat.com.vn/cho-nguoi-nuoc-thue-can-ho-dich-vu-day-du-do-chi-viec-vao-o-luon-so-66-ngo-53-yen-lang-2915384.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'eced95ad458c2e31edc3869be3b2165c', 5),
+(492, 'https://alonhadat.com.vn/phong-dep-ngay-big-c-nguyen-kiem-noi-that-thang-may-may-giat-cua-van-tay--2936126.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd4c4ea462695fe650d1f234f085d656a', 5),
+(493, 'https://alonhadat.com.vn/phong-25m2-co-may-lanh-tu-lanh-giuong-nem-tu-ao-free-thang-may-wifi-may-giat--2936101.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'a5cde2adfe28beb96edcf1e6ce8a0c7b', 5),
+(494, 'https://alonhadat.com.vn/cho-thue-phong-tro-trong-can-ho-tay-thanh-tan-phu-an-ninh-tien-nghi-he-sinh-thai-xanh-2934806.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '8b49b4c3041e1c793fa37023651dfa7c', 5),
+(495, 'https://alonhadat.com.vn/phong-moi-100-cho-thue-ngay-dung-de-lam-van-phong-hoac-day-hoc-2730303.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '2c94d84afa38d35353b6a90edfee1498', 5),
+(496, 'https://alonhadat.com.vn/cho-thue-nhieu-mat-bang-dep-dien-tich-ngang-tren-8m-mat-tien-duong-truong-chinh-cong-hoa-2933556.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '4c677bea3b88a0a5909c8e2946f313d6', 5),
+(497, 'https://alonhadat.com.vn/cho-thue-phong-tro-moi-xay-co-may-lanh-2850581.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '8e520bd07819513d890f4d1946712da6', 5),
+(498, 'https://alonhadat.com.vn/cho-thue-nha-nguyen-can-voi-khuon-vien-gan-1000m2-lien-ke-quan-1-2900265.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '26498c42a797ad0f35168cd7016e2c9c', 5),
+(499, 'https://alonhadat.com.vn/cho-thue-nha-moi-dep-nguyen-can-3lau-5pn-q-tan-phu-2940070.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '468a1e9420f9cfc9802f5518a1765a6e', 5),
+(500, 'https://alonhadat.com.vn/can-ho-cho-thue-mot-hai-phong-ngu-full-noi-that-p-thao-dien-quan-2-2939978.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '6f259289a4647af28a9f91f5bc0bb888', 5),
+(501, 'https://alonhadat.com.vn/chuyen-nhan-ky-gui-mua-ban-nhanh-cac-du-an-khu-long-truong-phu-huu-q9-giao-dich-nhanh-2908548.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'be2a626a381fefe5ed32808d825b3b8c', 5),
+(502, 'https://alonhadat.com.vn/dau-tu-va-an-cu-voi-nha-pho-trung-tam-thu-duc-chi-tu-3-390-ty-can-1-tret-3-lau-so-hong--2892615.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '227847af6749ee6cbb68882faa49d3b4', 5),
+(503, 'https://alonhadat.com.vn/5x25m2-dat-tho-cu-so-hong-rieng-xdtd-bao-sang-ten-gia-850tr-duong-20m-lh-0909-811-693-2915279.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'e953a1de826244c929850c99bfa790ab', 5),
+(504, 'https://alonhadat.com.vn/chi-duy-nhat-11-can-nha-pho-dep-long-lay-lai-thanh-xuan-22-2933532.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '3c8d2bbb205e01c5c6b648fcf22d1a19', 5),
+(505, 'https://alonhadat.com.vn/nhung-ngoi-nha-dep-va-dang-dung-dau-quan-12-2933739.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '22386e7be663f4f928f1108eeacda4dc', 5),
+(506, 'https://alonhadat.com.vn/nha-nga-tu-1-tret-3-lau-duc-4-tam-4pn-5wc-1-phong-tho-1-phong-giat-gia-re-hon-thi-truong-2939851.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'cff0391d43dc3c4ea4d44611c44fe6c3', 5),
+(507, 'https://alonhadat.com.vn/ban-nha-1-tret-1-lau-2-lau-3-lau-moi-gan-nga-tu-ga-xay-don-vao-o-ngay-2939870.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '55898fa1c5340f768aca6c6ba983dc2a', 5),
+(508, 'https://alonhadat.com.vn/chi-ban-nha-dep-1-tret-3-lau-tuong-rieng-duc-that-gia-chi-tu-3-ty-350-trieu-kem-nhieu-qua-2939878.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '2d4207dca0d0c63356feb718530fc7c2', 5),
+(509, 'https://alonhadat.com.vn/ban-nha-duong-thanh-xuan-22-cach-cho-minh-phat-moi-150m-2939903.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'cfeb302a71f119a44a4fe85a35bfb709', 5),
+(510, 'https://alonhadat.com.vn/ban-nha-moi-dep-hem-xe-hoi-thanh-xuan-22-q12-gia-chi-3-xxx-2939907.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'e2b020270f08e641ab330c973d770691', 5),
+(511, 'https://alonhadat.com.vn/ban-cho-ban-nhung-can-nha-dep-va-gia-re-tan-goc-xem-ngay-2939914.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '594c41e41cb0d26f59e6cb0d318daa6a', 5),
+(512, 'https://alonhadat.com.vn/80m2-tho-an-phu-tay-hung-long-185tr-tien-kinh-doanh-da-co-so-rieng-lh-ngoc-0968467517-2936538.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'c456899b70887567559c7f2890683d4e', 5),
+(513, 'https://alonhadat.com.vn/vo-no-ban-gap-250m2-dat-co-24-phong-tro-kcn-hai-son-shr-gia-2-8ty-lh-0902981075-2892424.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '871ecceafe04b2401d91d13f24f7273b', 5),
+(514, 'https://alonhadat.com.vn/toi-can-ban-gap-ngoi-nha-dt-214m2-shr-gia-7-5ty-dung-gia--2922417.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd0b9a354c481ddf18e4f38072359d00f', 5),
+(515, 'https://alonhadat.com.vn/ban-gap-3-lo-dat-nen-ly-thuong-kiet-giao-voi-d-thien-phuoc-shr-q-tan-binh-0937-360-061-hue-2939984.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '7f5c845bb6409bd702e79c582f570368', 5),
+(516, 'https://alonhadat.com.vn/nha-can-ban-gap-dc-hem-224-bach-dang-f24-q-binh-thanh-gia-7-6-ty-9pn-8wc-2934022.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '3b10d73390cc6d7d4eeddcceec7c3c79', 5),
+(517, 'https://alonhadat.com.vn/ban-gap-nha-mo-hinh-chdv-co-ham-tret-lung-7-lau-thang-may-13-phong-gia-15-ty-tl-2937189.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'c37f0ba3f9ee3c17b922c2413fef0b5d', 5),
+(518, 'https://alonhadat.com.vn/ban-gap-nha-3-mat-tien-ngo-tat-to-quan-binh-thanh-dt-4-5-x-19m-tret-3-lau-gia-13-ty-2937446.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'e77cd9ce68faabb79541d4880fc56608', 5),
+(519, 'https://alonhadat.com.vn/thien-nam-residence-khu-dan-cu-cao-cap-nhat-quan-12-2917788.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd98b83aa112ce84458c041eada8d2ad9', 5),
+(520, 'https://alonhadat.com.vn/ban-can-nha-1-tret-3-5-lau-gia-3-05-ty-ngay-cho-tx-21-cach-nga-4ga-300m-shr-lh-0901955567-2936485.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'c9cfdede1aa5cacc5bebc286a946cc60', 5),
+(561, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4196219/cho-thue-nha-tro-tai-duong-ung-van-khiem/phong-rong-30m2-ban-cong-san-thuong-cuc-ki-thoang-mat-nam-ngay-nga-4-d2-35tr.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '6e4bf7e266e1ff8cbb9102f868a00932', 6),
+(562, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4190791/cho-thue-nha-tro-tai-duong-cong-hoa/can-ho-dich-vu-cao-cap-ngan-dai-han-tan-binh-gia-35trth.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '0808869d2e38119db3a07b13ef0d5e98', 6),
+(563, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220124/cho-thue-nha-tro-tai-duong-chu-van-an/phong-40m2-ngu-va-loi-di-rieng-so-243261-4-trth.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '51a1ea6b1172757953acab21124ded8e', 6),
+(564, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4195540/cho-thue-nha-tro-tai-duong-chu-van-an/phong-dep-cua-soban-cong-wc-rieng-bao-ve-2424-gia-33-trth.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '09fcc004049ceadffc0f71d087eb9608', 6),
+(565, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4219387/cho-thue-van-phong-tai-duong-le-hong-phong/mat-tien-ho-chi-minh.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'aafa36c90bc391a03c6b88c844c867a1', 6),
+(566, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4214522/cho-thue-nha-tro-tai-duong-binh-loi/phong-dep-co-cua-so-ban-cong-khu-dan-cu-cao-cap-loibinh-thanh-gia-2-35-trieuth.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd923b115509dadc7c30997df16ed34b9', 6),
+(567, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220485/cho-thue-nha-mat-pho-tai-kdc-him-lam-tan-hung/gap-100m2-duong-lon-khu-q7-1-ham-tret-4-lau-gia-tot.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'f6e11d0d8953b90add8b20fb2201753f', 6),
+(568, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220359/cho-thue-van-phong-tai-duong-duong-cong-khi/biet-thu-lam-hay-mo-ca-phe-cao-cap.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '6693239743bca9316df2b319efba4bdf', 6),
+(569, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220199/cho-thue-can-ho-chung-cu-tai-phuong-phuc-loi/do-co-ban-ecohome-long-bien-s-775-m2-gia-6-tr-thang.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '18e22a066991da796c23da5a4ebaffd9', 6),
+(570, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4219276/cho-thue-loai-bat-dong-san-khac-tai-duong-le-van-luong/can-600m2-dat-hai-mat-tien-ptan-phong-q7-tphcm.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '0bedca712ce07d5e0758fc117d8eadba', 6),
+(571, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220640/cho-thue-van-phong-tai-duong-d5/mat-tien-107-binh-thanh-2540m2-gia-tu-57trthang-moi.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'fc358519a54d47c6229a93cc7354a479', 6),
+(572, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220612/cho-thue-nha-tro-tai-phuong-4/phong-mat-tien.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '4290acd661dbfe34b11a307f2b05cca5', 6),
+(573, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220596/cho-thue-nha-rieng-tai-phuong-lang-thuong/van-phong-o-gia-3-trieuthangso-52-ngo-121-chua-lang-dien-tich-25m2-co-de-xe.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'a5e8db223f7d7ee4fe4f3b40307ab9e8', 6),
+(574, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220592/cho-thue-nha-mat-pho-tai-quan-3/nguyen-can-mat-tien-406-duong-thi-minh-khai-ppham-ngu-lao-quan-3-dt-6x20m1t7l.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '082d50da60e5faa12992e6cbf00fb9ee', 6),
+(575, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220588/cho-thue-nha-rieng-tai-duong-bui-quang-la/nguyen-can-f12quan-go-vapbui.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '5739e765946a91d0058e6d9ed4b7faaa', 6),
+(576, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220586/cho-thue-nha-mat-pho-tai-duong-nguyen-thi-tan/mat-bang-can-goc-p2-quan-8-dt-56x8m-giatdt-26trieu.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'cfd6ec0892ab2547e8c37238086ab88e', 6),
+(577, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220583/cho-thue-nha-rieng-tai-duong-bui-quang-la/can-nguyen-f12quan-go-vapduong.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'c571dfcdf89a68c696b17523b481aa7c', 6),
+(578, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220581/cho-thue-nha-rieng-tai-phuong-my-an/1tang-150m2-duong-an-thuong-3-pn-full-noi-that-co-gara-o-to-30-trthang.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '6e929a76bdadce46ffa80f05ea46187a', 6),
+(579, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220582/cho-thue-nha-rieng-tai-pho-doi-can/johnny-manh-gap-4-tang-moi-xay-ngo-279-o-to-do-tan-cua-0914739966.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'a5f4128d34139b5a6d1eaad97a231e37', 6),
+(580, 'http://123nhadat.vnhttp://123nhadat.vn/raovat-t4220580/cho-thue-nha-rieng-tai-duong-phan-huy-ich/can-nguyen-p12-go-vap.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '3c672c3466a21a9a92461022c42b4275', 6);
 
 -- --------------------------------------------------------
 
@@ -467,12 +610,13 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 --
 
 DROP TABLE IF EXISTS `patterns`;
-CREATE TABLE `patterns` (
-  `pattern_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `patterns` (
+  `pattern_id` int(11) NOT NULL AUTO_INCREMENT,
   `pattern_category_id` int(11) DEFAULT NULL,
   `pattern_regex` text COLLATE utf8mb4_unicode_ci,
-  `site_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `site_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`pattern_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `patterns`
@@ -506,18 +650,18 @@ INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `s
 (37, 1, '<a id=\"hplTitle\" href=\"(.*?)\">', 3),
 (38, 2, '<div class=\"detail_top\">\\s*<h1 class=\"h1\">\\s*(.*?)\\s*<\\/h1>\r\n', 3),
 (39, 3, 'Giá:<\\/span>\\s*(.*?)\\s*<span', 3),
-(40, 4, 'Diện tích:<\\/span>\\s*(.*?)\\s*<\\/div>\r\n', 3),
-(41, 5, '<div class=\"text\">\\s*(.*?)\\s*<\\/div>', 3),
+(40, 4, '<div class=\"text\">([\\w\\W]*?)<\\/div>', 3),
+(41, 5, 'Diện tích:<\\/span>\\s*(.*?)\\s*<\\/div>', 3),
 (42, 8, 'Vị trí:<\\/b>\\s<span>(.*?)<\\/span>', 3),
 (43, 9, 'Ngày đăng tin<\\/td>\\s*<td>\\s*(.*?)<\\/td>', 3),
 (44, 10, '<a id=\"hplTitle\" href=\"(.*?)\">', 3),
 (45, 11, 'Tên liên lạc<\\/td>\\s*<td>\\s*(.*?)\\s*<\\/td>', 3),
 (46, 12, 'Điện thoại<\\/td>\\s*<td>\\s*(.*?)<\\/td>', 3),
-(47, 1, '<a class=\"vip5\" title=\".*\" href=\"(.*?)\">', 4),
+(47, 1, '<a class=\"vipdb\"[\\w\\W]*?href=\"(.*?)\">', 4),
 (48, 2, '<title>\\s*(.*?)\\s*<\\/title>', 4),
 (49, 3, 'Giá: <span class=\"spanprice\">\\s*(.*?)<\\/span>', 4),
-(50, 4, 'Diện tích:<span>\\s*(.*?)<\\/span>', 4),
-(51, 5, '<div class=\"pd-desc-content\">[\\s\\S]*?<\\/div>\r\n', 4),
+(50, 4, '<div class=\"pd-desc-content\">([\\w\\W]*?)<\\/div>', 4),
+(51, 5, 'Diện tích:<span>\\s*(.*?)<\\/span>', 4),
 (52, 7, 'Loại tin rao<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4),
 (53, 8, 'Khu vực:<\\/span> <a.*>(.*?)<\\/a>\\s*(.*?)\\s*<\\/div>', 4),
 (54, 9, 'Ngày đăng tin<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4),
@@ -540,8 +684,8 @@ INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `s
 (72, 1, '<div class=\"img[\\w\\W]*?<a href=\"\\s*(.*?)\\s*\">', 6),
 (73, 2, '<h1 class=\"tieude_nhadat\">(.*?)<\\/h1>', 6),
 (74, 3, 'Giá:<\\/label><span><b class=\"camcam\">(.*?)<\\/b>', 6),
-(75, 4, 'Diện tích:<\\/label><span><b class=\"camcam\">(.*?)<\\/b>', 6),
-(76, 5, '<div class=\"lienhe_nguoiban\">[\\w\\W]*?<p>\\s*(.*?)\\s*<\\/p>', 6),
+(75, 4, '<div class=\'detail text-content\'>([\\w\\W]*?)<\\/div>', 6),
+(76, 5, 'Diện tích:[\\w\\W]*?\'value\'>(.*?)<\\/span', 6),
 (77, 8, 'Khu vực:<\\/label><span><a.*>(.*?)<\\/a>(.*?)<\\/span><\\/li>', 6),
 (78, 9, 'Ngày đăng tin:\\s*(.*?)\\s*<\\/li>', 6),
 (79, 10, '<h1 class=\"tieude_nhadat\">(.*?)<\\/h1>', 6),
@@ -557,10 +701,11 @@ INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `s
 --
 
 DROP TABLE IF EXISTS `pattern_categories`;
-CREATE TABLE `pattern_categories` (
-  `patt_category_id` int(11) NOT NULL,
-  `patt_category_name` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE IF NOT EXISTS `pattern_categories` (
+  `patt_category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `patt_category_name` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`patt_category_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pattern_categories`
@@ -589,11 +734,12 @@ INSERT INTO `pattern_categories` (`patt_category_id`, `patt_category_name`) VALU
 --
 
 DROP TABLE IF EXISTS `sites`;
-CREATE TABLE `sites` (
-  `site_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `sites` (
+  `site_id` int(11) NOT NULL AUTO_INCREMENT,
   `site_name` text COLLATE utf8mb4_unicode_ci,
-  `site_url` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `site_url` text COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`site_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `sites`
@@ -603,9 +749,9 @@ INSERT INTO `sites` (`site_id`, `site_name`, `site_url`) VALUES
 (1, 'batdongsan', '{\r\n	\"site_name\" : \"batdongsan\",\r\n	\"site_url\" : \"https://batdongsan.com.vn\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\": \"/p{number}\"\r\n}'),
 (2, 'timmuanhadat', '{\"site_name\":\"timmuanhadat\",\r\n\"site_url\":\"http://timmuanhadat.com.vn\",\r\n\"site_url_categories\":[{\"category_name\":\"Nhà đất bán\",\r\n\"category_url\":\"http://timmuanhadat.com.vn/nha-dat-bat-dong-san/can-ban\"}\r\n,{\"category_name\":\"Nhà đất cho thuê\",\r\n\"category_url\":\"http://timmuanhadat.com.vn/nha-dat-bat-dong-san/cho-thue\"},\r\n{\"category_name\":\"Cần mua\",\r\n\"category_url\":\"http://timmuanhadat.com.vn/nha-dat-bat-dong-san/can-mua\"},\r\n{\"category_name\":\"Cần thuê\",\r\n\"category_url\":\"http://timmuanhadat.com.vn/nha-dat-bat-dong-san/can-thue\"}],\r\n\"type_page_url\":\"/trang--{number}.html\"}'),
 (3, 'phonhadat', '{\r\n	\"site_name\":\"phonhadat\",\r\n	\"site_url\":\"http://phonhadat.net\",\r\n	\"site_url_categories\":[\r\n		{\r\n			\"category_name\":\"Nhà đất bán\",\r\n			\"category_url\":\"http://phonhadat.net/nha-dat-ban\"\r\n		}\r\n		,{\r\n			\"category_name\":\"Nhà đất cho thuê\",\r\n			\"category_url\":\"http://phonhadat.net/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\": \"/p{number}.htm\"\r\n}'),
-(4, 'dothi', '{\r\n	\"site_name\" : \"dothi\",\r\n	\"site_url\" : \"https://dothi.net\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://dothi.net/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"https://dothi.net/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\": \"/p{number}\"\r\n}'),
+(4, 'dothi', '{\r\n	\"site_name\" : \"dothi\",\r\n	\"site_url\" : \"https://dothi.net\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://dothi.net/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"https://dothi.net/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\": \"/p{number}.htm\"\r\n}'),
 (5, 'alonhadat', '{\r\n	\"site_name\" : \"alonhadat\",\r\n	\"site_url\" : \"http://alonhadat.com.vn\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://alonhadat.com.vn/nha-dat/can-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"https://alonhadat.com.vn/nha-dat/cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\":\"/trang--{number}.html\"\r\n}'),
-(6, '123nhadat', '{\r\n	\"site_name\" : \"123nhadat\",\r\n	\"site_url\" : \"https://123nhadat.vn\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://123nhadat.vn/raovat-c1/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"http://123nhadat.vn/raovat-c2/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\":\"/trang--{number}.html\"\r\n}\r\n');
+(6, '123nhadat', '{\r\n	\"site_name\" : \"123nhadat\",\r\n	\"site_url\" : \"https://123nhadat.vn\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://123nhadat.vn/raovat-c1/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"http://123nhadat.vn/raovat-c2/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\":\"/number/-1/0/0\"\r\n}\r\n');
 
 -- --------------------------------------------------------
 
@@ -614,13 +760,14 @@ INSERT INTO `sites` (`site_id`, `site_name`, `site_url`) VALUES
 --
 
 DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_password` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_token` text COLLATE utf8mb4_unicode_ci,
-  `user_status` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `user_status` int(11) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
@@ -628,75 +775,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_password`, `user_token`, `user_status`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'RwOPzbuPAODuF1sIlPYQNduEhARZufl3', 1);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `data`
---
-ALTER TABLE `data`
-  ADD PRIMARY KEY (`data_id`),
-  ADD UNIQUE KEY `data_url_md5` (`data_url_md5`);
-
---
--- Indexes for table `patterns`
---
-ALTER TABLE `patterns`
-  ADD PRIMARY KEY (`pattern_id`);
-
---
--- Indexes for table `pattern_categories`
---
-ALTER TABLE `pattern_categories`
-  ADD PRIMARY KEY (`patt_category_id`);
-
---
--- Indexes for table `sites`
---
-ALTER TABLE `sites`
-  ADD PRIMARY KEY (`site_id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `data`
---
-ALTER TABLE `data`
-  MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=401;
-
---
--- AUTO_INCREMENT for table `patterns`
---
-ALTER TABLE `patterns`
-  MODIFY `pattern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
-
---
--- AUTO_INCREMENT for table `pattern_categories`
---
-ALTER TABLE `pattern_categories`
-  MODIFY `patt_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `sites`
---
-ALTER TABLE `sites`
-  MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

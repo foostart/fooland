@@ -71,10 +71,11 @@ function getDataDetailBySiteID(req, res, next) {
                                 var contactPhone = getValueByPattern("Contact Phone", pattern_rows, dataSource);
                                 var contactEmail = getValueByPattern("Contact Email", pattern_rows, dataSource);
                                 var contactAddress = getValueByPattern("Contact Address", pattern_rows, dataSource);
+                                area = area.replace("m<sup>2</sup>", "m²");
                                 dataInput.push([title]);
                                 dataInput.push([price.replace("m<sup>2</sup>", "m²")]);
-                                dataInput.push([area.replace("m<sup>2</sup>", "m²")]);
-                                dataInput.push([description]);
+                                dataInput.push([area.replace("&nbsp;m&#178;", "m²")]);
+                                dataInput.push([description.replace("<br/>","")]);
                                 dataInput.push([typeOfNews]);
                                 dataInput.push([typeBDS]);
                                 dataInput.push([location]);
