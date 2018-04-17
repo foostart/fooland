@@ -628,10 +628,10 @@ paths:
           required: true
         - name: typeQuery
           type: number
-          maximum: 15
+          maximum: 9
           in: query
           required: true
-          description: "Find by: 1. Data-ID, 2. Data-URL 3. Data-Tilte, 4. Data-Price,5. Data-Area, 6.Data-Description, 7. Data-Type-of-News, 8. Data-TypeofBDS, 9. Data-Location, 10. Data-Date 11. Data-ProjectName, 12. Data-ContactName, 13. Data-ContactPhone, 14. Data-ContactEmail, 15. Data-ContactAddress"
+          description: "Find by: 1. Data-ID, 2. Data-Tilte, 3. Data-Price,4. Data-Area,5. Data-Type-of-News, 6. Data-TypeofBDS, 7. Data-Location,8. Data-ContactName, 9. Data-ContactPhone"
         - name: valueQuery
           in: query
           required: true
@@ -910,7 +910,7 @@ definitions:
           type: object
           properties:
             dataID:
-              type: string
+              type: number
             dataUrl:
               type: string
             dataTitle:

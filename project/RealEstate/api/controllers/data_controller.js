@@ -20,16 +20,23 @@ function getDataFindBy(req, res, next) {
     var Token = req.swagger.params['Token'].value;
     var typeQuery = req.swagger.params.typeQuery.value;
 
-    console.log("1 ==> " + typeQuery);
+    console.log("\r\n typeQuery-----------------------------------------------------");
+    
+    console.log (typeQuery);
 
     var value_Query = req.swagger.params.valueQuery.value;
-    
-    console.log("2 ==> " + value_Query);
+    console.log("\r\n value_Query-----------------------------------------------------");
+    console.log( value_Query);
 
     var valuesArr = [];
 
     for (var i = 0; i < value_Query.length; i++) {
-        valuesArr.push([parseInt(value_Query[i])]);
+        switch(typeQuery){
+            case 9: 
+                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
+                break;
+        }
+        valuesArr.push([value_Query[i]]);
 
     }
     AuthModel.checkToken(Token, function (isAuth) {
@@ -57,7 +64,7 @@ function getDataFindBy(req, res, next) {
                             dataContactAddress: row.data_contact_address,
                         };
 
-                        console.log("6==> " + data);
+                        //console.log("6==> " + data);
                         results.data.push(data);
                     });
                     console.log("\r\nresults-----------------------------------------------------");

@@ -63,28 +63,28 @@ class DataModel extends DB
         if (typeQuery == 1){
             querySQL = "data_id = ?";
         
+        }else if (typeQuery == 2){
+            querySQL = "LOWER(data_title) LIKE ?";
         }else if (typeQuery == 3){
-            querySQL = "LOWER(data_title) LIKE '%LOWER(?)%'";
+            querySQL = "LOWER(data_price) LIKE ?"
         }else if (typeQuery == 4){
-            querySQL = "LOWER(data_price) LIKE '%LOWER(?)%'"
-        }else if (typeQuery == 5){
-            querySQL = "LOWER(data_area) LIKE '%LOWER(?)%'"
+            querySQL = "LOWER(data_area) LIKE ?"
         // }else if (typeQuery == 6){
         //     querySQL = "data_description = ?"
+        }else if (typeQuery == 5){
+            querySQL = "LOWER(data_type_of_news) LIKE ?"
+        }else if (typeQuery == 6){
+            querySQL = "LOWER(data_type_of_BDS) LIKE ?"
         }else if (typeQuery == 7){
-            querySQL = "LOWER(data_type_of_news) LIKE '%LOWER(?)%'"
-        }else if (typeQuery == 8){
-            querySQL = "LOWER(data_type_of_BDS) LIKE '%LOWER(?)%'"
-        }else if (typeQuery == 9){
-            querySQL = "LOWER(data_location) LIKE '%LOWER(?)%'"
+            querySQL = "LOWER(data_location) LIKE ?"
         // }else if (typeQuery == 10){
         //     querySQL = "data_date = ?"
         // }else if (typeQuery == 11){
         //     querySQL = "data_project_name = ?"
-        }else if (typeQuery == 12){
-            querySQL = "LOWER(data_contact_name) LIKE '%LOWER(?)%'"
-        }else if (typeQuery == 13){
-            querySQL = "LOWER(data_contact_phone) LIKE '%LOWER(?)%'"
+        }else if (typeQuery == 8){
+            querySQL = "LOWER(data_contact_name) LIKE ?"
+        }else if (typeQuery == 9){
+            querySQL = "LOWER(data_contact_phone) LIKE ?"
         // }else if (typeQuery == 14){
         //     querySQL = "data_contact_email = ?"
         // }else if (typeQuery == 15){
@@ -98,7 +98,8 @@ class DataModel extends DB
             callback(-1);
         })
 
-        console.log("4 ==> " + valuesQuery);
+        console.log("valuesQuery----------------------------------------------");
+        console.log(valuesQuery);
     }
 }
 
