@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 17, 2018 lúc 10:48 AM
--- Phiên bản máy phục vụ: 10.1.31-MariaDB
--- Phiên bản PHP: 5.6.34
+-- Host: 127.0.0.1
+-- Generation Time: Apr 17, 2018 at 11:10 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `db_realestate`
+-- Database: `db_realestate`
 --
 CREATE DATABASE IF NOT EXISTS `db_realestate` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `db_realestate`;
@@ -27,7 +27,7 @@ USE `db_realestate`;
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `data`
+-- Table structure for table `data`
 --
 
 DROP TABLE IF EXISTS `data`;
@@ -53,7 +53,7 @@ CREATE TABLE `data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `data`
+-- Dumping data for table `data`
 --
 
 INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
@@ -463,7 +463,7 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `patterns`
+-- Table structure for table `patterns`
 --
 
 DROP TABLE IF EXISTS `patterns`;
@@ -475,7 +475,7 @@ CREATE TABLE `patterns` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `patterns`
+-- Dumping data for table `patterns`
 --
 
 INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `site_id`) VALUES
@@ -526,7 +526,7 @@ INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `s
 (57, 12, '<b>Di động<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4),
 (59, 1, 'class=\'ct_title\'><a href=\'(.*?)\' class=\'vip\'>', 5),
 (60, 2, '<div class=\'title\'><h1>\\s*(.*?)\\s*<\\/h1>', 5),
-(61, 3, '<span class=\'price\'>[\\w\\W]*?<span class=\'value\'>\\s*(.*?)\\s*<\\/span>', NULL),
+(61, 3, '<span class=\'price\'>[\\w\\W]*?<span class=\'value\'>\\s*(.*?)\\s*<\\/span>', 5),
 (62, 4, '<span class=\'square\'>[\\w\\W]*?<span class=\'value\'>\\s*(.*?)s*<sup>', 5),
 (63, 5, '<div class=\'detail \'>[\\w\\W]*?<span .*?>\\s*(.*?)\\s*<\\/span>', 5),
 (64, 6, 'Loại tin<\\/td><td>(.*?)<\\/td>', 5),
@@ -553,7 +553,7 @@ INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `s
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `pattern_categories`
+-- Table structure for table `pattern_categories`
 --
 
 DROP TABLE IF EXISTS `pattern_categories`;
@@ -563,7 +563,7 @@ CREATE TABLE `pattern_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `pattern_categories`
+-- Dumping data for table `pattern_categories`
 --
 
 INSERT INTO `pattern_categories` (`patt_category_id`, `patt_category_name`) VALUES
@@ -585,7 +585,7 @@ INSERT INTO `pattern_categories` (`patt_category_id`, `patt_category_name`) VALU
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sites`
+-- Table structure for table `sites`
 --
 
 DROP TABLE IF EXISTS `sites`;
@@ -596,21 +596,21 @@ CREATE TABLE `sites` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sites`
+-- Dumping data for table `sites`
 --
 
 INSERT INTO `sites` (`site_id`, `site_name`, `site_url`) VALUES
 (1, 'batdongsan', '{\r\n	\"site_name\" : \"batdongsan\",\r\n	\"site_url\" : \"https://batdongsan.com.vn\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"https://batdongsan.com.vn/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\": \"/p{number}\"\r\n}'),
 (2, 'timmuanhadat', '{\"site_name\":\"timmuanhadat\",\r\n\"site_url\":\"http://timmuanhadat.com.vn\",\r\n\"site_url_categories\":[{\"category_name\":\"Nhà đất bán\",\r\n\"category_url\":\"http://timmuanhadat.com.vn/nha-dat-bat-dong-san/can-ban\"}\r\n,{\"category_name\":\"Nhà đất cho thuê\",\r\n\"category_url\":\"http://timmuanhadat.com.vn/nha-dat-bat-dong-san/cho-thue\"},\r\n{\"category_name\":\"Cần mua\",\r\n\"category_url\":\"http://timmuanhadat.com.vn/nha-dat-bat-dong-san/can-mua\"},\r\n{\"category_name\":\"Cần thuê\",\r\n\"category_url\":\"http://timmuanhadat.com.vn/nha-dat-bat-dong-san/can-thue\"}],\r\n\"type_page_url\":\"/trang--{number}.html\"}'),
-(3, 'phonhadat', '\r\n{\"site_name\":\"phonhadat\",\r\n\"site_url\":\"http://phonhadat.net\",\r\n\"site_url_categories\":[{\"category_name\":\"Nhà đất bán\",\r\n\"category_url\":\"http://phonhadat.net/nha-dat-ban\"}\r\n,{\"category_name\":\"Nhà đất cho thuê\",\r\n\"category_url\":\"http://phonhadat.net/nha-dat-cho-thue\"}'),
-(4, 'dothi', '\r\n{\"site_name\":\"dothi\",\r\n\"site_url\":\"https://dothi.net\",\r\n\"site_url_categories\":[{\"category_name\":\"BĐS bán\",\r\n\"category_url\":\"https://dothi.net/nha-dat-ban\"}\r\n,{\"category_name\":\"BĐS cho thuê\",\r\n\"category_url\":\"https://dothi.net/nha-dat-cho-thue\"}'),
-(5, 'alonhadat', '{\"site_name\":\"alonhadat\",\r\n\"site_url\":\"http://alonhadat.com.vn\",\r\n\"site_url_categories\":[{\"category_name\":\"Nhà đất bán\",\r\n\"category_url\":\"https://alonhadat.com.vn/nha-dat/can-ban\"}\r\n,{\"category_name\":\"Nhà đất cho thuê\",\r\n\"category_url\":\"https://alonhadat.com.vn/nha-dat/cho-thue\"}'),
-(6, '123nhadat', '{\"site_name\":\"123nhadat\",\r\n\"site_url\":\"https://123nhadat.vn\",\r\n\"site_url_categories\":[{\"category_name\":\"Nhà đất bán\",\r\n\"category_url\":\"https://123nhadat.vn/raovat-c1/nha-dat-ban\"}\r\n,{\"category_name\":\"Nhà đất cho thuê\",\r\n\"category_url\":\"http://123nhadat.vn/raovat-c2/nha-dat-cho-thue\"}');
+(3, 'phonhadat', '{\r\n	\"site_name\":\"phonhadat\",\r\n	\"site_url\":\"http://phonhadat.net\",\r\n	\"site_url_categories\":[\r\n		{\r\n			\"category_name\":\"Nhà đất bán\",\r\n			\"category_url\":\"http://phonhadat.net/nha-dat-ban\"\r\n		}\r\n		,{\r\n			\"category_name\":\"Nhà đất cho thuê\",\r\n			\"category_url\":\"http://phonhadat.net/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\": \"/p{number}.htm\"\r\n}'),
+(4, 'dothi', '{\r\n	\"site_name\" : \"dothi\",\r\n	\"site_url\" : \"https://dothi.net\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://dothi.net/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"https://dothi.net/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\": \"/p{number}\"\r\n}'),
+(5, 'alonhadat', '{\r\n	\"site_name\" : \"alonhadat\",\r\n	\"site_url\" : \"http://alonhadat.com.vn\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://alonhadat.com.vn/nha-dat/can-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"https://alonhadat.com.vn/nha-dat/cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\":\"/trang--{number}.html\"\r\n}'),
+(6, '123nhadat', '{\r\n	\"site_name\" : \"123nhadat\",\r\n	\"site_url\" : \"https://123nhadat.vn\",\r\n	\"site_url_categories\" : [\r\n		{\r\n			\"category_name\" : \"Nhà đất bán\",\r\n			\"category_url\" : \"https://123nhadat.vn/raovat-c1/nha-dat-ban\"\r\n		},\r\n		{\r\n			\"category_name\" : \"Nhà đất cho thuê\",\r\n			\"category_url\" : \"http://123nhadat.vn/raovat-c2/nha-dat-cho-thue\"\r\n		}\r\n	],\r\n	\"type_page_url\":\"/trang--{number}.html\"\r\n}\r\n');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -623,77 +623,77 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_password`, `user_token`, `user_status`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'RwOPzbuPAODuF1sIlPYQNduEhARZufl3', 1);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `data`
+-- Indexes for table `data`
 --
 ALTER TABLE `data`
   ADD PRIMARY KEY (`data_id`),
   ADD UNIQUE KEY `data_url_md5` (`data_url_md5`);
 
 --
--- Chỉ mục cho bảng `patterns`
+-- Indexes for table `patterns`
 --
 ALTER TABLE `patterns`
   ADD PRIMARY KEY (`pattern_id`);
 
 --
--- Chỉ mục cho bảng `pattern_categories`
+-- Indexes for table `pattern_categories`
 --
 ALTER TABLE `pattern_categories`
   ADD PRIMARY KEY (`patt_category_id`);
 
 --
--- Chỉ mục cho bảng `sites`
+-- Indexes for table `sites`
 --
 ALTER TABLE `sites`
   ADD PRIMARY KEY (`site_id`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `data`
+-- AUTO_INCREMENT for table `data`
 --
 ALTER TABLE `data`
   MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=401;
 
 --
--- AUTO_INCREMENT cho bảng `patterns`
+-- AUTO_INCREMENT for table `patterns`
 --
 ALTER TABLE `patterns`
   MODIFY `pattern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
--- AUTO_INCREMENT cho bảng `pattern_categories`
+-- AUTO_INCREMENT for table `pattern_categories`
 --
 ALTER TABLE `pattern_categories`
   MODIFY `patt_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng `sites`
+-- AUTO_INCREMENT for table `sites`
 --
 ALTER TABLE `sites`
   MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
