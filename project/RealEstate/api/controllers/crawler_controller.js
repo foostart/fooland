@@ -1,6 +1,5 @@
 'use strict';
 const request = require("request");
-
 // Khai bao crawler model
 const CrawlerModelClass = require("../models/crawler_model");
 const crawlerModel = new CrawlerModelClass();
@@ -68,6 +67,7 @@ function getDataDetailBySiteID(req, res, next) {
                                 var contactName = getValueByPattern("Contact Name", pattern_rows, dataSource);
                                 var contactPhone = getValueByPattern("Contact Phone", pattern_rows, dataSource);
                                 var contactEmail = getValueByPattern("Contact Email", pattern_rows, dataSource);
+                                // var b = new Buffer(contactEmail, 'base64');                                
                                 var contactAddress = getValueByPattern("Contact Address", pattern_rows, dataSource);
                                 area = area.replace("m<sup>2</sup>", "m²");
                                 dataInput.push([title]);
@@ -81,7 +81,7 @@ function getDataDetailBySiteID(req, res, next) {
                                 dataInput.push([projectName]);
                                 dataInput.push([contactName]);
                                 dataInput.push([contactPhone]);
-                                dataInput.push([conVertEmail(contactEmail)]);
+                                dataInput.push([contactEmail]);
                                 dataInput.push([contactAddress]);
                                 dataInput.push([2]);
                                 dataInput.push([dataID]);
@@ -202,11 +202,11 @@ function getURLBySiteID(req, res, next) {
 
 }
 
-function conVertEmail(encodedString) {
-    var textArea = document.createElement('textarea');
-    textArea.innerHTML = encodedString;
-    return textArea.value;
-}
+// function conVertEmail(encodedString) {
+//     var textArea = document.createElement('textarea');
+//     textArea.innerHTML = encodedString;
+//     return textArea.value;
+// }
 
 function convertStringToDate(str) {
     var s;
