@@ -32,9 +32,7 @@ function getDataDetailBySiteID(req, res, next) {
     };
 
     var siteID = req.swagger.params["siteID"].value;
-    console.log(siteID);
     var urlLimit = req.swagger.params["urlLimit"].value;
-    console.log(urlLimit);
     var countCollected = 0;
     if (urlLimit == null || urlLimit == "") {
         urlLimit = 10;
@@ -75,7 +73,7 @@ function getDataDetailBySiteID(req, res, next) {
                                 dataInput.push([title]);
                                 dataInput.push([price.replace("m<sup>2</sup>", "m²")]);
                                 dataInput.push([area.replace("&nbsp;m&#178;", "m²")]);
-                                dataInput.push([description.replace("<br/>","")]);
+                                dataInput.push([description.replace("<br/>", " ")]);
                                 dataInput.push([typeOfNews]);
                                 dataInput.push([typeBDS]);
                                 dataInput.push([location]);

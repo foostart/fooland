@@ -115,7 +115,15 @@ function getInfoOnPage(options, callback) {
             var match = pattern.exec(body);
             if (match != null) {
                 while (match != null) {
-                    results.push(getURL(urlRequest) + match[1]);
+                    var patternUrl = /http[s]*:/;
+                    var match1 = match[1].match(patternUrl);
+                    if (match1 === null)
+                    {
+                        results.push(getURL(urlRequest) + match[1]);
+                    }
+                    else{
+                        results.push(match[1]);
+                    }                    
                     match = pattern.exec(body);
                 }
                 resultJSON.status = 'OK';
