@@ -1,8 +1,7 @@
 const DB = require("../../config/DB");
 
-class DataModel extends DB
-{
-    constructor(){
+class DataModel extends DB {
+    constructor() {
         super();
     }
 
@@ -11,24 +10,24 @@ class DataModel extends DB
      * @param {array} data: Data is an array values of data table
      * @param callback: callback true or false
      */
-    update(data, callback){
-        this.executeMySQL("UPDATE data SET data_title=?,data_price=?,data_area=?,data_description=?,data_type_of_news=?,data_type_BDS=?,data_location=?,data_date=?,data_project_name=?,data_contact_name=?,data_contact_phone=?,data_contact_email=?,data_contact_address=?,status=? WHERE data_id=?", data).then(function(success){
+    update(data, callback) {
+        this.executeMySQL("UPDATE data SET data_title=?,data_price=?,data_area=?,data_description=?,data_type_of_news=?,data_type_BDS=?,data_location=?,data_date=?,data_project_name=?,data_contact_name=?,data_contact_phone=?,data_contact_email=?,data_contact_address=?,status=? WHERE data_id=?", data).then(function (success) {
             callback(success);
-        }).catch(function(err){
+        }).catch(function (err) {
             console.log(err);
             callback(false);
         })
     }
 
-     /**
-     * Find all url at data table by status
-     * @param Status : status to find url
-     * @param callback: callback return data rows
-     */
-    findURLByStatus(Status, SiteID, callback){
-        this.queryMySQL("SELECT data_id, data_url, site_id FROM data WHERE status = ? AND site_id = ?", [[Status], [SiteID]]).then(function(rows){
+    /**
+    * Find all url at data table by status
+    * @param Status : status to find url
+    * @param callback: callback return data rows
+    */
+    findURLByStatus(Status, SiteID, callback) {
+        this.queryMySQL("SELECT data_id, data_url, site_id FROM data WHERE status = ? AND site_id = ?", [[Status], [SiteID]]).then(function (rows) {
             callback(rows);
-        }).catch(function(err){
+        }).catch(function (err) {
             console.log(err);
             callback(-1);
         })
@@ -38,68 +37,62 @@ class DataModel extends DB
      * 
      * @param typeQuery : Type query;
      *                      1. DataID
-     *                      2. DataURL
-     *                      3. DataTitle
-     *                      4. DataPrice
-     *                      5. DataArea
-     *                      6. DataDescription
-     *                      7. DataTypeofNews
-     *                      8. DataTypeOfBDS
-     *                      9. DataLocation
-     *                      10. DataDate
-     *                      11. DataProjectName
-     *                      12. DataContactName
-     *                      13. DataContactPhone
-     *                      14. DataContactEmail
-     *                      15. DataConttactAddress
+     *                      2. DataTitle
+     *                      3. DataPrice
+     *                      4. DataArea
+     *                      5. DataTypeofNews
+     *                      6. DataTypeOfBDS
+     *                      7. DataLocation
+     *                      8. DataContactName
+     *                      9. DataContactPhone
      * 
-     * @param valuesQuery : Value is an array of input value by type query,  
-     *                      Example find pattern by type as '3': [[1],[2]]
+     * @param valuesQuery : Value is an array of input value by type query
      * @param callback : callback return data rows
      */
-    findBy(typeQuery, valuesQuery, callback)
-    {
+    findBy(typeQuery, valuesQuery, callback) {
         var querySQL = "";
-        if (typeQuery == 1){
-            querySQL = "data_id = ?";
-        
-        }else if (typeQuery == 2){
-            querySQL = "LOWER(data_title) LIKE ?";
-        }else if (typeQuery == 3){
-            querySQL = "LOWER(data_price) LIKE ?"
-        }else if (typeQuery == 4){
-            querySQL = "LOWER(data_area) LIKE ?"
-        // }else if (typeQuery == 6){
-        //     querySQL = "data_description = ?"
-        }else if (typeQuery == 5){
-            querySQL = "LOWER(data_type_of_news) LIKE ?"
-        }else if (typeQuery == 6){
-            querySQL = "LOWER(data_type_of_BDS) LIKE ?"
-        }else if (typeQuery == 7){
-            querySQL = "LOWER(data_location) LIKE ?"
-        // }else if (typeQuery == 10){
-        //     querySQL = "data_date = ?"
-        // }else if (typeQuery == 11){
-        //     querySQL = "data_project_name = ?"
-        }else if (typeQuery == 8){
-            querySQL = "LOWER(data_contact_name) LIKE ?"
-        }else if (typeQuery == 9){
-            querySQL = "LOWER(data_contact_phone) LIKE ?"
-        // }else if (typeQuery == 14){
-        //     querySQL = "data_contact_email = ?"
-        // }else if (typeQuery == 15){
-        //     querySQL = "data_contact_address = ?"
-         }
+
+        switch (typeQuery) {
+            case 1:
+                querySQL = "data_id = ?"; 
+                break;
+            case 2:
+                querySQL = "data_title LIKE ?";
+                break;
+            case 3:
+                querySQL = "data_price LIKE ?";
+                break;
+            case 4:
+                querySQL = "data_area LIKE ?"; 
+                break;
+            case 5:
+                querySQL = "data_type_of_news LIKE ?";
+                break;
+            case 6:
+                querySQL = "data_type_BDS LIKE ?";
+                break;
+            case 7:
+                querySQL = "data_location LIKE ?";
+                break;
+            case 8:
+                querySQL = "data_contact_name LIKE ?";
+                break;
+            case 9:
+                querySQL = "data_contact_phone LIKE ?";
+                break;
+
+        }
+
         var sql = "SELECT * FROM data WHERE " + querySQL;
-        this.queryMySQL(sql, valuesQuery).then(function(rows){
+        this.queryMySQL(sql, valuesQuery).then(function (rows) {
             callback(rows);
-        }).catch(function(err){
+        }).catch(function (err) {
             console.log(err);
             callback(-1);
         })
 
-        console.log("valuesQuery----------------------------------------------");
-        console.log(valuesQuery);
+        // console.log("valuesQuery----------------------------------------------");
+        // console.log(valuesQuery);
     }
 }
 

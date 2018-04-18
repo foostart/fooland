@@ -910,7 +910,7 @@ definitions:
           type: object
           properties:
             dataID:
-              type: number
+              type: string
             dataUrl:
               type: string
             dataTitle:

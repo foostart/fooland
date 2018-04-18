@@ -1,5 +1,5 @@
 'use strict';
- 
+
 const DataModelClass = require("../models/data_model");
 const dataModel = new DataModelClass();
 const authModelClass = require("../models/auth_model");
@@ -21,18 +21,38 @@ function getDataFindBy(req, res, next) {
     var typeQuery = req.swagger.params.typeQuery.value;
 
     console.log("\r\n typeQuery-----------------------------------------------------");
-    
-    console.log (typeQuery);
+    console.log(typeQuery);
 
     var value_Query = req.swagger.params.valueQuery.value;
     console.log("\r\n value_Query-----------------------------------------------------");
-    console.log( value_Query);
+    console.log(value_Query);
 
     var valuesArr = [];
 
     for (var i = 0; i < value_Query.length; i++) {
-        switch(typeQuery){
-            case 9: 
+        switch (typeQuery) {
+            case 2:
+                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
+                break;
+            case 3:
+                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
+                break;
+            case 4:
+                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
+                break;
+            case 5:
+                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
+                break;
+            case 6:
+                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
+                break;
+            case 7:
+                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
+                break;
+            case 8:
+                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
+                break;
+            case 9:
                 value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
                 break;
         }
@@ -50,7 +70,7 @@ function getDataFindBy(req, res, next) {
                             dataID: row.data_id.toString(),
                             dataUrl: row.data_url,
                             dataTitle: row.data_title,
-                            dataPrice: row.data_price,
+                            dataPrice: row.data_price.toString(),
                             dataArea: row.data_area,
                             dataDescription: row.data_description,
                             dataTypeOfNews: row.data_type_of_news,
@@ -59,7 +79,7 @@ function getDataFindBy(req, res, next) {
                             dataDate: row.data_date.toString(),
                             dataProjectName: row.data_project_name,
                             dataContactName: row.data_contact_name,
-                            dataContactPhone: row.data_contact_phone,
+                            dataContactPhone: row.data_contact_phone.toString(),
                             dataContactEmail: row.data_contact_email,
                             dataContactAddress: row.data_contact_address,
                         };
