@@ -81,7 +81,7 @@ function getDataDetailBySiteID(req, res, next) {
                                 dataInput.push([projectName]);
                                 dataInput.push([contactName]);
                                 dataInput.push([contactPhone]);
-                                dataInput.push([contactEmail]);
+                                dataInput.push([decodeEmail(contactEmail)]);
                                 dataInput.push([contactAddress]);
                                 dataInput.push([2]);
                                 dataInput.push([dataID]);
@@ -202,11 +202,20 @@ function getURLBySiteID(req, res, next) {
 
 }
 
-// function conVertEmail(encodedString) {
-//     var textArea = document.createElement('textarea');
-//     textArea.innerHTML = encodedString;
-//     return textArea.value;
-// }
+function decodeEmail(input)
+{
+    var result = "";
+    var pattern = /\&#(\d+);/g
+    var match = pattern.exec(input);
+    while (match) {
+        result += String.fromCharCode(parseInt(match[1]));
+        match = pattern.exec(input);
+    }
+    if (result == ""){
+        return input;
+    }
+    return result;
+}
 
 function convertStringToDate(str) {
     var s;
