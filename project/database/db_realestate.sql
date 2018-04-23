@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Apr 18, 2018 at 12:14 PM
--- Server version: 5.7.19
--- PHP Version: 7.1.9
+-- Host: 127.0.0.1
+-- Generation Time: Apr 23, 2018 at 08:01 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 5.6.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,8 +31,8 @@ USE `db_realestate`;
 --
 
 DROP TABLE IF EXISTS `data`;
-CREATE TABLE IF NOT EXISTS `data` (
-  `data_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `data` (
+  `data_id` int(11) NOT NULL,
   `data_url` text COLLATE utf8mb4_unicode_ci,
   `data_title` text COLLATE utf8mb4_unicode_ci,
   `data_price` text COLLATE utf8mb4_unicode_ci,
@@ -49,10 +49,8 @@ CREATE TABLE IF NOT EXISTS `data` (
   `data_contact_address` text COLLATE utf8mb4_unicode_ci,
   `status` int(11) NOT NULL,
   `data_url_md5` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `site_id` int(11) NOT NULL,
-  PRIMARY KEY (`data_id`),
-  UNIQUE KEY `data_url_md5` (`data_url_md5`)
-) ENGINE=InnoDB AUTO_INCREMENT=713 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `site_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `data`
@@ -80,7 +78,7 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 (19, 'https://batdongsan.com.vn/ban-dat-nen-du-an-xa-duong-to/sieu-dai-viet-phu-quoc-6-mo-lo-goc-3-mat-tien-ngay-nguyen-v-cu-gia-chi-tu-6-trieu-m2-pr15603344', 'SIÊU DỰ ÁN ĐẠI VIỆT - PHÚ QUỐC 6 MỞ BÁN LÔ GÓC 3 MẶT TIỀN NGAY NGUYỄN VĂN CỪ. GIÁ CHỈ TỪ 6 TRIỆU/M2', '6 triệu/m²', '500m²', 'Bất động sản Đại Việt chuẩn bị tung ra Siêu Dự án Đại Việt - Phú Quốc 6, vị trí cực HOT ngay đường <a href=\"/ban-dat-nen-du-an-duong-nguyen-van-cu-1-360\">Nguyễn Văn Cừ</a>, trục đường nối An Thới và Dương Đông.<br/><br/>** Quy mô dự án gồm 25 nền, diện tích mỗi nền 500m2.<br/><br/>** Vị trí không thể đắc địa hơn: Lô góc 3 mặt tiền ngay đường Nguyễn Văn Cừ. Trục đường nối Dương Đông và An Thới.<br/>+ Cách sân bay Phú Quốc chỉ 3km.<br/>+ Cách khu du lịch Bãi Sao chỉ 5km.<br/>+ Gần nối lên Cáp treo của Tập đoàn Sun Group, hệ thống cáp treo dài nhất Đông Nam Á, đi qua Hòn Thơm khoảng 10km. Vị trí sầm uất, nhộn nhịp, rất phù hợp để kinh doanh, buôn bán.<br/><br/>** Hạ tầng hoàn thiện:<br/>+ Khu dân cư nhiều cây xanh, không khí trong lành dễ chịu.<br/>+ Không giới hạn thiết kế xây dựng.<br/>+ Mua đất có thể xây dựng ngay, thích hợp cho xây nghỉ dưỡng hoặc cho thuê.<br/>+ Phù hợp xây khách sạn, khu vui chơi giải trí thương mại.<br/><br/>** Giá dự kiến mở bán ngày 19/04/2018 từ 6 triệu - 10 triệu/m2.<br/>** Liên hệ trực tiếp chủ đầu tư Hotline 0949.58.5678 để được tư vấn thông tin chính xác dự án.', 'Nhà đất bán', 'Bán đất nền dự án (đất trong dự án quy hoạch)', 'Xã Dương Tơ, Phú Quốc, Kiên Giang', '2018-04-14', 'SIÊU DỰ ÁN ĐẠI VIỆT - PHÚ QUỐC 6 MỞ BÁN LÔ GÓC 3 MẶT TIỀN NGAY NGUYỄN VĂN CỪ. GIÁ CHỈ TỪ 6 TRIỆU/M2', 'NGUYỄN PHƯƠNG LAN', '0949585678', '', '', 2, 'f5d663605330040b3df04f4078c63f48', 1),
 (20, 'https://batdongsan.com.vn/ban-dat-nen-du-an-pho-tran-dai-nghia-phuong-hoa-hai-prj-khu-do-thi-phu-my-an/nhieu-lo-vip-chinh-chu-da-ng-pearl-ngay-cau-vo-chi-cong-dg-xay-dung-pr15603216', 'BÁN NHIỀU LÔ VIP CHÍNH CHỦ, KHU PHÚ MỸ AN - ĐÀ NẴNG PEARL, NGAY CẦU VÕ CHÍ CÔNG ĐANG XÂY DỰNG', '25 triệu/m²', '410m²', 'Cần nhượng lại nhiều vị trí siêu đẹp, hàng hiếm dự án Phú Mỹ An - Đà Nẵng Pearl, ngay cầu Võ Chí Công - nối khu ven biển Đông Nam về thẳng sân bay Đà Nẵng.<br/><br/>+ Lô B3-22-12 DT 300m2, thuộc dãy Villa triệu đô OneRiver chủ đầu tư Đất Xanh đang triển khai. Đất 2 mặt tiền (Song Hào 30m và đường ven sông 17m5), bên cạnh tòa dịch vụ trung tâm. Giá chuyển nhượng: 12 tỷ.<br/><br/>+ 02 lô liền kề mặt tiền Trần Đại Nghĩa: B2-4-5x, đã cập nhật diện tích thực tế tăng thêm vào sổ, 410m2 tổng 2 lô, mặt tiền 15m, đường trước nhà là đường Xuyên Á 48m. Giá chuyển nhượng 25tr/m2.<br/><br/>+ 02 lô liền kề mặt tiền trục xương sống Đào Duy Tùng: B3-1-4 và 5, view trực diện đại học Pegasus Singapore, đường trước nhà 33m, diện tích 375m2 mỗi lô, giá chuyển nhượng 20.5tr/m2.<br/><br/>+ 04 lô liền kề mặt tiền Song Hào, hướng Nam, view khu thương mại FPT, ra đường Võ Chí Công nối dài vài bước chân, diện tích 150m2 mỗi lô, giá chuyển nhượng 3.4 tỷ/lô.<br/><br/>Kèm theo biệt thự R1. B03.09 FPT, 3 mặt tiền, sát sông, diện tích 467m2, mua trực tiếp chủ đầu tư, giá chuyển nhượng chỉ 7tỷ.<br/><br/>Khách hàng có nhu cầu vui lòng liên hệ.<br/>Anh Đức.<br/>0934 755 386 - 0964 755 386 - 0949 755 386.<br/>Làm việc chính chủ và gốc chủ đầu tư.<br/>Hoa hồng 1% cho môi giới.<br/>Cảm ơn.', 'Nhà đất bán', 'Bán đất nền dự án (đất trong dự án quy hoạch)', 'Dự án Phú Mỹ An, Phố Trần Đại Nghĩa, Phường Hòa Hải, Ngũ Hành Sơn, Đà Nẵng', '2018-04-14', 'BÁN NHIỀU LÔ VIP CHÍNH CHỦ, KHU PHÚ MỸ AN - ĐÀ NẴNG PEARL, NGAY CẦU VÕ CHÍ CÔNG ĐANG XÂY DỰNG', 'Nguyen Trung Duc', '0934755386', '', '', 2, '2b07c8e009ac22ac76673e78bee93dd9', 1),
 (21, 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-cao-lo-phuong-4-15-prj-topaz-city/chuyen-nhuong-lai-10-va-elite-gia-tot-nhat-thi-truong-lh-0909-678-859-pr15482121', 'KHÁCH KẸT TIỀN CẦN BÁN CĂN TOPAZ CITY VÀ TOPAZ ELITE GIÁ TỐT NHẤT THỊ TRƯỜNG, LH 0909 678 859', '1.8 tỷ', 'Căn hộ Topaz nằm ngay ngã tư Cao Lỗ và Tạ Quang Bửu với vị trí vàng mà hiếm có căn hộ nào có được: Chỉ trong vòng 2km quý khách hàng có thể di chuyển qua Q1, Q5 và Q7 với tình trạng giao thông cực kì thông thoáng. Tiện ích nội khu và ngoại khu đầy đủ (gym, spa, siêu thị, hồ bơi, trung tâm thương mại... ). Đặc biệt khuôn viên cây xanh rộng lớn tới 9ha.<br/><br/>Topaz phát triển với 2 dòng căn hộ: Topaz City và Topaz Elite.<br/>* Topaz Ciy: Căn hộ thương mại thiết kế thông minh và hiện đại từ 2PN - 3PN.<br/>- Topaz block B1, block b2 và block A2: 100% khách hàng đã nhận nhà: + Giá 1 tỷ 8 - 1 tỷ 870: 2PN, 70m2 - 73m2.<br/>+ Giá 2 tỷ 1 - 2 tỷ 5: 3PN, 92m2 - 95m2.<br/>- Topaz City block A1: Cuối 2018 giao nhà.<br/>+ Giá 1 tỷ 7 - 1 tỷ 750: 2PN, 70m2 - 73m2.<br/>+ Giá 2 tỷ - 2 tỷ 350: 3PN, 95m2.<br/>* Topaz Elite: Căn hộ thương mại cao cấp: Thiết kế hiện đại đẳng cấp, nội thất cao cấp.<br/>Hiện tại khách hàng kí gửi sang nhượng nhiều sản phẩm Topaz Elite: Phoenix 1, Phoenix 2, Dragon 2 và Dragon 1 với đầy đủ các diện tích từ 59.26m2 - 92m2 với giá cực kì tốt cho khách hàng có thiện chí mua ở và đầu tư.<br/><br/>Phương thức thanh toán cực kì linh hoạt. Đặc biệt Ngân hàng Vietcombank và OCB hỗ trợ cho vay với lãi suất cực kì ưu đãi, hồ sơ thủ tục nhanh gọn. Liên hệ ngân hàng 0909 191 324 (tiếp nhận thông tin 24/7).<br/><br/>Liên hệ trực tiếp để nhận thông tin chi tiết và xem nhà thực tế: 0909 678 859 - Mr Vũ (tiếp nhận thông tin 24/24).', '70m²', 'Nhà đất bán', 'Bán căn hộ chung cư', 'Dự án Topaz City, Đường Cao Lỗ, Phường 4, Quận 8, Hồ Chí Minh', '2018-04-16', 'KHÁCH KẸT TIỀN CẦN BÁN CĂN TOPAZ CITY VÀ TOPAZ ELITE GIÁ TỐT NHẤT THỊ TRƯỜNG, LH 0909 678 859', 'Lê Xuân Vũ', '0909191324', '', '', 2, 'f442a2db73f9feb5dd30ad44e72046e2', 1),
-(22, 'https://batdongsan.com.vn/ban-nha-rieng-pho-trung-liet-phuong-trung-liet/gia-dinh-di-dinh-cu-gap-dep-tam-dong-da-gia-loc-manh-tay-lh-0983-574-547-ba-phuong-pr15627335', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '6408041573cab607b74db83018717b45', 1),
+(22, 'https://batdongsan.com.vn/ban-nha-rieng-pho-trung-liet-phuong-trung-liet/gia-dinh-di-dinh-cu-gap-dep-tam-dong-da-gia-loc-manh-tay-lh-0983-574-547-ba-phuong-pr15627335', 'GIA ĐÌNH ĐI ĐỊNH CƯ BÁN GẤP NHÀ ĐẸP TRUNG TÂM ĐỐNG ĐA, GIA LỘC MẠNH TAY, LH: 0983.574.547 BÀ PHƯƠNG', '5.05 tỷ', 'Do chuẩn bị đi định cư nước ngoài nên gia đình tôi cần bán gấp căn nhà đẹp tâm huyết.<br/>Vị trí: Phố Trung Liệt (cách ngã tư Trung Liệt Thái Hà 15m). Trung tâm của trung tâm - Tiện ích cùng phố: Rạp Chiếu Phim Quốc Gia, Trung tâm tiếng Anh Apollo, Bể Bơi Thái Hà, Phố Kỹ Thuật Số, Phố Ẩm thực, Phố Tài Chính, Chợ Thái Hà, Bệnh Viện Thái Thịnh...<br/><br/>Nhà cách mặt phố Trung Liệt 3m (Phố Trung Liệt ô tô 12 chỗ tránh) cách Ga đường sắt trên cao <a href=\"/ban-nha-rieng-pho-hoang-cau-3\">Hoàng Cầu</a> 300m, Đồn Công An, Ủy Ban Phường 200m...<br/><br/>Dân trí: Khu phố dân trí cao, khu phố văn hóa gần các khu cán bộ lãnh đạo ủy ban và văn phòng chính phủ. Điện, nước, vệ sinh ổn định, sạch sẽ trật tự...<br/><br/>Kết cấu: Nhà khung bê tông, xây kiên cố, lên tầng thoải mái...<br/>Hiện trạng 3 tầng, 1 tum, Thiết kế hài hòa đẹp theo thời gian.<br/>- Tầng 1: Sân, phòng khách, bếp.<br/>- Tầng 2, 3: 4 phòng ngủ, 2 wc.<br/>- Tầng 4: Sân phơi, sân kho, khu thờ.<br/><br/>Phù hợp: Hộ gia đình, hoặc cải tạo cho thuê từng phòng, hoặc cho thuê cả nhà (15triệu đồng/tháng) hoặc làm địa điểm giao nhận hàng, bán hàng online, kinh doanh tốt.<br/><br/>Sổ hồng: Sổ hồng chính chủ, một tên một chủ giao dịch dễ dàng ngay trong ngày... Phòng công chứng và ngân hàng ngay cùng phố. Diện tích sổ 46m2, diện tích sử dụng 190 m2.<br/><br/>Địa chỉ: Số Nhà 3 Ngõ 47 Trung Liệt, Đống Đa, Hà Nội.<br/><br/>Giá tốt nhất so với 2000 bất động sản thổ cư đang giao bán tại Quận Đống Đa.<br/><br/>Giá bán: 5.05 tỷ đồng.<br/>Có thương lượng, gia lộc Mạnh Tay với khách Thiện Chí.<br/>Có hoa hồng 1% cho các bạn môi giới nếu giới thiệu được khách.<br/><br/>Cơ hội sống tiện lợi và trở thành công dân quận Đống Đa (quận sầm uất nhất Hà Nội) trong tầm tay. Hãy nhấc điện thoại gọi ngay cho Chính Chủ: 0983.574.547 Bà Phương để xem nhà.<br/><br/>Miễn báo mạng.<br/><br/>Xin cảm ơn vì đã đọc hết tin.', '46m²', 'Nhà đất bán', 'Bán nhà riêng', 'Phố Trung Liệt, Phường Trung Liệt, Đống Đa, Hà Nội', '2018-04-16', 'GIA ĐÌNH ĐI ĐỊNH CƯ BÁN GẤP NHÀ ĐẸP TRUNG TÂM ĐỐNG ĐA, GIA LỘC MẠNH TAY, LH: 0983.574.547 BÀ PHƯƠNG', 'A. Nguyên', '0919916539', 'chubaonguyen2014@gmail.com', '', 2, '6408041573cab607b74db83018717b45', 1),
 (23, 'https://batdongsan.com.vn/ban-can-ho-chung-cu-phuong-hoang-liet-prj-khu-do-thi-moi-phap-van-tu-hiep/gap-2-614-no8-va-1004-no18-lh-chinh-chu-0988766479-pr15205148', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '48aec08b1e6a84e1c4199efb27ab56bc', 1),
 (24, 'https://batdongsan.com.vn/ban-dat-xa-cua-duong/toi-can-o-ong-lang-phu-quoc-nen-toi-vua-bay-ra-phu-quoc-a-c-lh-0903-902-193-pr14388486', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'cfa069ebc9b595e2456cde9a3323c007', 1),
 (25, 'https://batdongsan.com.vn/ban-dat-duong-an-thuong-30-phuong-my-an/mat-tien-khu-bien-387-sinh-loi-tot-dt-162m2-huong-nam-gia-chi-25-ty-pr15626441', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '34e0db500bed2a256aee255564e89e4e', 1),
@@ -128,15 +126,15 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 (67, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-nguyen-khanh-toan-phuong-dich-vong/tai-nga-tu-van-huyen-h-tieu-c-b-pr15624907', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'abd7025a84d7438b12c65451f89c0bcf', 1),
 (68, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-pho-quang-phuong-2-22-prj-sky-center/chinh-chu-ngay-sat-san-bay-du-an-cao-cap-noi-that-day-du-pr15626302', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '849bf59c241099ad14623bbd37f7689e', 1),
 (69, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-song-hanh-phuong-an-phu-prj-estella-heights/nhu-nho-nhan-chuyen-ch-height-hang-cap-nhat-lien-tuc-gia-rat-rat-tot-luon-a-pr14433633', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '8d1b2c2e01293c34d1cf3723bccee9e6', 1),
-(70, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-pho-ton-duc-thang-prj-vinhomes-golden-river-ba-son/toi-o-toa-aqua-3-du-an-vinmes-day-du-noi-that-pr15603705', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '14d48107b7a70c0b7f9977105ed4774a', 1),
+(70, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-pho-ton-duc-thang-prj-vinhomes-golden-river-ba-son/toi-o-toa-aqua-3-du-an-vinmes-day-du-noi-that-pr15603705', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '14d48107b7a70c0b7f9977105ed4774a', 1);
+INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
 (71, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-15b-phuong-phu-my-9-prj-the-era-town/tong-p-quan-7-tu-1-3-pn-full-noi-that-gia-re-lh-0903-36-18-28-pr15625600', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '4d5f11677bd82c984d70ea564de5d675', 1),
 (72, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-nguyen-huu-canh-phuong-22-prj-vinhomes-central-park/vinmes-2-png-ngu-pr15624385', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '966fc7868cdda57c95bc85a1139e2aab', 1),
 (73, 'https://batdongsan.com.vn/cho-thue-nha-rieng-duong-nghia-phat-phuong-6-15/phong-day-du-tien-nghi-va-1-mat-bang-gia-1tr-thang-pr15624789', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'b7dd1808d4e1f9b5a529608121df316f', 1),
 (74, 'https://batdongsan.com.vn/cho-thue-nha-tro-phong-tro-duong-dien-bien-phu-phuong-da-kao/y-du-noi-that-p-quan-1-lhcc-0935623911-pr13204524', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'ba94194f42b7a0628cab2654faee9d97', 1),
 (75, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-nguyen-huy-tuong-phuong-thanh-xuan-trung-prj-imperia-garden/xem-nha-247-0915-35-365-noi-that-co-ban-va-du-do-gia-canh-tranh-pr15521853', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'a554153f46cd8992510d598fa6ecc5f4', 1),
 (76, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-ham-nghi-thi-tran-cau-dien-prj-vinhomes-gardenia/mb-viet-nam-0915-351-365-khong-do-full-do-gia-canh-tranh-nhat-truong-pr15520805', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '3f2d8f4a5a8f948a7b3df03f837a7bbb', 1),
-(77, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-nguyen-huu-tho-phuong-tan-hung-14-prj-sunrise-city/chuyen-ch-1-2-3-4pn-officetel-shop-penthouse-gia-68-trieu-0977771919-pr15624138', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'ecf8de7a9c4f689c71de97909bc7d554', 1);
-INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
+(77, 'https://batdongsan.com.vn/cho-thue-can-ho-chung-cu-duong-nguyen-huu-tho-phuong-tan-hung-14-prj-sunrise-city/chuyen-ch-1-2-3-4pn-officetel-shop-penthouse-gia-68-trieu-0977771919-pr15624138', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'ecf8de7a9c4f689c71de97909bc7d554', 1),
 (78, 'https://batdongsan.com.vn/cho-thue-nha-tro-phong-tro-duong-tran-hung-dao-phuong-cau-kho/dich-vu-cao-cap-tai-quan-1-pr13702529', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '9c213b342c4180e5eaa7d420167d61d1', 1),
 (79, 'https://batdongsan.com.vn/cho-thue-van-phong-duong-to-huu-xa-trung-van-prj-khu-do-thi-moi-phung-khoang/san-thuong-mai-toa-nha-housinco-dt-80m2-168m2-242m2-pr15319223', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '8d9cb40afa5bf2e76e6362a2321abb49', 1),
 (80, 'https://batdongsan.com.vn/cho-thue-nha-tro-phong-tro-duong-dang-thai-mai-68/can-gia-re-3-trieu-thang-xinh-dep-o-quan-phu-nhuan-pr15623584', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'de28bcc818f5cc9766fa72032d01c148', 1),
@@ -302,15 +300,15 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 (240, 'https://batdongsan.com.vn/ban-can-ho-chung-cu-phuong-an-phu-prj-palm-city/cao-cap-garden-tt-quan-2-gia-33tr-m2-dot-pha-thanh-toan-1-thang-lien-he-0939633833-pr15608287', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '5b131d5b2871c11274fbd052bfaa3273', 1),
 (241, 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-bat-nan-phuong-binh-trung-tay-prj-saigon-mystery-villas/cdt-hung-thinh-mo-khu-mat-tien-song-sai-gon-gia-tu-8-7-ty-ck-3-24-lh-0913057579-pr14422670', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'a3647eeba80bf45a423d02e611ea9b7b', 1),
 (242, 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-minh-khai-phuong-vinh-tuy-prj-vinhomes-times-city-park-hill/cat-lo-cac-gia-re-nhat-vao-o-ngay-lh-0945-575-668-pr14953810', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'f28ace22b6d31559b63f24d40e6f175e', 1),
-(243, 'https://batdongsan.com.vn/ban-nha-rieng-duong-thoai-ngoc-hau-phuong-phu-thanh/hem-xe-hoi-quay-dau-quan-tan-phu-pr15581594', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '50a4a6f422ab15b49ff7b9fa4fb1a352', 1),
+(243, 'https://batdongsan.com.vn/ban-nha-rieng-duong-thoai-ngoc-hau-phuong-phu-thanh/hem-xe-hoi-quay-dau-quan-tan-phu-pr15581594', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '50a4a6f422ab15b49ff7b9fa4fb1a352', 1);
+INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
 (244, 'https://batdongsan.com.vn/ban-nha-biet-thu-lien-ke-duong-bung-ong-thoan-phuong-phu-huu-2-prj-villa-park/nghi-ven-song-300m2-12-ty-qua-tang-250tr-chiet-khau-5-vay-80-0901358432-pr15602237', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'e880facd9007336cdd897bdf264bc6bd', 1),
 (245, 'https://batdongsan.com.vn/ban-nha-mat-pho-duong-me-linh-phuong-hoa-hiep-nam-prj-lakeside-palace/cc-nhuong-lai-2-can-lien-ke-shophouse-mt-34m-ngay-cong-chao-du-an-pr15602109', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '988a95a9080fd0d760d450a87b03435a', 1),
 (246, 'https://batdongsan.com.vn/ban-dat-nen-du-an-phu-quoc-kg/vang-mo-trong-tuan-cam-ket-loi-nhuan-hon-20-lh-thanh-09321-45799-pr15601451', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '33a927fa87154fb863a90639e5f2e6ad', 1),
 (247, 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-quoc-lo-51-xa-long-hung-6-prj-dreamland-city/gap-nha-pho-khu-gan-song-gia-9-8-trieu-m2-lien-he-ngay-de-xem-0915-224-799-pr9856132', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'de98a6e07ea61d5063580b3d1451b2ce', 1),
 (248, 'https://batdongsan.com.vn/ban-can-ho-chung-cu-pho-le-trong-tan-phuong-duong-noi-prj-icid-complex/chia-ka-trao-tay-tng-minh-smarme-ha-dong-chi-voi-300-trieu-lh-0984175357-pr15601270', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '867e90a085be8ed56c27ef451274e407', 1),
 (249, 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-nhu-nguyet-phuong-thuan-phuoc-prj-risemount-apartment-da-nang/lo-dien-truyen-tng-chuan-nhat-ben-song-han-cao-cap-nang-pr15600906', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '7b9ef594d5658447a039a12302051607', 1),
-(250, 'https://batdongsan.com.vn/ban-dat-duong-nguyen-duy-trinh-61/nen-cho-long-truong-quan-9-pr11831839', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '206659d2c0aa84e737c13ffd1d79b3c9', 1);
-INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
+(250, 'https://batdongsan.com.vn/ban-dat-duong-nguyen-duy-trinh-61/nen-cho-long-truong-quan-9-pr11831839', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '206659d2c0aa84e737c13ffd1d79b3c9', 1),
 (251, 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-suoi-cai-xa-bai-thom/lo-2-mat-tien-cua-c-c-hop-tac-dau-tu-kdc-hoac-sg-lai-chu-chi-l-0917619089-pr15600336', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd3a513b5c68a977ad3e2e51fe4da05e6', 1),
 (252, 'https://batdongsan.com.vn/ban-dat-nen-du-an-duong-le-hong-phong-xa-long-tho-prj-khu-do-thi-moi-phuoc-an/mua-ky-gui-hud-so-ca-nh-cu-100-lh-0911-504-868-pr15435615', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '766236843d7ec2b2c3c7711dc651c3cc', 1),
 (253, 'https://batdongsan.com.vn/ban-can-ho-chung-cu-duong-tran-hung-dao-phuong-an-hai-tay-prj-the-monarchy/mua-chinh-thuc-tu-chu-dau-tu-ndn-loi-ich-khi-mua-truc-tiep-kng-qua-trung-gian-pr15599672', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '4e5e98fdb16c0970a95b39e774567eb7', 1),
@@ -474,15 +472,15 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 (411, 'http://phonhadat.net/ban-nha-mat-pho-duong-nguyen-du-53/ban-nha-mat-tien-duong-nguyen-du-quan-1-dtcn-176m2-gia-40-ty0931480960-pr9920546.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '5d73c1e815167a68686c838febc15368', 3),
 (412, 'http://phonhadat.net/ban-nha-mat-pho-duong-mac-dinh-chi-1-53/ban-nha-mat-tien-mac-dinh-chi-p-dk-quan-1-22m-x-55mgia-390-ty-pr9920554.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '10306b7c678fa8c12cc07192e83bf437', 3),
 (413, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/can-tien-ban-gap-dat-gan-cho-trieu-khuc-40m2-gia-chi-1880-ty-gan-ho-o-to-do-cach-5m-0917-185-826-pr9920530.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '90ed254aff5ff57f0f73a891bc193cd9', 3),
-(414, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/ban-dat-gian-dan-60m2-ngo-66-trieu-khuc-duong-rong-12m-co-via-he-gia-54-ty-lh-0917185826-pr9920543.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '95868ff811d0411beefc5fb13d1b114c', 3),
+(414, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/ban-dat-gian-dan-60m2-ngo-66-trieu-khuc-duong-rong-12m-co-via-he-gia-54-ty-lh-0917185826-pr9920543.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '95868ff811d0411beefc5fb13d1b114c', 3);
+INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
 (415, 'http://phonhadat.net/ban-nha-mat-pho-duong-pasteur-53/ban-nha-mat-tien-duong-pasteurquan-1-dtcn-98m2-gia-32-ty0931480960-pr9920555.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '1efc12cb4d5471fc48cf4584faf9f97c', 3),
 (416, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/can-ban-gap-dat-mat-ngo-66a-va-mat-duong-21m-trieu-khuc-o-to-do-cua-kinh-doanh-duoc-sat-cong-phu-cdgtvt-gia-127tr1m-0917185826-pr9920531.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '37d2f721d6f3998864054b27606b2d82', 3),
 (417, 'http://phonhadat.net/ban-nha-mat-pho-duong-nguyen-thi-minh-khai-53/ban-nha-2-mat-tien-duong-nguyen-thi-minh-khai-phuong-da-kao-q1-dt9x10mgia225-ty-pr9920544.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'c028a859cffdc9dfedf56f97032f105c', 3),
 (418, 'http://phonhadat.net/ban-nha-rieng-duong-nguyen-trai-53/ban-nha-mat-tien-nguyen-trai-q1-vi-tri-vang-gan-cho-ben-thanh-gia-32-ty-pr9920553.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '85335e26eb188cfbc0bb9691f8313df4', 3),
 (419, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/ban-dat-gian-dan-60m2-ngo-66-trieu-khuc-duong-rong-12m-co-via-he-gia-54-ty-lh-0917185826-pr9920529.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '959903c6d5295db6ad4f3368f6a14897', 3),
 (420, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/cc-can-ban-gap-dat-52m-ngo-58-trieu-khuc-o-to-do-cua-gan-nguyen-trai-gia-42-ty-0917185826-pr9920542.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '7d8edb0e0e4ef8c930ededa2dae7896c', 3),
-(421, 'http://phonhadat.net/ban-dat-phuong-hiep-binh-phuoc/dat-hiep-binh-phuoc-thu-duc-tho-cu-shr-dau-tu-sinh-loi-pr9920556.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '0a76452fa0b66cf4b992276c1363d070', 3);
-INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
+(421, 'http://phonhadat.net/ban-dat-phuong-hiep-binh-phuoc/dat-hiep-binh-phuoc-thu-duc-tho-cu-shr-dau-tu-sinh-loi-pr9920556.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '0a76452fa0b66cf4b992276c1363d070', 3),
 (422, 'http://phonhadat.net/ban-nha-rieng-phuong-thanh-xuan-nam/ban-dat-phan-lo-40m2-trieu-khuc-thanh-xuan-o-to-vao-sat-uy-ban-tan-trieu-duong-6m-gia-295-ty-lh-0917185826-pr9920532.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '9f4bbeb3c1eaeac7f3def769bd74368b', 3),
 (423, 'http://phonhadat.net/ban-nha-rieng-duong-cat-linh-phuong-cat-linh/ban-nha-pho-cat-linh-32m24-tang-nha-ngay-gan-mat-pho-cat-linh-gia-3-ty-pr9920545.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '43efe1902f809e504071db5920909dbb', 3),
 (424, 'http://phonhadat.net/ban-nha-mat-pho-duong-cao-thang-55/ban-nha-mat-tien-cao-thang-quan-3-25m-x-40mgia-318ty-pr9920557.htm', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd5ca97c39d7917ce31a1795cac9ee724', 3),
@@ -633,14 +631,14 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 (669, 'http://batdongsan.vn/can-cho-thue-kho-gap-kcn-song-than-di-an-binh-duong-lh-0989364402-p174644.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'cb82281b76b804eba287d8f0385c51d3', 7),
 (670, 'http://batdongsan.vn/cho-thue-kho-cat-lai-quan-2-tphcm-100m2-200m21000m2-lh-0989364402-p174638.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'a9c6722f82fff91e40ac1c10e2553ab5', 7),
 (671, 'http://batdongsan.vn/cho-thue-nha-1tang-150m2-dat-duong-an-thuong-3-pn-full-noi-that-co-gara-o-to-30-tr/thang-p174635.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '9b2f7da69b9fcd7d866817d2ced23609', 7),
-(672, 'http://batdongsan.vn/mat-bang-trong-suot-mat-tien-nui-thanh-hop-lam-showroom-cafe-p174615.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '475df77fd17e0ea609a87cb3eebdfeda', 7),
+(672, 'http://batdongsan.vn/mat-bang-trong-suot-mat-tien-nui-thanh-hop-lam-showroom-cafe-p174615.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '475df77fd17e0ea609a87cb3eebdfeda', 7);
+INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
 (673, 'http://batdongsan.vn/nha-kiet-ngo-quyen-full-noi-that-cho-thue-o-lau-dai-chi-17-trieu-p174606.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'c368333122abf420d06a515528b4d143', 7),
 (674, 'http://batdongsan.vn/cho-thue-cua-hang-van-phong-tai-tay-son-dong-da-dt60m110m-lh-chinh-chu-0916514190-p174594.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'f165433ccfda2b20b8bb7c8df9b9a878', 7),
 (675, 'http://batdongsan.vn/chi-4tr/thang-thue-ngay-can-ho-mini-cao-cap-an-ninh-trung-tam-quan-7-moi-100-tang-noi-that-co-ban-p174573.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'd5172843d15d888088b35b6d52637bf0', 7),
-(676, 'http://batdongsan.vn/cho-thue-van-phong-mat-pho-le-thanh-nghihai-ba-trunglh-0971569085-p174490.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '4d9d36f7011bd9260e643fbfe0715b3c', 7);
-INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
+(676, 'http://batdongsan.vn/cho-thue-van-phong-mat-pho-le-thanh-nghihai-ba-trunglh-0971569085-p174490.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '4d9d36f7011bd9260e643fbfe0715b3c', 7),
 (677, 'https://homedy.com/chinh-chu-cho-thue-4-can-ho-mini-tai-phuong-11-binh-thanh-hem-xe-hoi-full-noi-that-cao-cap-es351698', 'Ch&#237;nh chủ cho thu&#234; 4 căn hộ mini tại Phường 11, B&#236;nh Thạnh. Hẻm xe hơi, Full nội thất cao cấp', '10 - 15</span>\r\n                            <em>Triệu/th&#225;ng</em>\r\n                    ', '30 - 40</span>\r\n                        <em>m²</em>\r\n                    ', '✨✨ Chính chủ cho thuê 4 căn hộ  mini tại P.11, Q.Bình Thạnh. Hẻm Xe hơi vào tận nhà, ngay ngã tư Phạm văn Đồng - Phan Văn Trị</strong><strong> ✨✨</strong></p>\n\n<p>- Địa Chỉ : Ngã tư Phạm Văn Đồng - Phan Văn Trị, Phường 11, Quận Bình Thạnh, TP. HCM</p>\n\n<p>- Cho thuê <a href=\"https://homedy.com/ban-can-ho-mini\" title=\"căn hộ mini\"><strong>căn hộ mini</strong></a> Bình Thạnh nằm trong khu dân cư văn minh, lịch sự, yên tĩnh.</p>\n\n<p>- Thuê căn hộ Bình Thạnh giá hợp lí, hẻm xe hơi an ninh rất đảm bảo.</p>\n\n<p>- Ra sân bay khoảng 7 phút. </p>\n\n<p>- Qua quận 1 chừng 10 phút. Gần siêu thị Emart. Gần trường quốc tế Việt Úc.</p>\n\n<p>- Diện tích <a href=\"https://homedy.com/cho-thue-can-ho-chung-cu\" title=\"cho thuê căn hộ\"><strong>cho thuê căn hộ</strong></a> Bình Thạnh từ 30 - 40m2. </p>\n\n<p>- Giá căn hộ cho thuê quận Bình Thạnh từ 10 - 15 triệu/tháng</p>\n\n<p>- Căn hộ được chủ nhà đầu tư tỉ mỉ từng chi tiết, màu sắc, không gian, tràn ngập ánh sáng để quý khách hàng có được khoảng thời gian thư giãn, bình yên sau giờ làm việc.</p>\n\n<p>- Có sân thượng là vườn hoa và thác nước.</p>\n\n<p>- Tất cả các phòng đều được trang bị nội thất hiện đại như hình ảnh, căn nhà hiện đại, ấm cúng và sang trọng phù hợp với các hộ gia đình, người nước ngoài công tác tại Việt Nam thuê để ở.</p>\n\n<p>Video chi tiết về căn nhà tại địa chỉ: <a href=\"https://www.youtube.com/watch?v=QQjx9aHdunk\" rel=\"nofollow\" target=\"_blank\">https://www.youtube.com/watch?v=QQjx9aHdunk</a></p>\n\n<p>☎️☎️<strong> Nếu bạn cần tìm căn hộ, liên hệ Ms. Bảo Ngọc để xem và thuê căn hộ mini Bình Thạnh, miễn tiếp môi giới</strong></p>\n\n<p>========================================================================================</p>\n\n<p><strong>✨✨ MINI FURNISHED APARTMENT FOR RENT IN WARD 11, BINH THANH DISTRICT. LOCATED IN WIDE ALLEY NEAR THE CROSSROAD PHAM VAN DONG - PHAN VAN TRI THAT CARS CAN GO IN ✨✨ </strong></p>\n\n<p>-Address: Crossroad Pham Van Dong - Phan Van Tri, ward 11, Binh Thanh district, HCM city.- Civilized, courteous, and quite residential area.</p>\n\n<p>- Safely path that transportation can move freely.</p>\n\n<p>- Reasonable renting price.</p>\n\n<p>- 7 minutes to the airport, 10 minutes to district 1.</p>\n\n<p>- Emart supermarket and Vietnam Australia international school are nearby.</p>\n\n<p>- The area of each household is 30 to 40 m^2.</p>\n\n<p>- Renting cost: $450 - $650/ 1 month.</p>\n\n<p>- This apartment is meticulous investment in every detail. With elegant decoration and open floor plan, this is a worthy place not only to live but also to relax.</p>\n\n<p>- There’s also a balcony with small garden and penjing</p>\n\n<p>- Every households are equipped with updated furniture as described in the video below. A cozy, luxury and modern apartment for families, foreigners that are working in Vietnam</p>\n\n<p><strong>Video:</strong> <a href=\"https://www.youtube.com/watch?v=QQjx9aHdunk\" rel=\"nofollow\" target=\"_blank\">https://www.youtube.com/watch?v=QQjx9aHdunk</a></p>\n\n<p>☎️☎️ <strong>Booking Contact</strong><em><strong>: Ms. Bao Ngoc, email: mshoang2014@gmail.com </strong></em></p>\n\n<p><em><strong>Thank you very much!</strong></em></p>\n\n<p> </p>', '', '', 'Đường Phạm Văn Đồng', '2018-04-17', '', ' Bảo Ngọc', '0903502457', '', '', 2, 'd1d74019817117dc58a1a6d304fa016a', 8),
-(678, 'https://homedy.com/cho-thue-can-ho-studio-full-noi-that-thiet-ke-dep-ban-cong-view-dep-mat-tien-duong-100-new-es340058', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '27e9dcb43a442c004cb80800e31e90c4', 8),
+(678, 'https://homedy.com/cho-thue-can-ho-studio-full-noi-that-thiet-ke-dep-ban-cong-view-dep-mat-tien-duong-100-new-es340058', 'Cho thu&#234; căn hộ Studio Full nội thất thiết kế đẹp, ban c&#244;ng view đẹp mặt tiền đường - 100% new', '5</span>\r\n                            <em>Triệu/th&#225;ng</em>\r\n                    ', '25</span>\r\n                        <em>m²</em>\r\n                    ', 'CHO THUÊ CĂN HỘ QUẬN 8 IN SAIGON</strong></p>\n\n<p><strong>???? Với hệ thống nội thất thông minh của INSAIGON, diện tích 20 - 25m2 vẫn đảm bảo 1 toilet, 1 bếp, <a href=\"https://homedy.com/ban-can-ho-1-phong-ngu\" title=\"1 phòng ngủ\"><strong>1 phòng ngủ</strong></a> , 1 phòng khách và 1 góc ăn uống. Và một tiêu chí cực kì quan trọng, INSAIGON sử dụng hoàn toàn năng lượng sạch chống cháy nổ và máy nươc nóng năng lượng măt trời. </strong></p>\n\n<p><strong>???? Địa chỉ <a href=\"https://homedy.com/cho-thue-can-ho-chung-cu\" title=\"cho thuê căn hộ\"><strong>cho thuê căn hộ</strong></a> quận 8: </strong><strong>269 Âu Dương Lân, Phường 2, Quận 8, Mặt tiền đường. </strong></p>\n\n<p><strong>???? Cách quận 1, 3, 5 ,7   5 - 10 phút đi xe máy</strong></p>\n\n<p>Thuế <a href=\"https://homedy.com/ban-can-ho-chung-cu\" title=\"căn hộ\"><strong>căn hộ</strong></a> quận 8 xung quanh có siêu thị tiện ích Circle K, Bmart  đối điện, hệ thống siêu thị bán rau củ quả sạch CoopFood cách 10m. </p>\n\n<p>Nhà thuốc kế bên, trạm y tế, phong tâp gym cách 50m</p>\n\n<p><strong>Giá thuê <a href=\"https://homedy.com/ban-can-ho-gia-re\" title=\"căn hộ giá rẻ\"><strong>căn hộ giá rẻ</strong></a> quận 8 thiện chí</strong>: <strong>5 - 6 triệu </strong>( hợp đồng dài hạn) </p>\n\n<p><strong>1. Nội thất có sẵn: </strong></p>\n\n<p>- Hệ thồng Giường, tủ bếp, tủ quần áo, bàn ăn, bàn làm việc tích hợp , toilet riêng.</p>\n\n<p>- Giường Nệm ( ko bao gồm ga giương)  </p>\n\n<p>- Bếp điện từ, máy lạnh , tủ lạnh ( 110 lit cỡ lớn) </p>\n\n<p>- Máy nước nóng năng lượng mặt trời, </p>\n\n<p><strong>2. Thuê căn hộ quận 8 giá rẻ có dịch vụ free đính kèm : </strong></p>\n\n<p>- Dọn dẹp phòng 1 tuần /1 lần </p>\n\n<p>- Wifi Free</p>\n\n<p>- Hầm gủi xe free  ( bảo vệ 24/24) , không giới hạn giờ giấc. </p>\n\n<p>- Thang máy. </p>\n\n<p><strong>3. Điện nước tính giá nhà nước. </strong></p>\n\n<p><strong>4. Môi trường an ninh, dân trí cao, sạch sẽ nhà hoàn toàn mới 100% </strong></p>\n\n<p>Hãy liên hệ để trở thành những vị khách đầu tiên hưởng dịch vụ, không gian tối ưu nhất ! </p>\n\n<p><strong>Mọi thông tin chi tiết vui lòng liên hệ chủ nhà Ms.Châu cho thuê căn hộ quận 8</strong></p>\n\n<p>Thông tin thêm: A - Z về INSAIGON: </p>\n\n<p> </p>\n\n<p> </p>', '', '', 'Đường Âu Dương Lân', '2018-04-16', '', ' Nguyễn Phương Minh Ch&#226;u', '0941363133', '', '', 2, '27e9dcb43a442c004cb80800e31e90c4', 8),
 (679, 'https://homedy.com/chuyen-cho-thue-can-ho-muong-thanh-bien-son-tra-da-nang-theo-ngay-thang-nam-gia-tot-nhat-es349085', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'b87049b2411765d868a183477d0877e7', 8),
 (680, 'https://homedy.com/chinh-chu-cho-thue-phong-tro-quan-go-vap-phong-moi-tien-nghi-gia-tu-15-trieuthang-es288438', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, '341fe49d18a90af856ae7a8af5006107', 8),
 (681, 'https://homedy.com/ky-tuc-xa-cao-cap-binh-thanh-sach-se-bao-dien-nuoc-may-lanh-cho-nau-an-chi-15-trieuthang-es359383', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'e65cff75fedb1483a3d118e4fd3dc16b', 8),
@@ -683,13 +681,12 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 --
 
 DROP TABLE IF EXISTS `patterns`;
-CREATE TABLE IF NOT EXISTS `patterns` (
-  `pattern_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `patterns` (
+  `pattern_id` int(11) NOT NULL,
   `pattern_category_id` int(11) DEFAULT NULL,
   `pattern_regex` text COLLATE utf8mb4_unicode_ci,
-  `site_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`pattern_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `site_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `patterns`
@@ -795,11 +792,10 @@ INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `s
 --
 
 DROP TABLE IF EXISTS `pattern_categories`;
-CREATE TABLE IF NOT EXISTS `pattern_categories` (
-  `patt_category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `patt_category_name` text COLLATE utf8mb4_unicode_ci,
-  PRIMARY KEY (`patt_category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `pattern_categories` (
+  `patt_category_id` int(11) NOT NULL,
+  `patt_category_name` text COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pattern_categories`
@@ -828,12 +824,11 @@ INSERT INTO `pattern_categories` (`patt_category_id`, `patt_category_name`) VALU
 --
 
 DROP TABLE IF EXISTS `sites`;
-CREATE TABLE IF NOT EXISTS `sites` (
-  `site_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `sites` (
+  `site_id` int(11) NOT NULL,
   `site_name` text COLLATE utf8mb4_unicode_ci,
-  `site_url` text COLLATE utf8mb4_unicode_ci,
-  PRIMARY KEY (`site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `site_url` text COLLATE utf8mb4_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `sites`
@@ -856,14 +851,13 @@ INSERT INTO `sites` (`site_id`, `site_name`, `site_url`) VALUES
 --
 
 DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
   `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_password` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_token` text COLLATE utf8mb4_unicode_ci,
-  `user_status` int(11) DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `user_status` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
@@ -871,6 +865,75 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_password`, `user_token`, `user_status`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'RwOPzbuPAODuF1sIlPYQNduEhARZufl3', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `data`
+--
+ALTER TABLE `data`
+  ADD PRIMARY KEY (`data_id`),
+  ADD UNIQUE KEY `data_url_md5` (`data_url_md5`);
+
+--
+-- Indexes for table `patterns`
+--
+ALTER TABLE `patterns`
+  ADD PRIMARY KEY (`pattern_id`);
+
+--
+-- Indexes for table `pattern_categories`
+--
+ALTER TABLE `pattern_categories`
+  ADD PRIMARY KEY (`patt_category_id`);
+
+--
+-- Indexes for table `sites`
+--
+ALTER TABLE `sites`
+  ADD PRIMARY KEY (`site_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `data`
+--
+ALTER TABLE `data`
+  MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=713;
+
+--
+-- AUTO_INCREMENT for table `patterns`
+--
+ALTER TABLE `patterns`
+  MODIFY `pattern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+
+--
+-- AUTO_INCREMENT for table `pattern_categories`
+--
+ALTER TABLE `pattern_categories`
+  MODIFY `patt_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `sites`
+--
+ALTER TABLE `sites`
+  MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
