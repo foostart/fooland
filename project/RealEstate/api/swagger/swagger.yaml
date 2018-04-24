@@ -168,6 +168,33 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+            
+  /Pattern/CheckPattern/:
+    x-swagger-router-controller: patterns_controller
+    get:
+      operationId: checkPattern
+      summary: Check pattern theo tiêu chí
+      description: Check pattern theo từng tiêu chí.
+      parameters:
+        - name: "url"
+          type: "string"
+          in: "query"
+          required: true
+        - name: "values"
+          in: "query"
+          required: true
+          type: "array"
+          items:
+            type: "string"
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GeneralResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   
   #Site API
   /Site/{Token}:

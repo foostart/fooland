@@ -13,9 +13,33 @@ module.exports = {
     updatePatterns: updatePatterns,
     deletePatterns: deletePatterns,
     insertPattern: insertPattern,
-    getPatternsByID: getPatternsByID
+    getPatternsByID: getPatternsByID,
+    checkPattern: checkPattern
 };
 
+
+//check pattern 
+function checkPattern(req, res, next) {
+    var results = {
+        success: 1,
+        items: [],
+        description: "OK"
+    };
+    var url = req.swagger.params['url'].value;
+    var arrPattern = req.swagger.params['values'].value;
+
+    patternModel.check(arrPattern, url, function (values) {
+        if (values.length >= arrPattern.length) {
+            results.success = 1;
+            results.items = values;
+        }
+        else {
+            results.success = 0;
+            results.description = "Error";
+        }
+        res.json(results);
+    });
+}
 // Controller lấy hết tất cả patterns có trong database
 function getAllPatterns(req, res, next) {
     var Token = req.swagger.params['Token'].value;
