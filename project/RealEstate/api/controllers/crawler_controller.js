@@ -37,12 +37,13 @@ function getDataDetailBySiteID(req, res, next) {
         urlLimit = 10;
     }
     var status = 1; // 1: chua co URL trong database , 2: co day du du lieu roi
-    patternModel.find(2, siteID, function (pattern_rows) { // lay ra pattern theo siteID
+    patternModel.findPatternByStatus(status, siteID, function (pattern_rows) { // lay ra pattern theo siteID
+        // console.log(pattern_rows);
         if (pattern_rows != -1) {
             dataModel.findURLByStatus(status, siteID, function (url_rows) {
-                console.log("\r\n url_rows: --------------------------------------------------------");
-                console.log(url_rows);
-                console.log("-------------------------------------------------------------------");
+                // console.log("\r\n url_rows: --------------------------------------------------------");
+                // console.log(url_rows);
+                // console.log("-------------------------------------------------------------------");
                 if (url_rows != -1) {
                     if (urlLimit >= url_rows.length) {
                         urlLimit = url_rows.length;
@@ -73,7 +74,7 @@ function getDataDetailBySiteID(req, res, next) {
                                 dataInput.push([title]);
                                 dataInput.push([price.replace("m<sup>2</sup>", "m²")]);
                                 dataInput.push([area.replace("&nbsp;m&#178;", "m²")]);
-                                dataInput.push([description.replace("<br/>", " ")]);
+                                dataInput.push([description.replace(/<br\/>/g, " ")]);
                                 dataInput.push([typeOfNews]);
                                 dataInput.push([typeBDS]);
                                 dataInput.push([location]);
@@ -98,7 +99,6 @@ function getDataDetailBySiteID(req, res, next) {
                                     }
                                 });
                             }
-                            // console.log("------------------------------------------------------------------------------");
                         });
                     }
 
@@ -110,6 +110,10 @@ function getDataDetailBySiteID(req, res, next) {
             });
         }
     });
+}
+
+function checkPatternValid(pattern_id, data) {
+
 }
 
 function getURLBySiteID(req, res, next) {
@@ -202,8 +206,7 @@ function getURLBySiteID(req, res, next) {
 
 }
 
-function decodeEmail(input)
-{
+function decodeEmail(input) {
     var result = "";
     var pattern = /\&#(\d+);/g
     var match = pattern.exec(input);
@@ -211,7 +214,7 @@ function decodeEmail(input)
         result += String.fromCharCode(parseInt(match[1]));
         match = pattern.exec(input);
     }
-    if (result == ""){
+    if (result == "") {
         return input;
     }
     return result;
@@ -270,6 +273,7 @@ function getHTML(urlRequest, data_id, callback) {
  */
 function getValueByPattern(name, arrayPattern, sourceHTML) {
     var result = "";
+    // var status = 2;
     for (var index = 0; index < arrayPattern.length; index++) {
         var element = arrayPattern[index]["patt_category_name"].toString(); // get name_category of each element in array 
 
@@ -282,6 +286,12 @@ function getValueByPattern(name, arrayPattern, sourceHTML) {
             if (match != null) {
                 result = match[1];
                 break;
+            }
+            else {
+                patternModel.updateStatus(arrayPattern[index]["pattern_id"], 2, function (success) {
+                    console.log("Pattern " + name + " not match:");
+                    console.log("Update status:" + success);
+                });
             }
         }
     }

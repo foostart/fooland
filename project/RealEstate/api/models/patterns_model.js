@@ -55,9 +55,11 @@ class PatternsModel extends DB {
     /**
      * Update data at 'patterns' table
      * @param patternId: Pattern ID to update
+     * @param status : status pattern
+     * @param callback: callback return trueor false 
      */
     updateStatus(patternId, status, callback) {
-        this.executeMySQL("UPDATE patterns SET pattern_status = ? WHERE patterns.pattern_id = ? ", [[status], [patternId]]).then(function (success) {
+        this.executeMySQL("UPDATE patterns SET pattern_status = ? WHERE pattern_id = ? ", [[status], [patternId]]).then(function (success) {
             callback(success);
         }).catch(function (err) {
             console.log(err);
@@ -92,6 +94,15 @@ class PatternsModel extends DB {
             console.log(err);
             callback(-1);
         })
+    }
+
+    findPatternByStatus(status,siteID,callback){
+        this.queryMySQL("SELECT * FROM patterns INNER JOIN pattern_categories ON pattern_categories.patt_category_id=patterns.pattern_category_id WHERE patterns.site_id =? AND patterns.pattern_status = ?",[[siteID],[status]]).then(function (rows) {
+            callback(rows);
+        }).catch(function (err) {
+            console.log(err);
+            callback(-1);
+        })       
     }
 
     /**
