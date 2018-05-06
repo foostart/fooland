@@ -225,8 +225,16 @@
 		systemctl restart httpd.service
 		
 14. Cài đặt phpMyAdmin để quản lý database trên web dễ hơn:
+
+	--Add the EPEL Repository
+		
+		rpm -iUvh http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 	
-		yum install phpMyAdmin
+	--Install phpMyAdmin:
+
+		yum -y update
+
+		yum -y install phpMyAdmin
 		
 	--Tiếp theo sẽ cấu hình phpMyAdmin . Chỉnh sửa Apahe để cho phép các kết nối đến phpMyAdmin không chỉ từ localhost:
 	
