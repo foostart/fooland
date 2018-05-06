@@ -1,0 +1,267 @@
+﻿1. Cài đặt virtuabox:
+
+	--Vào đường dẫn bên dưới để tải về phiên bản virtuabox thích hợp và cài đặt:
+	
+		https://www.virtualbox.org/wiki/Downloads
+
+2. Cài đặt Git Bash:
+
+	--Vào đường dẫn bên dưới để tải về phiên bản Git Bash thích hợp và cài đặt:
+	
+		https://git-scm.com/download/
+
+3. Cài đặt vagrant:
+	--Vào đường dẫn bên dưới để tải về phiên bản vagrant thích hợp và cài đặt:
+	
+		https://www.vagrantup.com/downloads.html
+		
+4. Add box vào vagrant:
+
+	--CentOS 7:
+		vagrant box add centos/7
+		
+	--Ubuntu 14.04LTS:
+		vagrant box add ubuntu/trusty64
+		
+5. Cài đặt centos/7 vào vagrant:
+
+	--Tạo thư mục chứa dữ liệu sau này thao tác với máy ảo vagrant:
+	
+		mkdir folder_name
+	
+		cd folder_name
+	
+	--Gõ lệnh: "vagrant box list" để xem danh sách các box OS được add vào.
+	
+	--NOTE: Tên các box trong list sẽ là tên để tạo máy ảo. Nếu dùng sai tên sẽ không tạo được. Ví dụ: trong box list có các tên "centos/7", "ubuntu/14".. thì khi tạo máy ảo sẽ dùng những tên này.
+	
+	--Tạo máy ảo:
+		vagrant init centos/7
+		
+	--Lúc này vagrant sẽ tạo cho ta 1 file vagrantfile trong thư mục folder_name. Mở file vagrantfile và tìm đến những dòng sau để bỏ những dấu # đầu dòng:
+		
+		# config.vm.network "forwarded_port", guest: 80, host: 8080
+		
+		# config.vm.network "private_network", ip: "192.168.33.10"
+		
+		# config.vm.network "public_network"
+		
+	Sửa thành:
+		
+		config.vm.network "forwarded_port", guest: 80, host: 8080
+		
+		config.vm.network "private_network", ip: "192.168.33.10"
+		
+		config.vm.network "public_network"
+		
+	
+	--Start máy ảo:
+	
+		vagrant up
+	
+	--Login máy ảo:
+	
+		vagrant ssh
+		
+	--Sau khi sửa xong và khởi động lại máy ảo hoàn tất. Vào địa chỉ 127.0.0.1:8080 hoặc 192.168.33.10 để vào webserver.
+	
+6. Cài đặt httpd (Apache2):
+
+	--centos/7:
+	
+		sudo yum -y install httpd
+		
+	--start service httpd apache:
+	
+		sudo service httpd start
+		
+	--Bật tự động Start service httpd apache khi khởi động máy ảo:
+		
+		sudo chkconfig httpd on
+
+7. Đồng bộ hoá dữ liệu giữa máy ảo và máy thật:
+
+	--Mở file vagrantfile và tìm đến dòng sau:
+		
+		# config.vm.synced_folder "../data", "/vagrant_data"
+		
+	Sữa lại thành:
+		
+		config.vm.synced_folder "data", "/home/vagrant/vagrant_data"
+	
+	--NOTE: "data" là tên thư mục chứa dữ liệu cần đồng bộ trên máy thật được đặt trong thư mực "folder_name" chứ máy ảo. "vagrant_data" là thư mục được tạo trên máy ảo để đồng bộ hoá dữ liệu từ máy ảo vào thư mục "data" trên máy thật.
+	
+8. Cài đặt nodejs:
+
+	--centos/7:
+		curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+		
+		sudo yum -y install nodejs
+		
+	--ubuntu:
+		curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+		
+		sudo apt-get install -y nodejs
+
+9. Cài đặt Swagger:
+
+			sudo npm install -g swagger
+		
+10. Fix can't sycn_folder:
+	--Mở git bash và chạy 2 dòng lệnh sau:
+	
+		vagrant plugin install vagrant-vbguest
+	
+		vagrant vbguest
+		
+	--Sau khi chạy xong 2 dòng lệnh trên thì có thể tạo lại máy ảo và synced_folder bình thường.
+
+11. Link box add:
+	http://www.vagrantbox.es
+
+--Add box cũng có thể dùng lệnh sau:
+
+	vagrant box add {title} {url}
+
+--"title" tên box, "url" link tải box. Ví dụ:
+	vagrant box add ubuntu1404 https://github.com/kraksoft/vagrant-box-ubuntu/releases/download/14.04/ubuntu-14.04-amd64.box
+
+12. Cài đặt MySQL:
+
+		sudo yum -y install mariadb-server mariadb
+
+	--Sau đó sẽ tạo một liên kết khởi động cho MySQL (cho phép MySQL khởi động cùng hệ thống ) và khởi động MySQL server.
+
+		sudo systemctl start mariadb.service
+		sudo systemctl enable mariadb.service
+		
+	--Đặt password cho tài khoản root MySQL:
+	
+		sudo mysql_secure_installation
+		
+	----------------------------------------------------------------------------------------------
+	[root@server /]# mysql_secure_installation
+	/usr/bin/mysql_secure_installation: line 379: find_mysql_client: command not found
+
+	NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+	 SERVERS IN PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!
+
+	In order to log into MariaDB to secure it, we'll need the current
+	password for the root user. If you've just installed MariaDB, and
+	you haven't set the root password yet, the password will be blank,
+	so you should just press enter here.
+
+	Enter current password for root (enter for none):   <--ENTER
+	OK, successfully used password, moving on...
+
+	Setting the root password ensures that nobody can log into the MariaDB
+	root user without the proper authorisation.
+
+	Set root password? [Y/n] y
+	New password:                                    <--password mariadb của bạn
+	Re-enter new password: 
+	Password updated successfully!                    
+	Reloading privilege tables..
+	 ... Success!
+
+	By default, a MariaDB installation has an anonymous user, allowing anyone
+	to log into MariaDB without having to have a user account created for
+	them. This is intended only for testing, and to make the installation
+	go a bit smoother. You should remove them before moving into a
+	production environment.
+
+	Remove anonymous users? [Y/n]             <--ENTER
+	 ... Success!
+
+	Normally, root should only be allowed to connect from 'localhost'. This
+	ensures that someone cannot guess at the root password from the network.
+
+	Disallow root login remotely? [Y/n]       <--ENTER
+	 ... Success!
+
+	By default, MariaDB comes with a database named 'test' that anyone can
+	access. This is also intended only for testing, and should be removed
+	before moving into a production environment.
+
+	Remove test database and access to it? [Y/n]        <--ENTER
+	 - Dropping test database...
+	 ... Success!
+	 - Removing privileges on test database...
+	 ... Success!
+
+	Reloading the privilege tables will ensure that all changes made so far
+	will take effect immediately.
+
+	Reload privilege tables now? [Y/n]         <--ENTER
+	 ... Success!
+
+	Cleaning up...
+
+	All done! If you've completed all of the above steps, your MariaDB
+	installation should now be secure.
+
+	Thanks for using MariaDB!
+	
+	----------------------------------------------------------------------------------------------
+	
+13. Cài đặt PHP:
+	
+		sudo yum -y install php
+		
+	--Sau khi cài đặt hoàn tất khởi động lại Apache:
+
+		systemctl restart httpd.service
+	
+	--Để MySQL hỗ trợ trên PHP ta có thể cài gói php-mysql , ta cũng có thể cài một số module PHP5 khác cần thiết , có thể tìm các module PHP5 khác như sau
+
+		yum search php
+		
+	--Chọn 1 cái bạn cần và cài đặt nó:
+
+		yum -y install php-mysql
+		
+	--Khởi động lại Apache2
+
+		systemctl restart httpd.service
+		
+14. Cài đặt phpMyAdmin để quản lý database trên web dễ hơn:
+	
+		yum install phpMyAdmin
+		
+	--Tiếp theo sẽ cấu hình phpMyAdmin . Chỉnh sửa Apahe để cho phép các kết nối đến phpMyAdmin không chỉ từ localhost:
+	
+		vi /etc/httpd/conf.d/phpMyAdmin.conf
+		
+	----------------------------------------------------------------------------------------------
+	Alias /phpMyAdmin /usr/share/phpMyAdmin
+	Alias /phpmyadmin /usr/share/phpMyAdmin
+
+	#<Directory /usr/share/phpMyAdmin/>
+	# <IfModule mod_authz_core.c>
+	# # Apache 2.4
+	# <RequireAny>
+	# Require ip 127.0.0.1
+	# Require ip ::1
+	# </RequireAny>
+	# </IfModule>
+	# <IfModule !mod_authz_core.c>
+	# # Apache 2.2
+	# Order Deny,Allow
+	# Deny from All
+	# Allow from 127.0.0.1
+	# Allow from ::1
+	# </IfModule>
+	#</Directory>
+
+
+	<Directory /usr/share/phpMyAdmin/>
+	 Options none
+	 AllowOverride Limit
+	 Require all granted
+	</Directory>
+	----------------------------------------------------------------------------------------------
+	
+	--Tiếp theo sẽ khởi động lại Apache2:
+		systemctl restart  httpd.service
+		
+	--Sau khi khởi động lại bạn có thể kết nối đến phpMyAdmin bằng cách truy cập đến http://yourip/phpMyAdmin (ví dụ : http://192.168.33.10/phpMyAdmin)	
