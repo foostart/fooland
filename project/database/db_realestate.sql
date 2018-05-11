@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 07, 2018 at 08:37 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 5.6.34
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th5 07, 2018 lúc 09:02 AM
+-- Phiên bản máy phục vụ: 10.1.30-MariaDB
+-- Phiên bản PHP: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_realestate`
+-- Cơ sở dữ liệu: `db_realestate`
 --
 CREATE DATABASE IF NOT EXISTS `db_realestate` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE `db_realestate`;
@@ -27,7 +27,7 @@ USE `db_realestate`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data`
+-- Cấu trúc bảng cho bảng `data`
 --
 
 DROP TABLE IF EXISTS `data`;
@@ -53,7 +53,7 @@ CREATE TABLE `data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `data`
+-- Đang đổ dữ liệu cho bảng `data`
 --
 
 INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_area`, `data_description`, `data_type_of_news`, `data_type_BDS`, `data_location`, `data_date`, `data_project_name`, `data_contact_name`, `data_contact_phone`, `data_contact_email`, `data_contact_address`, `status`, `data_url_md5`, `site_id`) VALUES
@@ -677,7 +677,7 @@ INSERT INTO `data` (`data_id`, `data_url`, `data_title`, `data_price`, `data_are
 -- --------------------------------------------------------
 
 --
--- Table structure for table `patterns`
+-- Cấu trúc bảng cho bảng `patterns`
 --
 
 DROP TABLE IF EXISTS `patterns`;
@@ -685,110 +685,111 @@ CREATE TABLE `patterns` (
   `pattern_id` int(11) NOT NULL,
   `pattern_category_id` int(11) DEFAULT NULL,
   `pattern_regex` text COLLATE utf8mb4_unicode_ci,
-  `site_id` int(11) DEFAULT NULL
+  `site_id` int(11) DEFAULT NULL,
+  `pattern_status` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `patterns`
+-- Đang đổ dữ liệu cho bảng `patterns`
 --
 
-INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `site_id`) VALUES
-(1, 1, '<div class=\'p-title\'>[\\w\\W]*?<a href=\'(.*?)\'[\\w\\W]*?<\\/a>', 1),
-(2, 2, '<h1 itemprop=\"name\">\\s*(.*?)\\s*<\\/h1>', 1),
-(3, 3, 'Giá:<\\/b>\\s*<strong>\\s*(.*?)&nbsp;\\s*<\\/strong>', 1),
-(4, 4, 'Diện tích:<\\/b>\\s*<strong>\\s*(.*?)<\\/strong>', 1),
-(5, 5, '<div class=\"pm-desc\">\\s*(.*?)\\s*<\\/div>', 1),
-(6, 6, '<span class=\"select-text-content\">(.*?)<\\/span>', 1),
-(7, 7, 'Loại tin rao[\\w\\W]*?<div class=\"right\">\\s*(.*?)\\s*<\\/div>', 1),
-(8, 8, 'Địa chỉ\\s*<\\/div>\\s*<div class=\"right\">\\s*(.*?)\\s*<\\/div>', 1),
-(9, 9, 'Ngày đăng:<\\/span>\\s*(.*?)\\s*<\\/div>', 1),
-(10, 10, '<h1 itemprop=\"name\">\\s*(.*?)\\s*<\\/h1>', 1),
-(11, 11, 'Tên liên lạc\\s*<\\/div>\\s*<div class=\"right\">\\s*(.*?)\\s*<\\/div>', 1),
-(12, 12, 'Mobile\\s*<\\/div>\\s*<div class=\"right\">\\s*(.*?)\\s*<\\/div>|Điện Thoại\\s*<\\/div>\\s*<div class=\"right\">\\s*(.*?)\\s*<\\/div>', 1),
-(13, 13, '<div id=\"contactEmail\"[\\w\\W]*?mailto:(.*?)\'>', 1),
-(14, 1, '<div class=\'vip-title\'>[\\w\\W]*? href=\'(.*?)\'', 2),
-(15, 2, '<div class=\'title\'><h1>(.*?)<\\/h1>', 2),
-(16, 3, 'Giá: <\\/span> <span class=\'value\'>(.*?)<\\/span>', 2),
-(17, 5, 'Diện tích: <\\/span> <span class=\'value\'>(.*?)<\\/span>', 2),
-(18, 4, '<div class=\'detail text-content\'>[\\s\\S]*?<\\/div>', 2),
-(19, 6, 'Loại tin<\\/td><td>(.*?)<\\/td>', 2),
-(20, 7, 'Loại BDS<\\/td><td>(.*?)<\\/td>', 2),
-(21, 9, '<span class=\'date\'>(.*?)<\\/span>', 2),
-(22, 10, '<div class=\'title\'><h1>(.*?)<\\/h1>', 2),
-(23, 11, 'Liên hệ:<\\/span><span class=\'value\'>(.*?)<\\/span>', 2),
-(24, 12, 'Điện Thoại:<\\/span> <span class=\'value\'>(.*?)<\\/span>', 2),
-(37, 1, '<a id=\"hplTitle\" href=\"(.*?)\">', 3),
-(38, 2, '<div class=\"detail_top\">\\s*<h1 class=\"h1\">\\s*(.*?)\\s*<\\/h1>\r\n', 3),
-(39, 3, 'Giá:<\\/span>\\s*(.*?)\\s*<span', 3),
-(40, 4, '<div class=\"text\">([\\w\\W]*?)<\\/div>', 3),
-(41, 5, 'Diện tích:<\\/span>\\s*(.*?)\\s*<\\/div>', 3),
-(42, 8, 'Vị trí:<\\/b>\\s<span>(.*?)<\\/span>', 3),
-(43, 9, 'Ngày đăng tin<\\/td>\\s*<td>\\s*(.*?)<\\/td>', 3),
-(44, 10, '<a id=\"hplTitle\" href=\"(.*?)\">', 3),
-(45, 11, 'Tên liên lạc<\\/td>\\s*<td>\\s*(.*?)\\s*<\\/td>', 3),
-(46, 12, 'Điện thoại<\\/td>\\s*<td>\\s*(.*?)<\\/td>', 3),
-(47, 1, '<a class=\"vipdb\"[\\w\\W]*?href=\"(.*?)\">', 4),
-(48, 2, '<title>\\s*(.*?)\\s*<\\/title>', 4),
-(49, 3, 'Giá: <span class=\"spanprice\">\\s*(.*?)<\\/span>', 4),
-(50, 4, '<div class=\"pd-desc-content\">([\\w\\W]*?)<\\/div>', 4),
-(51, 5, 'Diện tích:<span>\\s*(.*?)<\\/span>', 4),
-(52, 7, 'Loại tin rao<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4),
-(53, 8, 'Khu vực:<\\/span> <a.*>(.*?)<\\/a>\\s*(.*?)\\s*<\\/div>', 4),
-(54, 9, 'Ngày đăng tin<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4),
-(55, 10, '<title>\\s*(.*?)\\s*<\\/title>', 4),
-(56, 11, '<b>Tên liên lạc<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4),
-(57, 12, '<b>Di động<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4),
-(59, 1, 'class=\'ct_title\'><a href=\'(.*?)\' class=\'vip\'>', 5),
-(60, 2, '<div class=\'title\'><h1>\\s*(.*?)\\s*<\\/h1>', 5),
-(61, 3, '<span class=\'price\'>[\\w\\W]*?<span class=\'value\'>\\s*(.*?)\\s*<\\/span>', 5),
-(62, 4, '<span class=\'square\'>[\\w\\W]*?<span class=\'value\'>\\s*(.*?)s*<sup>', 5),
-(63, 5, '<div class=\'detail \'>[\\w\\W]*?<span .*?>\\s*(.*?)\\s*<\\/span>', 5),
-(64, 6, 'Loại tin<\\/td><td>(.*?)<\\/td>', 5),
-(65, 7, 'Loại BDS<\\/td><td>(.*?)<\\/td>', 5),
-(66, 8, '<div class=\'address\'>[\\w\\W]*?<span class=\'value\'>\\s*(.*?)\\s*<\\/span>', 5),
-(67, 9, '<span class=\'date\'>(.*?)<\\/span>', 5),
-(68, 10, '<div class=\'title\'><h1>\\s*(.*?)\\s*<\\/h1>', 5),
-(69, 11, '<div class=\'name\'>(.*?)<\\/div>', 5),
-(70, 12, '<div class=\'fone\'><a.*>(.*?)<\\/a><\\/div>', 5),
-(71, 14, 'Địa chỉ tài sản:<\\/span><span class=\'value\'>(.*?)<\\/span>', 5),
-(72, 1, '<div class=\"img[\\w\\W]*?<a href=\"\\s*(.*?)\\s*\">', 6),
-(73, 2, '<h1 class=\"tieude_nhadat\">(.*?)<\\/h1>', 6),
-(74, 3, 'Giá:<\\/label><span><b class=\"camcam\">(.*?)<\\/b>', 6),
-(75, 4, '<div class=\"save_print\">[\\w\\W]*?<p>([\\w\\W]*?)<\\/p>', 6),
-(76, 5, 'Diện tích:[\\w\\W]*?\"camcam\">(.*?)<\\/b>', 6),
-(77, 8, 'Khu vực:<\\/label><span><a.*>(.*?)<\\/a>(.*?)<\\/span><\\/li>', 6),
-(78, 9, 'Ngày đăng tin:\\s*(.*?)\\s*<\\/li>', 6),
-(79, 10, '<h1 class=\"tieude_nhadat\">(.*?)<\\/h1>', 6),
-(80, 11, '<li><b>(.*?)<\\/b><\\/li>', 6),
-(81, 12, 'Điện thoại:<b class=\"camcam\">(.*?)<\\/b>', 6),
-(82, 13, 'Email:(.*?)<\\/li>', 6),
-(83, 14, 'Địa chỉ:\\s*(.*?)\\s*<\\/li>', 6),
-(84, 1, '<h2 class=\"P_Title\">.*<a href=\'(.*?)\' title=\'.*\'>', 7),
-(85, 2, '<div class=\"P_Title1\">(.*?)<\\/div>', 7),
-(86, 3, '<span class=\"button-price\">(.*?)<\\/span>', 7),
-(87, 4, '<div class=\"PD_Gioithieu[\\w\\W]*?>(.*?)<div', 7),
-(88, 5, 'Diện tích:[\\w\\W]*?<span class=\'product-area\'>(.*?)<\\/span>', 7),
-(89, 7, 'Loại BĐS:[\\w\\W]*?<span>[\\w\\W]*?<span>\\s*(.*?)\\s*<\\/span>', 7),
-(90, 8, '<label>Địa chỉ:<\\/label><span>(.*?)<\\/span>', 7),
-(91, 9, '<label>Ngày đăng tin:<\\/label><span>(.*?)<\\/span>', 7),
-(92, 10, '<div class=\"P_Title1\">(.*?)<\\/div>', 7),
-(93, 11, '<div class=\"name\"><a class=\"\" href.* title=\"\">(.*?)<\\/a><\\/div>', 7),
-(94, 12, '<i class=\"fa-lg fa-fw.*><\\/i><span>(.*?)<\\/span>', 7),
-(95, 1, '<li class=\"item-project[\\w\\W]*?href=\"(.*?)\"', 8),
-(96, 2, '<h1 class=\"entry-title\">\\s*(.*?)\\s*<\\/h1>', 8),
-(97, 3, ' <div class=\"footer-feature-image\">[\\w\\W]*?\"price\">\\s*<span>([\\w\\W]*?)<\\/li>', 8),
-(98, 4, '<div class=\"col-sm-8 padding-right-7x main-content-left\">[\\w\\W]*?<strong>([\\w\\W]*?)\\s*<\\/div>', 8),
-(99, 5, ' <div class=\"footer-feature-image\">[\\w\\W]*?\"dien-tich\">\\s*<span>([\\w\\W]*?)<\\/li>', 8),
-(100, 8, '<span itemprop=\"streetAddress\">(.*?)</span>.*<span itemprop=\"addressLocality\">(.*?)</span>.*<span itemprop=\"addressRegion\">(.*?)</span>', 8),
-(101, 9, 'Ngày đăng tin: (.*?)<\\/b><\\/li>', 8),
-(102, 10, '<h1 class=\"entry-title\">s*(.*?)s*</h1>', 8),
-(103, 11, 'Liên hệ:<\\/span>(.*?)\\s*<\\/a>', 8),
-(104, 12, '<div class=\"info-contact[\\w\\W]*?mobile=\"(.*?)\"', 8);
+INSERT INTO `patterns` (`pattern_id`, `pattern_category_id`, `pattern_regex`, `site_id`, `pattern_status`) VALUES
+(1, 1, '<div class=\'p-title\'>[\\w\\W]*?<a href=\'(.*?)\'[\\w\\W]*?<\\/a>', 1, 1),
+(2, 2, '<h1 itemprop=\"name\">\\s*(.*?)\\s*<\\/h1>', 1, 1),
+(3, 3, 'Giá:<\\/b>\\s*<strong>\\s*(.*?)&nbsp;\\s*<\\/strong>', 1, 1),
+(4, 4, 'Diện tích:<\\/b>\\s*<strong>\\s*(.*?)<\\/strong>', 1, 1),
+(5, 5, '<div class=\"pm-desc\">\\s*(.*?)\\s*<\\/div>', 1, 1),
+(6, 6, '<span class=\"select-text-content\">(.*?)<\\/span>', 1, 1),
+(7, 7, 'Loại tin rao[\\w\\W]*?<div class=\"right\">\\s*(.*?)\\s*<\\/div>', 1, 1),
+(8, 8, 'Địa chỉ\\s*<\\/div>\\s*<div class=\"right\">\\s*(.*?)\\s*<\\/div>', 1, 1),
+(9, 9, 'Ngày đăng:<\\/span>\\s*(.*?)\\s*<\\/div>', 1, 1),
+(10, 10, '<h1 itemprop=\"name\">\\s*(.*?)\\s*<\\/h1>', 1, 1),
+(11, 11, 'Tên liên lạc\\s*<\\/div>\\s*<div class=\"right\">\\s*(.*?)\\s*<\\/div>', 1, 1),
+(12, 12, 'Mobile\\s*<\\/div>\\s*<div class=\"right\">\\s*(.*?)\\s*<\\/div>|Điện Thoại\\s*<\\/div>\\s*<div class=\"right\">\\s*(.*?)\\s*<\\/div>', 1, 1),
+(13, 13, '<div id=\"contactEmail\"[\\w\\W]*?mailto:(.*?)\'>', 1, 1),
+(14, 1, '<div class=\'vip-title\'>[\\w\\W]*? href=\'(.*?)\'', 2, 1),
+(15, 2, '<div class=\'title\'><h1>(.*?)<\\/h1>', 2, 1),
+(16, 3, 'Giá: <\\/span> <span class=\'value\'>(.*?)<\\/span>', 2, 1),
+(17, 5, 'Diện tích: <\\/span> <span class=\'value\'>(.*?)<\\/span>', 2, 1),
+(18, 4, '<div class=\'detail text-content\'>[\\s\\S]*?<\\/div>', 2, 1),
+(19, 6, 'Loại tin<\\/td><td>(.*?)<\\/td>', 2, 1),
+(20, 7, 'Loại BDS<\\/td><td>(.*?)<\\/td>', 2, 1),
+(21, 9, '<span class=\'date\'>(.*?)<\\/span>', 2, 1),
+(22, 10, '<div class=\'title\'><h1>(.*?)<\\/h1>', 2, 1),
+(23, 11, 'Liên hệ:<\\/span><span class=\'value\'>(.*?)<\\/span>', 2, 1),
+(24, 12, 'Điện Thoại:<\\/span> <span class=\'value\'>(.*?)<\\/span>', 2, 1),
+(37, 1, '<a id=\"hplTitle\" href=\"(.*?)\">', 3, 1),
+(38, 2, '<div class=\"detail_top\">\\s*<h1 class=\"h1\">\\s*(.*?)\\s*<\\/h1>\r\n', 3, 1),
+(39, 3, 'Giá:<\\/span>\\s*(.*?)\\s*<span', 3, 1),
+(40, 4, '<div class=\"text\">([\\w\\W]*?)<\\/div>', 3, 1),
+(41, 5, 'Diện tích:<\\/span>\\s*(.*?)\\s*<\\/div>', 3, 1),
+(42, 8, 'Vị trí:<\\/b>\\s<span>(.*?)<\\/span>', 3, 1),
+(43, 9, 'Ngày đăng tin<\\/td>\\s*<td>\\s*(.*?)<\\/td>', 3, 1),
+(44, 10, '<a id=\"hplTitle\" href=\"(.*?)\">', 3, 1),
+(45, 11, 'Tên liên lạc<\\/td>\\s*<td>\\s*(.*?)\\s*<\\/td>', 3, 1),
+(46, 12, 'Điện thoại<\\/td>\\s*<td>\\s*(.*?)<\\/td>', 3, 1),
+(47, 1, '<a class=\"vipdb\"[\\w\\W]*?href=\"(.*?)\">', 4, 1),
+(48, 2, '<title>\\s*(.*?)\\s*<\\/title>', 4, 1),
+(49, 3, 'Giá: <span class=\"spanprice\">\\s*(.*?)<\\/span>', 4, 1),
+(50, 4, '<div class=\"pd-desc-content\">([\\w\\W]*?)<\\/div>', 4, 1),
+(51, 5, 'Diện tích:<span>\\s*(.*?)<\\/span>', 4, 1),
+(52, 7, 'Loại tin rao<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4, 1),
+(53, 8, 'Khu vực:<\\/span> <a.*>(.*?)<\\/a>\\s*(.*?)\\s*<\\/div>', 4, 1),
+(54, 9, 'Ngày đăng tin<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4, 1),
+(55, 10, '<title>\\s*(.*?)\\s*<\\/title>', 4, 1),
+(56, 11, '<b>Tên liên lạc<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4, 1),
+(57, 12, '<b>Di động<\\/b><\\/td>\\s*<td>\\s*(.*?)<\\/td>', 4, 1),
+(59, 1, 'class=\'ct_title\'><a href=\'(.*?)\' class=\'vip\'>', 5, 1),
+(60, 2, '<div class=\'title\'><h1>\\s*(.*?)\\s*<\\/h1>', 5, 1),
+(61, 3, '<span class=\'price\'>[\\w\\W]*?<span class=\'value\'>\\s*(.*?)\\s*<\\/span>', 5, 1),
+(62, 4, '<span class=\'square\'>[\\w\\W]*?<span class=\'value\'>\\s*(.*?)s*<sup>', 5, 1),
+(63, 5, '<div class=\'detail \'>[\\w\\W]*?<span .*?>\\s*(.*?)\\s*<\\/span>', 5, 1),
+(64, 6, 'Loại tin<\\/td><td>(.*?)<\\/td>', 5, 1),
+(65, 7, 'Loại BDS<\\/td><td>(.*?)<\\/td>', 5, 1),
+(66, 8, '<div class=\'address\'>[\\w\\W]*?<span class=\'value\'>\\s*(.*?)\\s*<\\/span>', 5, 1),
+(67, 9, '<span class=\'date\'>(.*?)<\\/span>', 5, 1),
+(68, 10, '<div class=\'title\'><h1>\\s*(.*?)\\s*<\\/h1>', 5, 1),
+(69, 11, '<div class=\'name\'>(.*?)<\\/div>', 5, 1),
+(70, 12, '<div class=\'fone\'><a.*>(.*?)<\\/a><\\/div>', 5, 1),
+(71, 14, 'Địa chỉ tài sản:<\\/span><span class=\'value\'>(.*?)<\\/span>', 5, 1),
+(72, 1, '<div class=\"img[\\w\\W]*?<a href=\"\\s*(.*?)\\s*\">', 6, 1),
+(73, 2, '<h1 class=\"tieude_nhadat\">(.*?)<\\/h1>', 6, 1),
+(74, 3, 'Giá:<\\/label><span><b class=\"camcam\">(.*?)<\\/b>', 6, 1),
+(75, 4, '<div class=\"save_print\">[\\w\\W]*?<p>([\\w\\W]*?)<\\/p>', 6, 1),
+(76, 5, 'Diện tích:[\\w\\W]*?\"camcam\">(.*?)<\\/b>', 6, 1),
+(77, 8, 'Khu vực:<\\/label><span><a.*>(.*?)<\\/a>(.*?)<\\/span><\\/li>', 6, 1),
+(78, 9, 'Ngày đăng tin:\\s*(.*?)\\s*<\\/li>', 6, 1),
+(79, 10, '<h1 class=\"tieude_nhadat\">(.*?)<\\/h1>', 6, 1),
+(80, 11, '<li><b>(.*?)<\\/b><\\/li>', 6, 1),
+(81, 12, 'Điện thoại:<b class=\"camcam\">(.*?)<\\/b>', 6, 1),
+(82, 13, 'Email:(.*?)<\\/li>', 6, 1),
+(83, 14, 'Địa chỉ:\\s*(.*?)\\s*<\\/li>', 6, 1),
+(84, 1, '<h2 class=\"P_Title\">.*<a href=\'(.*?)\' title=\'.*\'>', 7, 1),
+(85, 2, '<div class=\"P_Title1\">(.*?)<\\/div>', 7, 1),
+(86, 3, '<span class=\"button-price\">(.*?)<\\/span>', 7, 1),
+(87, 4, '<div class=\"PD_Gioithieu[\\w\\W]*?>(.*?)<div', 7, 1),
+(88, 5, 'Diện tích:[\\w\\W]*?<span class=\'product-area\'>(.*?)<\\/span>', 7, 1),
+(89, 7, 'Loại BĐS:[\\w\\W]*?<span>[\\w\\W]*?<span>\\s*(.*?)\\s*<\\/span>', 7, 1),
+(90, 8, '<label>Địa chỉ:<\\/label><span>(.*?)<\\/span>', 7, 1),
+(91, 9, '<label>Ngày đăng tin:<\\/label><span>(.*?)<\\/span>', 7, 1),
+(92, 10, '<div class=\"P_Title1\">(.*?)<\\/div>', 7, 1),
+(93, 11, '<div class=\"name\"><a class=\"\" href.* title=\"\">(.*?)<\\/a><\\/div>', 7, 1),
+(94, 12, '<i class=\"fa-lg fa-fw.*><\\/i><span>(.*?)<\\/span>', 7, 1),
+(95, 1, '<li class=\"item-project[\\w\\W]*?href=\"(.*?)\"', 8, 1),
+(96, 2, '<h1 class=\"entry-title\">\\s*(.*?)\\s*<\\/h1>', 8, 1),
+(97, 3, ' <div class=\"footer-feature-image\">[\\w\\W]*?\"price\">\\s*<span>([\\w\\W]*?)<\\/li>', 8, 1),
+(98, 4, '<div class=\"col-sm-8 padding-right-7x main-content-left\">[\\w\\W]*?<strong>([\\w\\W]*?)\\s*<\\/div>', 8, 1),
+(99, 5, ' <div class=\"footer-feature-image\">[\\w\\W]*?\"dien-tich\">\\s*<span>([\\w\\W]*?)<\\/li>', 8, 1),
+(100, 8, '<span itemprop=\"streetAddress\">(.*?)</span>.*<span itemprop=\"addressLocality\">(.*?)</span>.*<span itemprop=\"addressRegion\">(.*?)</span>', 8, 1),
+(101, 9, 'Ngày đăng tin: (.*?)<\\/b><\\/li>', 8, 1),
+(102, 10, '<h1 class=\"entry-title\">s*(.*?)s*</h1>', 8, 1),
+(103, 11, 'Liên hệ:<\\/span>(.*?)\\s*<\\/a>', 8, 1),
+(104, 12, '<div class=\"info-contact[\\w\\W]*?mobile=\"(.*?)\"', 8, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pattern_categories`
+-- Cấu trúc bảng cho bảng `pattern_categories`
 --
 
 DROP TABLE IF EXISTS `pattern_categories`;
@@ -798,7 +799,7 @@ CREATE TABLE `pattern_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pattern_categories`
+-- Đang đổ dữ liệu cho bảng `pattern_categories`
 --
 
 INSERT INTO `pattern_categories` (`patt_category_id`, `patt_category_name`) VALUES
@@ -820,7 +821,7 @@ INSERT INTO `pattern_categories` (`patt_category_id`, `patt_category_name`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sites`
+-- Cấu trúc bảng cho bảng `sites`
 --
 
 DROP TABLE IF EXISTS `sites`;
@@ -831,7 +832,7 @@ CREATE TABLE `sites` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `sites`
+-- Đang đổ dữ liệu cho bảng `sites`
 --
 
 INSERT INTO `sites` (`site_id`, `site_name`, `site_url`) VALUES
@@ -847,7 +848,7 @@ INSERT INTO `sites` (`site_id`, `site_name`, `site_url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 DROP TABLE IF EXISTS `users`;
@@ -860,77 +861,77 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_password`, `user_token`, `user_status`) VALUES
 (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'RwOPzbuPAODuF1sIlPYQNduEhARZufl3', 1);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `data`
+-- Chỉ mục cho bảng `data`
 --
 ALTER TABLE `data`
   ADD PRIMARY KEY (`data_id`),
   ADD UNIQUE KEY `data_url_md5` (`data_url_md5`);
 
 --
--- Indexes for table `patterns`
+-- Chỉ mục cho bảng `patterns`
 --
 ALTER TABLE `patterns`
   ADD PRIMARY KEY (`pattern_id`);
 
 --
--- Indexes for table `pattern_categories`
+-- Chỉ mục cho bảng `pattern_categories`
 --
 ALTER TABLE `pattern_categories`
   ADD PRIMARY KEY (`patt_category_id`);
 
 --
--- Indexes for table `sites`
+-- Chỉ mục cho bảng `sites`
 --
 ALTER TABLE `sites`
   ADD PRIMARY KEY (`site_id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `data`
+-- AUTO_INCREMENT cho bảng `data`
 --
 ALTER TABLE `data`
   MODIFY `data_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=713;
 
 --
--- AUTO_INCREMENT for table `patterns`
+-- AUTO_INCREMENT cho bảng `patterns`
 --
 ALTER TABLE `patterns`
   MODIFY `pattern_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
--- AUTO_INCREMENT for table `pattern_categories`
+-- AUTO_INCREMENT cho bảng `pattern_categories`
 --
 ALTER TABLE `pattern_categories`
   MODIFY `patt_category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT for table `sites`
+-- AUTO_INCREMENT cho bảng `sites`
 --
 ALTER TABLE `sites`
   MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

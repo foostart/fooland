@@ -36,11 +36,13 @@ function getDataDetailBySiteID(req, res, next) {
     if (urlLimit == null || urlLimit == "") {
         urlLimit = 10;
     }
-    var status = 1; // 1: chua co URL trong database , 2: co day du du lieu roi
-    patternModel.findPatternByStatus(status, siteID, function (pattern_rows) { // lay ra pattern theo siteID
+    var statusFindPattern = 1; // 1: pattern da dung, 2: pattern sai, khong hoat dong dc
+    var statusFindURL = 1; // 1: chua co URL trong database , 2: co day du du lieu roi
+    
+    patternModel.findPatternByStatus(statusFindPattern, siteID, function (pattern_rows) { // lay ra pattern theo siteID
         // console.log(pattern_rows);
         if (pattern_rows != -1) {
-            dataModel.findURLByStatus(status, siteID, function (url_rows) {
+            dataModel.findURLByStatus(statusFindURL, siteID, function (url_rows) {
                 // console.log("\r\n url_rows: --------------------------------------------------------");
                 // console.log(url_rows);
                 // console.log("-------------------------------------------------------------------");
@@ -86,9 +88,9 @@ function getDataDetailBySiteID(req, res, next) {
                                 dataInput.push([contactAddress]);
                                 dataInput.push([2]);
                                 dataInput.push([dataID]);
-                                console.log("\r\ndataInput ---------------------------------------------------");
-                                console.log(dataInput);
-                                console.log("\r\n---------------------------------------------------");
+                                // console.log("\r\ndataInput ---------------------------------------------------");
+                                // console.log(dataInput);
+                                // console.log("\r\n---------------------------------------------------");
                                 dataModel.update(dataInput, function (update_success) {
                                     console.log("Update: ", dataID, update_success);
                                     dataInput = [];
@@ -286,12 +288,6 @@ function getValueByPattern(name, arrayPattern, sourceHTML) {
             if (match != null) {
                 result = match[1];
                 break;
-            }
-            else {
-                patternModel.updateStatus(arrayPattern[index]["pattern_id"], 2, function (success) {
-                    console.log("Pattern " + name + " not match:");
-                    console.log("Update status:" + success);
-                });
             }
         }
     }
