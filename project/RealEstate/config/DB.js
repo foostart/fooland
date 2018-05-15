@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-var connection = null;
+var connection = null; // a global variable
 
 class Database {
     constructor() {
@@ -17,6 +17,7 @@ class Database {
         }
     }
 
+    // query a SELECT string
     queryMySQL(sql, args = "") {
         return new Promise((resolve, reject) => {
             this.connection.query(sql, args, (err, rows) => {
@@ -26,7 +27,8 @@ class Database {
             });
         });
     }
-
+    
+    // Execute a sql string such as INSERT, UPDATE, DELETE, ...
     executeMySQL(sql, args = "") {
         return new Promise((resolve, reject) => {
             this.connection.query(sql, args, (err, rows) => {
@@ -40,6 +42,7 @@ class Database {
         });
     }
 
+    // Close this session
     closeMySQL() {
         return new Promise((resolve, reject) => {
             this.connection.end(err => {

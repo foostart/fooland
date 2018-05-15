@@ -1,13 +1,13 @@
 
 'use strict';
 
-// Khai báo pattern model 
+// Define
 const PatternModelClass = require("../models/patterns_model");
 const patternModel = new PatternModelClass();
 const authModelClass = require("../models/auth_model");
 const AuthModel = new authModelClass();
 
-// export cac hàm có trong controller
+// Export all functions for API
 module.exports = {
     getAllPatterns: getAllPatterns,
     updatePatterns: updatePatterns,
@@ -40,7 +40,8 @@ function checkPattern(req, res, next) {
         res.json(results);
     });
 }
-// Controller lấy hết tất cả patterns có trong database
+
+// Get all pattern in database
 function getAllPatterns(req, res, next) {
     var Token = req.swagger.params['Token'].value;
 
@@ -80,7 +81,7 @@ function getAllPatterns(req, res, next) {
     });
 }
 
-//Controller update pattern ==> chưa chạy dc
+//Controller update pattern
 function updatePatterns(req, res, next) {
     var results = {
         success: 1,
@@ -186,8 +187,7 @@ function insertPattern(req, res, next) {
     });
 }
 
-
-// Controller lấy patterns theo patternID có trong database
+// get pattern by patternID
 function getPatternsByID(req, res, next) {
     var results = {
         success: 1,
@@ -205,7 +205,8 @@ function getPatternsByID(req, res, next) {
         values.push([parseInt(valueQuery[i])]);
 
     }
-    console.log(values);
+    // console.log(values);
+    
     AuthModel.checkToken(Token, function (isAuth) {
         if (isAuth) {
             patternModel.find(typeQuery, values, function (rows) {

@@ -1,28 +1,26 @@
 'use strict';
 const request = require("request");
-// Khai bao crawler model
+// Define crawler model
 const CrawlerModelClass = require("../models/crawler_model");
 const crawlerModel = new CrawlerModelClass();
-// Khai bao Site model
+// Define Site model
 const SiteModelClass = require("../models/sites_model");
 const siteModel = new SiteModelClass();
-// Khai báo pattern model 
+// Define pattern model 
 const PatternModelClass = require("../models/patterns_model");
 const patternModel = new PatternModelClass();
 
-// Khai báo data_model 
+// Define data_model 
 const DataClass = require("../models/data_model");
 const dataModel = new DataClass();
 
-// export cac hàm có trong controller
+// export functions
 module.exports = {
     getURLBySiteID: getURLBySiteID,
     getDataDetailBySiteID: getDataDetailBySiteID
 };
 
-
-
-
+///////////////////////////// functions for API request ///////////////////////////////////
 function getDataDetailBySiteID(req, res, next) {
     var results = {
         success: 1,
@@ -36,27 +34,34 @@ function getDataDetailBySiteID(req, res, next) {
     if (urlLimit == null || urlLimit == "") {
         urlLimit = 10;
     }
-    var statusFindPattern = 1; // 1: pattern da dung, 2: pattern sai, khong hoat dong dc
-    var statusFindURL = 1; // 1: chua co URL trong database , 2: co day du du lieu roi
-    
-    patternModel.findPatternByStatus(statusFindPattern, siteID, function (pattern_rows) { // lay ra pattern theo siteID
+    var statusFindPattern = 1; // 1 is a right pattern, 2 is a wrong pattern (pattern not working)
+    var statusFindURL = 1; // 1 is only contains url in database , 2 is full informations in database
+
+    patternModel.findPatternByStatus(statusFindPattern, siteID, function (pattern_rows) { // get pattern by status
         // console.log(pattern_rows);
-        if (pattern_rows != -1) {
+        if (pattern_rows != -1 && pattern_rows.length > 0) {
+
+            // Find URL by status that only include status = 1
             dataModel.findURLByStatus(statusFindURL, siteID, function (url_rows) {
                 // console.log("\r\n url_rows: --------------------------------------------------------");
-                // console.log(url_rows);
+                // console.log(url_rows.length);
                 // console.log("-------------------------------------------------------------------");
-                if (url_rows != -1) {
+
+                if (url_rows != -1 && url_rows.length > 0) {
+
                     if (urlLimit >= url_rows.length) {
                         urlLimit = url_rows.length;
                     }
 
                     for (var i = 0; i < urlLimit; i++) {
-                        var url = url_rows[i]["data_url"];
-                        var data_id = url_rows[i]["data_id"];
-                        console.log(data_id, url);
+                        var url = url_rows[i]["data_url"]; // URL
+                        var data_id = url_rows[i]["data_id"]; // ID
+
+                        // console.log(data_id, url);
+
                         getHTML(url, data_id, function (dataSource, dataID) {
                             if (dataSource != "") {
+                                // Push all data to array
                                 var dataInput = [];
                                 var title = getValueByPattern("Title", pattern_rows, dataSource);
                                 var price = getValueByPattern("Price", pattern_rows, dataSource);
@@ -91,8 +96,10 @@ function getDataDetailBySiteID(req, res, next) {
                                 // console.log("\r\ndataInput ---------------------------------------------------");
                                 // console.log(dataInput);
                                 // console.log("\r\n---------------------------------------------------");
+
+                                // Insert data array to database
                                 dataModel.update(dataInput, function (update_success) {
-                                    console.log("Update: ", dataID, update_success);
+                                    // console.log("Update: ", dataID, update_success);
                                     dataInput = [];
                                     countCollected++;
                                     if (countCollected >= urlLimit) {
@@ -114,9 +121,6 @@ function getDataDetailBySiteID(req, res, next) {
     });
 }
 
-function checkPatternValid(pattern_id, data) {
-
-}
 
 function getURLBySiteID(req, res, next) {
     var results = {
@@ -128,43 +132,44 @@ function getURLBySiteID(req, res, next) {
     var pageLimit = req.swagger.params["pageLimit"].value;
     if (!pageLimit) pageLimit = 50;
 
-    var pattern_category_id = 1; // 1: lay ra pattern cua url 
+    var pattern_category_id = 1; // 1 is a pattern of category
     var countCollected = 0;
 
     patternModel.find(4, [[siteID], [pattern_category_id]], function (pattern_rows) { // find pattern URL with siteID and pattern_category_id
-        console.log("\r\pattern_rows: ---------------------------------------------------------");
-        console.log(pattern_rows);
+        // console.log("\r\pattern_rows: ---------------------------------------------------------");
+        // console.log(pattern_rows);
         if (pattern_rows != -1) {
             siteModel.findById(siteID, function (site_rows) { // Find all site URL with siteID
-                console.log("\r\nsite_rows: ---------------------------------------------------------");
-                console.log(site_rows);
+                // console.log("\r\nsite_rows: ---------------------------------------------------------");
+                // console.log(site_rows);
 
                 if (site_rows != -1) {
                     var siteJson = JSON.parse(site_rows[0].site_url);
                     var categories = siteJson.site_url_categories; // array url of site
                     var totalColected = categories.length * pattern_rows.length;
-                    console.log("\r\nsiteJson: ---------------------------------------------------------");
-                    console.log(siteJson);
-                    console.log("\r\ntotalColected: ---------------------------------------------------------");
-                    console.log(totalColected);
-                    console.log("\r\ncategories: ---------------------------------------------------------");
-                    console.log(categories);
+                    // console.log("\r\nsiteJson: ---------------------------------------------------------");
+                    // console.log(siteJson);
+                    // console.log("\r\ntotalColected: ---------------------------------------------------------");
+                    // console.log(totalColected);
+                    // console.log("\r\ncategories: ---------------------------------------------------------");
+                    // console.log(categories);
                     var isRunning = true;
                     for (var iSite = 0; iSite < categories.length; iSite++)// Loop for each URL of site
                     {
                         var category = categories[iSite];
                         pattern_rows.forEach(pattern => { // Loop for each pattern
-                            // patternModel.check(pattern.pattern_regex, category.category_url, function (pattern_checked) {
-                            //     if (pattern_checked) {
+
+                            // Define jsOptions variable with json type to contains the options that is a parameter of a [collect] function
                             var jsOptions = {
-                                LinkPage: category.category_url, // Duong dan cua trang can lay
-                                TypePage: siteJson.type_page_url, // Kieu trang cua duong dan do
-                                PatternURL: pattern.pattern_regex, // Pattern de lay ra URL cua tung bai viet
-                                SiteID: siteID, // Truyen vao siteID de khi crawler xong add vao DB
-                                PageLimit: parseInt(pageLimit) // gioi han trang lay ve
+                                LinkPage: category.category_url, // The url of page
+                                TypePage: siteJson.type_page_url, // The type of url. You can see it in [sites] table
+                                PatternURL: pattern.pattern_regex, // Pattern to get a URL of each page
+                                SiteID: siteID,
+                                PageLimit: parseInt(pageLimit)
 
-                            } // Khai bao du lieu option de truyen vao ham collect data 
+                            }
 
+                            // execute collect function
                             crawlerModel.collect(jsOptions, function (data_crawler) {
                                 if (data_crawler.status == "OK") {
                                     // console.log("\r\nData ----------------------");
@@ -184,8 +189,6 @@ function getURLBySiteID(req, res, next) {
                                     res.json(results);
                                 }
                             });
-                            //     }
-                            // });
                         });
 
                         if (isRunning == false) {
@@ -207,6 +210,8 @@ function getURLBySiteID(req, res, next) {
     });
 
 }
+
+////////////////////////////// support functions /////////////////////////////////////////////
 
 function decodeEmail(input) {
     var result = "";
@@ -246,7 +251,6 @@ function convertStringToDate(str) {
     }
     return result;
 }
-
 
 function getHTML(urlRequest, data_id, callback) {
     var optionsRequest = {

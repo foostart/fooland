@@ -1,7 +1,7 @@
 
 'use strict';
 
-// Khai báo pattern model 
+// Define
 const userModelClass = require("../models/users_model");
 const UserModel = new userModelClass();
 
@@ -10,7 +10,7 @@ const AuthModel = new authModelClass();
 
 const crypto = require("crypto");
 
-// export cac hàm có trong controller
+// Export all functions for API
 module.exports = {
     getUserByID: getUserByID,
     getAllUsers: getAllUsers,
@@ -20,7 +20,7 @@ module.exports = {
     getToken: getToken
 };
 
-// Controller lấy user theo userID có trong database
+// Get Users by UserID
 function getUserByID(req, res, next) {
     var userID = req.swagger.params['userID'].value;
     var Token = req.swagger.params['Token'].value;
@@ -58,7 +58,7 @@ function getUserByID(req, res, next) {
     });
 }
 
-// Controller lấy hết tất cả user với user_id va user_name có trong database
+// get all users in database
 function getAllUsers(req, res, next) {
     var Token = req.swagger.params['Token'].value;
 
@@ -168,7 +168,7 @@ function updateUser(req, res, next) {
     });
 }
 
-//DELETE /Users/{UserID}: Xóa user với userID ra khỏi db
+//DELETE /Users/{UserID}: Delete user by userID
 function deleteUser(req, res, next) {
     var Token = req.swagger.params['Token'].value;
     
@@ -195,7 +195,7 @@ function deleteUser(req, res, next) {
     });
 }
 
-//Lấy ra token của từng user theo userID
+// Get token of each user by UserID
 function getToken(req, res, next) {
     var results = {
         success: 1,
@@ -219,6 +219,7 @@ function getToken(req, res, next) {
     });
 }
 
+// Hash MD5
 function getMD5(input) {
     var md5sum = crypto.createHash('md5');
     md5sum.update(input);

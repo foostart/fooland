@@ -1,13 +1,13 @@
 
 'use strict';
 
-// Khai báo pattern model 
+// Define
 const SiteModelClass = require("../models/sites_model");
 const siteModel = new SiteModelClass();
 const authModelClass = require("../models/auth_model");
 const AuthModel = new authModelClass();
 
-// export cac hàm có trong controller
+// export all functions for API
 module.exports = {
     getAllSites: getAllSite,
     insertSite: insertSite,
@@ -15,7 +15,7 @@ module.exports = {
     deleteSite: deleteSite
 };
 
-// Controller lấy hết tất cả patterns có trong database
+// Get all site
 function getAllSite(req, res, next) {
     var Token = req.swagger.params['Token'].value;
 
@@ -53,7 +53,7 @@ function getAllSite(req, res, next) {
     });
 }
 
-//Controller update site
+// Update site 
 function updateSite(req, res, next) {
     var results = {
         success: 1,

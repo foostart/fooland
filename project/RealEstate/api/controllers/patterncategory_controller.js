@@ -1,13 +1,14 @@
 
 'use strict';
 
-// Khai báo pattern model 
+// Define
 const PatternCategoryModelClass = require("../models/patternCategory_model");
 const PatternCategoryModel = new PatternCategoryModelClass();
+
 const authModelClass = require("../models/auth_model");
 const AuthModel = new authModelClass();
 
-// export cac hàm có trong controller
+// export all functions for API
 module.exports = {
     deletePatternCategory: deletePatternCategory,
     insertPatterCategory: insertPatterCategory,
@@ -16,7 +17,7 @@ module.exports = {
     updatePatternCategory: updatePatternCategory
 };
 
-// Lấy pattern category theo patterncategoryID có trong database
+// Find pattern category by patterncategoryID
 function getPatternCategoryByID(req, res, next) {
     var PatternCategoryID = req.swagger.params["pattCategoryID"].value;
     var Token = req.swagger.params['Token'].value;
@@ -54,7 +55,7 @@ function getPatternCategoryByID(req, res, next) {
     });
 }
 
-// Lấy hết tất cả pattern category với pattern_category_id va pattern_category_name có trong database
+// Find all pattern category
 function getAllPatternCategory(req, res, next) {
     var Token = req.swagger.params['Token'].value;
 
@@ -90,7 +91,6 @@ function getAllPatternCategory(req, res, next) {
     });
 }
 
-
 //Insert new pattern category into database
 function insertPatterCategory(req, res, next) {
     var Token = req.swagger.params['Token'].value;
@@ -120,8 +120,7 @@ function insertPatterCategory(req, res, next) {
     });
 }
 
-
-//DELETE /PatternCategory/{PatternCategoryID}: Xóa PatternCategory với PatternCategoryID ra khỏi db
+//DELETE /PatternCategory/{PatternCategoryID}: Delete pattern category from database
 function deletePatternCategory(req, res, next) {
     var relsutsJson = {
         success: 1,
@@ -147,7 +146,6 @@ function deletePatternCategory(req, res, next) {
         }
     });
 }
-
 
 //Controller update pattern category
 function updatePatternCategory(req, res, next) {

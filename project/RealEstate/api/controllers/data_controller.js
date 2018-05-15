@@ -20,49 +20,27 @@ function getDataFindBy(req, res, next) {
     var Token = req.swagger.params['Token'].value;
     var typeQuery = req.swagger.params.typeQuery.value;
 
-    console.log("\r\n typeQuery-----------------------------------------------------");
-    console.log(typeQuery);
+    // console.log("\r\n typeQuery-----------------------------------------------------");
+    // console.log(typeQuery);
 
     var value_Query = req.swagger.params.valueQuery.value;
-    console.log("\r\n value_Query-----------------------------------------------------");
-    console.log(value_Query);
+    // console.log("\r\n value_Query-----------------------------------------------------");
+    // console.log(value_Query);
 
     var valuesArr = [];
 
     for (var i = 0; i < value_Query.length; i++) {
-        switch (typeQuery) {
-            case 2:
-                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
-                break;
-            case 3:
-                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
-                break;
-            case 4:
-                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
-                break;
-            case 5:
-                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
-                break;
-            case 6:
-                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
-                break;
-            case 7:
-                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
-                break;
-            case 8:
-                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
-                break;
-            case 9:
-                value_Query[i] = '%' + value_Query[i].toLowerCase() + '%';
-                break;
+        if (typeQuery != 1)
+        {
+            valuesArr.push(['%' + value_Query[i].toLowerCase() + '%']);
         }
-        valuesArr.push([value_Query[i]]);
-
     }
+    
+    // Check token
     AuthModel.checkToken(Token, function (isAuth) {
         if (isAuth) {
             dataModel.findBy(typeQuery, valuesArr, function (rows) {
-                console.log("3 ==> " + valuesArr);
+                // console.log("3 ==> " + valuesArr);
 
                 if (rows != -1) {
                     rows.forEach(row => {
@@ -87,8 +65,8 @@ function getDataFindBy(req, res, next) {
                         //console.log("6==> " + data);
                         results.data.push(data);
                     });
-                    console.log("\r\nresults-----------------------------------------------------");
-                    console.log(results);
+                    // console.log("\r\nresults-----------------------------------------------------");
+                    // console.log(results);
                     res.json(results);
                 } else {
                     results.success = 0;
