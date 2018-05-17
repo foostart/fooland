@@ -5,6 +5,27 @@ class DataModel extends DB {
         super();
     }
 
+    add(values, callback) {
+        this.executeMySQLAndReturnRows("INSERT INTO data(data_url, data_title, data_price, data_area, data_description, data_type_of_news, data_type_BDS, data_location, data_date, data_project_name, data_contact_name, data_contact_phone, data_contact_email, data_contact_address, status, data_url_md5, site_id) VALUES ?", [values]).then(function(rowsEffected){
+            callback(rowsEffected);
+        }).catch(function (err) {
+            // console.log(err);
+            callback(false);
+        });
+    }
+
+    checkURLExisted(urlMD5, callback) {
+        this.queryMySQL("SELECT COUNT(*) as total FROM data WHERE data_url_md5 = ?", [[urlMD5]]).then(function(rows){
+            if (parseInt(rows[0]["total"]) > 0)
+                callback(true);
+            else
+                callback(false);
+        }).catch(function (err) {
+            // console.log(err);
+            callback(false);
+        });
+    }
+
     /**
      * update data into 'data' table
      * @param {array} data: Data is an array values of data table
@@ -95,6 +116,5 @@ class DataModel extends DB {
         // console.log(valuesQuery);
     }
 }
-
 
 module.exports = DataModel;

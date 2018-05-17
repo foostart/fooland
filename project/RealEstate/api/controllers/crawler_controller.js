@@ -165,8 +165,8 @@ function getURLBySiteID(req, res, next) {
                                 TypePage: siteJson.type_page_url, // The type of url. You can see it in [sites] table
                                 PatternURL: pattern.pattern_regex, // Pattern to get a URL of each page
                                 SiteID: siteID,
-                                PageLimit: parseInt(pageLimit)
-
+                                PageLimit: parseInt(pageLimit),
+                                IsInsert:  true
                             }
 
                             // execute collect function

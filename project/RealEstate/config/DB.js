@@ -42,6 +42,17 @@ class Database {
         });
     }
 
+    // Execute a sql string such as INSERT, UPDATE, DELETE, ... and then return rows effected
+    executeMySQLAndReturnRows(sql, args = "") {
+        return new Promise((resolve, reject) => {
+            this.connection.query(sql, args, (err, rows) => {
+                if (err)
+                    return reject(err);
+                resolve(rows.affectedRows);
+            });
+        });
+    }
+
     // Close this session
     closeMySQL() {
         return new Promise((resolve, reject) => {

@@ -10,12 +10,13 @@ class CrawlerModel extends DB {
 
     /**
      * Collect all data on site
-     * @param {json} options op {LinkPage: "", TypePage: "", PatternURL: "", SiteID = 1, PageLimit = 50}
+     * @param {json} options op {LinkPage: "", TypePage: "", PatternURL: "", SiteID: 1, PageLimit: 50, IsInsert: true}
      * @param {function} callback callback return json: {status:"", message:"", total: 0, data:[]}
      */
     collect(options, callback) {
         var db = this;
-        var count = 0;
+        var numStart = 1;
+        var count = numStart;
         var countSuccess = 0;
         var json = {}; // json return
         json.status = "OK";
@@ -34,25 +35,31 @@ class CrawlerModel extends DB {
         };
 
         var isBreak = false;
-        for (var page = 1; page <= numberOfPages; page++) {
-            optionsGetPage.Page = page;
+        for (var page = numStart; page <= numberOfPages; page++) {
+            optionsGetPage.Page = page;    
             optionsGetPage.Url = options.LinkPage + options.TypePage.toString().replace('{number}', page.toString()); // assign page number to json option
-            console.log("\r\noptionsGetPage:========================================================" + page);            
-            console.log(optionsGetPage);
-            console.log("===========================================================================");                        
+            // console.log("\r\noptionsGetPage:========================================================" + page);
+            // console.log(optionsGetPage);
+            // console.log("===========================================================================");
             getInfoOnPage(optionsGetPage, function (results) {
                 // console.log(results);
                 if (results.status == "OK") {
+                    var values = [];
                     results.data.forEach(item => {
-                        db.executeMySQL("INSERT INTO data(data_url, status, data_url_md5, site_id) VALUES (?)", [[item, 1, getMD5(item), optionsGetPage.SiteID]]).then(function (success) {
-                            // callback(success);
-                        }).catch(function (err) { });
-                        countSuccess++;
                         json.data.push(item);
+                        values.push([item, , 1, getMD5(item), optionsGetPage.SiteID]);
                     });
+
+                    if (options.IsInsert == true) {
+                        db.executeMySQLAndReturnRows("INSERT INTO data(data_url, status, data_url_md5, site_id) VALUES ?", [values]).then(function (rowsEffected) {
+                            countSuccess += rowsEffected;
+                        }).catch(function (err) { });
+                    }
+                    else {
+                        countSuccess += results.data.length;
+                    }
                 }
-                else
-                {
+                else {
                     json.message = results.message;
                     isBreak = true;
                 }
@@ -117,13 +124,12 @@ function getInfoOnPage(options, callback) {
                 while (match != null) {
                     var patternUrl = /http[s]*:/;
                     var match1 = match[1].match(patternUrl);
-                    if (match1 === null)
-                    {
+                    if (match1 === null) {
                         results.push(getURL(urlRequest) + match[1]);
                     }
-                    else{
+                    else {
                         results.push(match[1]);
-                    }                    
+                    }
                     match = pattern.exec(body);
                 }
                 resultJSON.status = 'OK';
@@ -136,7 +142,7 @@ function getInfoOnPage(options, callback) {
             resultJSON.status = "Error";
             resultJSON.message = "Cannot request to " + options.url;
         }
-        console.log("Request to page " + urlRequest + " - " + resultJSON.status + ": " + resultJSON.message);
+        console.log("Request to page " + urlRequest + " - " + resultJSON.status + ":-> " + resultJSON.message);
         callback(resultJSON);
     });
 }
