@@ -132,8 +132,8 @@
 
 	--Sau đó sẽ tạo một liên kết khởi động cho MySQL (cho phép MySQL khởi động cùng hệ thống ) và khởi động MySQL server.
 
-		sudo systemctl start mariadb.service
-		sudo systemctl enable mariadb.service
+		sudo systemctl start mariadb.service //khởi động services mysql
+		sudo systemctl enable mariadb.service //server tự động bật service mysql
 		
 	--Đặt password cho tài khoản root MySQL:
 	
